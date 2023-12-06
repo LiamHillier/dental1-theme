@@ -1,0 +1,52 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `base` layer
+ *
+ * “Add things like base typography styles [or] opinionated global resets.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-base-styles
+ */
+
+/**
+ * This uses the background and foreground colors declared in the
+ * `theme.json` file and is applied both to the frontend and in the block
+ * editor.
+*/
+
+body {
+	@apply bg-background font-primary overflow-x-hidden;
+}
+
+/*------------------*/
+/*--- TYPOGRAPHY ---*/
+/*------------------*/
+h2 {
+	@apply text-2xl leading-normal uppercase;
+}
+h5 {
+	@apply text-base uppercase tracking-[0.3rem] font-semibold;
+}
+p {
+	@apply text-base text-gray-500;
+}
+.about-shape-divider-bottom-1,
+.about-shape-divider-bottom-2 {
+	width: 150%;
+	overflow: hidden;
+	line-height: 0;
+	transform: rotate(180deg);
+}
+
+.about-shape-divider-bottom-1 svg,
+.about-shape-divider-bottom-2 svg {
+	position: relative;
+	display: block;
+	width: calc(133% + 1.3px);
+	height: 150px;
+}
+
+.about-shape-divider-bottom-1 .shape-fill {
+	fill: rgb(249 250 251 / var(--tw-bg-opacity));
+}
+.about-shape-divider-bottom-2 .shape-fill {
+	fill: #ffffff;
+}

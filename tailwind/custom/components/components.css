@@ -1,0 +1,166 @@
+/**
+ * Custom styles to immediately follow Tailwind’s `components` layer
+ *
+ * “Add more opinionated, complex classes like buttons, form controls, alerts,
+ * etc; the sort of pre-built components you often see in other frameworks that
+ * you might need to override with utility classes.”
+ *
+ * — from https://tailwindcss.com/docs/plugins#adding-components
+ */
+
+/*---------------------*/
+/*--- HEADER STYLES ---*/
+/*---------------------*/
+.admin-bar #masthead {
+	margin-top: 32px;
+}
+#site-navigation a {
+	@apply text-black;
+}
+#site-navigation ul {
+	@apply flex gap-10 items-center;
+}
+.logo svg {
+	@apply h-20;
+}
+#site-navigation .feature-button a {
+	@apply bg-primary text-white py-4 px-5 rounded-full;
+}
+
+/*---------------------*/
+/*--- Buttons ---*/
+/*---------------------*/
+.button {
+	@apply rounded-full py-3 px-6 font-semibold text-center border-2 ease-in-out duration-300 inline-block;
+}
+.button.primary {
+	@apply bg-primary text-white hover:text-primary hover:bg-transparent border-primary;
+}
+/*---------------------*/
+/*--- Links ---*/
+/*---------------------*/
+.link {
+	@apply font-semibold transition-all ease-in-out duration-300 inline-block relative mb-2;
+}
+.link:after {
+	content: "";
+	@apply w-6/12 h-[2px] absolute -bottom-1 left-0 bg-primary transition-all ease-in-out duration-300;
+}
+.link:hover:after {
+	@apply w-full;
+}
+.link svg {
+	@apply transition-all ease-in-out duration-300;
+}
+.link:hover svg {
+	@apply ml-2;
+}
+
+/*---------------------*/
+/*--- Scroll ---*/
+/*---------------------*/
+#circle {
+	position: relative;
+	width: 100%;
+	padding-bottom: 200px;
+	overflow: hidden;
+}
+#circle svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	-webkit-animation-name: rotate;
+	-moz-animation-name: rotate;
+	-ms-animation-name: rotate;
+	-o-animation-name: rotate;
+	animation-name: rotate;
+	-webkit-animation-duration: 15s;
+	-moz-animation-duration: 15s;
+	-ms-animation-duration: 15s;
+	-o-animation-duration: 15s;
+	animation-duration: 15s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	-ms-animation-iteration-count: infinite;
+	-o-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	-ms-animation-timing-function: linear;
+	-o-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+	from {
+		-webkit-transform: rotate(360deg);
+	}
+	to {
+		-webkit-transform: rotate(0);
+	}
+}
+@-moz-keyframes rotate {
+	from {
+		-moz-transform: rotate(360deg);
+	}
+	to {
+		-moz-transform: rotate(0);
+	}
+}
+@-ms-keyframes rotate {
+	from {
+		-ms-transform: rotate(360deg);
+	}
+	to {
+		-ms-transform: rotate(0);
+	}
+}
+@-o-keyframes rotate {
+	from {
+		-o-transform: rotate(360deg);
+	}
+	to {
+		-o-transform: rotate(0);
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0);
+	}
+}
+
+/*---------------------*/
+/*--- STYLED SEELCT ---*/
+/*---------------------*/
+.styled-select-container {
+	position: relative;
+	display: inline-block;
+}
+
+#styled-select {
+	@apply bg-gradient-to-r from-teal-700 to-teal-500 inline-block rounded-lg text-white px-4 py-3 cursor-pointer flex justify-between items-center gap-3 text-sm font-light uppercase;
+}
+
+.styled-select-content {
+	display: none;
+	position: absolute;
+	background-color: #ffffff;
+	min-width: 200px;
+	box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+	z-index: 1;
+}
+
+.styled-select-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.styled-select-content a:hover {
+	background-color: #f1f1f1;
+}
