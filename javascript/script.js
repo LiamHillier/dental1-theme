@@ -10,49 +10,364 @@
  */
 
 // JavaScript to handle custom dropdown functionality
-// JavaScript to handle custom dropdown functionality
 const styledSelect = document.getElementById('styled-select');
+const selectText = document.getElementById('select-text');
 const selectContent = document.getElementById('select-content');
-const serviceDiv = document.querySelector('.service');
+const serviceContents = document.querySelectorAll('.service-content');
 
-styledSelect.addEventListener('click', function () {
+// Function to toggle dropdown content
+function toggleDropdown() {
 	selectContent.style.display =
 		selectContent.style.display === 'block' ? 'none' : 'block';
-});
-
-// Add event listeners for custom dropdown options
-const option1 = document.getElementById('option1');
-const option2 = document.getElementById('option2');
-const option3 = document.getElementById('option3');
-
-// Set "Option 1" as the default selection
-updateContent('Option 1 content goes here.');
-
-option1.addEventListener('click', function (e) {
-	e.preventDefault(); // Prevent the default anchor behavior
-	styledSelect.textContent = 'Option 1';
-	selectContent.style.display = 'none';
-	// Update content based on Option 1 selection
-	updateContent('Option 1 content goes here.');
-});
-
-option2.addEventListener('click', function (e) {
-	e.preventDefault(); // Prevent the default anchor behavior
-	styledSelect.textContent = 'Option 2';
-	selectContent.style.display = 'none';
-	// Update content based on Option 2 selection
-	updateContent('Option 2 content goes here.');
-});
-
-option3.addEventListener('click', function (e) {
-	e.preventDefault(); // Prevent the default anchor behavior
-	styledSelect.textContent = 'Option 3';
-	selectContent.style.display = 'none';
-	// Update content based on Option 3 selection
-	updateContent('Option 3 content goes here.');
-});
-
-function updateContent(content) {
-	// Update the content in the .service div
-	serviceDiv.textContent = content;
 }
+
+function updateServiceContent(selectedOptionId) {
+	// Hide all children of each service content
+	serviceContents.forEach((content) => {
+		Array.from(content.children).forEach((child) => {
+			child.style.display = 'none';
+		});
+	});
+
+	// Determine the ID of the child content to display
+	const contentId = selectedOptionId + '-content';
+
+	// Show the child content corresponding to the selected option
+	const selectedContent = document.getElementById(contentId);
+	if (selectedContent) {
+		selectedContent.style.display = 'block';
+	}
+}
+
+// Store SVG and text content for each option
+const optionContent = {
+	'childrens-dentistry': {
+		svg: `<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" viewBox="0.00 0.00 50.00 51.00">
+        <path fill="currentColor" d="   M 0.00 5.21   L 0.00 4.42   Q 1.43 3.86 2.51 2.94   Q 2.91 2.60 3.05 2.10   Q 3.27 1.32 3.72 0.68   Q 4.29 -0.12 4.58 0.82   Q 5.27 3.09 7.38 4.00   Q 9.42 4.87 7.33 5.57   Q 5.66 6.14 4.85 8.03   Q 3.98 10.09 3.38 7.94   Q 2.82 5.90 0.00 5.21   Z   M 5.15 4.74   A 1.01 1.01 0.0 0 0 4.14 3.73   A 1.01 1.01 0.0 0 0 3.13 4.74   A 1.01 1.01 0.0 0 0 4.14 5.75   A 1.01 1.01 0.0 0 0 5.15 4.74   Z" />
+        <path fill="currentColor" d="   M 8.06 29.74   Q 5.45 25.01 5.00 19.00   C 4.46 11.68 9.76 5.80 17.08 5.65   C 21.05 5.57 23.84 8.51 28.03 6.77   C 37.56 2.83 46.39 10.13 45.15 20.12   Q 44.47 25.52 42.07 29.89   Q 40.73 32.31 40.14 35.19   Q 38.77 41.86 37.24 48.01   C 36.21 52.18 30.34 51.58 29.65 47.22   Q 28.51 39.97 27.30 32.85   Q 26.94 30.77 24.99 30.74   A 2.02 2.01 -84.9 0 0 22.97 32.44   Q 21.68 40.47 20.50 47.22   C 19.73 51.62 13.99 52.19 12.94 47.97   Q 11.32 41.42 9.84 34.45   Q 9.32 32.01 8.06 29.74   Z   M 28.90 32.76   Q 30.26 40.71 31.35 47.45   A 2.07 2.06 1.7 0 0 32.95 49.14   Q 35.30 49.65 35.84 47.26   Q 37.32 40.77 38.73 34.27   Q 39.28 31.69 40.57 29.39   C 44.80 21.81 45.90 10.61 35.48 7.44   C 33.96 6.98 31.33 7.18 29.88 7.84   Q 25.16 9.95 20.85 8.02   C 15.88 5.79 10.22 8.27 7.79 12.81   C 5.25 17.54 7.16 25.12 9.73 29.59   Q 10.91 31.64 11.44 34.14   Q 12.97 41.38 14.47 47.59   A 2.15 2.15 0.0 0 0 16.52 49.24   Q 18.55 49.27 18.88 47.26   Q 20.10 39.67 21.40 32.50   C 22.23 27.90 28.11 28.13 28.90 32.76   Z" />
+        <path fill="currentColor" d="   M 13.81 12.42   C 12.10 13.19 10.90 14.69 10.93 16.61   A 0.71 0.71 0.0 0 1 10.35 17.32   L 10.07 17.37   A 0.73 0.73 0.0 0 1 9.21 16.57   Q 9.68 12.39 13.47 10.91   Q 13.93 10.73 14.03 11.21   L 14.15 11.77   Q 14.25 12.23 13.81 12.42   Z" />
+        <path fill="currentColor" d="   M 15.82 11.49   A 0.63 0.61 -17.4 0 1 16.19 10.80   Q 16.50 10.67 16.85 10.67   A 0.81 0.81 0.0 0 1 17.67 11.39   Q 17.71 11.80 17.44 12.08   Q 17.29 12.25 17.07 12.29   Q 16.03 12.52 15.82 11.49   Z" />
+        <path fill="currentColor" d="   M 50.00 39.53   L 50.00 40.58   Q 47.33 41.23 46.97 42.75   Q 46.26 45.69 45.13 42.88   Q 44.55 41.45 43.09 40.93   Q 40.50 40.02 43.08 39.08   Q 44.64 38.51 45.31 36.82   Q 46.16 34.69 46.82 36.89   Q 47.36 38.68 50.00 39.53   Z   M 47.05 40.00   A 0.97 0.97 0.0 0 0 46.08 39.03   A 0.97 0.97 0.0 0 0 45.11 40.00   A 0.97 0.97 0.0 0 0 46.08 40.97   A 0.97 0.97 0.0 0 0 47.05 40.00   Z" />
+    </svg>`, // SVG HTML for option 1
+		text: "Children's Dentistry",
+	},
+	'cosmetic-dentistry': {
+		svg: `<svg xmlns="http://www.w3.org/2000/svg" version="1.2" baseProfile="tiny" viewBox="0.00 0.00 40.00 55.00">
+		<path fill="currentColor" d="
+		  M 18.98 0.00
+		  L 21.40 0.00
+		  Q 30.14 1.19 35.15 7.68
+		  Q 38.10 11.50 38.71 15.98
+		  Q 39.41 21.12 38.63 25.78
+		  Q 38.57 26.19 38.81 26.52
+		  C 41.51 30.23 38.41 34.73 34.58 35.77
+		  Q 34.09 35.90 33.94 36.38
+		  Q 32.13 42.29 26.45 45.71
+		  A 0.98 0.97 -20.8 0 0 25.99 46.72
+		  Q 26.99 52.22 30.90 53.93
+		  Q 31.31 54.11 31.19 54.55
+		  Q 31.13 54.77 30.90 55.00
+		  L 29.91 55.00
+		  Q 25.72 52.48 24.85 47.25
+		  Q 24.73 46.54 24.11 46.90
+		  Q 20.24 49.19 16.39 46.97
+		  Q 15.77 46.61 15.61 47.31
+		  Q 14.44 52.48 10.48 55.00
+		  L 9.49 55.00
+		  Q 9.30 54.74 9.24 54.52
+		  A 0.53 0.52 -20.5 0 1 9.51 53.94
+		  Q 13.88 51.66 14.19 46.51
+		  A 1.06 1.06 0.0 0 0 13.67 45.53
+		  Q 8.38 42.41 6.42 36.55
+		  Q 6.23 35.99 5.66 35.80
+		  C 2.15 34.66 -1.33 30.18 1.50 26.63
+		  Q 1.82 26.24 1.74 25.75
+		  Q 1.07 21.62 1.49 17.06
+		  Q 1.89 12.78 4.15 9.20
+		  Q 9.07 1.39 18.98 0.00
+		  Z
+		  M 35.63 18.42
+		  Q 35.49 18.64 35.20 18.59
+		  A 0.34 0.34 0.0 0 0 34.81 18.98
+		  L 35.60 24.62
+		  Q 35.66 25.09 36.13 25.14
+		  L 36.99 25.23
+		  Q 37.48 25.28 37.52 24.80
+		  C 38.27 16.16 37.17 9.15 29.34 4.16
+		  Q 21.84 -0.63 14.21 2.51
+		  C 4.24 6.61 1.80 14.83 2.79 24.69
+		  Q 2.86 25.39 3.54 25.24
+		  L 4.26 25.09
+		  Q 4.75 24.99 4.82 24.49
+		  L 5.58 18.84
+		  A 0.44 0.43 13.9 0 0 5.29 18.37
+		  Q 5.03 18.27 4.99 18.03
+		  Q 4.87 17.41 5.49 17.37
+		  Q 10.22 17.04 13.14 12.45
+		  C 16.26 7.56 21.81 6.26 26.00 10.76
+		  Q 26.38 11.18 26.94 11.29
+		  C 31.43 12.14 31.12 16.73 35.34 17.71
+		  Q 35.99 17.86 35.63 18.42
+		  Z
+		  M 25.53 12.13
+		  Q 21.90 7.49 16.91 10.32
+		  Q 15.52 11.10 14.52 12.65
+		  C 12.84 15.25 10.52 17.62 7.47 18.35
+		  A 0.81 0.79 89.5 0 0 6.89 18.95
+		  Q 5.35 26.17 7.02 33.90
+		  Q 8.85 42.41 17.03 45.96
+		  Q 19.61 47.08 21.64 46.43
+		  C 34.22 42.43 35.13 30.38 33.48 19.12
+		  Q 33.41 18.64 33.04 18.31
+		  Q 31.02 16.52 29.55 14.18
+		  Q 28.64 12.73 26.93 12.78
+		  Q 26.06 12.81 25.53 12.13
+		  Z
+		  M 3.24 28.55
+		  Q 3.76 28.23 4.31 28.48
+		  Q 5.05 28.81 5.03 28.00
+		  L 5.01 26.99
+		  Q 5.00 26.37 4.38 26.44
+		  C 3.14 26.58 2.13 27.23 1.98 28.56
+		  Q 1.56 32.36 5.16 34.24
+		  A 0.41 0.41 0.0 0 0 5.75 33.80
+		  L 5.09 30.52
+		  Q 4.96 29.84 4.27 29.81
+		  Q 3.70 29.79 3.22 29.47
+		  A 0.55 0.54 46.4 0 1 3.24 28.55
+		  Z
+		  M 37.01 29.46
+		  L 35.94 29.84
+		  Q 35.35 30.05 35.23 30.66
+		  L 34.73 33.19
+		  Q 34.37 35.02 35.87 33.90
+		  C 38.24 32.14 40.16 27.88 36.32 26.42
+		  A 0.67 0.66 12.4 0 0 35.42 26.99
+		  L 35.35 28.09
+		  Q 35.31 28.57 35.78 28.45
+		  Q 36.48 28.27 37.10 28.68
+		  Q 37.85 29.17 37.01 29.46
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 20.8999 16.9484
+		  A 0.74 0.59 -0.9 0 1 20.1693 17.5499
+		  A 0.74 0.59 -0.9 0 1 19.4201 16.9716
+		  A 0.74 0.59 -0.9 0 1 20.1507 16.3701
+		  A 0.74 0.59 -0.9 0 1 20.8999 16.9484
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 17.8333 16.9342
+		  A 0.80 0.60 -21.7 0 1 17.3118 17.7875
+		  A 0.80 0.60 -21.7 0 1 16.3467 17.5258
+		  A 0.80 0.60 -21.7 0 1 16.8682 16.6725
+		  A 0.80 0.60 -21.7 0 1 17.8333 16.9342
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 22.49 16.85
+		  Q 23.02 16.53 23.61 16.80
+		  Q 24.42 17.17 23.65 17.62
+		  Q 22.98 18.01 22.41 17.38
+		  A 0.35 0.35 0.0 0 1 22.49 16.85
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 14.8539 17.7618
+		  A 0.69 0.47 -12.4 0 1 14.2809 18.3690
+		  A 0.69 0.47 -12.4 0 1 13.5061 18.0582
+		  A 0.69 0.47 -12.4 0 1 14.0791 17.4510
+		  A 0.69 0.47 -12.4 0 1 14.8539 17.7618
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 20.1860 22.9895
+		  A 0.71 0.46 87.9 0 1 19.7003 22.2969
+		  A 0.71 0.46 87.9 0 1 20.1340 21.5705
+		  A 0.71 0.46 87.9 0 1 20.6197 22.2631
+		  A 0.71 0.46 87.9 0 1 20.1860 22.9895
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 8.57 23.70
+		  Q 8.29 23.74 8.02 23.86
+		  Q 7.53 24.07 7.84 23.64
+		  C 9.31 21.57 14.67 22.38 16.93 23.02
+		  Q 17.20 23.09 17.09 23.35
+		  L 16.92 23.77
+		  Q 16.83 23.98 16.60 23.94
+		  Q 11.92 23.19 8.57 23.70
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 31.37 23.40
+		  L 23.67 23.82
+		  Q 23.49 23.83 23.46 23.65
+		  L 23.39 23.29
+		  A 0.33 0.32 -12.7 0 1 23.63 22.92
+		  C 25.92 22.35 31.06 21.71 32.44 23.50
+		  Q 33.11 24.37 32.14 23.87
+		  Q 31.94 23.76 31.80 23.59
+		  Q 31.63 23.38 31.37 23.40
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 20.1187 26.1100
+		  A 0.76 0.39 90.1 0 1 19.7300 25.3493
+		  A 0.76 0.39 90.1 0 1 20.1213 24.5900
+		  A 0.76 0.39 90.1 0 1 20.5100 25.3507
+		  A 0.76 0.39 90.1 0 1 20.1187 26.1100
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 9.80 26.98
+		  Q 12.85 28.13 15.67 27.86
+		  Q 16.02 27.83 16.03 28.18
+		  Q 16.04 28.44 15.81 28.56
+		  C 13.60 29.66 11.23 28.57 9.01 28.14
+		  A 0.30 0.30 0.0 0 1 8.83 27.66
+		  L 9.25 27.13
+		  A 0.49 0.49 0.0 0 1 9.80 26.98
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 29.16 27.33
+		  Q 30.04 26.95 31.01 27.15
+		  Q 31.40 27.23 31.46 27.62
+		  L 31.51 27.96
+		  Q 31.54 28.17 31.33 28.19
+		  C 28.71 28.43 27.13 29.62 24.31 28.60
+		  Q 24.12 28.53 24.17 28.34
+		  L 24.23 28.09
+		  Q 24.32 27.74 24.67 27.80
+		  Q 27.05 28.22 29.16 27.33
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 17.1805 29.8408
+		  A 0.82 0.35 -37.5 0 1 16.7431 30.6177
+		  A 0.82 0.35 -37.5 0 1 15.8795 30.8392
+		  A 0.82 0.35 -37.5 0 1 16.3169 30.0623
+		  A 0.82 0.35 -37.5 0 1 17.1805 29.8408
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 14.4895 31.7918
+		  A 0.70 0.48 -13.9 0 1 13.9253 32.4259
+		  A 0.70 0.48 -13.9 0 1 13.1305 32.1282
+		  A 0.70 0.48 -13.9 0 1 13.6947 31.4941
+		  A 0.70 0.48 -13.9 0 1 14.4895 31.7918
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 27.2700 31.9475
+		  A 0.71 0.43 -0.2 0 1 26.5615 32.3800
+		  A 0.71 0.43 -0.2 0 1 25.8500 31.9525
+		  A 0.71 0.43 -0.2 0 1 26.5585 31.5200
+		  A 0.71 0.43 -0.2 0 1 27.2700 31.9475
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 11.5520 32.3369
+		  A 0.68 0.57 -16.5 0 1 11.0619 33.0765
+		  A 0.68 0.57 -16.5 0 1 10.2480 32.7231
+		  A 0.68 0.57 -16.5 0 1 10.7381 31.9835
+		  A 0.68 0.57 -16.5 0 1 11.5520 32.3369
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 20.59 33.40
+		  L 21.61 32.89
+		  Q 22.23 32.58 22.31 33.27
+		  Q 22.38 33.84 21.91 34.11
+		  Q 19.80 35.34 17.98 33.70
+		  A 0.52 0.52 0.0 0 1 17.86 33.09
+		  Q 18.09 32.60 18.47 32.79
+		  Q 19.13 33.10 19.80 33.41
+		  A 0.90 0.89 43.9 0 0 20.59 33.40
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 24.75 37.46
+		  A 0.04 0.04 0.0 0 1 24.79 37.50
+		  L 24.79 37.56
+		  A 4.47 1.38 -0.0 0 1 20.32 38.94
+		  L 20.02 38.94
+		  A 4.47 1.38 -0.0 0 1 15.55 37.56
+		  L 15.55 37.50
+		  A 0.04 0.04 0.0 0 1 15.59 37.46
+		  L 24.75 37.46
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 21.7098 40.6962
+		  A 1.50 0.66 1.0 0 1 20.1985 41.3299
+		  A 1.50 0.66 1.0 0 1 18.7102 40.6438
+		  A 1.50 0.66 1.0 0 1 20.2215 40.0101
+		  A 1.50 0.66 1.0 0 1 21.7098 40.6962
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 25.7690 41.9722
+		  A 1.00 0.40 -36.0 0 1 25.1951 42.8836
+		  A 1.00 0.40 -36.0 0 1 24.1510 43.1478
+		  A 1.00 0.40 -36.0 0 1 24.7249 42.2364
+		  A 1.00 0.40 -36.0 0 1 25.7690 41.9722
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 15.9564 43.0214
+		  A 0.84 0.42 37.5 0 1 15.0343 42.8432
+		  A 0.84 0.42 37.5 0 1 14.6236 41.9986
+		  A 0.84 0.42 37.5 0 1 15.5457 42.1768
+		  A 0.84 0.42 37.5 0 1 15.9564 43.0214
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 22.8966 43.6401
+		  A 0.74 0.56 -29.1 0 1 22.5223 44.4893
+		  A 0.74 0.56 -29.1 0 1 21.6034 44.3599
+		  A 0.74 0.56 -29.1 0 1 21.9777 43.5107
+		  A 0.74 0.56 -29.1 0 1 22.8966 43.6401
+		  Z"
+		/>
+		<path fill="currentColor" d="
+		  M 18.9039 44.2264
+		  A 0.83 0.51 14.4 0 1 17.9732 44.5140
+		  A 0.83 0.51 14.4 0 1 17.2961 43.8136
+		  A 0.83 0.51 14.4 0 1 18.2268 43.5260
+		  A 0.83 0.51 14.4 0 1 18.9039 44.2264
+		  Z"
+		/>
+		</svg>
+		`, // SVG HTML for option 2
+		text: 'Cosmetic Dentistry',
+	},
+	// Add more options as needed
+};
+
+function updateSelectText(optionId) {
+	const content = optionContent[optionId];
+	selectText.innerHTML = content.svg + content.text;
+}
+
+// Event listener to toggle dropdown
+styledSelect.addEventListener('click', toggleDropdown);
+
+// Event listeners for options
+['childrens-dentistry', 'cosmetic-dentistry'].forEach((optionId) => {
+	const option = document.getElementById(optionId);
+	option.addEventListener('click', function (e) {
+		e.preventDefault();
+		toggleDropdown();
+		updateServiceContent(optionId);
+		updateSelectText(optionId);
+	});
+});
+
+// Initialize with default content
+document.addEventListener('DOMContentLoaded', () => {
+	updateServiceContent('childrens-dentistry');
+	updateSelectText('childrens-dentistry');
+});

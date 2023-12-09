@@ -11,15 +11,22 @@
     <div class="styled-select-container mt-6">
         <p class="mb-3 uppercase leading-widest text-base text-black">Select a sevice</p>
         <div id="styled-select">
-            <?php get_template_part('components/features/homepage/services/dropdowns/ChildrensDentistry'); ?>
+            <span id="select-text"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white w-6 h-6">
+                <polyline points="6 9 12 15 18 9" />
+            </svg>
         </div>
         <div class="styled-select-content" id="select-content">
-            <a href="#" id="option1">
+            <a href="#" id="childrens-dentistry">
                 <?php get_template_part('components/features/homepage/services/dropdowns/ChildrensDentistry'); ?>
             </a>
-            <a href="#" id="option2">Option 2</a>
-            <a href="#" id="option3">Option 3</a>
+            <a href="#" id="cosmetic-dentistry">
+                <?php get_template_part('components/features/homepage/services/dropdowns/CosmeticDentistry'); ?>
+            </a>
         </div>
     </div>
-    <div class="service">a</div>
+    <div class="service-content px-5 mt-8">
+        <?php get_template_part('components/features/homepage/services/content/ChildrensDentistry'); ?>
+        <?php get_template_part('components/features/homepage/services/content/CosmeticDentistry'); ?>
+    </div>
 </div>
