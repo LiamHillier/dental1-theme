@@ -1,5 +1,5 @@
-<div id="services" class="text-center relative bg-white -mt-1 py-20">
-    <div class="px-5 ">
+<section id="services" class="text-center relative bg-white -mt-1 py-20">
+    <header class="px-5 ">
         <h5 class="mb-2 text-primary">Our services</h5>
         <h2 class="mb-4">Personalized, Comprehensive <span class="text-primary">Treatment</span></h2>
         <p>At dental1.com.au, we are more than just a dental practice we are your trusted partner in achieving and maintaining a beautiful, healty smile. With over a decade of dedicated service in the field of dentistry, we've been transforming smiles and improving lives. </p>
@@ -7,7 +7,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
             </svg>
         </a>
-    </div>
+    </header>
     <div class="styled-select-container mt-6">
         <p class="mb-3 uppercase leading-widest text-base text-black">Select a sevice</p>
         <div id="styled-select">
@@ -40,4 +40,4 @@
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
     </div>
-</div>
+</section>

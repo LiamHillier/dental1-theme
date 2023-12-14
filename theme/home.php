@@ -17,6 +17,8 @@ get_header();
     get_template_part('components/features/homepage/Services');
     get_template_part('components/features/homepage/Locations');
     get_template_part('components/features/homepage/Team');
+    get_template_part('components/features/homepage/Social');
+    get_template_part('components/features/homepage/Contact');
     ?>
 
 </main><!-- #main -->

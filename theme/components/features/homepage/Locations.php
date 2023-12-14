@@ -1,4 +1,4 @@
-<section id="locations" class="pt-10 bg-gray-100 pb-10 px-5">
+<section id="locations" class="pt-10 bg-gray-100 pb-36 px-5 relative -mb-1">
     <header class="flex flex-col items-center gap-2 text-center mb-2">
         <div class="w-12 h-12">
             <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
@@ -56,4 +56,16 @@
         <a href="" class="button secondary">Contact Us</a>
         <a href="" class="button primary">Book Online</a>
     </div>
+    <div class="locations-divider-2">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+    <div class="w-full h-[20px] left-0 absolute bottom-0 bg-gray-50"></div>
+    <div class="locations-divider">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+
 </section>
