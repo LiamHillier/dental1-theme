@@ -7,12 +7,12 @@ $facebook = file_get_contents('wp-content/themes/dental1/theme/assets/icons/face
 $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/instagram.svg');
 ?>
 
-<section id="contact" class="text-center relative bg-gray-100 -mt-1 py-20">
+<section id="contact" class="text-center relative bg-gray-100 -mt-1 pt-20 pb-32">
     <header class="flex flex-col items-center gap-2 text-center mb-2">
         <div class="w-12 h-12">
             <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
         </div>
-        <h5 class="text-primary">Support</h5>
+        <p class="text-primary pre-header">Support</p>
         <h2 class="font-semibold">Get in touch</span></h2>
     </header>
     <p class="px-5 ">Whether you have a dental emergency, need to get some advice or just want to get a regular
@@ -48,6 +48,9 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
     <div class="flex justify-center items-center my-4 gap-4">
         <a href="https://www.facebook.com/dentalonecraigieburn/"> <?php echo $facebook; ?></a>
         <a href="https://www.instagram.com/dentalonegroup/"> <?php echo $instagram; ?></a>
+    </div>
+    <div id="basic-contact-form" class="my-10 mx-5 p-7 bg-white rounded-3xl shadow-3xl text-left bg-white shadow-2xl shadow-teal-500/30">
+        <?php echo do_shortcode("[gravityforms id='1' title='false' description='false']"); ?>
     </div>
     <div class="locations-divider-2">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">

@@ -15,16 +15,22 @@
 	margin-top: 32px;
 }
 #site-navigation a {
-	@apply text-black;
+	@apply text-black whitespace-nowrap;
+}
+#site-navigation ul li {
+	@apply w-full;
 }
 #site-navigation ul {
-	@apply flex gap-10 items-center;
+	@apply flex items-center;
 }
 .logo svg {
 	@apply h-20;
 }
 #site-navigation .feature-button a {
-	@apply bg-primary text-white py-4 px-5 rounded-full;
+	@apply text-white !w-[124px] whitespace-nowrap;
+}
+#site-navigation .feature-button {
+	@apply bg-primary text-white py-4 px-5 rounded-full !w-[124px];
 }
 
 /*---------------------*/

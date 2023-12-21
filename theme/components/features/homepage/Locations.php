@@ -3,11 +3,12 @@
         <div class="w-12 h-12">
             <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
         </div>
-        <h5 class="text-primary">Locations</h5>
+        <p class="text-primary pre-header">Locations</p>
         <h2 class="font-semibold">Our clinics across <br><span class="!text-primary">Australia</span></h2>
     </header>
     <div class="flex flex-col items-center gap-2">
-        <p class="text-center">At Dental1.com.au, we are more than just a dental practice; we are your trusted partner in achieving and maintaining a beautiful, healthy smile.</p>
+        <p class="text-center">At Dental1.com.au, we are more than just a dental practice; we are your trusted partner
+            in achieving and maintaining a beautiful, healthy smile.</p>
         <a href="" class="link mt-4">
             Book your consult
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
@@ -17,7 +18,8 @@
     </div>
     <ul class="mt-10 font-semibold text-lg flex flex-col gap-2" id="location-list">
         <li class="px-4 py-2 rounded-full " data-title="Craigieburn" data-phone="(03) 9021 8928" data-address="31 Craigieburn Road, Craigieburn" data-email="info@dental1.com.au">Craigieburn</li>
-        <li class="px-4 py-2 rounded-full" data-title="Lower Templestowe" data-phone="(03) 9581 2628" data-address="275 Manningham Road Lower Templestowe, VIC 3107" data-email="info@dental1.com.au">Lower Templestowe</li>
+        <li class="px-4 py-2 rounded-full" data-title="Lower Templestowe" data-phone="(03) 9581 2628" data-address="275 Manningham Road Lower Templestowe, VIC 3107" data-email="info@dental1.com.au">Lower
+            Templestowe</li>
         <li class="px-4 py-2 rounded-full" data-title="Epping North" data-phone="(03) 9039 6597" data-address="1/341 Harvest Home Road, Epping VIC 3076" data-email="info@dental1.com.au">Epping North</li>
         <li class="px-4 py-2 rounded-full" data-title="Essendon" data-phone="(03) 9969 2841" data-address="Level 1, 1003 Mt Alexander Rd, Essendon" data-email="info@dental1.com.au">Essendon</li>
         <li class="px-4 py-2 rounded-full" data-title="Richmond" data-phone="(03) 9113 9313" data-address="Inside Medical One Victoria Gardens Shopping Centre, Level 1, 620 Victoria Street Richmond VIC 3121" data-email="info@dental1.com.au">Richmond</li>

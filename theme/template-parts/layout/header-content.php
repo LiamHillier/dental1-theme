@@ -12,7 +12,7 @@ $logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-
 
 ?>
 
-<header id="masthead" class="grid grid-cols-3 justify-between gap-5 md:gap-8 lg:gap-20 items-center w-full max-w-content mx-auto py-4 px-5 lg:px-20 absolute top-0 left-[50%] -translate-x-[50%] z-50">
+<header id="masthead" class="grid grid-cols-3 justify-between  items-center w-full max-w-content mx-auto py-4 px-5 lg:px-20 absolute top-0 left-[50%] -translate-x-[50%] z-50">
 
 	<div class="md:hidden">nav</div>
 

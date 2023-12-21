@@ -8,46 +8,73 @@
  * @package dental1
  */
 
+$logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-dark.svg');
+$facebook = file_get_contents('wp-content/themes/dental1/theme/assets/icons/facebook.svg');
+$instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/instagram.svg');
 ?>
 
-<footer id="colophon" class="bg-white -mt-1">
+<footer id="colophon" class="bg-white -mt-1 pt-16 pb-4">
 
-	<?php if (is_active_sidebar('sidebar-1')) : ?>
-		<aside role="complementary" aria-label="<?php esc_attr_e('Footer', 'dental1'); ?>">
-			<?php dynamic_sidebar('sidebar-1'); ?>
-		</aside>
-	<?php endif; ?>
+	<div class="logo h-20 flex justify-center mb-6">
+		<?php echo $logo; ?>
+	</div>
+	<div class="px-5">
+		<p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime libero repudiandae autem
+			aspernatur facilis ut repellendus, sequi enim, consequuntur hic laboriosam a cum, nam ab quo magni
+			dignissimos.
+			Facilis, repellendus.</p>
+	</div>
 
-	<?php if (has_nav_menu('menu-2')) : ?>
-		<nav aria-label="<?php esc_attr_e('Footer Menu', 'dental1'); ?>">
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-2',
-					'menu_class'     => 'footer-menu',
-					'depth'          => 1,
-				)
-			);
-			?>
-		</nav>
-	<?php endif; ?>
+	<div class="flex justify-center items-center my-6 gap-4">
+		<a href="https://www.facebook.com/dentalonecraigieburn/"> <?php echo $facebook; ?></a>
+		<a href="https://www.instagram.com/dentalonegroup/"> <?php echo $instagram; ?></a>
+	</div>
 
-	<div>
-		<?php
-		$dental1_blog_info = get_bloginfo('name');
-		if (!empty($dental1_blog_info)) :
-		?>
-			<a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a>,
-		<?php
-		endif;
+	<div class="p5-8 grid grid-cols-2 divide-x gap-y-10 justify-center">
+		<div class="justify-self-end pr-8 w-[125px]">
+			<p class="text-lg text-black mb-4">Quick links</p>
+			<ul class="text-gray-500 flex flex-col gap-2">
+				<li>Home</li>
+				<li>About Us</li>
+				<li>Services</li>
+				<li>Locations</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+		<div class="pl-8 w-[125px]">
+			<p class="text-lg text-black mb-4">Company</p>
+			<ul class="text-gray-500 flex flex-col gap-2">
+				<li>Home</li>
+				<li>About Us</li>
+				<li>Services</li>
+				<li>Locations</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+		<div class="justify-self-end pr-8 border-none w-[125px]">
+			<p class="text-lg text-black mb-4">Legal</p>
+			<ul class="text-gray-500 flex flex-col gap-2">
+				<li>Home</li>
+				<li>About Us</li>
+				<li>Services</li>
+				<li>Locations</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+		<div class="pl-8 w-[125px]">
+			<p class="text-lg text-black mb-4">Contact</p>
+			<ul class="text-gray-500 flex flex-col gap-2">
+				<li>Home</li>
+				<li>About Us</li>
+				<li>Services</li>
+				<li>Locations</li>
+				<li>Contact</li>
+			</ul>
+		</div>
+	</div>
 
-		/* translators: 1: WordPress link, 2: WordPress. */
-		printf(
-			'<a href="%1$s">proudly powered by %2$s</a>.',
-			esc_url(__('https://wordpress.org/', 'dental1')),
-			'WordPress'
-		);
-		?>
+	<div class="mt-16">
+		<p class="text-sm text-black text-center">&copy; <?php echo date("Y"); ?> Dental One. All Rights Reserved.</p>
 	</div>
 
 </footer><!-- #colophon -->

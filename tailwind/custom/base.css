@@ -19,14 +19,27 @@ body {
 /*------------------*/
 /*--- TYPOGRAPHY ---*/
 /*------------------*/
-h2 {
-	@apply text-2xl leading-normal uppercase;
-}
-h5 {
-	@apply text-base uppercase tracking-[0.3rem] font-semibold;
-}
+
 p {
 	@apply text-base text-gray-500;
+}
+
+h2 {
+	font-size: clamp(28px, 3vw, 42px);
+	line-height: 1;
+}
+
+.hero-text-large {
+	font-size: clamp(48px, 7vw, 128px);
+	line-height: 1;
+}
+.hero-text-medium {
+	line-height: 1;
+	font-size: clamp(36px, 3vw, 56px);
+}
+
+.pre-header {
+	@apply text-base uppercase tracking-[0.3rem] font-semibold text-black;
 }
 .about-shape-divider-bottom-1,
 .about-shape-divider-bottom-2 {
@@ -170,4 +183,104 @@ p {
 }
 .contact-link {
 	@apply text-left;
+}
+.gform_wrapper .gfield {
+	@apply my-4;
+}
+.gform_wrapper .gfield_label {
+	@apply text-left text-base;
+}
+.ginput_container {
+	@apply mt-2;
+}
+.gform_wrapper .gform-grid-col {
+	@apply flex flex-col gap-1;
+}
+.gform_wrapper fieldset span:last-of-type {
+	@apply mt-4;
+}
+.gform_wrapper input {
+	@apply w-full rounded-full px-5 py-3 placeholder:text-gray-500 border border-gray-300 text-sm;
+}
+.gform_wrapper textarea {
+	@apply rounded-3xl placeholder:text-gray-500 border border-gray-300 px-5 py-3 w-full text-sm;
+}
+.hidden_sub_label {
+	@apply hidden;
+}
+.gform_required_legend {
+	@apply hidden;
+}
+.gform_button {
+	@apply bg-primary text-white inline-block !w-auto !px-6;
+}
+.ginput_counter {
+	@apply text-xs text-gray-400;
+}
+.gform_footer {
+	@apply border-t border-gray-300 pt-4;
+}
+
+.name_first input {
+	background: url("/wp-content/themes/dental1/theme/assets/icons/user.svg")
+		no-repeat scroll 0 1px transparent;
+	background-size: 24px 24px;
+	background-position: 1rem center;
+	display: block;
+	padding-left: 48px;
+}
+.name_last input {
+	background: url("/wp-content/themes/dental1/theme/assets/icons/user.svg")
+		no-repeat scroll 0 1px transparent;
+	background-size: 24px 24px;
+	background-position: 1rem center;
+	display: block;
+	padding-left: 48px;
+}
+.ginput_container_email input {
+	background: url("/wp-content/themes/dental1/theme/assets/icons/mail-bg.svg")
+		no-repeat scroll 0 1px transparent;
+	background-size: 24px 24px;
+	background-position: 1rem center;
+	display: block;
+	padding-left: 48px;
+}
+
+@screen md {
+	#childrens-dentistry-content {
+		@apply !grid grid-cols-3 grid-rows-2  place-content-end relative;
+	}
+	#childrens-dentistry-content img {
+		@apply absolute left-[44%] translate-x-[-50%] w-[55vw] max-h-screen;
+	}
+	#childrens-dentistry-content header {
+		@apply col-start-3 flex flex-col items-start justify-end relative z-10;
+	}
+	#childrens-dentistry-content h2 {
+		font-size: clamp(38px, 6vw, 58px);
+		line-height: 1;
+		@apply text-left border-b-0;
+	}
+	#childrens-dentistry-content > div {
+		@apply col-start-3 place-self-start text-left relative z-10;
+	}
+	#childrens-dentistry-content > div > div {
+		@apply justify-start;
+	}
+	#select-text svg {
+		@apply !w-7 !h-7;
+	}
+	#select-text {
+		@apply !uppercase;
+	}
+
+	.desktop-service-select {
+		@apply absolute top-[350px] left-20 bg-white/50  shadow-lg rounded-xl flex flex-col items-start z-20 w-[300px];
+	}
+	.desktop-service-select ul {
+		@apply divide-y w-full;
+	}
+	.desktop-service-select li {
+		@apply px-4 py-3 flex gap-2 items-center justify-start;
+	}
 }

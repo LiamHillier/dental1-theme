@@ -2,18 +2,23 @@
 $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-badge.svg');
 ?>
 <section id="about" class="text-center relative pb-0">
-    <header class="px-5 ">
-        <h5 class="mb-2">ABOUT US</h5>
+    <div class="bg-primary rounded-full w-[65vw] h-[65vw] absolute bottom-2 -left-52"></div>
+    <header class="px-5 md:absolute md:right-20 md:w-4/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20">
+        <p class="mb-2 pre-header">ABOUT US</p>
         <h2 class="mb-4">Discover the dental elegance at <span class="text-primary">DentalOne</span></h2>
-        <p>At dental1.com.au, we are more than just a dental practice we are your trusted partner in achieving and maintaining a beautiful, healty smile. With over a decade of dedicated service in the field of dentistry, we've been transforming smiles and improving lives. </p>
-        <p>Whether you're looking to enhance your smile's beauty or maintain your dental health, DentalOne is here for you. Schedule an appointment with us, and let us help you acheive the smile of your dreams.</p>
+        <p>At dental1.com.au, we are more than just a dental practice we are your trusted partner in achieving and
+            maintaining a beautiful, healty smile. With over a decade of dedicated service in the field of
+            dentistry,
+            we've been transforming smiles and improving lives. </p><br />
+        <p>Whether you're looking to enhance your smile's beauty or maintain your dental health, DentalOne is here
+            for
+            you. Schedule an appointment with us, and let us help you acheive the smile of your dreams.</p>
         <a href="/book-online" class="button primary mt-6">Book Online</a>
     </header>
     <div class="relative mt-10">
-        <div class="w-[90vw] h-auto rounded-full bg-primary absolute h-[90vw] z-0 -left-36 bottom-3"></div>
         <div class="relative z-10">
-            <img srcset="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw]" />
-            <div class="w-24 h-24 absolute right-16 top-[50%] translate-y-[-50%]">
+            <img srcset="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw] md:ml-0 md:max-w-full" />
+            <div class="w-24 h-24 md:w-[16vw] md:h-[16vw] absolute right-16 md:right-[45vw] top-[50%] translate-y-[-50%]">
                 <?php echo $badge; ?>
             </div>
         </div>

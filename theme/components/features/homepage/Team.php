@@ -1,6 +1,6 @@
 <section id="team" class="bg-white py-12">
     <header class="flex flex-col items-center gap-2 text-center mb-2">
-        <h5 class="text-primary">Team</h5>
+        <p class="text-primary pre-header">Team</p>
         <h2 class="font-semibold">Let's meet our <br><span class="!text-primary">expert</span> dentist</h2>
     </header>
     <div class="flex justify-center items-center mt-12 gap-4">
