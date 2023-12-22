@@ -426,3 +426,101 @@ const nextButtonNode = document.querySelector('.team__next');
 
 prevButtonNode.addEventListener('click', teamApi.scrollPrev, false);
 nextButtonNode.addEventListener('click', teamApi.scrollNext, false);
+
+mapboxgl.accessToken =
+	'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
+var map = new mapboxgl.Map({
+	container: 'map', // The id of the map container
+	style: 'mapbox://styles/mapbox/dark-v10', // Using the light theme style
+	center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
+	zoom: 8.5, // Initial zoom level,
+	dragPan: false,
+});
+
+// After the map has been initialized and loaded
+map.on('load', function () {
+	// Disable all of the following interactions:
+	map.boxZoom.disable(); // Disable box zoom
+	map.scrollZoom.disable(); // Disable scroll zoom
+	map.dragPan.disable(); // Disable drag pan
+	map.dragRotate.disable(); // Disable drag rotate
+	map.keyboard.disable(); // Disable keyboard
+	map.doubleClickZoom.disable(); // Disable double click zoom
+	map.touchZoomRotate.disable(); // Disable touch zoom rotate
+});
+
+// List of coordinates and messages for each location
+var locations = [
+	{ coords: [144.91196, -37.74778], message: 'Essendon' },
+	{ coords: [144.93931, -37.599], message: 'Craigieburn' },
+	{ coords: [145.10872, -37.77277], message: 'Lower Templestowe' },
+	{ coords: [145.00439, -37.62144], message: 'Epping' },
+	{ coords: [145.01091, -37.81175], message: 'Richmond' },
+	{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
+];
+
+locations.forEach(function (location) {
+	// Create a marker element
+	var el = document.createElement('div');
+	el.className = 'marker';
+
+	// Create a popup
+	var popup = new mapboxgl.Popup({ offset: 25 }).setText(location.message);
+
+	// Create a marker at the specified coordinates, attach the popup
+	var marker = new mapboxgl.Marker(el)
+		.setLngLat(location.coords)
+		.setPopup(popup)
+		.addTo(map);
+
+	// Add a click event listener to the marker
+	el.addEventListener('click', function () {
+		isCycling = false; // Stop the cycling when any marker is clicked
+		clearTimeout(popupCycleInterval);
+	});
+});
+
+map.on('style.load', function () {
+	var waterLayerIds = map
+		.getStyle()
+		.layers.filter(function (layer) {
+			return (
+				layer['type'] === 'fill' && layer['source-layer'] === 'water'
+			);
+		})
+		.map(function (layer) {
+			return layer.id;
+		});
+
+	waterLayerIds.forEach(function (id) {
+		map.setPaintProperty(id, 'fill-color', '#f3f4f6');
+	});
+});
+var isCycling = true;
+var currentPopupIndex = 0;
+var popupCycleInterval;
+var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
+
+function cyclePopups() {
+	if (!isCycling || currentPopupIndex >= locations.length) {
+		currentPopupIndex = 0; // Reset to first popup after the last one
+		return;
+	}
+
+	var location = locations[currentPopupIndex];
+	var popup = new mapboxgl.Popup({ offset: 25 })
+		.setLngLat(location.coords)
+		.setText(location.message)
+		.addTo(map);
+
+	currentPopupIndex++;
+
+	// Close the current popup after cycleDuration milliseconds and open the next one
+	popupCycleInterval = setTimeout(function () {
+		popup.remove();
+		cyclePopups();
+	}, cycleDuration);
+}
+
+// Start cycling through popups
+cyclePopups();

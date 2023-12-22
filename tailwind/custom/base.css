@@ -284,3 +284,41 @@ h2 {
 		@apply px-4 py-3 flex gap-2 items-center justify-start;
 	}
 }
+
+@screen md {
+	#locations {
+		@apply px-20;
+	}
+	#locations header {
+		@apply text-left items-start max-w-lg;
+	}
+	#locations .locations-description {
+		@apply items-start text-left max-w-lg mt-6;
+	}
+	#locations .locations-description p {
+		@apply text-left;
+	}
+	#map {
+		@apply bg-gray-50 mx-auto;
+	}
+}
+.svg {
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+.clipped {
+	width: 100%;
+	background-size: cover;
+	-webkit-clip-path: url(#my-clip-path);
+	clip-path: url(#my-clip-path);
+}
+.marker {
+	@apply rounded-full bg-primary w-4 h-4 border-2 border-white cursor-pointer;
+}
+.mapboxgl-popup {
+	z-index: 9999; /* Use a high value to ensure it's above other elements */
+}
+.mapboxgl-canvas {
+	@apply cursor-default;
+}
