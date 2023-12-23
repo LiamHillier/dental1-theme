@@ -16,23 +16,24 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<?php wp_head(); ?>
-	<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
-	<script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <?php wp_head(); ?>
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css' rel='stylesheet' />
 
 </head>
 
 <body <?php body_class(); ?>>
 
-	<?php wp_body_open(); ?>
+    <?php wp_body_open(); ?>
 
-	<div id="page" class="overflow-x-hidden">
-		<a href="#content" class="sr-only"><?php esc_html_e('Skip to content', 'dental1'); ?></a>
+    <div id="page" class="overflow-x-hidden">
+        <a href="#content" class="sr-only"><?php esc_html_e('Skip to content', 'dental1'); ?></a>
 
-		<?php get_template_part('template-parts/layout/header', 'content'); ?>
+        <?php get_template_part('template-parts/layout/header', 'content'); ?>
 
-		<div id="content">
+        <div id="content">

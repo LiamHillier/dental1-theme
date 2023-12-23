@@ -431,7 +431,7 @@ mapboxgl.accessToken =
 	'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
 var map = new mapboxgl.Map({
 	container: 'map', // The id of the map container
-	style: 'mapbox://styles/mapbox/dark-v10', // Using the light theme style
+	style: 'mapbox://styles/liamtsa/clqhfvanb000i01pm5bsu38be', // Using the light theme style
 	center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
 	zoom: 8.5, // Initial zoom level,
 	dragPan: false,
@@ -459,13 +459,26 @@ var locations = [
 	{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
 ];
 
+var locationDetails2 = {};
+var locationElements = document.querySelectorAll('#location-list li');
+locationElements.forEach(function (elem) {
+	var title = elem.getAttribute('data-title');
+	locationDetails2[title] = {
+		phone: elem.getAttribute('data-phone'),
+		address: elem.getAttribute('data-address'),
+		email: elem.getAttribute('data-email'),
+	};
+});
+
 locations.forEach(function (location) {
 	// Create a marker element
 	var el = document.createElement('div');
 	el.className = 'marker';
 
 	// Create a popup
-	var popup = new mapboxgl.Popup({ offset: 25 }).setText(location.message);
+	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } }).setText(
+		location.message
+	);
 
 	// Create a marker at the specified coordinates, attach the popup
 	var marker = new mapboxgl.Marker(el)
@@ -473,12 +486,62 @@ locations.forEach(function (location) {
 		.setPopup(popup)
 		.addTo(map);
 
-	// Add a click event listener to the marker
 	el.addEventListener('click', function () {
-		isCycling = false; // Stop the cycling when any marker is clicked
+		// Remove active class from all markers
+		document.querySelectorAll('.marker').forEach(function (markerEl) {
+			markerEl.classList.remove('marker-active');
+		});
+		// Add active class to the clicked marker
+		el.classList.add('marker-active');
+		var coords = location.coords;
+		positionDetailsElement(coords);
+		isCycling = false;
 		clearTimeout(popupCycleInterval);
+		updateLocationDetails(location.message);
 	});
 });
+
+function positionDetailsElement(coords) {
+	var mapCanvas = map.getCanvasContainer();
+	var pos = map.project(new mapboxgl.LngLat(coords[0], coords[1]));
+
+	var detailsElement = document.getElementById('location-details');
+	detailsElement.style.position = 'absolute';
+
+	// Calculate the left position by adding an offset to the marker's x-coordinate
+	var leftPosition = pos.x; // 20px as an example offset; adjust as needed
+	var topPosition = pos.y + 200; // 20px as an example offset; adjust as needed
+
+	// Ensure the details element is not too close to the right edge of the screen
+	var rightBoundary =
+		mapCanvas.offsetWidth -
+		parseFloat(getComputedStyle(document.documentElement).fontSize) * 5; // 5rem from the right edge
+	if (leftPosition + detailsElement.offsetWidth > rightBoundary) {
+		leftPosition = rightBoundary - detailsElement.offsetWidth;
+	}
+
+	detailsElement.style.right = 'calc(5rem + 10vw)';
+	detailsElement.style.top = topPosition + 'px'; // Align vertically with the marker
+}
+
+function updateLocationDetails(locationName) {
+	var details = locationDetails2[locationName];
+	console.log(details);
+	if (details) {
+		// Update the title
+		document.getElementById('location-title').innerText =
+			'Dental one in ' + locationName;
+
+		// Update phone number
+		document.getElementById('phone-text').innerText = details.phone;
+
+		// Update email
+		document.getElementById('email-text').innerText = details.email;
+
+		// Update address
+		document.getElementById('address-text').innerText = details.address;
+	}
+}
 
 map.on('style.load', function () {
 	var waterLayerIds = map
@@ -502,25 +565,38 @@ var popupCycleInterval;
 var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
 
 function cyclePopups() {
-	if (!isCycling || currentPopupIndex >= locations.length) {
-		currentPopupIndex = 0; // Reset to first popup after the last one
-		return;
+	// Check if it's the end of the locations array and reset if necessary
+	if (currentPopupIndex >= locations.length) {
+		currentPopupIndex = 0;
 	}
 
 	var location = locations[currentPopupIndex];
-	var popup = new mapboxgl.Popup({ offset: 25 })
+	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } })
 		.setLngLat(location.coords)
 		.setText(location.message)
 		.addTo(map);
 
+	document.querySelectorAll('.marker').forEach(function (markerEl, index) {
+		if (index === currentPopupIndex) {
+			markerEl.classList.add('marker-active');
+		} else {
+			markerEl.classList.remove('marker-active');
+		}
+	});
+
+	// Update the location details and position them
+	updateLocationDetails(location.message);
+	positionDetailsElement(location.coords);
+
+	// Increment the index for the next cycle
 	currentPopupIndex++;
 
-	// Close the current popup after cycleDuration milliseconds and open the next one
+	// Schedule the next cycle
 	popupCycleInterval = setTimeout(function () {
-		popup.remove();
-		cyclePopups();
+		popup.remove(); // Remove the current popup
+		cyclePopups(); // Continue cycling
 	}, cycleDuration);
 }
 
-// Start cycling through popups
+// Start the cycling when ready
 cyclePopups();

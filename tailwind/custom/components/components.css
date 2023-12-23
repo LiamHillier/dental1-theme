@@ -43,7 +43,7 @@
 	@apply bg-primary text-white hover:text-primary hover:bg-transparent border-primary;
 }
 .button.secondary {
-	@apply bg-gray-800 text-white hover:text-gray-800 hover:bg-transparent border-gray-800;
+	@apply bg-neutral-600 text-white hover:text-neutral-600 hover:bg-transparent border-neutral-600;
 }
 /*---------------------*/
 /*--- Links ---*/

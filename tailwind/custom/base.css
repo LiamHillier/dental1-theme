@@ -129,7 +129,20 @@ h2 {
 .team__slide .slide-content img {
 	@apply rounded-full w-8/12 relative z-10;
 }
-
+@screen md {
+	.team {
+		--slide-spacing: 1rem;
+		--slide-size: 25%;
+		--slide-height: 19rem;
+		@apply px-20;
+	}
+	.team__slide {
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		position: relative;
+	}
+}
 .locations-divider {
 	position: absolute;
 	bottom: 0;
@@ -301,6 +314,15 @@ h2 {
 	#map {
 		@apply bg-gray-50 mx-auto;
 	}
+	#location-details {
+		@apply absolute max-w-[400px] mr-20;
+	}
+	#location-details svg {
+		@apply text-primary w-4 h-4;
+	}
+	#location-address p {
+		@apply flex-wrap;
+	}
 }
 .svg {
 	position: absolute;
@@ -314,11 +336,43 @@ h2 {
 	clip-path: url(#my-clip-path);
 }
 .marker {
-	@apply rounded-full bg-primary w-4 h-4 border-2 border-white cursor-pointer;
+	@apply rounded-full bg-primary w-4 h-4 border-2 border-white cursor-pointer relative z-50;
 }
 .mapboxgl-popup {
 	z-index: 9999; /* Use a high value to ensure it's above other elements */
 }
 .mapboxgl-canvas {
 	@apply cursor-default;
+}
+/* Add your custom popup styles here */
+.custom-popup {
+	position: absolute;
+	background: white;
+	padding: 10px;
+	border: 1px solid #ccc;
+	z-index: 1;
+}
+.marker-active::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 310%;
+	height: 310%;
+	@apply bg-primary/50 rounded-full top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%] -z-10;
+}
+.mapboxgl-popup-anchor-bottom {
+	@apply !flex-col;
+}
+.mapboxgl-popup-tip {
+	@apply rotate-180;
+}
+.mapboxgl-popup-content {
+	background: #fff;
+	padding: 3px 13px !important;
+	pointer-events: auto;
+	position: relative;
+	@apply !border !border-primary !rounded-full !text-primary;
+}
+.mapboxgl-popup-close-button {
+	@apply hidden;
 }

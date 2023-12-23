@@ -1,5 +1,5 @@
-<section id="social" class="pt-10 bg-white pb-36 px-5 relative -mb-1">
-    <header class="flex flex-col items-center gap-2 text-center mb-2">
+<section id="social" class="pt-10 bg-white pb-36 px-5 relative -mb-1 -mt-1">
+    <header class="flex flex-col items-center gap-2 text-center mb-2 md:items-start md:px-20 md:text-left">
         <p class="text-primary pre-header">Follow us</p>
         <h2 class="font-semibold">Latest posts from <br><span class="!text-primary">our social media</span></h2>
     </header>
