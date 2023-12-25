@@ -30,7 +30,7 @@ h2 {
 }
 
 .hero-text-large {
-	font-size: clamp(48px, 7vw, 128px);
+	font-size: clamp(48px, 7vw, 96px);
 	line-height: 1;
 }
 .hero-text-medium {
@@ -132,6 +132,23 @@ h2 {
 @screen md {
 	.team {
 		--slide-spacing: 1rem;
+		--slide-size: 33%;
+		--slide-height: 19rem;
+		@apply px-20;
+	}
+	.team__slide {
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		position: relative;
+	}
+	.team__slide .slide-content > div {
+		@apply -mt-40 pt-48 rounded-xl;
+	}
+}
+@screen lg {
+	.team {
+		--slide-spacing: 1rem;
 		--slide-size: 25%;
 		--slide-height: 19rem;
 		@apply px-20;
@@ -141,6 +158,9 @@ h2 {
 		min-width: 0;
 		padding-left: var(--slide-spacing);
 		position: relative;
+	}
+	.team__slide .slide-content > div {
+		@apply -mt-48 pt-52 rounded-xl;
 	}
 }
 .locations-divider {
@@ -183,6 +203,23 @@ h2 {
 
 .locations-divider-2 .shape-fill {
 	@apply fill-gray-50;
+}
+
+@screen md {
+	.locations-divider svg {
+		width: calc(100%);
+	}
+	.locations-divider-2 svg {
+		width: calc(100%);
+	}
+	.about-shape-divider-bottom-1 svg,
+	.about-shape-divider-bottom-2 svg {
+		width: calc(100%);
+	}
+	.service-shape-divider-bottom-1 svg,
+	.service-shape-divider-bottom-2 svg {
+		width: calc(100%);
+	}
 }
 
 .social-link {
@@ -288,7 +325,7 @@ h2 {
 	}
 
 	.desktop-service-select {
-		@apply absolute top-[350px] left-20 bg-white/50  shadow-lg rounded-xl flex flex-col items-start z-20 w-[300px];
+		@apply absolute top-[100px] left-20 bg-white/50  shadow-lg rounded-xl flex flex-col items-start z-20 w-[300px];
 	}
 	.desktop-service-select ul {
 		@apply divide-y w-full;
@@ -336,7 +373,7 @@ h2 {
 	clip-path: url(#my-clip-path);
 }
 .marker {
-	@apply rounded-full bg-primary w-4 h-4 border-2 border-white cursor-pointer relative z-50;
+	@apply rounded-full bg-primary w-4 h-4 border-2 border-white cursor-pointer relative z-50 !absolute;
 }
 .mapboxgl-popup {
 	z-index: 9999; /* Use a high value to ensure it's above other elements */

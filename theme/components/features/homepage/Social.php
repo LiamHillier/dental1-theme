@@ -1,9 +1,9 @@
 <section id="social" class="pt-10 bg-white pb-36 px-5 relative -mb-1 -mt-1">
-    <header class="flex flex-col items-center gap-2 text-center mb-2 md:items-start md:px-20 md:text-left">
+    <header class="flex flex-col items-center gap-2 text-center mb-2 md:items-start md:px-20 md:text-left max-w-screen-2xl mx-auto">
         <p class="text-primary pre-header">Follow us</p>
         <h2 class="font-semibold">Latest posts from <br><span class="!text-primary">our social media</span></h2>
     </header>
-    <div class="flex items-center justify-center gap-3 flex-wrap mt-10">
+    <div class="flex items-center justify-center gap-3 flex-wrap mt-10 max-w-screen-2xl mx-auto">
         <a href="" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>Follow us on Facebook</a>
