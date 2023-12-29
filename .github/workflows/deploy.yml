@@ -27,15 +27,14 @@ jobs:
       run: npm run bundle  # replace with your actual command if different
 
     - name: Create Release
-      id: create_release
       uses: actions/create-release@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        tag_name: v1.0.0  # Replace with your desired tag name
+        release_name: Release v1.0.0  # Replace with your desired release name
         draft: false
         prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Upload Release Asset
       uses: actions/upload-release-asset@v1
