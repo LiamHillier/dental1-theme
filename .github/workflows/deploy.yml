@@ -27,6 +27,7 @@ jobs:
       run: npm run bundle  # replace with your actual command if different
 
     - name: Create Release
+      id: create_release  # This ID is used to reference the step's outputs
       uses: actions/create-release@v1
       with:
         tag_name: v1.0.0  # Replace with your desired tag name
@@ -41,7 +42,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./path/to/your/bundle.zip  # path to the file or directory you want to upload
-        asset_name: bundle.zip  # name of the asset as it will appear in the release
+        upload_url: ${{ steps.create_release.outputs.upload_url }}  # Reference the output from the create release step
+        asset_path: ./dental1.zip  # path to the file or directory you want to upload
+        asset_name: dental1.zip  # name of the asset as it will appear in the release
         asset_content_type: application/zip
