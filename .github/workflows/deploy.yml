@@ -57,6 +57,10 @@ jobs:
         sudo apt-get install p7zip-full
         7z x dental1.zip -o./extracted
 
+    - name: Find and Replace Text
+      run: |
+        find ./extracted -type f -exec sed -i 's|wp-content/themes/dental1/theme|wp-content/themes/dental1|g' {} +
+
     - name: Upload to Server via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
