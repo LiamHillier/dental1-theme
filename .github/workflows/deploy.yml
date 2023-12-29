@@ -53,7 +53,7 @@ jobs:
 
     - name: Download and Extract Zip File
       run: |
-        wget https://github.com/${{ github.repository }}/releases/download/${{ steps.create_release.outputs.tag_name }}/dental1.zip
+        wget https://github.com/${{ github.repository }}/releases/download/${{ env.TAG_NAME }}/dental1.zip
         unzip dental1.zip -d ./extracted
 
     - name: Upload to Server via FTP
