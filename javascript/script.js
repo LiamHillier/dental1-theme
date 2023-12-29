@@ -495,35 +495,12 @@ locations.forEach(function (location) {
 		// Add active class to the clicked marker
 		el.classList.add('marker-active');
 		var coords = location.coords;
-		positionDetailsElement(coords);
+
 		isCycling = false;
 		clearTimeout(popupCycleInterval);
 		updateLocationDetails(location.message);
 	});
 });
-
-function positionDetailsElement(coords) {
-	var mapCanvas = map.getCanvasContainer();
-	var pos = map.project(new mapboxgl.LngLat(coords[0], coords[1]));
-
-	var detailsElement = document.getElementById('location-details');
-	detailsElement.style.position = 'absolute';
-
-	// Calculate the left position by adding an offset to the marker's x-coordinate
-	var leftPosition = pos.x; // 20px as an example offset; adjust as needed
-	var topPosition = pos.y + 200; // 20px as an example offset; adjust as needed
-
-	// Ensure the details element is not too close to the right edge of the screen
-	var rightBoundary =
-		mapCanvas.offsetWidth -
-		parseFloat(getComputedStyle(document.documentElement).fontSize) * 5; // 5rem from the right edge
-	if (leftPosition + detailsElement.offsetWidth > rightBoundary) {
-		leftPosition = rightBoundary - detailsElement.offsetWidth;
-	}
-
-	detailsElement.style.right = 'calc(5rem + 10vw)';
-	detailsElement.style.top = topPosition + 'px'; // Align vertically with the marker
-}
 
 function updateLocationDetails(locationName) {
 	var details = locationDetails2[locationName];
@@ -582,7 +559,6 @@ function cyclePopups() {
 
 	// Update the location details and position them
 	updateLocationDetails(location.message);
-	positionDetailsElement(location.coords);
 
 	// Increment the index for the next cycle
 	currentPopupIndex++;

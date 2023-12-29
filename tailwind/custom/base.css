@@ -235,40 +235,40 @@ h2 {
 	@apply text-left;
 }
 .gform_wrapper .gfield {
-	@apply my-4;
+	@apply !my-4;
 }
 .gform_wrapper .gfield_label {
-	@apply text-left text-base;
+	@apply !text-left !text-base;
 }
 .ginput_container {
-	@apply mt-2;
+	@apply !mt-2;
 }
 .gform_wrapper .gform-grid-col {
-	@apply flex flex-col gap-1;
+	@apply !flex !flex-col !gap-1;
 }
 .gform_wrapper fieldset span:last-of-type {
-	@apply mt-4;
+	@apply !mt-4;
 }
 .gform_wrapper input {
-	@apply w-full rounded-full px-5 py-3 placeholder:text-gray-500 border border-gray-300 text-sm;
+	@apply !w-full !rounded-full !px-5 !py-3 placeholder:!text-gray-500 !border !border-gray-300 !text-sm;
 }
 .gform_wrapper textarea {
-	@apply rounded-3xl placeholder:text-gray-500 border border-gray-300 px-5 py-3 w-full text-sm;
+	@apply !rounded-3xl placeholder:!text-gray-500 !border !border-gray-300 !px-5 !py-3 !w-full !text-sm;
 }
 .hidden_sub_label {
-	@apply hidden;
+	@apply !hidden;
 }
 .gform_required_legend {
-	@apply hidden;
+	@apply !hidden;
 }
 .gform_button {
-	@apply bg-primary text-white inline-block !w-auto !px-6;
+	@apply !bg-primary !text-white !inline-block !w-auto !px-6;
 }
 .ginput_counter {
-	@apply text-xs text-gray-400;
+	@apply !text-xs !text-gray-400;
 }
 .gform_footer {
-	@apply border-t border-gray-300 pt-4;
+	@apply !border-t !border-gray-300 !pt-4;
 }
 
 .name_first input {
@@ -352,13 +352,34 @@ h2 {
 		@apply bg-gray-50 mx-auto;
 	}
 	#location-details {
-		@apply absolute max-w-[400px] mr-20;
+		@apply absolute w-[500px] right-[50%] translate-x-[250px] top-[65%];
 	}
 	#location-details svg {
 		@apply text-primary w-4 h-4;
 	}
+	#location-details img {
+		@apply h-40 min-h-full;
+	}
 	#location-address p {
 		@apply flex-wrap;
+	}
+	.locations-map {
+		@apply max-w-screen-2xl mx-auto;
+	}
+	#location-title {
+		@apply text-lg;
+	}
+	#location-phone,
+	#location-email,
+	#location-address,
+	#address-text {
+		@apply !text-base text-gray-600;
+	}
+}
+
+@screen lg {
+	#location-details {
+		@apply absolute max-w-[500px] !right-20 top-[45%] translate-x-0;
 	}
 }
 .svg {

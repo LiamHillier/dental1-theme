@@ -20,7 +20,7 @@
         </div>
     </div>
 
-    <div class="team mt-12">
+    <div class="team mt-12 max-w-screen-2xl mx-auto">
         <div class="team__viewport">
             <div class="team__container">
                 <div class="team__slide">
