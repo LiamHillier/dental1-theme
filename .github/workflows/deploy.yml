@@ -1,0 +1,46 @@
+name: Create Release and Run NPM Bundle
+
+on:
+  push:
+    branches:
+      - main  # or any other branch you want to trigger the workflow
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'  # specify your Node.js version
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Run NPM Bundle
+      run: npm run bundle  # replace with your actual command if different
+
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
+
+    - name: Upload Release Asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./path/to/your/bundle.zip  # path to the file or directory you want to upload
+        asset_name: bundle.zip  # name of the asset as it will appear in the release
+        asset_content_type: application/zip
