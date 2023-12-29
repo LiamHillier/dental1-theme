@@ -26,12 +26,16 @@ jobs:
     - name: Run NPM Bundle
       run: npm run bundle  # replace with your actual command if different
 
+    - name: Generate Tag Name
+      id: tag_generator
+      run: echo "TAG_NAME=$(date +v%Y%m%d-%H%M%S)" >> $GITHUB_ENV
+
     - name: Create Release
       id: create_release  # This ID is used to reference the step's outputs
       uses: actions/create-release@v1
       with:
-        tag_name: v1.0.0  # Replace with your desired tag name
-        release_name: Release v1.0.0  # Replace with your desired release name
+        tag_name: ${{ env.TAG_NAME }}
+        release_name: Release ${{ env.TAG_NAME }}
         draft: false
         prerelease: false
       env:
