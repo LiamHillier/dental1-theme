@@ -64,5 +64,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./extracted/
-        server-dir: ./public_html/wp-content/themes  # Add this line
+        server-dir: public_html/wp-content/themes/  # Add this line
         # Add other necessary configurations as per your requirement
