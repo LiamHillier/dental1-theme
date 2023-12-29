@@ -52,6 +52,8 @@ jobs:
         asset_content_type: application/zip
 
     - name: Download and Extract Zip File
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Ensure you have this secret set in your repository
       run: |
         wget https://github.com/${{ github.repository }}/releases/download/${{ env.TAG_NAME }}/dental1.zip
         sudo apt-get install p7zip-full
