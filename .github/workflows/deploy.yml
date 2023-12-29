@@ -54,7 +54,8 @@ jobs:
     - name: Download and Extract Zip File
       run: |
         wget https://github.com/${{ github.repository }}/releases/download/${{ env.TAG_NAME }}/dental1.zip
-        unzip dental1.zip -d ./extracted
+        sudo apt-get install p7zip-full
+        7z x dental1.zip -o./extracted
 
     - name: Upload to Server via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -63,5 +64,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./extracted/
-        remote-dir: /public_html/wp-content/themes/dental1/  # Add this line
+        remote-dir: /public_html/wp-content/themes/  # Add this line
         # Add other necessary configurations as per your requirement
