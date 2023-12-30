@@ -54,5 +54,8 @@
 		"wp-env": "wp-env",
 		"watch:browser-sync": "browser-sync start --proxy \"http://localhost:1000/\" --files \"theme\" --no-notify --no-inject-changes"
 	},
-	"prettier": "@wordpress/prettier-config"
+	"prettier": "@wordpress/prettier-config",
+	"dependencies": {
+		"animate.css": "^4.1.1"
+	}
 }

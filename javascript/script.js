@@ -9,6 +9,28 @@
  * https://esbuild.github.io/
  */
 
+document.addEventListener('DOMContentLoaded', () => {
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.remove('animate__initial');
+
+					entry.target.style.animationPlayState = 'running';
+					observer.unobserve(entry.target);
+				}
+			});
+		},
+		{
+			threshold: 0.1, // Adjust as necessary
+		}
+	);
+
+	document.querySelectorAll('.animate__animated').forEach((element) => {
+		observer.observe(element);
+	});
+});
+
 // JavaScript to handle custom dropdown functionality
 const styledSelect = document.getElementById('styled-select');
 const selectText = document.getElementById('select-text');

@@ -16,6 +16,11 @@ body {
 	@apply bg-background font-primary overflow-x-hidden;
 }
 
+.animate__initial {
+	opacity: 0;
+	animation-play-state: paused;
+}
+
 /*------------------*/
 /*--- TYPOGRAPHY ---*/
 /*------------------*/
