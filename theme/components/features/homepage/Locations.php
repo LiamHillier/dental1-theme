@@ -3,19 +3,24 @@
         <div id='geocoder-container' class="hidden"></div>
         <div class="max-w-screen-2xl mx-auto md:flex justify-between items-center md:flex-wrap md:gap-10">
             <div>
-                <header class="flex flex-col items-center gap-2 text-center mb-2">
+                <header class="flex flex-col items-center gap-2 text-center mb-2 ">
                     <div class="w-12 h-12">
                         <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
                     </div>
-                    <p class="text-primary pre-header">Locations</p>
-                    <h2 class="font-semibold">Our clinics across <br><span class="!text-primary">Melbourne</span></h2>
+                    <p class="text-primary pre-header animate__initial animate__animated animate__fadeInUp">Locations
+                    </p>
+                    <h2 class="font-semibold animate__initial animate__animated animate__fadeInUp">Our clinics across
+                        <br><span class="!text-primary">Melbourne</span>
+                    </h2>
                 </header>
                 <div class="flex flex-col items-center gap-2 locations-description">
-                    <p class="text-center">At Dental1.com.au, we are more than just a dental practice; we are your
+                    <p class="text-center animate__initial animate__animated animate__fadeInUp">At Dental1.com.au, we
+                        are
+                        more than just a dental practice; we are your
                         trusted
                         partner
                         in achieving and maintaining a beautiful, healthy smile.</p>
-                    <a href="" class="link mt-4">
+                    <a href="" class="link mt-4 animate__initial animate__animated animate__fadeInUp animate__delay-1s">
                         Book your consult
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -86,22 +91,20 @@
                     </svg>
                     <span id="email-text">info@dental1.com.au</span>
                 </a>
-                <div class="text-sm text-gray-500 hover:text-primary flex gap-4 items-center " id="location-address">
+                <div class="text-sm text-gra 46 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
+                </svg>
 
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="shrink-0 w-4 h-4 mt-1 text-primary">
-                        <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-                    </svg>
-
-                    <p class="text-sm text-gray-600 grow-0"> <span id="address-text">31 Craigieburn Road, Craigieburn
-                        </span>
-                    </p>
-                </div>
+                <p class="text-sm text-gray-600 grow-0"> <span id="address-text">31 Craigieburn Road, Craigieburn
+                    </span>
+                </p>
             </div>
         </div>
-        <div class="flex gap-2 items-center justify-center mt-12">
-            <a href="" class="button secondary">Contact Us</a>
-            <a href="" class="button primary">Book Online</a>
-        </div>
+    </div>
+    <div class="flex gap-2 items-center justify-center mt-12">
+        <a href="" class="button secondary animate__initial animate__animated animate__fadeInUp">Contact Us</a>
+        <a href="" class="button primary animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">Book
+            Online</a>
+    </div>
 
     </div>
     <div class="locations-divider-2">

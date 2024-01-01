@@ -61,7 +61,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
             </div>
         </div>
 
-        <div id="basic-contact-form" class="my-10 mx-5 p-7 bg-white rounded-3xl shadow-3xl text-left bg-white shadow-2xl shadow-teal-500/30 lg:col-span-2 md:mx-0">
+        <div id="basic-contact-form" class="my-10 mx-5 p-7 bg-white rounded-3xl shadow-3xl text-left bg-white shadow-2xl shadow-teal-500/30 lg:col-span-2 md:mx-0 animate__initial animate__animated animate__bounceIn animate__fast">
             <?php echo do_shortcode("[gravityforms id='1' title='false' description='false']"); ?>
         </div>
     </div>

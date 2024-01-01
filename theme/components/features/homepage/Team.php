@@ -1,9 +1,13 @@
 <section id="team" class="bg-white py-12">
     <div class="md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto">
         <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
-            <p class="text-primary pre-header md:text-left">Team</p>
-            <h2 class="font-semibold md:text-left ">Let's meet our <br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl">expert</span>
-                    <span class="md:text-4xl flex flex-col">dentists <svg xmlns="http://www.w3.org/2000/svg" width="238" height="24" viewBox="0 0 238 24" fill="none" class="hidden md:block w-32 float-right">
+            <p class="text-primary pre-header md:text-left animate__initial animate__animated animate__fadeInUp">
+                Team</p>
+            <h2 class="font-semibold md:text-left animate__initial animate__animated animate__fadeInUp">
+                Let's
+                meet our<br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl  ">expert</span>
+                    <span class="md:text-4xl flex flex-col ">dentists
+                        <svg xmlns="http://www.w3.org/2000/svg" width="238" height="24" viewBox="0 0 238 24" fill="none" class="hidden md:block w-32 float-right">
                             <path d="M232.958 18.4731C232.958 18.4731 87.458 -10.3269 5.95801 17.4731" stroke="#08A39A" stroke-width="10" stroke-linecap="round" />
                         </svg></span></span>
             </h2>
@@ -23,7 +27,7 @@
     <div class="team mt-12 max-w-screen-2xl mx-auto">
         <div class="team__viewport">
             <div class="team__container">
-                <div class="team__slide">
+                <div class="team__slide animate__initial animate__animated animate__fadeInUp">
                     <div class="slide-content">
                         <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
                         <div>
@@ -33,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide">
+                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">
                     <div class="slide-content">
                         <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
                         <div>
@@ -43,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide">
+                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_4s">
                     <div class="slide-content">
                         <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
                         <div>
@@ -53,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide">
+                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_8s">
                     <div class="slide-content">
                         <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
                         <div>
@@ -63,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide">
+                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="slide-content">
                         <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
                         <div>
@@ -73,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide">
+                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1_2s">
                     <div class="slide-content">
                         <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
                         <div>
@@ -83,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide">
+                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1_4s">
                     <div class="slide-content">
                         <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
                         <div>
@@ -97,7 +101,8 @@
         </div>
     </div>
     <div class="flex justify-center mt-16">
-        <a class="button secondary">View all</a>
+        <a class="button secondary animate__initial animate__animated animate__fadeInUp animate__delay-2s">View
+            all</a>
     </div>
     <div class="mx-5 md:mx-20 border-b border-neutral-300 mt-10" />
 </section>

@@ -439,3 +439,27 @@ h2 {
 .mapboxgl-popup-close-button {
 	@apply hidden;
 }
+.animate__delay-0_2s {
+	animation-delay: 200ms !important;
+}
+.animate__delay-0_4s {
+	animation-delay: 400ms !important;
+}
+.animate__delay-0_6s {
+	animation-delay: 600ms !important;
+}
+.animate__delay-0_8s {
+	animation-delay: 800ms !important;
+}
+.animate__delay-1_2s {
+	animation-delay: 1.2s !important;
+}
+.animate__delay-1_4s {
+	animation-delay: 1.4s !important;
+}
+.animate__delay-1_6s {
+	animation-delay: 1.6s !important;
+}
+.animate__delay-1_8s {
+	animation-delay: 1.8s !important;
+}
