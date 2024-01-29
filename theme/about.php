@@ -23,7 +23,7 @@ get_header();
                 in
                 Australia,
                 starting with our home state of Victoria.</p>
-            <p class=" animate__initial  animate__animated animate__fadeInUp">Cost has long been sighted as the number
+            <p class=" animate__initial  animate__animated animate__fadeIn">Cost has long been sighted as the number
                 one reason people avoid visiting the dentist. At Dental One we
                 aim
                 to remove this obstacle and usher in a new wave of Affordable Dental Care for all. You can expect the
