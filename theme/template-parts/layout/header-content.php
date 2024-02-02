@@ -30,7 +30,7 @@ $logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-
 	</nav>
 
 	<div class="logo h-20 flex justify-center">
-		<?php echo $logo; ?>
+		<a href="/"><?php echo $logo; ?></a>
 	</div>
 
 	<nav id="site-navigation" aria-label="<?php esc_attr_e('Main Right  Navigation', 'dental1'); ?>" class="hidden md:block">
