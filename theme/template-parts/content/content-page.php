@@ -11,19 +11,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="entry-header">
-		<?php
-		if ( ! is_front_page() ) {
-			the_title( '<h1 class="entry-title">', '</h1>' );
-		} else {
-			the_title( '<h2 class="entry-title">', '</h2>' );
-		}
-		?>
-	</header><!-- .entry-header -->
-
 	<?php dental1_post_thumbnail(); ?>
 
-	<div <?php dental1_content_class( 'entry-content' ); ?>>
+	<div  class="max-w-screen-2xl mx-auto px-5 md:px-20" <?php dental1_content_class( 'entry-content' ); ?>
 		<?php
 		the_content();
 
