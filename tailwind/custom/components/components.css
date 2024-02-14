@@ -43,7 +43,7 @@
 /*--- Buttons ---*/
 /*---------------------*/
 .button {
-	@apply rounded-full py-3 px-6 font-semibold text-center border-2 ease-in-out duration-300 inline-block;
+	@apply rounded-full py-3 px-6 font-semibold text-center border ease-in-out duration-300 inline-block lowercase;
 }
 .button.primary {
 	@apply bg-primary text-white hover:text-primary hover:bg-transparent border-primary;
@@ -51,6 +51,12 @@
 .button.secondary {
 	@apply bg-neutral-600 text-white hover:text-neutral-600 hover:bg-transparent border-neutral-600;
 }
+.button.alt {
+	@apply border-black;
+}
+.button.alt:hover {
+	@apply border-primary bg-primary text-white;
+ }
 /*---------------------*/
 /*--- Links ---*/
 /*---------------------*/
@@ -201,7 +207,7 @@
 	min-width: 0;
 }
 .embla__dots {
-	@apply max-w-screen-2xl mx-auto py-4 px-5 md:px-20 flex flex-col gap-3 absolute bottom-[50%] right-0;
+	@apply max-w-screen-2xl mx-auto py-4 px-5 md:px-20 flex flex-col gap-3 absolute bottom-[120px] md:bottom-[50%] right-0;
 }
 .embla__dot {
 	@apply p-2 w-full h-full flex items-center justify-center cursor-pointer;
@@ -216,9 +222,9 @@
 	@apply bg-primary ;
 }
 .embla__dot .slide-number {
-	@apply absolute left-2 font-bold;
+	@apply absolute -left-12 md:left-2 font-bold text-white md:text-black;
 }
 .embla__dot .dot-line {
-	@apply absolute w-10 h-[1px] bg-black;
+	@apply absolute w-10 h-[1px] bg-white md:bg-black;
 	left: calc(50% - 60px);
 }

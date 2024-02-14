@@ -6,9 +6,23 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
 <div class="embla relative">
     <div class="embla__container max-h-[1000px] ">
         <div class="embla__slide">
-            <div class="relative flex flex-col justify-between items-center gap-10 h-full  overflow-hidden">
-            <div class="bg-gradient-to-t from-transparent to-gray-200 h-[180px] w-full absolute top-0 left-0 z-10"></div>
-                <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/DentalOne-23227-scaled-e1698358364346-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-23227-scaled-e1698358364346-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-23227-scaled-e1698358364346-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-23227-scaled-e1698358364346-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-23227-scaled-e1698358364346-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-23227-scaled-e1698358364346-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/DentalOne-23227-scaled-e1698358364346.jpg" alt="Dental One Hero" width="1708" height="1132" class=" object-cover absolute top-0 left-0 w-full h-full" />
+            <div class="relative flex flex-col justify-center items-start gap-10 h-full  overflow-hidden pb-40">
+                <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
+                <img  srcset="/wp-content/themes/dental1/theme/assets/images/hero/hero-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1600w.avif 1600w"
+  sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px"
+  src="/wp-content/themes/dental1/theme/assets/images/hero/hero-1.jpg"
+  alt="Dental One Hero"
+  width="1708"
+  height="1132" class=" object-cover absolute top-0 left-0 w-full h-full" />
+                <div class="relative z-20 w-full max-w-screen-2xl mx-auto py-4 px-5 md:px-20">
+                    <h1 class="hero-text-large font-black text-primary text-center md:text-left">The Smile<br/> You Deserve</h1>
+                    <p class="text-black max-w-lg pl-2 mt-2 text-xl mx-auto md:ml-0 text-center md:text-left">Experience dental excellence where your comfort and health are our top priorities. With state-of-the-art technology and compassionate care to provide you with unparalleled dental services.</p>
+                    <div class="flex gap-4 items-center mt-6 justify-center md:justify-start">
+                    <a href="/services" class="button primary">book appointment</a>
+                    <a href="/services" class="button alt">our services</a>
+                    </div>
+                   
+                </div>
             </div>
         </div>
         <div class="embla__slide">
@@ -87,8 +101,8 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                 <text fill="#08A39A" letter-spacing="1" font-size="8" y="65">
                     <textPath xlink:href="#circlePath" startOffset="0%">SCROLL DOWN</textPath>
                 </text>
-                <circle cx="130" cy="85" r="3" fill="#fff" />
-                <text fill="#fff" letter-spacing="1" font-size="8" y="65">
+                <circle cx="130" cy="85" r="3" fill="#000" />
+                <text fill="#000" letter-spacing="1" font-size="8" y="65">
                     <textPath xlink:href="#circlePath" startOffset="50%">SCROLL DOWN</textPath>
                 </text>
                 <circle cx="70" cy="115" r="3" fill="#08A39A" />
