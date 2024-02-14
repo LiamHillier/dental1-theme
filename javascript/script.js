@@ -714,3 +714,60 @@ const emblaNode = document.querySelector('.embla');
 const options = { loop: false };
 
 const emblaApi = EmblaCarousel(emblaNode, options);
+const dotsContainer = document.querySelector('.embla__dots');
+
+const setupDots = () => {
+	const slides = emblaApi.slideNodes();
+	const dotsFragment = document.createDocumentFragment();
+
+	slides.forEach((slide, index) => {
+		const dot = document.createElement('button');
+		dot.className = 'embla__dot';
+
+		// Create the slide number element
+		const slideNumber = document.createElement('span');
+		slideNumber.className = 'slide-number';
+		slideNumber.textContent = `0${index + 1}`; // Slide index is 0-based; add 1 for display
+		dot.appendChild(slideNumber);
+
+		// Create the inner div
+		const dotInner = document.createElement('div');
+		dotInner.className = 'dot-inner';
+		dot.appendChild(dotInner);
+
+		// Create the dot-line element
+		const dotLine = document.createElement('div');
+		dotLine.className = 'dot-line';
+		dot.appendChild(dotLine);
+
+		dot.addEventListener('click', () => emblaApi.scrollTo(index));
+		dotsFragment.appendChild(dot);
+	});
+
+	dotsContainer.appendChild(dotsFragment);
+	updateDots(); // This will initially set the correct state
+};
+
+const updateDots = () => {
+	const dots = dotsContainer.querySelectorAll('.embla__dot');
+	const selectedIndex = emblaApi.selectedScrollSnap();
+
+	dots.forEach((dot, index) => {
+		const isActive = index === selectedIndex;
+		dot.classList.toggle('is-active', isActive);
+
+		// Find the slide number and dot-line within the dot
+		const slideNumber = dot.querySelector('.slide-number');
+		const dotLine = dot.querySelector('.dot-line');
+
+		// Update visibility based on active state
+		slideNumber.style.display = isActive ? 'inline-block' : 'none';
+		dotLine.style.display = isActive ? 'block' : 'none';
+	});
+};
+
+// Use `emblaApi.on('select', updateDots)` instead of `embla.on('select', updateDots)`
+emblaApi.on('select', updateDots);
+
+// Don't forget to call `setupDots` to initialize the dots after defining it
+setupDots();
