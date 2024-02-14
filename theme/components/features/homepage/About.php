@@ -1,7 +1,7 @@
 <?php
 $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-badge.svg');
 ?>
-<section id="about" class="text-center relative pb-0 ">
+<section id="about" class="text-center relative pb-0 !mt-[100px] bg-gray-100">
     <div class="max-w-screen-2xl mx-auto relative">
         <div class="bg-primary rounded-full w-[65vw] h-[65vw] absolute bottom-2 -left-52 md:max-w-[900px]  md:max-h-[900px]">
         </div>
@@ -24,7 +24,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
             <a href="/book-online" class="button primary mt-6 animate__initial animate__animated animate__fadeInUp">Book
                 Online</a>
         </header>
-        <div class="relative mt-10">
+        <div class="relative">
             <div class="relative z-10">
                 <img srcset="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw] md:-ml-16  md:max-w-[1368px]" />
                 <div class="w-24 h-24 md:w-[16vw] md:h-[16vw] md:max-w-[170px] absolute right-16 md:left-[200px] lg:left-[400px] top-[50%] translate-y-[-50%] animate__animated animate__bounceIn animate__slow">

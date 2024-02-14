@@ -11,9 +11,7 @@
 /*---------------------*/
 /*--- HEADER STYLES ---*/
 /*---------------------*/
-.admin-bar #masthead {
-	margin-top: 32px;
-}
+
 #site-navigation a {
 	@apply text-black whitespace-nowrap;
 }
@@ -21,16 +19,24 @@
 	@apply w-full;
 }
 #site-navigation ul {
-	@apply flex items-center;
+	@apply flex items-center gap-6;
 }
 .logo svg {
 	@apply h-20;
 }
 #site-navigation .feature-button a {
-	@apply text-white !w-[124px] whitespace-nowrap;
+	@apply text-white lowercase;
 }
 #site-navigation .feature-button {
-	@apply bg-primary text-white py-4 px-5 rounded-full !w-[124px];
+	@apply bg-primary text-white py-4 px-7 rounded-full  flex items-center justify-center fill-white gap-2;
+}
+#site-navigation .feature-button::before {
+	content: '';
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iI2ZmZiIgY2xhc3M9InctNiBoLTYiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTYuNzUgM3YyLjI1TTE3LjI1IDN2Mi4yNU0zIDE4Ljc1VjcuNWEyLjI1IDIuMjUgMCAwIDEgMi4yNS0yLjI1aDEzLjVBMi4yNSAyLjI1IDAgMCAxIDIxIDcuNXYxMS4yNW0tMTggMEEyLjI1IDIuMjUgMCAwIDAgNS4yNSAyMWgxMy41QTIuMjUgMi4yNSAwIDAgMCAyMSAxOC43NW0tMTggMHYtNy41QTIuMjUgMi4yNSAwIDAgMSA1LjI1IDloMTMuNUEyLjI1IDIuMjUgMCAwIDEgMjEgMTEuMjV2Ny41bS05LTZoLjAwOHYuMDA4SDEydi0uMDA4Wk0xMiAxNWguMDA4di4wMDhIMTJWMTVabTAgMi4yNWguMDA4di4wMDhIMTJ2LS4wMDhaTTkuNzUgMTVoLjAwOHYuMDA4SDkuNzVWMTVabTAgMi4yNWguMDA4di4wMDhIOS43NXYtLjAwOFpNNy41IDE1aC4wMDh2LjAwOEg3LjVWMTVabTAgMi4yNWguMDA4di4wMDhINy41di0uMDA4Wm02Ljc1LTQuNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTAgMi4yNWguMDA4di4wMDhoLS4wMDhWMTVabTAgMi4yNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTIuMjUtNC41aC4wMDh2LjAwOEgxNi41di0uMDA4Wm0wIDIuMjVoLjAwOHYuMDA4SDE2LjVWMTVaIiAvPgo8L3N2Zz4K");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 24px;
+	height: 24px;
 }
 
 /*---------------------*/
@@ -181,4 +187,16 @@
 }
 #select-text {
 	@apply flex gap-2 items-center;
+}
+
+/* EMBLA */
+.embla {
+	overflow: hidden;
+}
+.embla__container {
+	display: flex;
+}
+.embla__slide {
+	flex: 0 0 100%;
+	min-width: 0;
 }

@@ -43,7 +43,7 @@
     <?php wp_body_open(); ?>
 
 
-    <div id="page" class="overflow-x-hidden">
+    <div id="page" class="">
         <a href="#content" class="sr-only"><?php esc_html_e('Skip to content', 'dental1'); ?></a>
 
         <?php get_template_part('template-parts/layout/header', 'content'); ?>

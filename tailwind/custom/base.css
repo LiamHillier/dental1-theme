@@ -13,7 +13,7 @@
 */
 
 body {
-	@apply bg-background font-primary overflow-x-hidden;
+	@apply bg-gray-200 font-primary overflow-x-hidden;
 }
 
 .animate__initial {

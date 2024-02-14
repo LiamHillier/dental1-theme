@@ -696,3 +696,21 @@ function setActiveMarker(marker) {
 		console.error('Invalid marker object:', marker);
 	}
 }
+
+window.addEventListener('scroll', function () {
+	var header = document.getElementById('masthead');
+	if (window.scrollY > 50) {
+		header.classList.add('bg-white');
+		header.classList.remove('bg-transparent');
+	} else {
+		header.classList.add('bg-transparent');
+		header.classList.remove('bg-white');
+	}
+});
+
+import EmblaCarousel from 'embla-carousel';
+
+const emblaNode = document.querySelector('.embla');
+const options = { loop: false };
+
+const emblaApi = EmblaCarousel(emblaNode, options);

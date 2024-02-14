@@ -9,7 +9,7 @@ get_header();
 ?>
 
 
-<main id="main">
+<main id="main" class="">
 
     <?php
     get_template_part('components/features/homepage/hero/Hero');
