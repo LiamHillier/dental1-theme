@@ -101,8 +101,8 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                 <text fill="#08A39A" letter-spacing="1" font-size="8" y="65">
                     <textPath xlink:href="#circlePath" startOffset="0%">SCROLL DOWN</textPath>
                 </text>
-                <circle cx="130" cy="85" r="3" fill="#000" />
-                <text fill="#000" letter-spacing="1" font-size="8" y="65">
+                <circle cx="130" cy="85" r="3" fill="#fff" />
+                <text fill="#fff" letter-spacing="1" font-size="8" y="65">
                     <textPath xlink:href="#circlePath" startOffset="50%">SCROLL DOWN</textPath>
                 </text>
                 <circle cx="70" cy="115" r="3" fill="#08A39A" />

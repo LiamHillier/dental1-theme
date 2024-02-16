@@ -8,7 +8,7 @@
 get_header();
 ?>
 
-<main id="main" class="bg-background">
+<main id="main" class="bg-gray-100">
     <?php get_template_part('components/features/about/Hero'); ?>
     <div class="relative">
         <section id="about" class="text-center max-w-screen-2xl mx-auto px-5 md:px-20  pb-[240px] mt-20 md:mt-0">

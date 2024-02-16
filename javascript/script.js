@@ -374,25 +374,27 @@ function updateSelectText(optionId) {
 	selectText.innerHTML = content.svg + content.text;
 }
 
-// Event listener to toggle dropdown
-styledSelect.addEventListener('click', toggleDropdown);
+if (styledSelect) {
+	// Event listener to toggle dropdown
+	styledSelect.addEventListener('click', toggleDropdown);
 
-// Event listeners for options
-['childrens-dentistry', 'cosmetic-dentistry'].forEach((optionId) => {
-	const option = document.getElementById(optionId);
-	option.addEventListener('click', function (e) {
-		e.preventDefault();
-		toggleDropdown();
-		updateServiceContent(optionId);
-		updateSelectText(optionId);
+	// Event listeners for options
+	['childrens-dentistry', 'cosmetic-dentistry'].forEach((optionId) => {
+		const option = document.getElementById(optionId);
+		option.addEventListener('click', function (e) {
+			e.preventDefault();
+			toggleDropdown();
+			updateServiceContent(optionId);
+			updateSelectText(optionId);
+		});
 	});
-});
 
-// Initialize with default content
-document.addEventListener('DOMContentLoaded', () => {
-	updateServiceContent('childrens-dentistry');
-	updateSelectText('childrens-dentistry');
-});
+	// Initialize with default content
+	document.addEventListener('DOMContentLoaded', () => {
+		updateServiceContent('childrens-dentistry');
+		updateSelectText('childrens-dentistry');
+	});
+}
 
 const locationList = document.getElementById('location-list');
 const locationDetails = document.getElementById('location-details');
@@ -401,299 +403,316 @@ const locationPhone = document.getElementById('location-phone');
 const locationEmail = document.getElementById('location-email');
 const locationAddress = document.getElementById('location-address');
 
-// Make the first <li> element active by default
-const firstLi = locationList.querySelector('li');
-firstLi.classList.add('active');
+if (locationList) {
+	// Make the first <li> element active by default
+	const firstLi = locationList.querySelector('li');
+	firstLi.classList.add('active');
 
-locationList.addEventListener('click', function (event) {
-	if (event.target.tagName === 'LI') {
-		// Remove "active" class from all <li> elements
-		const liElements = locationList.querySelectorAll('li');
-		liElements.forEach((li) => {
-			li.classList.remove('active');
-		});
+	locationList.addEventListener('click', function (event) {
+		if (event.target.tagName === 'LI') {
+			// Remove "active" class from all <li> elements
+			const liElements = locationList.querySelectorAll('li');
+			liElements.forEach((li) => {
+				li.classList.remove('active');
+			});
 
-		// Add "active" class to the clicked <li> element
-		event.target.classList.add('active');
+			// Add "active" class to the clicked <li> element
+			event.target.classList.add('active');
 
-		locationTitle.textContent =
-			'Dental one in ' + event.target.getAttribute('data-title');
-		locationPhone.href = 'tel:' + event.target.getAttribute('data-phone');
-		locationPhone.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mt-1 text-primary">
+			locationTitle.textContent =
+				'Dental one in ' + event.target.getAttribute('data-title');
+			locationPhone.href =
+				'tel:' + event.target.getAttribute('data-phone');
+			locationPhone.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mt-1 text-primary">
                     <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.970c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clip-rule="evenodd" />
                 </svg> ${event.target.getAttribute('data-phone')}`;
-		locationEmail.href =
-			'mailto:' + event.target.getAttribute('data-email');
-		locationEmail.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mt-1 text-primary">
+			locationEmail.href =
+				'mailto:' + event.target.getAttribute('data-email');
+			locationEmail.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mt-1 text-primary">
                     <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                     <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                 </svg> ${event.target.getAttribute('data-email')}`;
-		locationAddress.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mt-1 text-primary">
+			locationAddress.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mt-1 text-primary">
                     <path fill-rule="evenodd" d="M11.54 22.351l.07.04.028.016a.76.76 0 00.723 0l.028-.015.071-.041a16.975 16.975 0 001.144-.742 19.58 19.58 0 002.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 00-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 002.682 2.282 16.975 16.975 0 001.145.742zM12 13.5a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
                 </svg> ${event.target.getAttribute('data-address')}`;
-	}
-});
+		}
+	});
+}
 
 const OPTIONS = { slidesToScroll: 'auto', containScroll: 'trimSnaps' };
 
 const teamNode = document.querySelector('.team');
-const viewportNode = teamNode.querySelector('.team__viewport');
 
-// @ts-ignore
-const teamApi = EmblaCarousel(viewportNode, OPTIONS);
+if (teamNode) {
+	const viewportNode = teamNode.querySelector('.team__viewport');
 
-// Grab button nodes
-const prevButtonNode = document.querySelector('.team__prev');
-const nextButtonNode = document.querySelector('.team__next');
+	// @ts-ignore
+	const teamApi = EmblaCarousel(viewportNode, OPTIONS);
 
-prevButtonNode.addEventListener('click', teamApi.scrollPrev, false);
-nextButtonNode.addEventListener('click', teamApi.scrollNext, false);
+	// Grab button nodes
+	const prevButtonNode = document.querySelector('.team__prev');
+	const nextButtonNode = document.querySelector('.team__next');
 
-mapboxgl.accessToken =
-	'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
-var map = new mapboxgl.Map({
-	container: 'map', // The id of the map container
-	style: 'mapbox://styles/liamtsa/clqhfvanb000i01pm5bsu38be', // Using the light theme style
-	center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
-	zoom: 8.5, // Initial zoom level,
-	dragPan: false,
-});
-
-var currentOpenPopup = null; // Global variable to keep track of the open popup
-
-// After the map has been initialized and loaded
-map.on('load', function () {
-	// Disable all of the following interactions:
-	map.boxZoom.disable(); // Disable box zoom
-	map.scrollZoom.disable(); // Disable scroll zoom
-	map.dragPan.disable(); // Disable drag pan
-	map.dragRotate.disable(); // Disable drag rotate
-	map.keyboard.disable(); // Disable keyboard
-	map.doubleClickZoom.disable(); // Disable double click zoom
-	map.touchZoomRotate.disable(); // Disable touch zoom rotate
-});
-// List of coordinates and messages for each location
-var locations = [
-	{ coords: [144.91196, -37.74778], message: 'Essendon' },
-	{ coords: [144.93931, -37.599], message: 'Craigieburn' },
-	{ coords: [145.10872, -37.77277], message: 'Lower Templestowe' },
-	{ coords: [145.004395, -37.621441], message: 'Epping' },
-	{ coords: [145.01091, -37.81175], message: 'Richmond' },
-	{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
-];
-
-var locationDetails2 = {};
-var locationElements = document.querySelectorAll('#location-list li');
-locationElements.forEach(function (elem) {
-	var title = elem.getAttribute('data-title');
-	locationDetails2[title] = {
-		phone: elem.getAttribute('data-phone'),
-		address: elem.getAttribute('data-address'),
-		email: elem.getAttribute('data-email'),
-	};
-});
-
-locations.forEach(function (location) {
-	// Create a marker element
-	var el = document.createElement('div');
-	el.className = 'marker';
-
-	// Create a popup
-	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } }).setText(
-		location.message
-	);
-
-	// Create and store the Mapbox marker object
-	location.marker = new mapboxgl.Marker(el)
-		.setLngLat(location.coords)
-		.setPopup(popup)
-		.addTo(map);
-
-	el.addEventListener('click', function () {
-		// Remove active class from all markers
-		document.querySelectorAll('.marker').forEach(function (markerEl) {
-			markerEl.classList.remove('marker-active');
-		});
-		// Add active class to the clicked marker
-		el.classList.add('marker-active');
-		var coords = location.coords;
-
-		isCycling = false;
-		clearTimeout(popupCycleInterval);
-		updateLocationDetails(location.message);
-	});
-});
-
-function updateLocationDetails(locationName) {
-	var details = locationDetails2[locationName];
-
-	if (details) {
-		document.getElementById('location-title').innerText =
-			'Dental one in ' + locationName;
-		document.getElementById('phone-text').innerText = details.phone;
-		document.getElementById('email-text').innerText = details.email;
-		document.getElementById('address-text').innerText = details.address;
-	} else {
-		console.log('Details not found for location:', locationName);
-	}
+	prevButtonNode.addEventListener('click', teamApi.scrollPrev, false);
+	nextButtonNode.addEventListener('click', teamApi.scrollNext, false);
 }
+const locationsContainer = document.querySelector('#locations');
 
-map.on('style.load', function () {
-	var waterLayerIds = map
-		.getStyle()
-		.layers.filter(function (layer) {
-			return (
-				layer['type'] === 'fill' && layer['source-layer'] === 'water'
-			);
-		})
-		.map(function (layer) {
-			return layer.id;
-		});
-
-	waterLayerIds.forEach(function (id) {
-		map.setPaintProperty(id, 'fill-color', '#f3f4f6');
-	});
-});
-var isCycling = true;
-var currentPopupIndex = 0;
-var popupCycleInterval;
-var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
-
-function cyclePopups() {
-	// Check if it's the end of the locations array and reset if necessary
-	if (currentPopupIndex >= locations.length) {
-		currentPopupIndex = 0;
-	}
-
-	var location = locations[currentPopupIndex];
-	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } })
-		.setLngLat(location.coords)
-		.setText(location.message)
-		.addTo(map);
-
-	document.querySelectorAll('.marker').forEach(function (markerEl, index) {
-		if (index === currentPopupIndex) {
-			markerEl.classList.add('marker-active');
-		} else {
-			markerEl.classList.remove('marker-active');
-		}
+if (locationsContainer) {
+	mapboxgl.accessToken =
+		'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
+	var map = new mapboxgl.Map({
+		container: 'map', // The id of the map container
+		style: 'mapbox://styles/liamtsa/clqhfvanb000i01pm5bsu38be', // Using the light theme style
+		center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
+		zoom: 8.5, // Initial zoom level,
+		dragPan: false,
 	});
 
-	// Update the location details and position them
-	updateLocationDetails(location.message);
+	var currentOpenPopup = null; // Global variable to keep track of the open popup
 
-	// Increment the index for the next cycle
-	currentPopupIndex++;
-
-	// Schedule the next cycle
-	popupCycleInterval = setTimeout(function () {
-		popup.remove(); // Remove the current popup
-		cyclePopups(); // Continue cycling
-	}, cycleDuration);
-}
-
-// Start the cycling when ready
-cyclePopups();
-
-function geocodeAddress(address, callback) {
-	// Southwest corner (longitude, latitude) and Northeast corner (longitude, latitude) of Melbourne
-	var melbourneBbox = [
-		144.593741856, -38.433859306, 145.512528832, -37.5112737225,
+	// After the map has been initialized and loaded
+	map.on('load', function () {
+		// Disable all of the following interactions:
+		map.boxZoom.disable(); // Disable box zoom
+		map.scrollZoom.disable(); // Disable scroll zoom
+		map.dragPan.disable(); // Disable drag pan
+		map.dragRotate.disable(); // Disable drag rotate
+		map.keyboard.disable(); // Disable keyboard
+		map.doubleClickZoom.disable(); // Disable double click zoom
+		map.touchZoomRotate.disable(); // Disable touch zoom rotate
+	});
+	// List of coordinates and messages for each location
+	var locations = [
+		{ coords: [144.91196, -37.74778], message: 'Essendon' },
+		{ coords: [144.93931, -37.599], message: 'Craigieburn' },
+		{ coords: [145.10872, -37.77277], message: 'Lower Templestowe' },
+		{ coords: [145.004395, -37.621441], message: 'Epping' },
+		{ coords: [145.01091, -37.81175], message: 'Richmond' },
+		{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
 	];
-	var geocoder = new MapboxGeocoder({
-		accessToken: mapboxgl.accessToken,
-		mapboxgl: map,
-		marker: false,
-		flyTo: false,
-		countries: 'AU', // Limit search to Australia
-		bbox: melbourneBbox, // Limit search to the Melbourne area
-	});
-	geocoder.addTo('#geocoder-container');
 
-	geocoder.query(address);
-	geocoder.on('result', function (result) {
-		const data = result.result;
-		// Check if the response has a center property
-		if (data && data.center) {
-			var coords = data.center;
-			callback(coords);
-		} else {
-			console.log('No valid location found in geocoding response.');
-		}
+	var locationDetails2 = {};
+	var locationElements = document.querySelectorAll('#location-list li');
+	locationElements.forEach(function (elem) {
+		var title = elem.getAttribute('data-title');
+		locationDetails2[title] = {
+			phone: elem.getAttribute('data-phone'),
+			address: elem.getAttribute('data-address'),
+			email: elem.getAttribute('data-email'),
+		};
 	});
-}
-
-function findClosestMarker(coordinates) {
-	var closestMarker = null;
-	var closestDistance = Infinity;
 
 	locations.forEach(function (location) {
-		var distance = getDistanceBetweenPoints(coordinates, location.coords);
-		if (distance < closestDistance) {
-			closestDistance = distance;
-			closestMarker = location; // Assuming location has a reference to the marker
-		}
-	});
+		// Create a marker element
+		var el = document.createElement('div');
+		el.className = 'marker';
 
-	return closestMarker; // Return the marker object
-}
+		// Create a popup
+		var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } }).setText(
+			location.message
+		);
 
-function getDistanceBetweenPoints(point1, point2) {
-	// Calculate the distance between point1 and point2
-	// Use a simple distance formula or a more complex method like Haversine formula for accuracy
-	// For simplicity:
-	var a = point1[0] - point2[0];
-	var b = point1[1] - point2[1];
+		// Create and store the Mapbox marker object
+		location.marker = new mapboxgl.Marker(el)
+			.setLngLat(location.coords)
+			.setPopup(popup)
+			.addTo(map);
 
-	return Math.sqrt(a * a + b * b);
-}
+		el.addEventListener('click', function () {
+			// Remove active class from all markers
+			document.querySelectorAll('.marker').forEach(function (markerEl) {
+				markerEl.classList.remove('marker-active');
+			});
+			// Add active class to the clicked marker
+			el.classList.add('marker-active');
+			var coords = location.coords;
 
-document
-	.getElementById('address-form')
-	.addEventListener('submit', function (e) {
-		e.preventDefault(); // Prevent the default form submission
-		var address = document.getElementById('address-input').value;
-		geocodeAddress(address, function (coords) {
-			var closestMarker = findClosestMarker(coords);
-			if (closestMarker) {
-				// Stop cycling when search is complete
-				isCycling = false;
-				if (popupCycleInterval) {
-					clearTimeout(popupCycleInterval);
-				}
-				setActiveMarker(closestMarker); // Use the marker object
-			}
+			isCycling = false;
+			clearTimeout(popupCycleInterval);
+			updateLocationDetails(location.message);
 		});
 	});
 
-function setActiveMarker(marker) {
-	// Assuming marker has a property 'message' that corresponds to the location name
+	function updateLocationDetails(locationName) {
+		var details = locationDetails2[locationName];
 
-	var locationName = marker.message;
-
-	// Update the details for the active marker
-	updateLocationDetails(locationName);
-
-	// Close any currently open popups
-	locations.forEach(function (location) {
-		if (location.marker) {
-			var popup = location.marker.getPopup();
-			if (popup) {
-				popup.remove();
-			}
-			if (location.marker.getElement) {
-				location.marker.getElement().classList.remove('marker-active');
-			}
+		if (details) {
+			document.getElementById('location-title').innerText =
+				'Dental one in ' + locationName;
+			document.getElementById('phone-text').innerText = details.phone;
+			document.getElementById('email-text').innerText = details.email;
+			document.getElementById('address-text').innerText = details.address;
+		} else {
+			console.log('Details not found for location:', locationName);
 		}
-	});
+	}
 
-	// Set the active style for the selected marker
-	if (marker.marker && marker.marker.getElement) {
-		marker.marker.getElement().classList.add('marker-active');
-		// Open the popup for the active marker
-		marker.marker.getPopup().addTo(map);
-	} else {
-		console.error('Invalid marker object:', marker);
+	map.on('style.load', function () {
+		var waterLayerIds = map
+			.getStyle()
+			.layers.filter(function (layer) {
+				return (
+					layer['type'] === 'fill' &&
+					layer['source-layer'] === 'water'
+				);
+			})
+			.map(function (layer) {
+				return layer.id;
+			});
+
+		waterLayerIds.forEach(function (id) {
+			map.setPaintProperty(id, 'fill-color', '#f3f4f6');
+		});
+	});
+	var isCycling = true;
+	var currentPopupIndex = 0;
+	var popupCycleInterval;
+	var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
+
+	function cyclePopups() {
+		// Check if it's the end of the locations array and reset if necessary
+		if (currentPopupIndex >= locations.length) {
+			currentPopupIndex = 0;
+		}
+
+		var location = locations[currentPopupIndex];
+		var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } })
+			.setLngLat(location.coords)
+			.setText(location.message)
+			.addTo(map);
+
+		document
+			.querySelectorAll('.marker')
+			.forEach(function (markerEl, index) {
+				if (index === currentPopupIndex) {
+					markerEl.classList.add('marker-active');
+				} else {
+					markerEl.classList.remove('marker-active');
+				}
+			});
+
+		// Update the location details and position them
+		updateLocationDetails(location.message);
+
+		// Increment the index for the next cycle
+		currentPopupIndex++;
+
+		// Schedule the next cycle
+		popupCycleInterval = setTimeout(function () {
+			popup.remove(); // Remove the current popup
+			cyclePopups(); // Continue cycling
+		}, cycleDuration);
+	}
+
+	// Start the cycling when ready
+	cyclePopups();
+
+	function geocodeAddress(address, callback) {
+		// Southwest corner (longitude, latitude) and Northeast corner (longitude, latitude) of Melbourne
+		var melbourneBbox = [
+			144.593741856, -38.433859306, 145.512528832, -37.5112737225,
+		];
+		var geocoder = new MapboxGeocoder({
+			accessToken: mapboxgl.accessToken,
+			mapboxgl: map,
+			marker: false,
+			flyTo: false,
+			countries: 'AU', // Limit search to Australia
+			bbox: melbourneBbox, // Limit search to the Melbourne area
+		});
+		geocoder.addTo('#geocoder-container');
+
+		geocoder.query(address);
+		geocoder.on('result', function (result) {
+			const data = result.result;
+			// Check if the response has a center property
+			if (data && data.center) {
+				var coords = data.center;
+				callback(coords);
+			} else {
+				console.log('No valid location found in geocoding response.');
+			}
+		});
+	}
+
+	function findClosestMarker(coordinates) {
+		var closestMarker = null;
+		var closestDistance = Infinity;
+
+		locations.forEach(function (location) {
+			var distance = getDistanceBetweenPoints(
+				coordinates,
+				location.coords
+			);
+			if (distance < closestDistance) {
+				closestDistance = distance;
+				closestMarker = location; // Assuming location has a reference to the marker
+			}
+		});
+
+		return closestMarker; // Return the marker object
+	}
+
+	function getDistanceBetweenPoints(point1, point2) {
+		// Calculate the distance between point1 and point2
+		// Use a simple distance formula or a more complex method like Haversine formula for accuracy
+		// For simplicity:
+		var a = point1[0] - point2[0];
+		var b = point1[1] - point2[1];
+
+		return Math.sqrt(a * a + b * b);
+	}
+
+	document
+		.getElementById('address-form')
+		.addEventListener('submit', function (e) {
+			e.preventDefault(); // Prevent the default form submission
+			var address = document.getElementById('address-input').value;
+			geocodeAddress(address, function (coords) {
+				var closestMarker = findClosestMarker(coords);
+				if (closestMarker) {
+					// Stop cycling when search is complete
+					isCycling = false;
+					if (popupCycleInterval) {
+						clearTimeout(popupCycleInterval);
+					}
+					setActiveMarker(closestMarker); // Use the marker object
+				}
+			});
+		});
+
+	function setActiveMarker(marker) {
+		// Assuming marker has a property 'message' that corresponds to the location name
+
+		var locationName = marker.message;
+
+		// Update the details for the active marker
+		updateLocationDetails(locationName);
+
+		// Close any currently open popups
+		locations.forEach(function (location) {
+			if (location.marker) {
+				var popup = location.marker.getPopup();
+				if (popup) {
+					popup.remove();
+				}
+				if (location.marker.getElement) {
+					location.marker
+						.getElement()
+						.classList.remove('marker-active');
+				}
+			}
+		});
+
+		// Set the active style for the selected marker
+		if (marker.marker && marker.marker.getElement) {
+			marker.marker.getElement().classList.add('marker-active');
+			// Open the popup for the active marker
+			marker.marker.getPopup().addTo(map);
+		} else {
+			console.error('Invalid marker object:', marker);
+		}
 	}
 }
 
