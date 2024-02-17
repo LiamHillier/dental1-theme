@@ -12,8 +12,20 @@
  * editor.
 */
 
+:root {
+	--global-palette1: rgb(8, 163, 154) !important;
+	--global-palette2: #2B6CB0;
+	--global-palette3: #1A202C;
+	--global-palette4: #2D3748;
+	--global-palette5: #4A5568;
+	--global-palette6: #718096;
+	--global-palette7: #EDF2F7;
+	--global-palette8: #F7FAFC;
+	--global-palette9: #ffffff;
+}
+
 body {
-	@apply bg-gray-200 font-primary overflow-x-hidden;
+	@apply font-primary overflow-x-hidden;
 }
 
 .animate__initial {
@@ -27,6 +39,12 @@ body {
 
 p {
 	@apply text-base text-gray-500;
+}
+
+
+h1 {
+	font-size: clamp(36px, 4vw, 56px);
+	line-height: 1;
 }
 
 h2 {

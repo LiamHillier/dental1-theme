@@ -196,17 +196,17 @@ if ( ! function_exists( 'dental1_post_thumbnail' ) ) :
 		if ( is_singular() ) :
 			?>
 
-			<figure>
-				<?php the_post_thumbnail(); ?>
+			<figure class="w-full h-full object-cover object-center">
+			<?php the_post_thumbnail('post-thumbnail', ['class' => 'w-full h-full object-cover object-center']); ?>
 			</figure><!-- .post-thumbnail -->
 
 			<?php
 		else :
 			?>
 
-			<figure>
+			<figure class="w-full h-full object-cover object-center">
 				<a href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-					<?php the_post_thumbnail(); ?>
+				<?php the_post_thumbnail('post-thumbnail', ['class' => 'w-full h-full object-cover object-center']); ?>
 				</a>
 			</figure>
 

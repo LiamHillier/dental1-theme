@@ -96,6 +96,8 @@ if (!function_exists('dental1_setup')) :
 			)
 		);
 
+		add_theme_support( 'wp-block-styles' );
+
 		// Add theme support for selective refresh for widgets.
 		add_theme_support('customize-selective-refresh-widgets');
 
@@ -107,9 +109,6 @@ if (!function_exists('dental1_setup')) :
 
 		// Add support for responsive embedded content.
 		add_theme_support('responsive-embeds');
-
-		// Remove support for block templates.
-		remove_theme_support('block-templates');
 	}
 endif;
 add_action('after_setup_theme', 'dental1_setup');
@@ -147,53 +146,49 @@ function dental1_scripts()
 		wp_enqueue_script('comment-reply');
 	}
 
-	wp_dequeue_style('wp-block-library');
-	wp_dequeue_style('wp-block-library-theme');
-	wp_dequeue_style('wc-blocks-style'); // Remove WooCommerce block CSS
-
 }
 add_action('wp_enqueue_scripts', 'dental1_scripts');
 
 /**
  * Enqueue the block editor script.
  */
-// function dental1_enqueue_block_editor_script()
-// {
-// 	wp_enqueue_script(
-// 		'dental1-editor',
-// 		get_template_directory_uri() . '/js/block-editor.min.js',
-// 		array(
-// 			'wp-blocks',
-// 			'wp-edit-post',
-// 		),
-// 		DENTAL1_VERSION,
-// 		true
-// 	);
-// }
-// add_action('enqueue_block_editor_assets', 'dental1_enqueue_block_editor_script');
+function dental1_enqueue_block_editor_script()
+{
+	wp_enqueue_script(
+		'dental1-editor',
+		get_template_directory_uri() . '/js/block-editor.min.js',
+		array(
+			'wp-blocks',
+			'wp-edit-post',
+		),
+		DENTAL1_VERSION,
+		true
+	);
+}
+add_action('enqueue_block_editor_assets', 'dental1_enqueue_block_editor_script');
 
 /**
  * Enqueue the script necessary to support Tailwind Typography in the block
  * editor, using an inline script to create a JavaScript array containing the
  * Tailwind Typography classes from DENTAL1_TYPOGRAPHY_CLASSES.
  */
-// function dental1_enqueue_typography_script()
-// {
-// 	if (is_admin()) {
-// 		wp_enqueue_script(
-// 			'dental1-typography',
-// 			get_template_directory_uri() . '/js/tailwind-typography-classes.min.js',
-// 			array(
-// 				'wp-blocks',
-// 				'wp-edit-post',
-// 			),
-// 			DENTAL1_VERSION,
-// 			true
-// 		);
-// 		wp_add_inline_script('dental1-typography', "tailwindTypographyClasses = '" . esc_attr(DENTAL1_TYPOGRAPHY_CLASSES) . "'.split(' ');", 'before');
-// 	}
-// }
-// add_action('enqueue_block_assets', 'dental1_enqueue_typography_script');
+function dental1_enqueue_typography_script()
+{
+	if (is_admin()) {
+		wp_enqueue_script(
+			'dental1-typography',
+			get_template_directory_uri() . '/js/tailwind-typography-classes.min.js',
+			array(
+				'wp-blocks',
+				'wp-edit-post',
+			),
+			DENTAL1_VERSION,
+			true
+		);
+		wp_add_inline_script('dental1-typography', "tailwindTypographyClasses = '" . esc_attr(DENTAL1_TYPOGRAPHY_CLASSES) . "'.split(' ');", 'before');
+	}
+}
+add_action('enqueue_block_assets', 'dental1_enqueue_typography_script');
 
 
 function custom_theme_assets_url()
