@@ -397,7 +397,6 @@ if (styledSelect) {
 }
 
 const locationList = document.getElementById('location-list');
-const locationDetails = document.getElementById('location-details');
 const locationTitle = document.getElementById('location-title');
 const locationPhone = document.getElementById('location-phone');
 const locationEmail = document.getElementById('location-email');
@@ -458,261 +457,251 @@ if (teamNode) {
 }
 const locationsContainer = document.querySelector('#locations');
 
-if (locationsContainer) {
-	mapboxgl.accessToken =
-		'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
-	var map = new mapboxgl.Map({
-		container: 'map', // The id of the map container
-		style: 'mapbox://styles/liamtsa/clqhfvanb000i01pm5bsu38be', // Using the light theme style
-		center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
-		zoom: 8.5, // Initial zoom level,
-		dragPan: false,
+mapboxgl.accessToken =
+	'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
+var map = new mapboxgl.Map({
+	container: 'map', // The id of the map container
+	style: 'mapbox://styles/liamtsa/clqhfvanb000i01pm5bsu38be', // Using the light theme style
+	center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
+	zoom: 8.5, // Initial zoom level,
+	dragPan: false,
+});
+
+var currentOpenPopup = null; // Global variable to keep track of the open popup
+
+// After the map has been initialized and loaded
+map.on('load', function () {
+	// Disable all of the following interactions:
+	map.boxZoom.disable(); // Disable box zoom
+	map.scrollZoom.disable(); // Disable scroll zoom
+	map.dragPan.disable(); // Disable drag pan
+	map.dragRotate.disable(); // Disable drag rotate
+	map.keyboard.disable(); // Disable keyboard
+	map.doubleClickZoom.disable(); // Disable double click zoom
+	map.touchZoomRotate.disable(); // Disable touch zoom rotate
+});
+// List of coordinates and messages for each location
+var locations = [
+	{ coords: [144.91196, -37.74778], message: 'Essendon' },
+	{ coords: [144.93931, -37.599], message: 'Craigieburn' },
+	{ coords: [145.10872, -37.77277], message: 'Lower Templestowe' },
+	{ coords: [145.004395, -37.621441], message: 'Epping' },
+	{ coords: [145.01091, -37.81175], message: 'Richmond' },
+	{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
+];
+
+var locationDetails2 = {};
+var locationElements = document.querySelectorAll('#location-list li');
+locationElements.forEach(function (elem) {
+	var title = elem.getAttribute('data-title');
+	locationDetails2[title] = {
+		phone: elem.getAttribute('data-phone'),
+		address: elem.getAttribute('data-address'),
+		email: elem.getAttribute('data-email'),
+	};
+});
+
+locations.forEach(function (location) {
+	// Create a marker element
+	var el = document.createElement('div');
+	el.className = 'marker';
+
+	// Create a popup
+	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } }).setText(
+		location.message
+	);
+
+	// Create and store the Mapbox marker object
+	location.marker = new mapboxgl.Marker(el)
+		.setLngLat(location.coords)
+		.setPopup(popup)
+		.addTo(map);
+
+	el.addEventListener('click', function () {
+		// Remove active class from all markers
+		document.querySelectorAll('.marker').forEach(function (markerEl) {
+			markerEl.classList.remove('marker-active');
+		});
+		// Add active class to the clicked marker
+		el.classList.add('marker-active');
+		var coords = location.coords;
+
+		isCycling = false;
+		clearTimeout(popupCycleInterval);
+		updateLocationDetails(location.message);
+	});
+});
+
+function updateLocationDetails(locationName) {
+	var details = locationDetails2[locationName];
+
+	if (details) {
+		document.getElementById('location-title').innerText =
+			'Dental one in ' + locationName;
+		document.getElementById('phone-text').innerText = details.phone;
+		document.getElementById('email-text').innerText = details.email;
+		document.getElementById('address-text').innerText = details.address;
+	} else {
+		console.log('Details not found for location:', locationName);
+	}
+}
+
+map.on('style.load', function () {
+	var waterLayerIds = map
+		.getStyle()
+		.layers.filter(function (layer) {
+			return (
+				layer['type'] === 'fill' && layer['source-layer'] === 'water'
+			);
+		})
+		.map(function (layer) {
+			return layer.id;
+		});
+
+	waterLayerIds.forEach(function (id) {
+		map.setPaintProperty(id, 'fill-color', '#f3f4f6');
+	});
+});
+var isCycling = true;
+var currentPopupIndex = 0;
+var popupCycleInterval;
+var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
+
+function cyclePopups() {
+	// Check if it's the end of the locations array and reset if necessary
+	if (currentPopupIndex >= locations.length) {
+		currentPopupIndex = 0;
+	}
+
+	var location = locations[currentPopupIndex];
+	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } })
+		.setLngLat(location.coords)
+		.setText(location.message)
+		.addTo(map);
+
+	document.querySelectorAll('.marker').forEach(function (markerEl, index) {
+		if (index === currentPopupIndex) {
+			markerEl.classList.add('marker-active');
+		} else {
+			markerEl.classList.remove('marker-active');
+		}
 	});
 
-	var currentOpenPopup = null; // Global variable to keep track of the open popup
+	// Update the location details and position them
+	updateLocationDetails(location.message);
 
-	// After the map has been initialized and loaded
-	map.on('load', function () {
-		// Disable all of the following interactions:
-		map.boxZoom.disable(); // Disable box zoom
-		map.scrollZoom.disable(); // Disable scroll zoom
-		map.dragPan.disable(); // Disable drag pan
-		map.dragRotate.disable(); // Disable drag rotate
-		map.keyboard.disable(); // Disable keyboard
-		map.doubleClickZoom.disable(); // Disable double click zoom
-		map.touchZoomRotate.disable(); // Disable touch zoom rotate
-	});
-	// List of coordinates and messages for each location
-	var locations = [
-		{ coords: [144.91196, -37.74778], message: 'Essendon' },
-		{ coords: [144.93931, -37.599], message: 'Craigieburn' },
-		{ coords: [145.10872, -37.77277], message: 'Lower Templestowe' },
-		{ coords: [145.004395, -37.621441], message: 'Epping' },
-		{ coords: [145.01091, -37.81175], message: 'Richmond' },
-		{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
+	// Increment the index for the next cycle
+	currentPopupIndex++;
+
+	// Schedule the next cycle
+	popupCycleInterval = setTimeout(function () {
+		popup.remove(); // Remove the current popup
+		cyclePopups(); // Continue cycling
+	}, cycleDuration);
+}
+
+// Start the cycling when ready
+cyclePopups();
+
+function geocodeAddress(address, callback) {
+	// Southwest corner (longitude, latitude) and Northeast corner (longitude, latitude) of Melbourne
+	var melbourneBbox = [
+		144.593741856, -38.433859306, 145.512528832, -37.5112737225,
 	];
-
-	var locationDetails2 = {};
-	var locationElements = document.querySelectorAll('#location-list li');
-	locationElements.forEach(function (elem) {
-		var title = elem.getAttribute('data-title');
-		locationDetails2[title] = {
-			phone: elem.getAttribute('data-phone'),
-			address: elem.getAttribute('data-address'),
-			email: elem.getAttribute('data-email'),
-		};
+	var geocoder = new MapboxGeocoder({
+		accessToken: mapboxgl.accessToken,
+		mapboxgl: map,
+		marker: false,
+		flyTo: false,
+		countries: 'AU', // Limit search to Australia
+		bbox: melbourneBbox, // Limit search to the Melbourne area
 	});
+	geocoder.addTo('#geocoder-container');
+
+	geocoder.query(address);
+	geocoder.on('result', function (result) {
+		const data = result.result;
+		// Check if the response has a center property
+		if (data && data.center) {
+			var coords = data.center;
+			callback(coords);
+		} else {
+			console.log('No valid location found in geocoding response.');
+		}
+	});
+}
+
+function findClosestMarker(coordinates) {
+	var closestMarker = null;
+	var closestDistance = Infinity;
 
 	locations.forEach(function (location) {
-		// Create a marker element
-		var el = document.createElement('div');
-		el.className = 'marker';
+		var distance = getDistanceBetweenPoints(coordinates, location.coords);
+		if (distance < closestDistance) {
+			closestDistance = distance;
+			closestMarker = location; // Assuming location has a reference to the marker
+		}
+	});
 
-		// Create a popup
-		var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } }).setText(
-			location.message
-		);
+	return closestMarker; // Return the marker object
+}
 
-		// Create and store the Mapbox marker object
-		location.marker = new mapboxgl.Marker(el)
-			.setLngLat(location.coords)
-			.setPopup(popup)
-			.addTo(map);
+function getDistanceBetweenPoints(point1, point2) {
+	// Calculate the distance between point1 and point2
+	// Use a simple distance formula or a more complex method like Haversine formula for accuracy
+	// For simplicity:
+	var a = point1[0] - point2[0];
+	var b = point1[1] - point2[1];
 
-		el.addEventListener('click', function () {
-			// Remove active class from all markers
-			document.querySelectorAll('.marker').forEach(function (markerEl) {
-				markerEl.classList.remove('marker-active');
-			});
-			// Add active class to the clicked marker
-			el.classList.add('marker-active');
-			var coords = location.coords;
+	return Math.sqrt(a * a + b * b);
+}
 
-			isCycling = false;
-			clearTimeout(popupCycleInterval);
-			updateLocationDetails(location.message);
+document
+	.getElementById('address-form')
+	.addEventListener('submit', function (e) {
+		e.preventDefault(); // Prevent the default form submission
+		var address = document.getElementById('address-input').value;
+		geocodeAddress(address, function (coords) {
+			var closestMarker = findClosestMarker(coords);
+			if (closestMarker) {
+				// Stop cycling when search is complete
+				isCycling = false;
+				if (popupCycleInterval) {
+					clearTimeout(popupCycleInterval);
+				}
+				setActiveMarker(closestMarker); // Use the marker object
+			}
 		});
 	});
 
-	function updateLocationDetails(locationName) {
-		var details = locationDetails2[locationName];
+function setActiveMarker(marker) {
+	// Assuming marker has a property 'message' that corresponds to the location name
 
-		if (details) {
-			document.getElementById('location-title').innerText =
-				'Dental one in ' + locationName;
-			document.getElementById('phone-text').innerText = details.phone;
-			document.getElementById('email-text').innerText = details.email;
-			document.getElementById('address-text').innerText = details.address;
-		} else {
-			console.log('Details not found for location:', locationName);
+	var locationName = marker.message;
+
+	// Update the details for the active marker
+	updateLocationDetails(locationName);
+
+	// Close any currently open popups
+	locations.forEach(function (location) {
+		if (location.marker) {
+			var popup = location.marker.getPopup();
+			if (popup) {
+				popup.remove();
+			}
+			if (location.marker.getElement) {
+				location.marker.getElement().classList.remove('marker-active');
+			}
 		}
-	}
-
-	map.on('style.load', function () {
-		var waterLayerIds = map
-			.getStyle()
-			.layers.filter(function (layer) {
-				return (
-					layer['type'] === 'fill' &&
-					layer['source-layer'] === 'water'
-				);
-			})
-			.map(function (layer) {
-				return layer.id;
-			});
-
-		waterLayerIds.forEach(function (id) {
-			map.setPaintProperty(id, 'fill-color', '#f3f4f6');
-		});
 	});
-	var isCycling = true;
-	var currentPopupIndex = 0;
-	var popupCycleInterval;
-	var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
 
-	function cyclePopups() {
-		// Check if it's the end of the locations array and reset if necessary
-		if (currentPopupIndex >= locations.length) {
-			currentPopupIndex = 0;
-		}
-
-		var location = locations[currentPopupIndex];
-		var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } })
-			.setLngLat(location.coords)
-			.setText(location.message)
-			.addTo(map);
-
-		document
-			.querySelectorAll('.marker')
-			.forEach(function (markerEl, index) {
-				if (index === currentPopupIndex) {
-					markerEl.classList.add('marker-active');
-				} else {
-					markerEl.classList.remove('marker-active');
-				}
-			});
-
-		// Update the location details and position them
-		updateLocationDetails(location.message);
-
-		// Increment the index for the next cycle
-		currentPopupIndex++;
-
-		// Schedule the next cycle
-		popupCycleInterval = setTimeout(function () {
-			popup.remove(); // Remove the current popup
-			cyclePopups(); // Continue cycling
-		}, cycleDuration);
-	}
-
-	// Start the cycling when ready
-	cyclePopups();
-
-	function geocodeAddress(address, callback) {
-		// Southwest corner (longitude, latitude) and Northeast corner (longitude, latitude) of Melbourne
-		var melbourneBbox = [
-			144.593741856, -38.433859306, 145.512528832, -37.5112737225,
-		];
-		var geocoder = new MapboxGeocoder({
-			accessToken: mapboxgl.accessToken,
-			mapboxgl: map,
-			marker: false,
-			flyTo: false,
-			countries: 'AU', // Limit search to Australia
-			bbox: melbourneBbox, // Limit search to the Melbourne area
-		});
-		geocoder.addTo('#geocoder-container');
-
-		geocoder.query(address);
-		geocoder.on('result', function (result) {
-			const data = result.result;
-			// Check if the response has a center property
-			if (data && data.center) {
-				var coords = data.center;
-				callback(coords);
-			} else {
-				console.log('No valid location found in geocoding response.');
-			}
-		});
-	}
-
-	function findClosestMarker(coordinates) {
-		var closestMarker = null;
-		var closestDistance = Infinity;
-
-		locations.forEach(function (location) {
-			var distance = getDistanceBetweenPoints(
-				coordinates,
-				location.coords
-			);
-			if (distance < closestDistance) {
-				closestDistance = distance;
-				closestMarker = location; // Assuming location has a reference to the marker
-			}
-		});
-
-		return closestMarker; // Return the marker object
-	}
-
-	function getDistanceBetweenPoints(point1, point2) {
-		// Calculate the distance between point1 and point2
-		// Use a simple distance formula or a more complex method like Haversine formula for accuracy
-		// For simplicity:
-		var a = point1[0] - point2[0];
-		var b = point1[1] - point2[1];
-
-		return Math.sqrt(a * a + b * b);
-	}
-
-	document
-		.getElementById('address-form')
-		.addEventListener('submit', function (e) {
-			e.preventDefault(); // Prevent the default form submission
-			var address = document.getElementById('address-input').value;
-			geocodeAddress(address, function (coords) {
-				var closestMarker = findClosestMarker(coords);
-				if (closestMarker) {
-					// Stop cycling when search is complete
-					isCycling = false;
-					if (popupCycleInterval) {
-						clearTimeout(popupCycleInterval);
-					}
-					setActiveMarker(closestMarker); // Use the marker object
-				}
-			});
-		});
-
-	function setActiveMarker(marker) {
-		// Assuming marker has a property 'message' that corresponds to the location name
-
-		var locationName = marker.message;
-
-		// Update the details for the active marker
-		updateLocationDetails(locationName);
-
-		// Close any currently open popups
-		locations.forEach(function (location) {
-			if (location.marker) {
-				var popup = location.marker.getPopup();
-				if (popup) {
-					popup.remove();
-				}
-				if (location.marker.getElement) {
-					location.marker
-						.getElement()
-						.classList.remove('marker-active');
-				}
-			}
-		});
-
-		// Set the active style for the selected marker
-		if (marker.marker && marker.marker.getElement) {
-			marker.marker.getElement().classList.add('marker-active');
-			// Open the popup for the active marker
-			marker.marker.getPopup().addTo(map);
-		} else {
-			console.error('Invalid marker object:', marker);
-		}
+	// Set the active style for the selected marker
+	if (marker.marker && marker.marker.getElement) {
+		marker.marker.getElement().classList.add('marker-active');
+		// Open the popup for the active marker
+		marker.marker.getPopup().addTo(map);
+	} else {
+		console.error('Invalid marker object:', marker);
 	}
 }
 
@@ -791,16 +780,16 @@ emblaApi.on('select', updateDots);
 // Don't forget to call `setupDots` to initialize the dots after defining it
 setupDots();
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 	const menuIcon = document.querySelector('.feather-menu');
 	const menuClose = document.querySelector('.menu-close');
 	const fullScreenMenu = document.querySelector('.mobile-menu');
-  
-	menuIcon.addEventListener('click', function() {
-	  fullScreenMenu.classList.toggle('hidden');
+
+	menuIcon.addEventListener('click', function () {
+		fullScreenMenu.classList.toggle('hidden');
 	});
 
-	menuClose.addEventListener('click', function() {
+	menuClose.addEventListener('click', function () {
 		fullScreenMenu.classList.add('hidden');
-	  });
-  });
+	});
+});
