@@ -790,3 +790,17 @@ emblaApi.on('select', updateDots);
 
 // Don't forget to call `setupDots` to initialize the dots after defining it
 setupDots();
+
+document.addEventListener('DOMContentLoaded', function() {
+	const menuIcon = document.querySelector('.feather-menu');
+	const menuClose = document.querySelector('.menu-close');
+	const fullScreenMenu = document.querySelector('.mobile-menu');
+  
+	menuIcon.addEventListener('click', function() {
+	  fullScreenMenu.classList.toggle('hidden');
+	});
+
+	menuClose.addEventListener('click', function() {
+		fullScreenMenu.classList.add('hidden');
+	  });
+  });

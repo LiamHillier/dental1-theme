@@ -19,10 +19,10 @@
 	@apply w-full;
 }
 #site-navigation ul {
-	@apply flex items-center gap-6;
+	@apply flex flex-col md:flex-row items-center gap-6;
 }
 .logo svg {
-	@apply h-20;
+	@apply h-14 sm:h-16 md:h-20;
 }
 #site-navigation .feature-button a {
 	@apply text-white lowercase;
