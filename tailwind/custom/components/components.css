@@ -13,10 +13,10 @@
 /*---------------------*/
 
 #site-navigation a {
-	@apply text-black whitespace-nowrap;
+	@apply text-black whitespace-nowrap text-lg md:text-base;
 }
 #site-navigation ul li {
-	@apply w-full;
+	@apply w-full text-center md:text-left;
 }
 #site-navigation ul {
 	@apply flex flex-col md:flex-row items-center gap-6;

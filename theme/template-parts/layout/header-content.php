@@ -43,7 +43,7 @@ $logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-
 
 </header><!-- #masthead -->
 
-<div class="mobile-menu hidden md:hidden flex flex-col items-stretch justify-start fixed w-screen h-screen bg-white top-0 z-50 pt-24 px-10">
+<div class="mobile-menu hidden md:hidden flex flex-col items-stretch justify-center fixed w-screen h-screen bg-white top-0 z-50 pt-24 px-10">
 	<div class="flex justify-end absolute top-16 right-10">
 	<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary fill-primary menu-close">
 		<line x1="18" y1="6" x2="6" y2="18" />

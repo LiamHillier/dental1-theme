@@ -24,6 +24,10 @@
 	--global-palette9: #ffffff;
 }
 
+html {
+	@apply !overflow-x-hidden;
+}
+
 body {
 	@apply font-primary;
 }
