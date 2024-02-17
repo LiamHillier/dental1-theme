@@ -56,7 +56,7 @@
 }
 .button.alt:hover {
 	@apply border-primary bg-primary text-white;
- }
+}
 /*---------------------*/
 /*--- Links ---*/
 /*---------------------*/
@@ -219,7 +219,7 @@
 	@apply border border-primary rounded-full;
 }
 .embla__dot.is-active .dot-inner {
-	@apply bg-primary ;
+	@apply bg-primary;
 }
 .embla__dot .slide-number {
 	@apply absolute -left-12 md:left-2 font-bold text-white md:text-black;
@@ -227,4 +227,41 @@
 .embla__dot .dot-line {
 	@apply absolute w-10 h-[1px] bg-white md:bg-black;
 	left: calc(50% - 60px);
+}
+
+#hero .sb-feed-posts {
+	width: 40% !important;
+}
+#hero .sb-item-author-img {
+	display: none;
+}
+#hero .sb-post-item {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 0px;
+}
+#hero .sb-item-rating {
+	display: none !important;
+}
+#hero .sb-post-item-wrap {
+	padding: 0px !important;
+}
+#hero .sbr-owl-item {
+	padding: 0px !important;
+}
+#hero .sb-feed-header {
+	margin: 0px !important;
+}
+#hero .sb-feed-header-bottom {
+	margin: 0px !important;
+	margin-bottom: 5px !important;
+}
+#hero #sb-reviews-container-3 {
+	margin-top: 20px !important;
+}
+#hero .sbr-owl-nav {
+	display: none;
+}
+#hero .sbr-owl-dots {
+	display: none;
 }

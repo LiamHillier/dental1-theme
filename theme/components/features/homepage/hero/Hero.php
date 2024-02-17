@@ -3,7 +3,7 @@ $circle = file_get_contents('wp-content/themes/dental1/theme/assets/icons/circle
 $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/double-dash.svg');
 ?>
 
-<div class="embla relative">
+<div class="embla relative" id="hero">
     <div class="embla__container max-h-[1000px] ">
         <div class="embla__slide">
             <div class="relative flex flex-col justify-center items-start gap-10 h-full  overflow-hidden pb-40">
