@@ -9,6 +9,21 @@
  * https://esbuild.github.io/
  */
 
+document.addEventListener('DOMContentLoaded', function () {
+	const menuIcon = document.querySelector('.feather-menu');
+	const menuClose = document.querySelector('.menu-close');
+	const fullScreenMenu = document.querySelector('.mobile-menu');
+
+	menuIcon.addEventListener('click', function () {
+		fullScreenMenu.classList.toggle('hidden');
+	});
+
+	menuClose.addEventListener('click', function () {
+		fullScreenMenu.classList.add('hidden');
+	});
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
 	const observer = new IntersectionObserver(
 		(entries) => {
@@ -450,258 +465,268 @@ if (teamNode) {
 
 	// Grab button nodes
 	const prevButtonNode = document.querySelector('.team__prev');
-	const nextButtonNode = document.querySelector('.team__next');
 
 	prevButtonNode.addEventListener('click', teamApi.scrollPrev, false);
-	nextButtonNode.addEventListener('click', teamApi.scrollNext, false);
 }
+
 const locationsContainer = document.querySelector('#locations');
 
-mapboxgl.accessToken =
-	'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
-var map = new mapboxgl.Map({
-	container: 'map', // The id of the map container
-	style: 'mapbox://styles/liamtsa/clqhfvanb000i01pm5bsu38be', // Using the light theme style
-	center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
-	zoom: 8.5, // Initial zoom level,
-	dragPan: false,
-});
-
-var currentOpenPopup = null; // Global variable to keep track of the open popup
-
-// After the map has been initialized and loaded
-map.on('load', function () {
-	// Disable all of the following interactions:
-	map.boxZoom.disable(); // Disable box zoom
-	map.scrollZoom.disable(); // Disable scroll zoom
-	map.dragPan.disable(); // Disable drag pan
-	map.dragRotate.disable(); // Disable drag rotate
-	map.keyboard.disable(); // Disable keyboard
-	map.doubleClickZoom.disable(); // Disable double click zoom
-	map.touchZoomRotate.disable(); // Disable touch zoom rotate
-});
-// List of coordinates and messages for each location
-var locations = [
-	{ coords: [144.91196, -37.74778], message: 'Essendon' },
-	{ coords: [144.93931, -37.599], message: 'Craigieburn' },
-	{ coords: [145.10872, -37.77277], message: 'Lower Templestowe' },
-	{ coords: [145.004395, -37.621441], message: 'Epping' },
-	{ coords: [145.01091, -37.81175], message: 'Richmond' },
-	{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
-];
-
-var locationDetails2 = {};
-var locationElements = document.querySelectorAll('#location-list li');
-locationElements.forEach(function (elem) {
-	var title = elem.getAttribute('data-title');
-	locationDetails2[title] = {
-		phone: elem.getAttribute('data-phone'),
-		address: elem.getAttribute('data-address'),
-		email: elem.getAttribute('data-email'),
-	};
-});
-
-locations.forEach(function (location) {
-	// Create a marker element
-	var el = document.createElement('div');
-	el.className = 'marker';
-
-	// Create a popup
-	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } }).setText(
-		location.message
-	);
-
-	// Create and store the Mapbox marker object
-	location.marker = new mapboxgl.Marker(el)
-		.setLngLat(location.coords)
-		.setPopup(popup)
-		.addTo(map);
-
-	el.addEventListener('click', function () {
-		// Remove active class from all markers
-		document.querySelectorAll('.marker').forEach(function (markerEl) {
-			markerEl.classList.remove('marker-active');
-		});
-		// Add active class to the clicked marker
-		el.classList.add('marker-active');
-		var coords = location.coords;
-
-		isCycling = false;
-		clearTimeout(popupCycleInterval);
-		updateLocationDetails(location.message);
-	});
-});
-
-function updateLocationDetails(locationName) {
-	var details = locationDetails2[locationName];
-
-	if (details) {
-		document.getElementById('location-title').innerText =
-			'Dental one in ' + locationName;
-		document.getElementById('phone-text').innerText = details.phone;
-		document.getElementById('email-text').innerText = details.email;
-		document.getElementById('address-text').innerText = details.address;
-	} else {
-		console.log('Details not found for location:', locationName);
-	}
-}
-
-map.on('style.load', function () {
-	var waterLayerIds = map
-		.getStyle()
-		.layers.filter(function (layer) {
-			return (
-				layer['type'] === 'fill' && layer['source-layer'] === 'water'
-			);
-		})
-		.map(function (layer) {
-			return layer.id;
-		});
-
-	waterLayerIds.forEach(function (id) {
-		map.setPaintProperty(id, 'fill-color', '#f3f4f6');
-	});
-});
-var isCycling = true;
-var currentPopupIndex = 0;
-var popupCycleInterval;
-var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
-
-function cyclePopups() {
-	// Check if it's the end of the locations array and reset if necessary
-	if (currentPopupIndex >= locations.length) {
-		currentPopupIndex = 0;
-	}
-
-	var location = locations[currentPopupIndex];
-	var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } })
-		.setLngLat(location.coords)
-		.setText(location.message)
-		.addTo(map);
-
-	document.querySelectorAll('.marker').forEach(function (markerEl, index) {
-		if (index === currentPopupIndex) {
-			markerEl.classList.add('marker-active');
-		} else {
-			markerEl.classList.remove('marker-active');
-		}
+if (locationsContainer) {
+	mapboxgl.accessToken =
+		'pk.eyJ1IjoibGlhbXRzYSIsImEiOiJjbGxieDM5cmQwNmNuM3FsNWVnZ2g0YnA2In0.Y1YQ4L3WfY9MgaxwsqwU0w';
+	var map = new mapboxgl.Map({
+		container: 'map', // The id of the map container
+		style: 'mapbox://styles/liamtsa/clqhfvanb000i01pm5bsu38be', // Using the light theme style
+		center: [145.307193491332, -37.944962859363], // Set the initial center of the map (for example, using the Reservoir coordinates)
+		zoom: 8.5, // Initial zoom level,
+		dragPan: false,
 	});
 
-	// Update the location details and position them
-	updateLocationDetails(location.message);
+	var currentOpenPopup = null; // Global variable to keep track of the open popup
 
-	// Increment the index for the next cycle
-	currentPopupIndex++;
+	// After the map has been initialized and loaded
+	map.on('load', function () {
+		// Disable all of the following interactions:
+		map.boxZoom.disable(); // Disable box zoom
+		map.scrollZoom.disable(); // Disable scroll zoom
+		map.dragPan.disable(); // Disable drag pan
+		map.dragRotate.disable(); // Disable drag rotate
+		map.keyboard.disable(); // Disable keyboard
+		map.doubleClickZoom.disable(); // Disable double click zoom
+		map.touchZoomRotate.disable(); // Disable touch zoom rotate
+	});
 
-	// Schedule the next cycle
-	popupCycleInterval = setTimeout(function () {
-		popup.remove(); // Remove the current popup
-		cyclePopups(); // Continue cycling
-	}, cycleDuration);
-}
-
-// Start the cycling when ready
-cyclePopups();
-
-function geocodeAddress(address, callback) {
-	// Southwest corner (longitude, latitude) and Northeast corner (longitude, latitude) of Melbourne
-	var melbourneBbox = [
-		144.593741856, -38.433859306, 145.512528832, -37.5112737225,
+	// List of coordinates and messages for each location
+	var locations = [
+		{ coords: [144.91196, -37.74778], message: 'Essendon' },
+		{ coords: [144.93931, -37.599], message: 'Craigieburn' },
+		{ coords: [145.10872, -37.77277], message: 'Lower Templestowe' },
+		{ coords: [145.004395, -37.621441], message: 'Epping' },
+		{ coords: [145.01091, -37.81175], message: 'Richmond' },
+		{ coords: [145.007193491332, -37.714962879063], message: 'Reservoir' },
 	];
-	var geocoder = new MapboxGeocoder({
-		accessToken: mapboxgl.accessToken,
-		mapboxgl: map,
-		marker: false,
-		flyTo: false,
-		countries: 'AU', // Limit search to Australia
-		bbox: melbourneBbox, // Limit search to the Melbourne area
-	});
-	geocoder.addTo('#geocoder-container');
 
-	geocoder.query(address);
-	geocoder.on('result', function (result) {
-		const data = result.result;
-		// Check if the response has a center property
-		if (data && data.center) {
-			var coords = data.center;
-			callback(coords);
-		} else {
-			console.log('No valid location found in geocoding response.');
-		}
+	var locationDetails2 = {};
+	var locationElements = document.querySelectorAll('#location-list li');
+	locationElements.forEach(function (elem) {
+		var title = elem.getAttribute('data-title');
+		locationDetails2[title] = {
+			phone: elem.getAttribute('data-phone'),
+			address: elem.getAttribute('data-address'),
+			email: elem.getAttribute('data-email'),
+		};
 	});
-}
-
-function findClosestMarker(coordinates) {
-	var closestMarker = null;
-	var closestDistance = Infinity;
 
 	locations.forEach(function (location) {
-		var distance = getDistanceBetweenPoints(coordinates, location.coords);
-		if (distance < closestDistance) {
-			closestDistance = distance;
-			closestMarker = location; // Assuming location has a reference to the marker
-		}
-	});
+		// Create a marker element
+		var el = document.createElement('div');
+		el.className = 'marker';
 
-	return closestMarker; // Return the marker object
-}
+		// Create a popup
+		var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } }).setText(
+			location.message
+		);
 
-function getDistanceBetweenPoints(point1, point2) {
-	// Calculate the distance between point1 and point2
-	// Use a simple distance formula or a more complex method like Haversine formula for accuracy
-	// For simplicity:
-	var a = point1[0] - point2[0];
-	var b = point1[1] - point2[1];
+		// Create and store the Mapbox marker object
+		location.marker = new mapboxgl.Marker(el)
+			.setLngLat(location.coords)
+			.setPopup(popup)
+			.addTo(map);
 
-	return Math.sqrt(a * a + b * b);
-}
+		el.addEventListener('click', function () {
+			// Remove active class from all markers
+			document.querySelectorAll('.marker').forEach(function (markerEl) {
+				markerEl.classList.remove('marker-active');
+			});
+			// Add active class to the clicked marker
+			el.classList.add('marker-active');
+			var coords = location.coords;
 
-document
-	.getElementById('address-form')
-	.addEventListener('submit', function (e) {
-		e.preventDefault(); // Prevent the default form submission
-		var address = document.getElementById('address-input').value;
-		geocodeAddress(address, function (coords) {
-			var closestMarker = findClosestMarker(coords);
-			if (closestMarker) {
-				// Stop cycling when search is complete
-				isCycling = false;
-				if (popupCycleInterval) {
-					clearTimeout(popupCycleInterval);
-				}
-				setActiveMarker(closestMarker); // Use the marker object
-			}
+			isCycling = false;
+			clearTimeout(popupCycleInterval);
+			updateLocationDetails(location.message);
 		});
 	});
 
-function setActiveMarker(marker) {
-	// Assuming marker has a property 'message' that corresponds to the location name
+	function updateLocationDetails(locationName) {
+		var details = locationDetails2[locationName];
 
-	var locationName = marker.message;
-
-	// Update the details for the active marker
-	updateLocationDetails(locationName);
-
-	// Close any currently open popups
-	locations.forEach(function (location) {
-		if (location.marker) {
-			var popup = location.marker.getPopup();
-			if (popup) {
-				popup.remove();
-			}
-			if (location.marker.getElement) {
-				location.marker.getElement().classList.remove('marker-active');
-			}
+		if (details) {
+			document.getElementById('location-title').innerText =
+				'Dental one in ' + locationName;
+			document.getElementById('phone-text').innerText = details.phone;
+			document.getElementById('email-text').innerText = details.email;
+			document.getElementById('address-text').innerText = details.address;
+		} else {
+			console.log('Details not found for location:', locationName);
 		}
-	});
+	}
 
-	// Set the active style for the selected marker
-	if (marker.marker && marker.marker.getElement) {
-		marker.marker.getElement().classList.add('marker-active');
-		// Open the popup for the active marker
-		marker.marker.getPopup().addTo(map);
-	} else {
-		console.error('Invalid marker object:', marker);
+	map.on('style.load', function () {
+		var waterLayerIds = map
+			.getStyle()
+			.layers.filter(function (layer) {
+				return (
+					layer['type'] === 'fill' &&
+					layer['source-layer'] === 'water'
+				);
+			})
+			.map(function (layer) {
+				return layer.id;
+			});
+
+		waterLayerIds.forEach(function (id) {
+			map.setPaintProperty(id, 'fill-color', '#f3f4f6');
+		});
+	});
+	var isCycling = true;
+	var currentPopupIndex = 0;
+	var popupCycleInterval;
+	var cycleDuration = 3000; // Duration for each popup to stay open (in milliseconds)
+
+	function cyclePopups() {
+		// Check if it's the end of the locations array and reset if necessary
+		if (currentPopupIndex >= locations.length) {
+			currentPopupIndex = 0;
+		}
+
+		var location = locations[currentPopupIndex];
+		var popup = new mapboxgl.Popup({ offset: { bottom: [0, 45] } })
+			.setLngLat(location.coords)
+			.setText(location.message)
+			.addTo(map);
+
+		document
+			.querySelectorAll('.marker')
+			.forEach(function (markerEl, index) {
+				if (index === currentPopupIndex) {
+					markerEl.classList.add('marker-active');
+				} else {
+					markerEl.classList.remove('marker-active');
+				}
+			});
+
+		// Update the location details and position them
+		updateLocationDetails(location.message);
+
+		// Increment the index for the next cycle
+		currentPopupIndex++;
+
+		// Schedule the next cycle
+		popupCycleInterval = setTimeout(function () {
+			popup.remove(); // Remove the current popup
+			cyclePopups(); // Continue cycling
+		}, cycleDuration);
+	}
+
+	// Start the cycling when ready
+	cyclePopups();
+
+	function geocodeAddress(address, callback) {
+		// Southwest corner (longitude, latitude) and Northeast corner (longitude, latitude) of Melbourne
+		var melbourneBbox = [
+			144.593741856, -38.433859306, 145.512528832, -37.5112737225,
+		];
+		var geocoder = new MapboxGeocoder({
+			accessToken: mapboxgl.accessToken,
+			mapboxgl: map,
+			marker: false,
+			flyTo: false,
+			countries: 'AU', // Limit search to Australia
+			bbox: melbourneBbox, // Limit search to the Melbourne area
+		});
+		geocoder.addTo('#geocoder-container');
+
+		geocoder.query(address);
+		geocoder.on('result', function (result) {
+			const data = result.result;
+			// Check if the response has a center property
+			if (data && data.center) {
+				var coords = data.center;
+				callback(coords);
+			} else {
+				console.log('No valid location found in geocoding response.');
+			}
+		});
+	}
+
+	function findClosestMarker(coordinates) {
+		var closestMarker = null;
+		var closestDistance = Infinity;
+
+		locations.forEach(function (location) {
+			var distance = getDistanceBetweenPoints(
+				coordinates,
+				location.coords
+			);
+			if (distance < closestDistance) {
+				closestDistance = distance;
+				closestMarker = location; // Assuming location has a reference to the marker
+			}
+		});
+
+		return closestMarker; // Return the marker object
+	}
+
+	function getDistanceBetweenPoints(point1, point2) {
+		// Calculate the distance between point1 and point2
+		// Use a simple distance formula or a more complex method like Haversine formula for accuracy
+		// For simplicity:
+		var a = point1[0] - point2[0];
+		var b = point1[1] - point2[1];
+
+		return Math.sqrt(a * a + b * b);
+	}
+
+	document
+		.getElementById('address-form')
+		.addEventListener('submit', function (e) {
+			e.preventDefault(); // Prevent the default form submission
+			var address = document.getElementById('address-input').value;
+			geocodeAddress(address, function (coords) {
+				var closestMarker = findClosestMarker(coords);
+				if (closestMarker) {
+					// Stop cycling when search is complete
+					isCycling = false;
+					if (popupCycleInterval) {
+						clearTimeout(popupCycleInterval);
+					}
+					setActiveMarker(closestMarker); // Use the marker object
+				}
+			});
+		});
+
+	function setActiveMarker(marker) {
+		// Assuming marker has a property 'message' that corresponds to the location name
+
+		var locationName = marker.message;
+
+		// Update the details for the active marker
+		updateLocationDetails(locationName);
+
+		// Close any currently open popups
+		locations.forEach(function (location) {
+			if (location.marker) {
+				var popup = location.marker.getPopup();
+				if (popup) {
+					popup.remove();
+				}
+				if (location.marker.getElement) {
+					location.marker
+						.getElement()
+						.classList.remove('marker-active');
+				}
+			}
+		});
+
+		// Set the active style for the selected marker
+		if (marker.marker && marker.marker.getElement) {
+			marker.marker.getElement().classList.add('marker-active');
+			// Open the popup for the active marker
+			marker.marker.getPopup().addTo(map);
+		} else {
+			console.error('Invalid marker object:', marker);
+		}
 	}
 }
 
@@ -716,80 +741,67 @@ window.addEventListener('scroll', function () {
 	}
 });
 
-import EmblaCarousel from 'embla-carousel';
+const heroSlider = document.querySelector('.hero');
+if (heroSlider) {
+	const options = { loop: false };
 
-const emblaNode = document.querySelector('.embla');
-const options = { loop: false };
+	const emblaApi = EmblaCarousel(heroSlider, options);
+	const dotsContainer = document.querySelector('.embla__dots');
 
-const emblaApi = EmblaCarousel(emblaNode, options);
-const dotsContainer = document.querySelector('.embla__dots');
+	const setupDots = () => {
+		const slides = emblaApi.slideNodes();
+		const dotsFragment = document.createDocumentFragment();
 
-const setupDots = () => {
-	const slides = emblaApi.slideNodes();
-	const dotsFragment = document.createDocumentFragment();
+		slides.forEach((slide, index) => {
+			const dot = document.createElement('button');
+			dot.className = 'embla__dot';
 
-	slides.forEach((slide, index) => {
-		const dot = document.createElement('button');
-		dot.className = 'embla__dot';
+			// Create the slide number element
+			const slideNumber = document.createElement('span');
+			slideNumber.className = 'slide-number';
+			slideNumber.textContent = `0${index + 1}`; // Slide index is 0-based; add 1 for display
+			dot.appendChild(slideNumber);
 
-		// Create the slide number element
-		const slideNumber = document.createElement('span');
-		slideNumber.className = 'slide-number';
-		slideNumber.textContent = `0${index + 1}`; // Slide index is 0-based; add 1 for display
-		dot.appendChild(slideNumber);
+			// Create the inner div
+			const dotInner = document.createElement('div');
+			dotInner.className = 'dot-inner';
+			dot.appendChild(dotInner);
 
-		// Create the inner div
-		const dotInner = document.createElement('div');
-		dotInner.className = 'dot-inner';
-		dot.appendChild(dotInner);
+			// Create the dot-line element
+			const dotLine = document.createElement('div');
+			dotLine.className = 'dot-line';
+			dot.appendChild(dotLine);
 
-		// Create the dot-line element
-		const dotLine = document.createElement('div');
-		dotLine.className = 'dot-line';
-		dot.appendChild(dotLine);
+			dot.addEventListener('click', () => emblaApi.scrollTo(index));
+			dotsFragment.appendChild(dot);
+		});
 
-		dot.addEventListener('click', () => emblaApi.scrollTo(index));
-		dotsFragment.appendChild(dot);
-	});
+		dotsContainer.appendChild(dotsFragment);
+		updateDots(); // This will initially set the correct state
+	};
 
-	dotsContainer.appendChild(dotsFragment);
-	updateDots(); // This will initially set the correct state
-};
+	const updateDots = () => {
+		const dots = dotsContainer.querySelectorAll('.embla__dot');
+		const selectedIndex = emblaApi.selectedScrollSnap();
 
-const updateDots = () => {
-	const dots = dotsContainer.querySelectorAll('.embla__dot');
-	const selectedIndex = emblaApi.selectedScrollSnap();
+		dots.forEach((dot, index) => {
+			const isActive = index === selectedIndex;
+			dot.classList.toggle('is-active', isActive);
 
-	dots.forEach((dot, index) => {
-		const isActive = index === selectedIndex;
-		dot.classList.toggle('is-active', isActive);
+			// Find the slide number and dot-line within the dot
+			const slideNumber = dot.querySelector('.slide-number');
+			const dotLine = dot.querySelector('.dot-line');
 
-		// Find the slide number and dot-line within the dot
-		const slideNumber = dot.querySelector('.slide-number');
-		const dotLine = dot.querySelector('.dot-line');
+			// Update visibility based on active state
+			slideNumber.style.display = isActive ? 'inline-block' : 'none';
+			dotLine.style.display = isActive ? 'block' : 'none';
+		});
+	};
 
-		// Update visibility based on active state
-		slideNumber.style.display = isActive ? 'inline-block' : 'none';
-		dotLine.style.display = isActive ? 'block' : 'none';
-	});
-};
+	// Use `emblaApi.on('select', updateDots)` instead of `embla.on('select', updateDots)`
+	emblaApi.on('select', updateDots);
 
-// Use `emblaApi.on('select', updateDots)` instead of `embla.on('select', updateDots)`
-emblaApi.on('select', updateDots);
+	// Don't forget to call `setupDots` to initialize the dots after defining it
+	setupDots();
+}
 
-// Don't forget to call `setupDots` to initialize the dots after defining it
-setupDots();
-
-document.addEventListener('DOMContentLoaded', function () {
-	const menuIcon = document.querySelector('.feather-menu');
-	const menuClose = document.querySelector('.menu-close');
-	const fullScreenMenu = document.querySelector('.mobile-menu');
-
-	menuIcon.addEventListener('click', function () {
-		fullScreenMenu.classList.toggle('hidden');
-	});
-
-	menuClose.addEventListener('click', function () {
-		fullScreenMenu.classList.add('hidden');
-	});
-});

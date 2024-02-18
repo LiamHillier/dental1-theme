@@ -16,7 +16,7 @@
 	@apply text-black whitespace-nowrap text-lg md:text-base;
 }
 #site-navigation ul li {
-	@apply w-full text-center md:text-left;
+	@apply w-full text-left;
 }
 #site-navigation ul {
 	@apply flex flex-col md:flex-row items-center gap-6;
@@ -230,7 +230,7 @@
 }
 
 #hero .sb-feed-posts {
-	width: 40% !important;
+	@apply w-full md:!w-[40%];
 }
 #hero .sb-item-author-img {
 	display: none;
