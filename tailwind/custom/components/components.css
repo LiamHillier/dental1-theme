@@ -222,10 +222,10 @@
 	@apply bg-primary;
 }
 .embla__dot .slide-number {
-	@apply absolute -left-12 md:left-2 font-bold text-white md:text-black;
+	@apply absolute -left-12 md:left-2 font-bold text-black;
 }
 .embla__dot .dot-line {
-	@apply absolute w-10 h-[1px] bg-white md:bg-black;
+	@apply absolute w-10 h-[1px] bg-black;
 	left: calc(50% - 60px);
 }
 
