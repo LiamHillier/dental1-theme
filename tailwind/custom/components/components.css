@@ -268,3 +268,16 @@
 #hero .sb-item-provider-icon {
 	display: none;
 }
+@media (max-width: 768px) {
+	.embla__dots {
+		display: none;
+	}
+	.embla__slide > div {
+		padding-top: 30px;
+		padding-bottom: 0px;
+	}
+}
+
+#hero .w-full.absolute.bottom-0.bg-gray-50 {
+	background: white;
+}
