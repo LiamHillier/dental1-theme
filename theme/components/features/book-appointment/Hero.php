@@ -7,7 +7,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
         <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
         <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/hero-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/hero-1.jpg" alt="Dental One Hero" width="1708" height="1132" class=" object-cover absolute top-0 left-0 w-full h-full" />
         <div class="relative z-20 w-full max-w-screen-2xl mx-auto py-4 px-5 md:px-20">
-            <h1 class="hero-text-large font-black text-primary text-center md:text-left mb-8">Book<br/> Appointment</h1>
+            <h1 class="hero-text-large font-bold text-primary text-center md:text-left mb-8">Book<br/> Appointment</h1>
             <p class="text-black max-w-lg pl-2 mt-2 text-xl mx-auto md:ml-0 text-center md:text-left">Our experienced dentists and caring support team at Dental One are here to provide you with the very best of ongoing dental care and guidance for you and your family.</p>
         </div>
     </div>
