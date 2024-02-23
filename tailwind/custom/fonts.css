@@ -28,15 +28,22 @@
 	font-style: normal;
 	font-display: swap;
 }
+@font-face {
+	font-family: "Raleway";
+	src: url("/wp-content/themes/dental1/theme/assets/fonts/Raleway-VariableFont_wght.woff2")
+		format("woff2");
+	font-style: normal;
+	font-display: swap;
+}
 
 @layer base {
 	.font-accent {
-		font-family: "Perfect Beloved", serif;
+		font-family: "Raleway", serif;
 	}
 	.font-secondary {
-		font-family: "Abril Fatface", serif;
+		font-family: "Raleway", serif;
 	}
 	.font-primary {
-		font-family: "Neue Plak", sans-serif;
+		font-family: "Raleway", sans-serif;
 	}
 }
