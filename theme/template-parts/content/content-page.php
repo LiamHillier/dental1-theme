@@ -12,7 +12,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<div id="banner" class="relative overflow-hidden min-h-[400px]">
+	<div id="banner" class="relative overflow-hidden min-h-[276px] md:min-h-[400px]">
 		<div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
 		<div class="absolute top-0 left-0 w-full h-full object-cover">
 			<?php dental1_post_thumbnail(); ?>
