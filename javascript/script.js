@@ -23,6 +23,49 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const hasChildrenMenus = document.querySelectorAll('.menu-item-has-children');
+    const tolerance = 50; // Pixels from the right edge of the viewport
+
+    hasChildrenMenus.forEach(menu => {
+        menu.addEventListener('mouseenter', function () {
+            const submenu = this.querySelector('.sub-menu');
+            // Make sure the submenu is visible for calculation
+            submenu.style.display = 'flex';
+            submenu.style.visibility = 'hidden';
+
+            // Calculate positions
+            const submenuRect = submenu.getBoundingClientRect();
+            const overflowRight = submenuRect.right + tolerance - window.innerWidth;
+
+            if (overflowRight > 0) {
+                // If overflowing the right edge, adjust position
+                submenu.style.left = `auto`;
+                submenu.style.right = `0px`;
+            } else {
+                // Position normally if not overflowing
+                submenu.style.left = `0`;
+                submenu.style.right = `auto`;
+            }
+
+            // Make submenu fully visible after adjustments
+            submenu.style.visibility = 'visible';
+        });
+
+        menu.addEventListener('mouseleave', function () {
+            const submenu = this.querySelector('.sub-menu');
+            submenu.style.display = 'none'; // Hide the submenu
+            // Reset positioning to default for next time
+            submenu.style.left = '';
+            submenu.style.right = '';
+            submenu.style.visibility = '';
+        });
+    });
+});
+
+
+  
+
 
 document.addEventListener('DOMContentLoaded', () => {
 	const observer = new IntersectionObserver(
@@ -804,4 +847,3 @@ if (heroSlider) {
 	// Don't forget to call `setupDots` to initialize the dots after defining it
 	setupDots();
 }
-

@@ -11,14 +11,23 @@
 /*---------------------*/
 /*--- HEADER STYLES ---*/
 /*---------------------*/
+* {
+	box-sizing: border-box;
+}
 
 #site-navigation a {
-	@apply text-black whitespace-nowrap text-lg md:text-base;
+	@apply text-black whitespace-nowrap text-lg md:text-base hover:text-primary;
 }
-#site-navigation ul li {
+#site-navigation li:hover > a {
+	@apply text-primary;
+}
+#site-navigation li.current_page_parent > a, #site-navigation li.current_page_parent:after {
+	@apply text-primary fill-primary;
+}
+#site-navigation #main-right > li {
 	@apply w-full text-left;
 }
-#site-navigation ul {
+#site-navigation #main-right {
 	@apply flex flex-col md:flex-row items-center gap-6;
 }
 .logo svg {
@@ -38,7 +47,37 @@
 	width: 24px;
 	height: 24px;
 }
+.menu-item-has-children::after {
+	@apply absolute flex right-0 top-[50%] translate-y-[-50%] items-center justify-center;
+	content: '';
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItY2hldnJvbi1kb3duIj48cG9seWxpbmUgcG9pbnRzPSI2IDkgMTIgMTUgMTggOSIvPjwvc3ZnPg==");
+	background-size: contain;
+	width: 18px;
+	height: 18px;
+}
+#site-navigation .menu-item-has-children.current_page_parent:after, #site-navigation .menu-item-has-children:hover:after {
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMwOEEzOUEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tZG93biI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiLz48L3N2Zz4=");
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 18px;
+}
+.menu-item-has-children {
+	@apply relative pr-6 text-black;
+}
+.menu-item-has-children:hover {
+	@apply text-primary;
+}
+.menu-item-has-children .sub-menu {
+	@apply p-4 rounded-lg min-w-[230px] text-transparent flex flex-col gap-2 shadow;
+	position: absolute;
+	visibility: hidden; /* Make it invisible */
+}
 
+.menu-item-has-children:hover .sub-menu {
+	@apply bg-white text-black;
+	visibility: visible; /* Make it visible on hover */
+}
 /*---------------------*/
 /*--- Buttons ---*/
 /*---------------------*/

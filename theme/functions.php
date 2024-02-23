@@ -217,3 +217,24 @@ add_filter('tiny_mce_before_init', 'dental1_tinymce_add_class');
 require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/menus.php';
+
+
+class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
+    // Start Level
+    function start_lvl( &$output, $depth = 0, $args = null ) {
+        if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
+            $t = '';
+            $n = '';
+        } else {
+            $t = "\t";
+            $n = "\n";
+        }
+        $indent = str_repeat( $t, $depth );
+        // Add 'sub-menu' class and also 'hidden' class
+        $classes = array( 'sub-menu', 'hidden' );
+        $class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $classes, $args, $depth ) );
+        $class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
+        
+        $output .= "{$n}{$indent}<ul$class_names>{$n}";
+    }
+}
