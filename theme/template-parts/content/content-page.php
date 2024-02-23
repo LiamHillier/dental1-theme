@@ -18,7 +18,7 @@
 			<?php dental1_post_thumbnail(); ?>
 		</div>
 		<div class="relative z-10 flex flex-col items-center justify-center gap-4">
-			<h1 class="text-center font-semibold pt-[220px] pb-[280px] text-primary"><?php echo get_the_title(); ?></h1>
+			<h1 class="text-center font-bold pt-[220px] pb-[280px] text-primary"><?php echo get_the_title(); ?></h1>
 		</div>
 		<div class="service-shape-divider-bottom-1 absolute bottom-6 left-0 ">
 			<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
