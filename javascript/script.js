@@ -25,40 +25,56 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const hasChildrenMenus = document.querySelectorAll('.menu-item-has-children');
-    const tolerance = 50; // Pixels from the right edge of the viewport
 
     hasChildrenMenus.forEach(menu => {
-        menu.addEventListener('mouseenter', function () {
+        let isOpen = false; // Track if the submenu is open
+
+        menu.addEventListener('click', function (event) {
+            event.stopPropagation(); // Prevent click from bubbling
             const submenu = this.querySelector('.sub-menu');
-            // Make sure the submenu is visible for calculation
-            submenu.style.display = 'flex';
-            submenu.style.visibility = 'hidden';
+            
+            if (!isOpen) {
+                // Show the submenu if it's not already open
+                submenu.style.display = 'flex';
+                submenu.style.visibility = 'hidden';
 
-            // Calculate positions
-            const submenuRect = submenu.getBoundingClientRect();
-            const overflowRight = submenuRect.right + tolerance - window.innerWidth;
+                // Calculate positions
+                const submenuRect = submenu.getBoundingClientRect();
+                const overflowRight = submenuRect.right + 50 - window.innerWidth; // 50 pixels tolerance
 
-            if (overflowRight > 0) {
-                // If overflowing the right edge, adjust position
-                submenu.style.left = `auto`;
-                submenu.style.right = `0px`;
+                if (overflowRight > 0) {
+                    // If overflowing the right edge, adjust position
+                    submenu.style.left = `auto`;
+                    submenu.style.right = `0px`;
+                } else {
+                    // Position normally if not overflowing
+                    submenu.style.left = `0`;
+                    submenu.style.right = `auto`;
+                }
+
+                // Make submenu fully visible after adjustments
+                submenu.style.visibility = 'visible';
+                isOpen = true; // Mark the submenu as open
             } else {
-                // Position normally if not overflowing
-                submenu.style.left = `0`;
-                submenu.style.right = `auto`;
+                // Hide the submenu if it is open
+                submenu.style.display = 'none';
+                submenu.style.left = '';
+                submenu.style.right = '';
+                submenu.style.visibility = '';
+                isOpen = false; // Mark the submenu as closed
             }
+        }, false);
 
-            // Make submenu fully visible after adjustments
-            submenu.style.visibility = 'visible';
-        });
-
-        menu.addEventListener('mouseleave', function () {
-            const submenu = this.querySelector('.sub-menu');
-            submenu.style.display = 'none'; // Hide the submenu
-            // Reset positioning to default for next time
-            submenu.style.left = '';
-            submenu.style.right = '';
-            submenu.style.visibility = '';
+        // Optional: Close submenu when clicking outside
+        document.addEventListener('click', function () {
+            const submenu = menu.querySelector('.sub-menu');
+            if (isOpen) {
+                submenu.style.display = 'none';
+                submenu.style.left = '';
+                submenu.style.right = '';
+                submenu.style.visibility = '';
+                isOpen = false;
+            }
         });
     });
 });
