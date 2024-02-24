@@ -27,57 +27,80 @@ document.addEventListener('DOMContentLoaded', function () {
     const hasChildrenMenus = document.querySelectorAll('.menu-item-has-children');
 
     hasChildrenMenus.forEach(menu => {
-        let isOpen = false; // Track if the submenu is open
+        let isTouchDevice = false; // A flag to track if the current device supports touch
 
-        menu.addEventListener('click', function (event) {
-            event.stopPropagation(); // Prevent click from bubbling
-            const submenu = this.querySelector('.sub-menu');
-            
-            if (!isOpen) {
-                // Show the submenu if it's not already open
-                submenu.style.display = 'flex';
-                submenu.style.visibility = 'hidden';
+        // Function to show submenu
+        function showSubmenu(submenu) {
+            // Make sure the submenu is visible for calculation
+            submenu.style.display = 'flex';
+            submenu.style.visibility = 'hidden';
 
-                // Calculate positions
-                const submenuRect = submenu.getBoundingClientRect();
-                const overflowRight = submenuRect.right + 50 - window.innerWidth; // 50 pixels tolerance
+            // Calculate positions
+            const submenuRect = submenu.getBoundingClientRect();
+            const overflowRight = submenuRect.right + 50 - window.innerWidth; // 50 pixels tolerance
 
-                if (overflowRight > 0) {
-                    // If overflowing the right edge, adjust position
-                    submenu.style.left = `auto`;
-                    submenu.style.right = `0px`;
-                } else {
-                    // Position normally if not overflowing
-                    submenu.style.left = `0`;
-                    submenu.style.right = `auto`;
-                }
-
-                // Make submenu fully visible after adjustments
-                submenu.style.visibility = 'visible';
-                isOpen = true; // Mark the submenu as open
+            if (overflowRight > 0) {
+                // If overflowing the right edge, adjust position
+                submenu.style.left = `auto`;
+                submenu.style.right = `0px`;
             } else {
-                // Hide the submenu if it is open
-                submenu.style.display = 'none';
-                submenu.style.left = '';
-                submenu.style.right = '';
-                submenu.style.visibility = '';
-                isOpen = false; // Mark the submenu as closed
+                // Position normally if not overflowing
+                submenu.style.left = `0`;
+                submenu.style.right = `auto`;
             }
-        }, false);
 
-        // Optional: Close submenu when clicking outside
+            // Make submenu fully visible after adjustments
+            submenu.style.visibility = 'visible';
+        }
+
+        // Function to hide submenu
+        function hideSubmenu(submenu) {
+            submenu.style.display = 'none'; // Hide the submenu
+            // Reset positioning to default for next time
+            submenu.style.left = '';
+            submenu.style.right = '';
+            submenu.style.visibility = '';
+        }
+
+        // Desktop: Show submenu on hover
+        menu.addEventListener('mouseenter', function () {
+            if (!isTouchDevice) {
+                const submenu = this.querySelector('.sub-menu');
+                showSubmenu(submenu);
+            }
+        });
+
+        menu.addEventListener('mouseleave', function () {
+            if (!isTouchDevice) {
+                const submenu = this.querySelector('.sub-menu');
+                hideSubmenu(submenu);
+            }
+        });
+
+        // Mobile: Toggle submenu on click
+        menu.addEventListener('click', function (event) {
+            isTouchDevice = true; // Assume touch if the menu item is clicked
+            const submenu = this.querySelector('.sub-menu');
+            if (submenu.style.display === 'flex') {
+                hideSubmenu(submenu);
+            } else {
+                event.stopPropagation(); // Prevent click from bubbling
+                showSubmenu(submenu);
+            }
+        });
+
+        // Close submenu when clicking outside, for both desktop and mobile
         document.addEventListener('click', function () {
-            const submenu = menu.querySelector('.sub-menu');
-            if (isOpen) {
-                submenu.style.display = 'none';
-                submenu.style.left = '';
-                submenu.style.right = '';
-                submenu.style.visibility = '';
-                isOpen = false;
+            if (isTouchDevice) {
+                const submenu = menu.querySelector('.sub-menu');
+                if (submenu.style.display === 'flex') {
+                    hideSubmenu(submenu);
+                }
             }
         });
     });
 });
+
 
 
   
