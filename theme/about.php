@@ -85,7 +85,7 @@ get_header();
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         01</div>
-                    <img src="wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">Private health Insurance Patients</p>
                 <p class="text-center mx-12">Why pay hundreds on insurance just to be stung with a gap? Our No Gap
@@ -97,7 +97,7 @@ get_header();
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         02</div>
-                    <img src="wp-content/themes/dental1/theme/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">No insurance
                     Patients</p>
@@ -109,7 +109,7 @@ get_header();
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         03</div>
-                    <img src="wp-content/themes/dental1/theme/assets/images/about/noun-pedodontics-3981829.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-pedodontics-3981829.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">Child dental
                     Benefits</p>
@@ -120,7 +120,7 @@ get_header();
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         04</div>
-                    <img src="wp-content/themes/dental1/theme/assets/images/about/noun-strategic-plan-5780211.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-strategic-plan-5780211.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">Financing
                     Plans</p>
@@ -162,7 +162,7 @@ get_header();
                 <div class="lg:pl-20 flex flex-col gap-6 justify-center">
                     <div class="bg-white rounded-full p-4 w-full flex items-center gap-8 relative">
                         <div class="relative bg-primary rounded-full p-4">
-                            <img src="wp-content/themes/dental1/theme/assets/images/about/noun-dental-exam-5873704.png" class="w-[54px] h-[54px]" />
+                            <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-dental-exam-5873704.png" class="w-[54px] h-[54px]" />
                         </div>
                         <h4 class="text-3xl">Exam</h4>
                         <span class="absolute right-10"><svg width="34" height="33" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -172,7 +172,7 @@ get_header();
                     </div>
                     <div class="bg-white rounded-full p-4 w-full flex items-center gap-8 relative">
                         <div class="relative bg-primary rounded-full p-4">
-                            <img src="wp-content/themes/dental1/theme/assets/images/about/noun-dental-clean-2317191.png" class="w-[54px] h-[54px]" />
+                            <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-dental-clean-2317191.png" class="w-[54px] h-[54px]" />
                         </div>
                         <h4 class="text-3xl">Clean</h4>
                         <span class="absolute right-10"><svg width="34" height="33" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +182,7 @@ get_header();
                     </div>
                     <div class="bg-white rounded-full p-4 w-full flex items-center gap-8 relative">
                         <div class="relative bg-primary rounded-full p-4">
-                            <img src="wp-content/themes/dental1/theme/assets/images/about/noun-dental-xray-5847122.png" class="w-[54px] h-[54px]" />
+                            <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-dental-xray-5847122.png" class="w-[54px] h-[54px]" />
                         </div>
                         <h4 class="text-3xl">X-Rays</h4>
                         <span class="absolute right-10"><svg width="34" height="33" viewBox="0 0 45 44" fill="none" xmlns="http://www.w3.org/2000/svg">
