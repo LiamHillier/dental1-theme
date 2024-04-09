@@ -69,7 +69,7 @@
 	@apply text-primary;
 }
 .menu-item-has-children .sub-menu {
-	@apply p-4 md:rounded-lg md:min-w-[230px] hidden text-transparent flex-col gap-2 md:shadow md:absolute;
+	@apply p-4 md:rounded-lg md:min-w-[230px] hidden text-transparent flex-col gap-2 md:shadow md:absolute bg-white;
 	visibility: hidden; /* Make it invisible */
 }
 
