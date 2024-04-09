@@ -44,19 +44,24 @@ main {
 /*--- TYPOGRAPHY ---*/
 /*------------------*/
 
-p {
-	@apply text-base text-gray-500;
+p, ul, li {
+	@apply text-base !text-gray-500;
 }
 
+h1,h2,h3,h4 {
+	font-weight: bold;
+}
 
 h1 {
 	font-size: clamp(36px, 4vw, 56px);
 	line-height: 1;
+	font-weight: bold;
 }
 
 h2 {
 	font-size: clamp(28px, 3vw, 42px);
 	line-height: 1;
+	font-weight: bold;
 }
 
 .hero-text-large {
