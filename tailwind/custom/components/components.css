@@ -78,6 +78,10 @@
 	visibility: visible; /* Make it visible on hover */
 }
 
+.menu-item-has-children .sub-menu > .sub-menu {
+	@apply left-auto;
+}
+
 /*---------------------*/
 /*--- Buttons ---*/
 /*---------------------*/
