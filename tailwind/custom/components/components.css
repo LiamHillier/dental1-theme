@@ -79,7 +79,7 @@
 }
 
 #main-right > li.menu-item-has-children > .sub-menu li.menu-item-has-children > .sub-menu {
-	@apply left-auto;
+	@apply !left-[100%];
 }
 
 /*---------------------*/
