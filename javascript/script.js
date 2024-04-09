@@ -25,48 +25,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const hasChildrenMenus = document.querySelectorAll('.menu-item-has-children');
+    let hideSubmenuTimeout; // Declare a variable to hold the timeout ID
 
     hasChildrenMenus.forEach(menu => {
-        let isTouchDevice = false; // A flag to track if the current device supports touch
+        let isTouchDevice = false; 
 
-        // Function to show submenu
         function showSubmenu(submenu) {
-            // Make sure the submenu is visible for calculation
             submenu.style.display = 'flex';
             submenu.style.visibility = 'hidden';
 
-            // Calculate positions
             const submenuRect = submenu.getBoundingClientRect();
-            const overflowRight = submenuRect.right + 50 - window.innerWidth; // 50 pixels tolerance
+            const overflowRight = submenuRect.right + 50 - window.innerWidth;
 
             if (overflowRight > 0) {
-                // If overflowing the right edge, adjust position
                 submenu.style.left = `auto`;
                 submenu.style.right = `0px`;
             } else {
-                // Position normally if not overflowing
                 submenu.style.left = `0`;
                 submenu.style.right = `auto`;
             }
 
-            // Make submenu fully visible after adjustments
             submenu.style.visibility = 'visible';
         }
 
-        // Function to hide submenu
         function hideSubmenu(submenu) {
-            submenu.style.display = 'none'; // Hide the submenu
-            // Reset positioning to default for next time
-            submenu.style.left = '';
-            submenu.style.right = '';
-            submenu.style.visibility = '';
+            // Wrap the hiding logic in a function to delay its execution
+            hideSubmenuTimeout = setTimeout(() => {
+                submenu.style.display = 'none';
+                submenu.style.left = '';
+                submenu.style.right = '';
+                submenu.style.visibility = '';
+            }, 300); // Delay hiding to allow moving to sub-submenu
         }
 
-        // Desktop: Show submenu on hover
+        function cancelHideSubmenu() {
+            clearTimeout(hideSubmenuTimeout); // Cancel the scheduled hiding
+        }
+
         menu.addEventListener('mouseenter', function () {
             if (!isTouchDevice) {
                 const submenu = this.querySelector('.sub-menu');
                 showSubmenu(submenu);
+                cancelHideSubmenu(); // Cancel hiding if re-entering
             }
         });
 
@@ -77,30 +77,33 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        // Mobile: Toggle submenu on click
+        // Add mouseenter listener to the submenu itself to prevent hiding when moving towards sub-submenu
+        menu.querySelectorAll('.sub-menu').forEach(submenu => {
+            submenu.addEventListener('mouseenter', cancelHideSubmenu);
+            submenu.addEventListener('mouseleave', () => hideSubmenu(submenu));
+        });
+
         menu.addEventListener('click', function (event) {
-            isTouchDevice = true; // Assume touch if the menu item is clicked
+            isTouchDevice = true; 
             const submenu = this.querySelector('.sub-menu');
             if (submenu.style.display === 'flex') {
                 hideSubmenu(submenu);
             } else {
-                event.stopPropagation(); // Prevent click from bubbling
+                event.stopPropagation(); 
                 showSubmenu(submenu);
             }
         });
 
-        // Close submenu when clicking outside, for both desktop and mobile
         document.addEventListener('click', function () {
             if (isTouchDevice) {
                 const submenu = menu.querySelector('.sub-menu');
-                if (submenu.style.display === 'flex') {
+                if (submenu && submenu.style.display === 'flex') {
                     hideSubmenu(submenu);
                 }
             }
         });
     });
 });
-
 
 
   
