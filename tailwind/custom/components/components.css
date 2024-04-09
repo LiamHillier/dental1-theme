@@ -16,13 +16,21 @@
 }
 
 #site-navigation a {
-	@apply text-black whitespace-nowrap text-lg md:text-base hover:text-primary;
+	@apply text-black whitespace-nowrap text-lg md:text-base;
+	
+	&:not(.feature-button) {
+		@apply hover:text-primary
+	}	
 }
 #site-navigation li:hover > a {
-	@apply text-primary;
+	&:not(.feature-button) {
+		@apply text-primary;
+	}	
 }
 #site-navigation li.current-menu-item > a, #site-navigation li.current-menu-item:after {
-	@apply text-primary fill-primary;
+	&:not(.feature-button) {
+		@apply text-primary fill-primary;
+	}
 }
 #site-navigation #main-right > li {
 	@apply w-full text-left pt-4 md:pt-0;
