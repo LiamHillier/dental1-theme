@@ -78,7 +78,7 @@
 	visibility: visible; /* Make it visible on hover */
 }
 
-.menu-item-has-children > .sub-menu > .sub-menu {
+#main-right > li.menu-item-has-children > .sub-menu li.menu-item-has-children > .sub-menu {
 	@apply left-auto;
 }
 
