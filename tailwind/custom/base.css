@@ -45,7 +45,8 @@ main {
 /*------------------*/
 
 p, ul, li {
-	@apply text-base text-gray-500;
+	@apply text-gray-500 font-normal;
+	font-size: 1.25rem;
 }
 
 h1,h2,h3,h4 {
