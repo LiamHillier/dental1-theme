@@ -37,10 +37,10 @@
 }
 
 /* @layer base {
-	.font-accent {
+	. {
 		font-family: "Raleway", serif;
 	}
-	.font-secondary {
+	. {
 		font-family: "Raleway", serif;
 	}
 	.font-primary {

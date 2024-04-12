@@ -28,9 +28,6 @@ html {
 	@apply !overflow-x-hidden;
 }
 
-body {
-	@apply font-primary;
-}
 main {
 	@apply !overflow-x-hidden w-screen;
 }

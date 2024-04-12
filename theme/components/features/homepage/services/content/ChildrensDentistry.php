@@ -1,7 +1,7 @@
 <section id="childrens-dentistry-content">
     <header class="mb-6">
         <p class="text-primary pb-3 pre-header">DentalOne</p>
-        <h2 class="font-secondary text-4xl text-center font-semibold capitalize border-b-4 border-primary pb-4 inline-block">
+        <h2 class=" text-4xl text-center font-semibold capitalize border-b-4 border-primary pb-4 inline-block">
             Children's <br class="hidden md:block" /><span class="md:pl-10"></span>Dentistry</h2>
         <div class="hidden md:block bg-primary w-6/12 h-[4px] md:ml-20"></div>
     </header>

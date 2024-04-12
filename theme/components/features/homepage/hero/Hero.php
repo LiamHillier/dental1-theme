@@ -40,8 +40,8 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                 <img alt="dental 1 smiling women after dental care" class="mt-32 inset-0 flex justify-center items-center h-full w-full object-cover object-top z-0 min-h-[700px] md:mt-0 md:max-h-[1200px] md:w-auto" srcset="/wp-content/themes/dental1/theme/assets/images/hero/banner-image-1-(1)-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/banner-image-1-(1)-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/banner-image-1-(1)-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/banner-image-1-(1)-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/banner-image-1-(1)-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/banner-image-1-(1)-1600w.avif 1600w, /wp-content/themes/dental1/theme/assets/images/hero/banner-image-1-(1)-2000w.avif 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="/wp-content/themes/dental1/theme/assets/images/hero/banner-image 1 (1).png" alt="lady smiling after dental appointment at dental1" />
                 <div class="absolute top-[50%] translate-y-[-50%] px-5 flex flex-col md:flex-row md:justify-between w-full md:px-20 md:-mt-20 gap-16 md:gap-24 max-w-screen-2xl mx-auto">
                     <div class="text-center md:text-left flex flex-col gap-2 items-center md:items-start relative z-10 lg:-mt-20 md:w-4/12 ">
-                        <h1 class="font-accent hero-text-medium animate__animated animate__fadeInUp">Welcome to Dental<span class="text-primary">One</span></h1>
-                        <h2 class="font-secondary hero-text-large capitalize text-neutral-800  animate__animated animate__fadeInUp">
+                        <h1 class=" hero-text-medium animate__animated animate__fadeInUp">Welcome to Dental<span class="text-primary">One</span></h1>
+                        <h2 class=" hero-text-large capitalize text-neutral-800  animate__animated animate__fadeInUp">
                             Unleash</h2>
                         <p class="hidden md:block max-w-md text-black my-8 animate__animated animate__fadeIn animate__slow">
                             Lorem ipsum dolor,
@@ -62,10 +62,10 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                         <div class="w-[200px] h-[200px]">
                             <?php echo $circle; ?>
                         </div>
-                        <h2 class="text-white font-secondary absolute top-[50%] translate-y-[-50%] text-4xl lowercase pb-3">your
+                        <h2 class="text-white  absolute top-[50%] translate-y-[-50%] text-4xl lowercase pb-3">your
                         </h2>
                     </div>
-                    <div class="text-center flex flex-col items-center md:items-end relative z-10 font-secondary  md:mt-40 md:w-4/12">
+                    <div class="text-center flex flex-col items-center md:items-end relative z-10   md:mt-40 md:w-4/12">
                         <div class="flex">
                             <h2 class="animate__animated animate__fadeInUp hero-text-large capitalize text-neutral-800">
                                 Smile</h2>
