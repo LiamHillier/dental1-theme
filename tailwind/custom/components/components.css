@@ -353,6 +353,7 @@
 .mega-feature-button {
 	padding: 0px !important;
 }
+
 .mega-feature-button a {
 	line-height: 1 !important;
 		background: rgb(8 163 154) !important; 
@@ -367,6 +368,7 @@
 #mega-menu-wrap-main-right #mega-menu-main-right>li.mega-menu-item>a.mega-menu-link {
 	line-height: 40px;
 }
+
 #mega-menu-wrap-main-right #mega-menu-main-right li.mega-menu-item a.mega-menu-link:before {
 	fill: white; 
 	color: white;
