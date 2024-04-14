@@ -71,9 +71,6 @@ h2 {
 	font-size: clamp(36px, 3vw, 56px);
 }
 
-.pre-header {
-	@apply text-base uppercase tracking-[0.3rem] font-semibold text-black;
-}
 .about-shape-divider-bottom-1,
 .about-shape-divider-bottom-2 {
 	width: 150%;
