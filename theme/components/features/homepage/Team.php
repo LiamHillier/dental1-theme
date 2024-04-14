@@ -59,9 +59,9 @@
                 </div>
                 <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_8s">
                     <div class="slide-content">
-                        <img src="/wp-content/uploads/2024/04/FILOMENA.jpg" />
+                        <img src="/wp-content/uploads/2024/04/isabelle.jpg" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Filomena Perri</p>
+                            <p class="font-semibold text-lg">Isabelle Magliozzi</p>
                             <p>General Dentist</p>
                             <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
