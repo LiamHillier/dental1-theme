@@ -95,7 +95,10 @@
 #mega-menu-wrap-main-right {
 	background: transparent;
 }
-#mega-menu-wrap-main-right #mega-menu-main-right > li.mega-menu-item > a.mega-menu-link {
+#mega-menu-wrap-main-right
+	#mega-menu-main-right
+	> li.mega-menu-item
+	> a.mega-menu-link {
 	font-size: 1rem;
 	line-height: 1.5rem;
 }
@@ -356,25 +359,31 @@
 
 .mega-feature-button a {
 	line-height: 1 !important;
-		background: rgb(8 163 154) !important; 
+	background: rgb(8 163 154) !important;
 	border-radius: 60px !important;
 	padding: 0px !important;
 	display: flex !important;
 	align-items: center !important;
-		padding: 20px 30px !important;
+	padding: 20px 30px !important;
 	color: white !important;
 }
 
-#mega-menu-wrap-main-right #mega-menu-main-right>li.mega-menu-item>a.mega-menu-link {
+#mega-menu-wrap-main-right
+	#mega-menu-main-right
+	> li.mega-menu-item
+	> a.mega-menu-link {
 	line-height: 40px;
 }
 
-#mega-menu-wrap-main-right #mega-menu-main-right li.mega-menu-item a.mega-menu-link:before {
-	fill: white; 
+#mega-menu-wrap-main-right
+	#mega-menu-main-right
+	li.mega-menu-item
+	a.mega-menu-link:before {
+	fill: white;
 	color: white;
 	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIGNsYXNzPSJ3LTYgaC02IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTYuNzUgM3YyLjI1TTE3LjI1IDN2Mi4yNU0zIDE4Ljc1VjcuNWEyLjI1IDIuMjUgMCAwIDEgMi4yNS0yLjI1aDEzLjVBMi4yNSAyLjI1IDAgMCAxIDIxIDcuNXYxMS4yNW0tMTggMEEyLjI1IDIuMjUgMCAwIDAgNS4yNSAyMWgxMy41QTIuMjUgMi4yNSAwIDAgMCAyMSAxOC43NW0tMTggMHYtNy41QTIuMjUgMi4yNSAwIDAgMSA1LjI1IDloMTMuNUEyLjI1IDIuMjUgMCAwIDEgMjEgMTEuMjV2Ny41bS05LTZoLjAwOHYuMDA4SDEydi0uMDA4Wk0xMiAxNWguMDA4di4wMDhIMTJWMTVabTAgMi4yNWguMDA4di4wMDhIMTJ2LS4wMDhaTTkuNzUgMTVoLjAwOHYuMDA4SDkuNzVWMTVabTAgMi4yNWguMDA4di4wMDhIOS43NXYtLjAwOFpNNy41IDE1aC4wMDh2LjAwOEg3LjVWMTVabTAgMi4yNWguMDA4di4wMDhINy41di0uMDA4Wm02Ljc1LTQuNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTAgMi4yNWguMDA4di4wMDhoLS4wMDhWMTVabTAgMi4yNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTIuMjUtNC41aC4wMDh2LjAwOEgxNi41di0uMDA4Wm0wIDIuMjVoLjAwOHYuMDA4SDE2LjVWMTVaIi8+PC9zdmc+) !important;
-    background-size: contain;
-    background-repeat: no-repeat;
+	background-size: contain;
+	background-repeat: no-repeat;
 	width: 24px;
 	height: 24px;
 }
@@ -394,4 +403,3 @@
 		justify-content: center !important;
 	}
 }
-
