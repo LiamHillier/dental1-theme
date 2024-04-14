@@ -1,5 +1,5 @@
-<section id="services" class="text-center relative bg-white -mt-1 py-20 md:pb-40 md:pt-40  grid md:grid-cols-2">
-    <div class="px-5  md:px-20 text-left  mb-16 md:mb-0 flex flex-col ">
+<section id="services" class="text-center relative bg-white -mt-1 py-20 md:pb-40 md:pt-40  grid md:grid-cols-2 max-w-screen-2xl mx-auto px-5  md:px-20 gap-10">
+    <div class=" text-left  mb-16 md:mb-0 flex flex-col ">
         <div>
             <p class="mb-2 text-primary animate__initial animate__animated animate__fadeInLeft">Our services
             </p>
@@ -21,7 +21,7 @@
             </a>
         </div>
     </div>
-    <div class="pb-32 px-5  md:px-20">
+    <div class="pb-32 ">
         <div class="rounded-xl overflow-hidden">
             <img srcset="/wp-content/themes/dental1/theme/assets/images/DentalOne-Templestowe-23119-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/DentalOne-Templestowe-23119-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/DentalOne-Templestowe-23119-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/DentalOne-Templestowe-23119-1200w.avif 1200w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (min-width: 801px) 1200px" src="/wp-content/themes/dental1/theme/assets/images/DentalOne-Templestowe-23119.jpg" alt="dental one services" width="1980" height="1321" loading="lazy" class="full-image h-full" />
         </div>
