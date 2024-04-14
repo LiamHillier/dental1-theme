@@ -6,7 +6,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         <div class="bg-primary rounded-full w-[65vw] h-[65vw] absolute bottom-2 -left-52 md:max-w-[900px]  md:max-h-[900px]">
         </div>
         <header class="px-5 md:absolute md:right-20 md:w-5/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
-            <p class="mb-2 animate__initial animate__animated animate__fadeInUp">About us</p>
+            <p class="mb-2 animate__initial animate__animated animate__fadeInUp text-primary">About us</p>
             <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp">Discover the dental
                 elegance at <span class="text-primary">DentalOne</span>
             </h2>
