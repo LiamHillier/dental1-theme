@@ -33,67 +33,67 @@
                         <div>
                             <p class="font-semibold text-lg">Dr Michael Ahmar</p>
                             <p>General Dentist</p>
-                            <a href="" class="button primary">Learn More</a>
+                            <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">
                     <div class="slide-content">
-                        <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
+                        <img src="/wp-content/uploads/2024/04/Dr-William-Yu-1024x1024.jpeg" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Michael Ahmar</p>
+                            <p class="font-semibold text-lg">Dr. William Yu</p>
                             <p>General Dentist</p>
-                            <a href="" class="button primary">Learn More</a>
+                            <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_4s">
                     <div class="slide-content">
-                        <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
+                        <img src=/wp-content/uploads/2024/04/ayman.jpg" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Michael Ahmar</p>
+                            <p class="font-semibold text-lg">Dr Ayman Khodr</p>
                             <p>General Dentist</p>
-                            <a href="" class="button primary">Learn More</a>
+                            <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_8s">
                     <div class="slide-content">
-                        <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
+                        <img src="/wp-content/uploads/2024/04/FILOMENA.jpg" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Michael Ahmar</p>
+                            <p class="font-semibold text-lg">Dr Filomena Perri</p>
                             <p>General Dentist</p>
-                            <a href="" class="button primary">Learn More</a>
+                            <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1s">
                     <div class="slide-content">
-                        <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
+                        <img src="/wp-content/uploads/2024/04/Christine-Nacief-OHT.jpg" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Michael Ahmar</p>
+                            <p class="font-semibold text-lg">Christine Nacief</p>
                             <p>General Dentist</p>
-                            <a href="" class="button primary">Learn More</a>
+                            <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1_2s">
                     <div class="slide-content">
-                        <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
+                        <img src="/wp-content/uploads/2024/04/ahmad.jpg" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Michael Ahmar</p>
+                            <p class="font-semibold text-lg">Dr Ahmad Mehrez</p>
                             <p>General Dentist</p>
-                            <a href="" class="button primary">Learn More</a>
+                            <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
                     </div>
                 </div>
                 <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1_4s">
                     <div class="slide-content">
-                        <img src="/wp-content/themes/dental1/theme/assets/images/team/michael.jpg" />
+                        <img src="/wp-content/uploads/2024/04/daniel-y-scaled-1-1024x1024.jpg" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Michael Ahmar</p>
+                            <p class="font-semibold text-lg">Dr Daniel Yacoub</p>
                             <p>General Dentist</p>
-                            <a href="" class="button primary">Learn More</a>
+                            <a href="/meet-the-team/" class="button primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
         </div>
     </div>
     <div class="flex justify-center mt-16">
-        <a class="button secondary animate__initial animate__animated animate__fadeInUp animate__delay-2s">View
+        <a  href="/meet-the-team/" class="button secondary animate__initial animate__animated animate__fadeInUp animate__delay-2s">View
             all</a>
     </div>
     <div class="mx-5 md:mx-20 border-b border-neutral-300 mt-10" />

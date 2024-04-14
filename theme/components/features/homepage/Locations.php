@@ -7,9 +7,9 @@
                     <div class="w-12 h-12">
                         <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
                     </div>
-                    <p class="text-primary pre-header animate__initial animate__animated animate__fadeInUp">Locations
+                    <p class="text-primary animate__initial animate__animated animate__fadeInUp">Locations
                     </p>
-                    <h2 class="font-semibold animate__initial animate__animated animate__fadeInUp">Our clinics across
+                    <h2 class="animate__initial animate__animated animate__fadeInUp">Our clinics across
                         <br><span class="!text-primary">Melbourne</span>
                     </h2>
                 </header>
@@ -20,7 +20,7 @@
                         trusted
                         partner
                         in achieving and maintaining a beautiful, healthy smile.</p>
-                    <a href="" class="link mt-4 animate__initial animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="/book-appointment" class="link mt-4 animate__initial animate__animated animate__fadeInUp animate__delay-1s">
                         Book your consult
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6 inline-block ml-1">
@@ -122,8 +122,8 @@
         </div>
     </div>
     <div class="flex gap-2 items-center justify-center mt-12">
-        <a href="" class="button secondary animate__initial animate__animated animate__fadeInUp">Contact Us</a>
-        <a href="" class="button primary animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">Book
+        <a href="/contact" class="button secondary animate__initial animate__animated animate__fadeInUp">Contact Us</a>
+        <a href="/book-appointment" class="button primary animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">Book
             Online</a>
     </div>
 

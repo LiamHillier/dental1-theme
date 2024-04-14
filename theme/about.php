@@ -13,11 +13,11 @@ get_header();
     <div class="relative">
         <section id="about" class="text-center max-w-screen-2xl mx-auto px-5 md:px-20  pb-[240px] mt-20 md:mt-0">
             <div class="max-w-[650px] mx-auto mb-20 z-10 relative">
-                <p class="mb-2 pre-header animate__initial animate__animated animate__fadeInUp">ABOUT US</p>
-                <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp uppercase font-base">Why
-                    dental <span class="text-primary">ONE</span>
+                <p class="mb-2 animate__initial animate__animated animate__fadeInUp">About us</p>
+                <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp ">Why
+                    Dental<span class="text-primary">One</span>
                 </h2>
-                <p class="font-bold text-black my-10 animate__initial  animate__animated animate__fadeInUp">Dental One was
+                <p class="text-black my-10 animate__initial  animate__animated animate__fadeInUp">DentalOne was
                     created to make Dentistry more affordable and
                     accessible
                     in
@@ -67,8 +67,8 @@ get_header();
     <section id="services" class="bg-white pt-20 pb-[140px]">
         <div class="px-5 md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto">
             <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start text-center md:text-left">
-                <p class="text-primary pre-header md:text-left animate__initial animate__animated animate__fadeInUp">
-                    OUR SERVICES</p>
+                <p class="text-primary  md:text-left animate__initial animate__animated animate__fadeInUp">
+                    Our services</p>
                 <h2 class="text-center md:text-left  animate__initial animate__animated animate__fadeInUp">
                     Affordable options<br><span class="!text-primary">for
                         all!</span>
@@ -141,13 +141,12 @@ get_header();
     </div>
     <div class="relative">
         <section id="gap-free" class="bg-gray-100 pb-[340px] pt-20">
-
             <div class="grid md:grid-cols-2 gap-10 max-w-screen-2xl mx-auto px-5 md:px-20 mt-10">
                 <div class="lg:pr-20">
                     <div class="md:flex justify-between items-center mb-10">
-                        <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start text-center md:text-left">
-                            <p class="text-primary pre-header md:text-left animate__initial animate__animated animate__fadeInUp">
-                                ABOUT US</p>
+                        <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start ">
+                            <p class="text-primary  md:text-left animate__initial animate__animated animate__fadeInUp">
+                                About us</p>
                             <h2 class="text-center md:text-left  animate__initial animate__animated animate__fadeInUp">
                                 Affordable gap free general<br><span class="!text-primary">Dentist has arrived</span>
                             </h2>

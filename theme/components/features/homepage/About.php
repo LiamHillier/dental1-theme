@@ -5,9 +5,9 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
     <div class="max-w-screen-2xl mx-auto relative">
         <div class="bg-primary rounded-full w-[65vw] h-[65vw] absolute bottom-2 -left-52 md:max-w-[900px]  md:max-h-[900px]">
         </div>
-        <header class="px-5 md:absolute md:right-20 md:w-4/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
-            <p class="mb-2 pre-header animate__initial animate__animated animate__fadeInUp">ABOUT US</p>
-            <h2 class="mb-4 font-semibold animate__initial  animate__animated animate__fadeInUp">Discover the dental
+        <header class="px-5 md:absolute md:right-20 md:w-5/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
+            <p class="mb-2 animate__initial animate__animated animate__fadeInUp">About us</p>
+            <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp">Discover the dental
                 elegance at <span class="text-primary">DentalOne</span>
             </h2>
             <p class="animate__initial animate__animated animate__fadeInUp">At dental1.com.au, we are more than just a
@@ -21,7 +21,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
                 maintain your dental health, DentalOne is here
                 for
                 you. Schedule an appointment with us, and let us help you acheive the smile of your dreams.</p>
-            <a href="/book-online" class="button primary mt-6 animate__initial animate__animated animate__fadeInUp">Book
+            <a href="/book-aapointment" class="button primary mt-6 animate__initial animate__animated animate__fadeInUp">Book
                 Online</a>
         </header>
         <div class="relative">

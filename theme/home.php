@@ -14,7 +14,7 @@ get_header();
     <?php
     get_template_part('components/features/homepage/hero/Hero');
     get_template_part('components/features/homepage/About');
-    get_template_part('components/features/homepage/Services');
+    get_template_part('components/features/homepage/Services-2');
     get_template_part('components/features/homepage/Locations');
     get_template_part('components/features/homepage/Team');
     get_template_part('components/features/homepage/Social');

@@ -4,7 +4,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
 ?>
 
 <div class="embla relative hero" id="hero">
-    <div class="embla__container max-h-[1000px] ">
+    <div class="embla__container min-h-screen md:min-h-[900px] max-h-[1000px] ">
         <div class="embla__slide">
             <div class="relative flex flex-col justify-center items-start gap-10 h-full  overflow-hidden pb-52 md:pb-40 md:pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
                 <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
@@ -13,14 +13,14 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                     <h1 class="hero-text-large font-bold text-primary text-left">The Smile<br /> You Deserve</h1>
                     <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
                     <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
-                        <a href="/services" class="button primary">book appointment</a>
+                        <a href="/book-appointment" class="button primary">book appointment</a>
                         <a href="/services" class="button alt">our services</a>
                     </div>
                    
                 </div>
             </div>
         </div>
-        <div class="embla__slide">
+        <!-- <div class="embla__slide">
             <div class="relative flex flex-col justify-center items-start gap-10 h-full  overflow-hidden pb-52 md:pb-40 pt-[150px] bg-gradient-to-tl from-sky-50 to-gray-100">
                 <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
                 <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/hero-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/hero-1.jpg" alt="Dental One Hero" width="1708" height="1132" class="hidden sm:block object-cover absolute top-0 left-0 w-full h-full" />
@@ -80,7 +80,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                 </div>
                 <div class="bg-gradient-to-t from-gray-200 to-transparent h-[100px] w-full absolute bottom-0 left-0"></div>
             </div>
-        </div>
+        </div> -->
        
     </div>
     <div class="embla__dots"></div>

@@ -14,8 +14,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                 <div class="w-12 h-12">
                     <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
                 </div>
-                <p class="text-primary pre-header">Support</p>
-                <h2 class="font-semibold">Get in touch</span></h2>
+                <p class="text-primary">Support</p>
+                <h2 class="">Get in touch</span></h2>
             </header>
             <p class="px-5 md:pl-0 md:pr-20 mt-6">Whether you have a dental emergency, need to get some advice or just
                 want
@@ -62,7 +62,14 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
         </div>
 
         <div id="basic-contact-form" class="my-10 mx-5 p-7 bg-white rounded-3xl shadow-3xl text-left bg-white shadow-2xl shadow-teal-500/30 lg:col-span-2 md:mx-0 animate__initial animate__animated animate__bounceIn animate__fast">
-            <?php echo do_shortcode("[gravityforms id='1' title='false' description='false']"); ?>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+        <script>
+        hbspt.forms.create({
+            region: "na1",
+            portalId: "44861831",
+            formId: "76012445-de63-49e8-a850-be5599509652"
+        });
+        </script>
         </div>
     </div>
 
