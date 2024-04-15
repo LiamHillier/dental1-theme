@@ -26,7 +26,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         </header>
         <div class="relative">
             <div class="relative z-10">
-                <img srcset="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/about-dentalone-com-au.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw] md:-ml-16  md:max-w-[1368px]" />
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/3-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/3-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/3-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/3-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/3-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/3-1600w.avif 1600w, /wp-content/themes/dental1/theme/assets/images/3-2000w.avif 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="/wp-content/themes/dental1/theme/assets/images/3.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw] md:-ml-[700px]  md:max-w-[1368px] z-0" />
                 <div class="w-24 h-24 md:w-[16vw] md:h-[16vw] md:max-w-[170px] absolute right-16 md:left-[200px] lg:left-[400px] top-[50%] translate-y-[-50%] animate__animated animate__bounceIn animate__slow">
                     <?php echo $badge; ?>
                 </div>
@@ -34,13 +34,13 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         </div>
     </div>
 
-    <div class="about-shape-divider-bottom-1 absolute bottom-6 left-0">
+    <div class="about-shape-divider-bottom-1 absolute bottom-6 left-0 z-10">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
     </div>
-    <div class="w-full h-[26px] bg-gray-200 absolute bottom-0 bg-gray-50"></div>
-    <div class="about-shape-divider-bottom-2 absolute -bottom-0 left-0">
+    <div class="w-full h-[26px] bg-gray-200 absolute bottom-0 bg-gray-50 z-10"></div>
+    <div class="about-shape-divider-bottom-2 absolute -bottom-0 left-0 z-10">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
