@@ -64,12 +64,12 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 		<div class="justify-self-end pr-8 border-l-0  w-[125px]  md:w-full md:!border-l md:pl-8">
 			<p class="text-lg text-black mb-4">Locations</p>
 			<ul class="text-gray-500 flex flex-col">
-				<li><a href="/craigieburn/">Craigieburn</a></li>
-				<li><a href="/richmond">Richmond</a></li>
-				<li><a href="/lower-templestowe/">Lower Templestowe</a></li>
-				<li><a href="/epping/">Epping North</a></li>
-				<li><a href="/essendon/">Essendon</a></li>
-				<li><a href="/reservoir">Reservoir</a></li>
+				<li><a href="/locations/craigieburn/">Craigieburn</a></li>
+				<li><a href="/locations/richmond">Richmond</a></li>
+				<li><a href="/locations/lower-templestowe/">Lower Templestowe</a></li>
+				<li><a href="/locations/epping/">Epping North</a></li>
+				<li><a href="/locations/essendon/">Essendon</a></li>
+				<li><a href="/locations/reservoir">Reservoir</a></li>
 			</ul>
 		</div>
 		<div class="pl-8 w-[125px]  md:w-full">
