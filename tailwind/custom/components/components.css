@@ -472,3 +472,7 @@ footer ul li {
 .hs-form-radio label input {
 	width: auto !important;
 }
+
+p > a {
+	@apply text-primary underline;
+}
