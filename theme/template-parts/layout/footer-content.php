@@ -67,7 +67,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/craigieburn/">Craigieburn</a></li>
 				<li><a href="/richmond">Richmond</a></li>
 				<li><a href="/lower-templestowe/">Lower Templestowe</a></li>
-				<li><a href="/epping-north/">Epping North</a></li>
+				<li><a href="/epping/">Epping North</a></li>
 				<li><a href="/essendon/">Essendon</a></li>
 				<li><a href="/reservoir">Reservoir</a></li>
 			</ul>
