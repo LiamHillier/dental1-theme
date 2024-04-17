@@ -476,3 +476,7 @@ footer ul li {
 p:not(.link) > a:not(.link) {
 	@apply text-primary underline;
 }
+
+.link * {
+	@apply no-underline;
+}
