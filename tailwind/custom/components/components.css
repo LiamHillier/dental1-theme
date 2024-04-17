@@ -478,7 +478,7 @@ p:not(.link) > a:not(.link) {
 }
 
 .link * {
-	@apply no-underline;
+	@apply !no-underline;
 }
 
 .wp-block-safe-svg-svg-icon {
