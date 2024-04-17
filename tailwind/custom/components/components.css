@@ -473,6 +473,6 @@ footer ul li {
 	width: auto !important;
 }
 
-p > a {
+p:not(.link) > a:not(.link) {
 	@apply text-primary underline;
 }
