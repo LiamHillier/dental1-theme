@@ -480,3 +480,9 @@ p:not(.link) > a:not(.link) {
 .link * {
 	@apply no-underline;
 }
+
+.wp-block-safe-svg-svg-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
