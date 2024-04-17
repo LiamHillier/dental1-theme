@@ -404,6 +404,12 @@
 	}
 }
 
+.hbspt-form form h1 {
+	font-size: 1.5rem !important;
+
+	@apply text-primary;
+}
+
 .hbspt-form form {
 	width: 100% !important;
 	display: flex;
@@ -486,3 +492,4 @@ p:not(.link) > a:not(.link) {
 	align-items: center;
 	justify-content: center;
 }
+
