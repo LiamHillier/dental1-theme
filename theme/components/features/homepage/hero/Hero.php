@@ -6,7 +6,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
 <div class="embla relative hero" id="hero">
     <div class="embla__container min-h-screen md:min-h-[900px] max-h-[1000px] ">
         <div class="embla__slide">
-            <div class="relative flex flex-col justify-center items-start gap-10 h-full  overflow-hidden pb-52 md:pb-40 md:pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
+            <div class="relative flex flex-col justify-center items-start gap-10 h-full  px-10 md:px-0   overflow-hidden pb-52 md:pb-40 md:pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
                 <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
                 <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/hero-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/hero-1.jpg" alt="Dental One Hero" width="1708" height="1132" class="hidden sm:block object-cover absolute top-0 left-0 w-full h-full" />
                 <div class="relative z-20 w-full max-w-screen-2xl mx-auto py-4 px-5 md:px-20">
@@ -16,7 +16,39 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                         <a href="/book-appointment" class="button primary">book appointment</a>
                         <a href="/services" class="button alt">our services</a>
                     </div>
-                   
+
+                </div>
+            </div>
+        </div>
+        <div class="embla__slide">
+            <div class="relative flex flex-col justify-center items-start gap-10 h-full  overflow-hidden px-10 md:px-0 pb-52 md:pb-40 md:pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
+                <div class="bg-gradient-to-t from-transparent to-white h-full w-full absolute top-0 left-0 z-10"></div>
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/child-7800568-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/child-7800568-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/child-7800568-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/child-7800568-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/child-7800568-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/child-7800568-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/child-7800568.jpg" alt="Child dental benefits scheme" class="hidden sm:block object-cover absolute top-0 left-0 w-full h-full object-left" />
+                <div class="relative z-20 w-full  py-4 px-5 md:px-20">
+                    <h1 class="hero-text-large font-bold text-primary text-left">Child Dental<br> Benefits Scheme</h1>
+                    <p class="text-black font-bold mt-2">Your child's oral health matters!</p>
+                    <p class=" max-w-xl text-black">The new federal government scheme allocates $1056 towards any eligible child's dental treatment over two calendar years for most services</p>
+                    <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
+                        <a href="/book-appointment" class="button primary">book appointment</a>
+                        <a href="/services" class="button alt">our services</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="embla__slide">
+            <div class="relative flex flex-col justify-center items-start gap-10 h-full  overflow-hidden px-10 md:px-0 pb-52 md:pb-40 md:pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
+                <div class="bg-gradient-to-t from-transparent to-white h-full w-full absolute top-0 left-0 z-10"></div>
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-6_edited-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-6_edited-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-6_edited-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-6_edited-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-6_edited-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-6_edited-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-6_edited.jpg" class="hidden sm:block object-cover absolute top-0 left-0 w-full h-full object-left" alt="Dental One Essendon"/>
+                <div class="relative z-20 w-full  py-4 px-5 md:px-20">
+                    <h1 class="hero-text-large font-bold text-primary text-left">New Clinic<br> Now Open!</h1>
+                    <p class="font-bold  text-black mt-2">Dental One Essendon is now open.</p>
+                    <p class=" max-w-xl text-black">Book in now or refer a friend of family member & you both receive $50 off your next treatment.</p>
+                    <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
+                        <a href="/book-appointment" class="button primary">book appointment</a>
+                        <a href="/services" class="button alt">our services</a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -81,7 +113,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                 <div class="bg-gradient-to-t from-gray-200 to-transparent h-[100px] w-full absolute bottom-0 left-0"></div>
             </div>
         </div> -->
-       
+
     </div>
     <div class="embla__dots"></div>
     <div class="service-shape-divider-bottom-1 absolute bottom-6 left-0 ">
@@ -99,7 +131,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
 
 
 
-<div id="container" class="-mt-[200px] md:-mt-[300px]">
+<!-- <div id="container" class="-mt-[200px] md:-mt-[300px]">
     <div id="circle" class="animate__initial animate__animated animate__fadeInUp animate__slow">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
             <defs>
@@ -119,4 +151,4 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
             </g>
         </svg>
     </div>
-</div>
+</div> -->

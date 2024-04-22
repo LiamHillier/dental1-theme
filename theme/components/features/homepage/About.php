@@ -27,9 +27,9 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         <div class="relative">
             <div class="relative z-10">
                 <img srcset="/wp-content/themes/dental1/theme/assets/images/3-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/3-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/3-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/3-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/3-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/3-1600w.avif 1600w, /wp-content/themes/dental1/theme/assets/images/3-2000w.avif 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="/wp-content/themes/dental1/theme/assets/images/3.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw] md:-ml-[700px]  md:max-w-[1368px] z-0" />
-                <div class="w-24 h-24 md:w-[16vw] md:h-[16vw] md:max-w-[170px] absolute right-16 md:left-[200px] lg:left-[400px] top-[50%] translate-y-[-50%] animate__animated animate__bounceIn animate__slow">
+                <!-- <div class="w-24 h-24 md:w-[16vw] md:h-[16vw] md:max-w-[170px] absolute right-16 md:left-[200px] lg:left-[400px] top-[50%] translate-y-[-50%] animate__animated animate__bounceIn animate__slow">
                     <?php echo $badge; ?>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
