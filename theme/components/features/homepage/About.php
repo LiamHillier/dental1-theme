@@ -1,7 +1,7 @@
 <?php
 $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-badge.svg');
 ?>
-<section id="about" class="text-center relative pt-20 md:pt-0 pb-0 md:!mt-[100px] bg-gray-100">
+<section id="about" class="text-center relative pt-20 md:pt-0 pb-0  bg-gray-100">
     <div class="max-w-screen-2xl mx-auto relative">
         <div class="bg-primary rounded-full w-[65vw] h-[65vw] absolute bottom-2 -left-52 md:max-w-[900px]  md:max-h-[900px]">
         </div>
