@@ -1,7 +1,7 @@
 <section id="locations" class="pt-10 bg-gray-100 pb-36 relative -mb-1 px-5  md:px-0">
     <div class=" max-w-screen-2xl mx-auto relative">
         <div id='geocoder-container' class="hidden"></div>
-        <div class="max-w-screen-2xl mx-auto md:flex justify-between items-center md:flex-wrap md:gap-10">
+        <div class="md:px-20 max-w-screen-2xl mx-auto md:flex justify-between items-center md:flex-wrap md:gap-10">
             <div>
                 <header class="flex flex-col items-center gap-2 text-center mb-2 ">
                     <div class="w-12 h-12">
