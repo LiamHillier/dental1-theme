@@ -539,12 +539,10 @@ p:not(.link) > a:not(.link) {
 }
 
 .locations-carousel .location-card {
-	display: flex;
+	
 	padding: 0px !important;
 	overflow: hidden;
-    flex-direction: column;
-    justify-content: flex-start; /* Center content vertically */
-    align-items: flex-start; /* Center content horizontally */
+
     text-align: left;
     box-sizing: border-box;
     background: #fff;
@@ -552,7 +550,7 @@ p:not(.link) > a:not(.link) {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: auto; /* Ensure the card adjusts to its content */
     max-width: 100%; /* Optional: Limit the maximum width */
-	height: 100%;
+	height: auto;
 }
 
 .locations-carousel .location-card img {

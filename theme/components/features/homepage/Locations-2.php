@@ -107,7 +107,7 @@
                                                 </a>
                                             </p>
                                         </div>
-                                        <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded -mt-5">
+                                        <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded -mt-3">
                                             <?php echo esc_html('Book Appointment'); ?>
                                         </a>
                                     </div>
