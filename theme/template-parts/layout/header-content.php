@@ -11,7 +11,7 @@
 $logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-dark.svg');
 
 ?>
-<div id="top-bar" class="font-semibold w-full text-white bg-primary z-50 relative">
+<div id="top-bar" class="font-semibold w-full text-white bg-primary z-50 sticky top-0">
 	<div class=" max-w-screen-2xl  mx-auto px-10 md:px-20 py-2 text-sm flex justify-between gap-4">
 		<div class="flex gap-4 items-center">
 			<div class="flex gap-1 items-center">
@@ -51,7 +51,7 @@ $logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-
 	</div>
 
 </div>
-<header id="masthead" class="w-screen sticky top-0 left-0 z-50 bg-transparent transition-colors duration-300 ease-in -mb-[112px]">
+<header id="masthead" class="w-screen sticky top-[40px] left-0 z-50 bg-transparent transition-colors duration-300 ease-in -mb-[112px]">
 	<div class="max-w-screen-2xl mx-auto py-4 px-10 md:px-20 flex justify-between items-center ">
 		<div class="logo h-full flex justify-start items-center">
 			<a href="/"><?php echo $logo; ?></a>
