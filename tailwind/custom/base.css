@@ -366,9 +366,6 @@ h2 {
 }
 
 @screen md {
-	#locations {
-		@apply px-20;
-	}
 	#locations header {
 		@apply text-left items-start max-w-lg;
 	}

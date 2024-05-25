@@ -110,6 +110,23 @@
 	@apply shadow;
 }
 
+.mobile-book:before {
+	@apply hidden sm:inline-block;
+    font: inherit;
+    font-family: dashicons;
+    position: static;
+    margin: 0 6px 0 0;
+    vertical-align: top;
+	content: '';
+    fill: #fff;
+    color: #fff;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIGNsYXNzPSJ3LTYgaC02IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTYuNzUgM3YyLjI1TTE3LjI1IDN2Mi4yNU0zIDE4Ljc1VjcuNWEyLjI1IDIuMjUgMCAwIDEgMi4yNS0yLjI1aDEzLjVBMi4yNSAyLjI1IDAgMCAxIDIxIDcuNXYxMS4yNW0tMTggMEEyLjI1IDIuMjUgMCAwIDAgNS4yNSAyMWgxMy41QTIuMjUgMi4yNSAwIDAgMCAyMSAxOC43NW0tMTggMHYtNy41QTIuMjUgMi4yNSAwIDAgMSA1LjI1IDloMTMuNUEyLjI1IDIuMjUgMCAwIDEgMjEgMTEuMjV2Ny41bS05LTZoLjAwOHYuMDA4SDEydi0uMDA4Wk0xMiAxNWguMDA4di4wMDhIMTJWMTVabTAgMi4yNWguMDA4di4wMDhIMTJ2LS4wMDhaTTkuNzUgMTVoLjAwOHYuMDA4SDkuNzVWMTVabTAgMi4yNWguMDA4di4wMDhIOS43NXYtLjAwOFpNNy41IDE1aC4wMDh2LjAwOEg3LjVWMTVabTAgMi4yNWguMDA4di4wMDhINy41di0uMDA4Wm02Ljc1LTQuNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTAgMi4yNWguMDA4di4wMDhoLS4wMDhWMTVabTAgMi4yNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTIuMjUtNC41aC4wMDh2LjAwOEgxNi41di0uMDA4Wm0wIDIuMjVoLjAwOHYuMDA4SDE2LjVWMTVaIi8+PC9zdmc+) !important;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
+}
+
 /*---------------------*/
 /*--- Buttons ---*/
 /*---------------------*/
@@ -491,5 +508,71 @@ p:not(.link) > a:not(.link) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.locations-carousel {
+    overflow: hidden;
+    width: 100%;
+	height: 100%; 
+}
+
+.locations-carousel .embla__viewport {
+    overflow: hidden;
+    width: 100%;
+	height: 100%; 
+}
+
+.locations-carousel .embla__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+	height: 100%;
+	padding: 20px 0px;
+}
+
+.locations-carousel .embla__slide {
+    position: relative;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+	width: 320px;
+    margin-right: 2rem; /* Optional spacing between slides */
+}
+
+.locations-carousel .location-card {
+	display: flex;
+	padding: 0px !important;
+	overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start; /* Center content vertically */
+    align-items: flex-start; /* Center content horizontally */
+    text-align: left;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: auto; /* Ensure the card adjusts to its content */
+    max-width: 100%; /* Optional: Limit the maximum width */
+	height: 100%;
+}
+
+.locations-carousel .location-card img {
+    max-width: 100%;
+	width: 100%;
+    height: 275px;
+	object-fit: cover;
+}
+
+.locations-carousel .location-card .location-content {
+	padding: 1rem;
+}
+.locations-carousel .location-card .location-content h3 {
+	@apply text-primary text-xl mb-2;
+}
+.locations-carousel .location-card .location-content p {
+	font-size: 1rem;
+	color: black;
+}
+.locations-carousel .location-card .location-content p a {
+	@apply text-gray-800;
 }
 

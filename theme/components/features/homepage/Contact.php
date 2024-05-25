@@ -49,10 +49,10 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                         <li><a href="/locations/reservoir">Reservoir</a></li>
                     </ul>
                 </div>
-                <a href="mailto:info@dental1.com.au" class="contact-link ">
+                <a href="mailto:info@DentalOne" class="contact-link ">
                     <span class="text-primary"><?php echo $mail; ?></span>
                     <p class="font-semibold text-lg text-black">Email Us</p>
-                    <p>info@dental1.com.au</p>
+                    <p>info@DentalOne</p>
                 </a>
                 <a href="" class="contact-link">
                     <span class="text-primary"><?php echo $pin; ?></span>

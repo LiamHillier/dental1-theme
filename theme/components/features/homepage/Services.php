@@ -7,7 +7,7 @@
                 Comprehensive <span class="text-primary">Treatment</span></h2>
         </div>
         <div class="md:place-self-end max-w-xl">
-            <p class="animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">At dental1.com.au, we
+            <p class="animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">At DentalOne, we
                 are more than just a
                 dental practice we are your trusted partner in
                 achieving and

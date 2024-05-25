@@ -10,7 +10,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
             <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp">Discover the dental
                 elegance at <span class="text-primary">DentalOne</span>
             </h2>
-            <p class="animate__initial animate__animated animate__fadeInUp">At dental1.com.au, we are more than just a
+            <p class="animate__initial animate__animated animate__fadeInUp">At DentalOne, we are more than just a
                 dental practice we
                 are your trusted partner in achieving and
                 maintaining a beautiful, healty smile. With over a decade of dedicated service in the field of
