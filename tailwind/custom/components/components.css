@@ -535,7 +535,7 @@ p:not(.link) > a:not(.link) {
     flex: 0 0 auto;
     box-sizing: border-box;
 	width: 320px;
-	height: 542px;
+	height: 500px;
     margin-right: 2rem; /* Optional spacing between slides */
 }
 
