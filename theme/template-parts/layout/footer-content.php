@@ -32,8 +32,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 	</div>
 
 
-	<div class="p5-8 grid grid-cols-2 divide-x gap-y-10 justify-center md:grid-cols-6 max-w-screen-2xl mx-auto md:px-20">
-		<div class="justify-self-end pr-8 w-[125px] md:w-full">
+	<div class="p5-8 grid sm:grid-cols-2 divide-x gap-y-10 sm:justify-center md:grid-cols-6 max-w-screen-2xl mx-auto md:px-20">
+		<div class="sm:justify-self-end pl-8 sm:pl-0 pr-8 w-full">
 			<p class="text-lg text-black mb-4">Quick links</p>
 			<ul class="text-gray-500 flex flex-col gap-2">
 				<li><a href="/">Home</a></li>
@@ -46,7 +46,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/faq/">FAQs</a></li>
 			</ul>
 		</div>
-		<div class="pl-8 w-[125px] md:w-full">
+		<div class="pl-8 :w-full">
 			<p class="text-lg text-black mb-4">Services</p>
 			<ul class="text-gray-500 flex flex-col gap-2">
 				<li><a href="/general-dentistry/">General</a></li>
@@ -62,7 +62,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 		</div>
 		<div class="hidden md:block"></div>
 		<div class="hidden md:block border-none"></div>
-		<div class="justify-self-end pr-8 border-l-0  w-[125px]  md:w-full md:!border-l md:pl-8">
+		<div class="sm:justify-self-end pl-8 sm:pl-0 pr-8 border-l-0  w-full md:!border-l md:pl-8">
 			<p class="text-lg text-black mb-4">Locations</p>
 			<ul class="text-gray-500 flex flex-col">
 				<li><a href="/locations/craigieburn/">Craigieburn</a></li>
@@ -73,7 +73,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/locations/reservoir">Reservoir</a></li>
 			</ul>
 		</div>
-		<div class="pl-8 w-[125px]  md:w-full">
+		<div class="pl-8  w-full">
 			<p class="text-lg text-black mb-4">Contact</p>
 			<ul class="text-gray-500 flex flex-col gap-2">
 				<li><a href="/contact/">Contact</a></li>
