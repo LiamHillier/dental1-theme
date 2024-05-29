@@ -13,6 +13,7 @@ $facebook = file_get_contents('wp-content/themes/dental1/theme/assets/icons/face
 $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/instagram.svg');
 ?>
 
+
 <footer id="colophon" class="bg-gradient-to-t from-teal-50 via-white to-white -mt-1 pt-16 pb-4">
 
 	<div class="lg:-mb-40">
