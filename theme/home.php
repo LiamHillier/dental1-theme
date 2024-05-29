@@ -14,7 +14,7 @@ get_header();
     <?php
     get_template_part('components/features/homepage/hero/Hero');
     ?>
-    <section id="testimonials" class="bg-gray-100 max-w-screen-2xl mx-auto px-10 md:px-20">
+    <section id="testimonials" class="bg-gray-100 ">
         <!-- <div>
             <header class="flex flex-col items-center gap-2 text-center mb-2 ">
                 <p class="text-primary animate__initial animate__animated animate__fadeInUp">Results
@@ -33,7 +33,7 @@ get_header();
                 </a>
             </div>
         </div> -->
-        <div class="pt-20 md:pt-0 md:pb-20" id="testimonials-container">
+        <div class="pt-20 md:pt-0 md:pb-20 max-w-screen-2xl mx-auto px-10 md:px-20" id="testimonials-container">
             <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
         </div>
 
