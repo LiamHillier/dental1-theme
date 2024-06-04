@@ -14,7 +14,7 @@
 * {
 	box-sizing: border-box;
 }
-#masthead .logo, #masthead #site-navigation {
+#masthead .logo, #masthead #site-navigation, #masthead > div {
 	position: relative;
 	z-index: 1000;
 }
