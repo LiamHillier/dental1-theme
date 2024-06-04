@@ -574,6 +574,6 @@ p:not(.link) > a:not(.link) {
 }
 
 #mega-menu-main-right {
-	display: flex;
+	display: flex !important;
 	align-items: center;
 }
