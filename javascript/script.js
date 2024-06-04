@@ -12,11 +12,17 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    const megaMenuLink = document.querySelector('.mega-menu-link');
+    const megaMenuLinks = document.querySelectorAll('.mega-menu-link');
     const header = document.getElementById('masthead');
 
     function checkAriaExpanded() {
-        if (megaMenuLink.getAttribute('aria-expanded') === 'true') {
+        let shouldBeWhite = false;
+        megaMenuLinks.forEach(link => {
+            if (link.getAttribute('aria-expanded') === 'true') {
+                shouldBeWhite = true;
+            }
+        });
+        if (shouldBeWhite) {
             header.classList.add('bg-white');
         } else {
             header.classList.remove('bg-white');
@@ -26,8 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Create an observer to watch for changes to the aria-expanded attribute
     const observerLink = new MutationObserver(checkAriaExpanded);
 
-    // Start observing the megaMenuLink for attribute changes
-    observerLink.observe(megaMenuLink, { attributes: true, attributeFilter: ['aria-expanded'] });
+    // Start observing each megaMenuLink for attribute changes
+    megaMenuLinks.forEach(link => {
+        observerLink.observe(link, { attributes: true, attributeFilter: ['aria-expanded'] });
+    });
 
     // Initial check on page load
     checkAriaExpanded();
