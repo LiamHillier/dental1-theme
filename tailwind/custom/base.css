@@ -24,7 +24,7 @@
 	--global-palette9: #ffffff;
 }
 
-html {
+html, body {
 	@apply !overflow-x-hidden;
 }
 
