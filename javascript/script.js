@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => emblaLocationsApi.reInit());
     }
 
-    const teamsContainer = document.querySelector('#team .embla__viewport');
+    const teamsContainer = document.querySelector('#team .team__viewport');
     const teamPrevButton = document.querySelector('.team__prev');
     const teamNextButton = document.querySelector('.team__next');
 
