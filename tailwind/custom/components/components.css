@@ -14,7 +14,14 @@
 * {
 	box-sizing: border-box;
 }
-
+#masthead {
+	position: relative;
+	z-index: 9999999;
+}
+#masthead > div, .logo {
+	position: relative;
+	z-index: 9999999;
+}
 #site-navigation a {
 	@apply text-black whitespace-nowrap text-lg md:text-base;
 
