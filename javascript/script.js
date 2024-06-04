@@ -11,25 +11,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const megaMenuLink = document.querySelector('.mega-menu-link');
-    const header = document.getElementById('masthead');
-
-    function checkAriaExpanded() {
-        if (megaMenuLink.getAttribute('aria-expanded') === 'true') {
-            header.style.backgroundColor = 'white';
-        } else {
-            header.style.backgroundColor = ''; // Reset to default or previous color if needed
+    document.addEventListener('DOMContentLoaded', function() {
+        const megaMenuLink = document.querySelector('.mega-menu-item-has-children');
+        const header = document.getElementById('masthead');
+    
+        function checkAriaExpanded() {
+            if (megaMenuLink.getAttribute('aria-expanded') === 'true') {
+                header.style.backgroundColor = 'white';
+            } else {
+                header.style.backgroundColor = ''; // Reset to default or previous color if needed
+            }
         }
-    }
-
-    // Check aria-expanded on page load
-    checkAriaExpanded();
-
-    // Add an event listener to monitor changes
-    megaMenuLink.addEventListener('click', function() {
-        // Use a timeout to allow for the attribute to update after the click event
-        setTimeout(checkAriaExpanded, 0);
+    
+        // Check aria-expanded on page load
+        checkAriaExpanded();
+    
+        // Add event listeners to monitor hover changes
+        megaMenuLink.addEventListener('mouseenter', checkAriaExpanded);
+        megaMenuLink.addEventListener('mouseleave', checkAriaExpanded);
     });
+    
 
     const observer = new IntersectionObserver(
         entries => {
