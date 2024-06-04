@@ -582,5 +582,5 @@ p:not(.link) > a:not(.link) {
 	padding-top: -10px;
 }
 .mega-menu-row {
-	@apply max-w-screen-2xl mx-auto px-10 md:px-20;
+	@apply !max-w-screen-2xl !mx-auto !px-10 !md:px-20;
 }
