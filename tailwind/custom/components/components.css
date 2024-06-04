@@ -578,9 +578,9 @@ p:not(.link) > a:not(.link) {
 	align-items: center;
 }
 .mega-sub-menu  {
-	top: 70px;
-	padding-top: -10px;
+	top: 70px !important;
+	padding-top: -10px !important;
 }
-#masthead #mega-menu-wrap-main-right #mega-menu-main-right li.mega-menu-megamenu > ul.mega-sub-menu > li.mega-menu-row {
+#masthead .mega-menu-row {
 	@apply !max-w-screen-2xl !mx-auto !px-10 !md:px-20;
 }
