@@ -573,3 +573,7 @@ p:not(.link) > a:not(.link) {
 	@apply text-gray-800;
 }
 
+#mega-menu-main-right {
+	display: flex;
+	align-items: center;
+}
