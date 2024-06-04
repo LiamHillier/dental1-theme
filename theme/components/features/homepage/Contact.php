@@ -38,8 +38,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                     <p>13 000 NO GAP (1300 066 427)</p>
                 </a>
                 <div class="contact-link">
-                    <span class="text-primary"><?php echo $clock; ?></span>
-                    <p class="font-semibold text-lg text-black">Mon - Saturday</p>
+                    <span class="text-primary"><?php echo $pin; ?></span>
+                    <p class="font-semibold text-lg text-black">Locations</p>
                     <ul class="text-gray-500 flex flex-col text-sm gap-2">
                         <li><a href="/locations/craigieburn/">Craigieburn</a></li>
                         <li><a href="/locations/richmond">Richmond</a></li>
@@ -47,17 +47,13 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                         <li><a href="/locations/epping/">Epping North</a></li>
                         <li><a href="/locations/essendon/">Essendon</a></li>
                         <li><a href="/locations/reservoir">Reservoir</a></li>
+                        <li><a href="/locations/south-yarra">South Yarra</a></li>
                     </ul>
                 </div>
                 <a href="mailto:info@DentalOne" class="contact-link ">
                     <span class="text-primary"><?php echo $mail; ?></span>
                     <p class="font-semibold text-lg text-black">Email Us</p>
                     <p>info@dental1.com.au</p>
-                </a>
-                <a href="" class="contact-link">
-                    <span class="text-primary"><?php echo $pin; ?></span>
-                    <p class="font-semibold text-lg text-black">Main headquaters</p>
-                    <p>275 Manningham Road Lower Templestowe, VIC 3107</p>
                 </a>
             </div>
             <hr class="mx-5" />
