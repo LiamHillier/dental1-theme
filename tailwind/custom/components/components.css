@@ -577,9 +577,12 @@ p:not(.link) > a:not(.link) {
 	display: flex !important;
 	align-items: center;
 }
-#masthead #mega-menu-main-right > li > ul  {
+#mega-menu-main-right > li > ul  {
 	top: 70px;
-	padding-top: -10px;
+	padding: 0px !important;
+	padding-top: -10px !important;
+	display: flex;
+	justify-content: center;
 }
 #masthead #mega-menu-main-right > li > ul > li.mega-menu-row {
 	@apply !max-w-screen-2xl !mx-auto !px-10 md:!px-20;
