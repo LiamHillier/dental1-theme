@@ -579,9 +579,8 @@ p:not(.link) > a:not(.link) {
 }
 #mega-menu-main-right > li.mega-menu-item-has-children > ul  {
 	top: 70px !important;
-	padding: 0px !important;
-	padding-top: -10px !important;
-	display: flex;
+	padding: -10px 0px 0px 0px !important;
+	display: flex  !important;
 	justify-content: center;
 }
 #masthead #mega-menu-main-right > li > ul > li.mega-menu-row {
