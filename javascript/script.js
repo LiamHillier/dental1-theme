@@ -23,12 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Check aria-expanded on page load
-    checkAriaExpanded();
+    // Create an observer to watch for changes to the aria-expanded attribute
+    const observerLink = new MutationObserver(checkAriaExpanded);
 
-    // Add event listeners to monitor hover changes
-    megaMenuLink.addEventListener('mouseenter', checkAriaExpanded);
-    megaMenuLink.addEventListener('mouseleave', checkAriaExpanded);
+    // Start observing the megaMenuLink for attribute changes
+    observerLink.observe(megaMenuLink, { attributes: true, attributeFilter: ['aria-expanded'] });
+
+    // Initial check on page load
+    checkAriaExpanded();
 
 
 
