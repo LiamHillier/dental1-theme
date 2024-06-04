@@ -10,6 +10,27 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    const megaMenuLink = document.querySelector('.mega-menu-link');
+    const header = document.getElementById('masthead');
+
+    function checkAriaExpanded() {
+        if (megaMenuLink.getAttribute('aria-expanded') === 'true') {
+            header.style.backgroundColor = 'white';
+        } else {
+            header.style.backgroundColor = ''; // Reset to default or previous color if needed
+        }
+    }
+
+    // Check aria-expanded on page load
+    checkAriaExpanded();
+
+    // Add an event listener to monitor changes
+    megaMenuLink.addEventListener('click', function() {
+        // Use a timeout to allow for the attribute to update after the click event
+        setTimeout(checkAriaExpanded, 0);
+    });
+
     const observer = new IntersectionObserver(
         entries => {
             entries.forEach(entry => {
