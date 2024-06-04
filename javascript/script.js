@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function checkAriaExpanded() {
         if (megaMenuLink.getAttribute('aria-expanded') === 'true') {
-            header.style.backgroundColor = 'white';
+            header.classList.add('bg-white');
         } else {
-            header.style.backgroundColor = ''; // Reset to default or previous color if needed
+            header.classList.remove('bg-white');
         }
     }
 
