@@ -21,6 +21,9 @@
 #masthead  {
 	z-index: 1000 !important;
 }
+li.mega-menu-megamenu {
+	z-index: -1 !important;
+}
 #site-navigation a {
 	@apply text-black whitespace-nowrap text-lg md:text-base;
 
