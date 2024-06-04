@@ -94,6 +94,40 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', () => emblaLocationsApi.reInit());
     }
 
+    const teamsContainer = document.querySelector('#team .embla__viewport');
+    const teamPrevButton = document.querySelector('.team__prev');
+    const teamNextButton = document.querySelector('.team__next');
+
+    if (teamsContainer) {
+        const emblaTeamsApi = EmblaCarousel(teamsContainer, {
+            loop: false,
+            align: 'start'
+        });
+
+        teamPrevButton.addEventListener('click', () => emblaTeamsApi.scrollPrev());
+        teamNextButton.addEventListener('click', () => emblaTeamsApi.scrollNext());
+
+        // Autoplay functionality
+        let autoplayInterval;
+        const autoplay = () => {
+            autoplayInterval = setInterval(() => {
+                emblaTeamsApi.scrollNext();
+            }, 3000); // Adjust the interval as needed
+        };
+
+        const stopAutoplay = () => {
+            clearInterval(autoplayInterval);
+        };
+
+        teamsContainer.addEventListener('mouseenter', stopAutoplay);
+        teamsContainer.addEventListener('mouseleave', autoplay);
+
+        autoplay();
+
+        // Handle window resize
+        window.addEventListener('resize', () => emblaTeamsApi.reInit());
+    }
+
     window.addEventListener('scroll', () => {
         const header = document.getElementById('masthead');
         const addClass = window.scrollY > 50;
