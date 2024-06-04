@@ -19,7 +19,7 @@
 	z-index: 99999;
 }
 #masthead  {
-	z-index: 99999;
+	z-index: 99999 !important;
 }
 #site-navigation a {
 	@apply text-black whitespace-nowrap text-lg md:text-base;
