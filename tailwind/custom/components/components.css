@@ -586,3 +586,6 @@ p:not(.link) > a:not(.link) {
 #masthead #mega-menu-main-right > li > ul > li.mega-menu-row {
 	@apply !max-w-screen-2xl !mx-auto !px-10 md:!px-20;
 }
+.mega-sub-menu  {
+	padding: 0rem !important;
+}
