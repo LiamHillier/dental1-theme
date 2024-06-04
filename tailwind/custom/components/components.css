@@ -14,8 +14,11 @@
 * {
 	box-sizing: border-box;
 }
-#masthead .logo, #masthead #site-navigation, #masthead {
+#masthead .logo, #masthead #site-navigation {
 	position: relative;
+	z-index: 99999;
+}
+#masthead  {
 	z-index: 99999;
 }
 #site-navigation a {
