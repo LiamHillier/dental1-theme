@@ -9,7 +9,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 
 <section id="contact" class="text-center relative bg-gray-100 -mt-1 pt-20 pb-32 md:text-left md:pb-60">
     <div class="max-w-screen-2xl mx-auto md:px-20 lg:grid lg:grid-cols-5 lg:gap-20 ">
-        <div class="col-span-3 lg:max-w-xl">
+        <div class="col-span-3">
             <header class=" flex flex-col items-center gap-2 text-center mb-2 md:items-start">
                 <div class="w-12 h-12">
                     <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
@@ -31,7 +31,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                 professional and caring dentists.​<br /><br />Simply fill in your details below and we will contact you
                 to
                 resolve any queries and to confirm your appointment.</p>
-            <div class="grid md:grid-cols-2 gap-x-4 gap-y-10 px-10 my-10 lg:max-w-xl lg:mx-auto md:pl-0">
+            <div class="grid md:grid-cols-2 gap-x-4 gap-y-10 px-10 my-10 md:pl-0">
                 <div class="flex flex-col gap-2">
                     <a href="tel:1300066427" class="contact-link">
                         <span class="text-primary"><?php echo $phone; ?></span>
