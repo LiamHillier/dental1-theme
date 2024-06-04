@@ -573,6 +573,11 @@ p:not(.link) > a:not(.link) {
 	@apply text-gray-800;
 }
 
+.mega-sub-menu {
+	padding: 0px !important;
+}
+
+
 #mega-menu-main-right {
 	display: flex !important;
 	align-items: center;
@@ -588,9 +593,6 @@ p:not(.link) > a:not(.link) {
 	@apply !max-w-screen-2xl !mx-auto !px-10 md:!px-20;
 }
 
-.mega-sub-menu > li > .mega-sub-menu {
-	padding: 0px;
-}
 
 #mega-menu-wrap-main-right #mega-menu-main-right > li.mega-menu-megamenu > ul.mega-sub-menu li.mega-menu-column > ul.mega-sub-menu > li.mega-menu-item > a.mega-menu-link {
 	margin-bottom: 10px;
