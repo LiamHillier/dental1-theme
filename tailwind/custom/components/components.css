@@ -14,16 +14,7 @@
 * {
 	box-sizing: border-box;
 }
-#masthead .logo, #masthead #site-navigation, #masthead > div {
-	position: relative;
-	z-index: 1000;
-}
-#masthead  {
-	z-index: 1000 !important;
-}
-li.mega-menu-megamenu {
-	z-index: -1 !important;
-}
+
 #site-navigation a {
 	@apply text-black whitespace-nowrap text-lg md:text-base;
 
