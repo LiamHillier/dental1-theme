@@ -587,7 +587,7 @@ p:not(.link) > a:not(.link) {
 	padding: 0px !important;
 	display: flex  !important;
 	justify-content: center;
-	padding: 10px 0px !important;
+	padding: 20px 0px 10px 0px !important;
 }
 #masthead #mega-menu-main-right > li > ul > li.mega-menu-row {
 	@apply !max-w-screen-2xl !mx-auto !px-10 md:!px-20;
