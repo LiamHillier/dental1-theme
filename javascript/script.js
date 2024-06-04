@@ -12,7 +12,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('DOMContentLoaded', function() {
-        const megaMenuLink = document.querySelector('.mega-menu-item-has-children');
+        const megaMenuLink = document.querySelector('.mega-menu-megamenu a');
         const header = document.getElementById('masthead');
     
         function checkAriaExpanded() {
