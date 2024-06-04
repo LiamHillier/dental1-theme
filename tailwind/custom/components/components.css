@@ -577,7 +577,9 @@ p:not(.link) > a:not(.link) {
 	padding: 0px !important;
 }
 
-
+.mega-sub-menu > mega-menu-item {
+	margin-bottom: 6px !important;
+}
 #mega-menu-main-right {
 	display: flex !important;
 	align-items: center;
