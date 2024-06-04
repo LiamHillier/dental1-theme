@@ -35,7 +35,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 	<div class="p5-8 grid sm:grid-cols-2 divide-x gap-y-10 sm:justify-center md:grid-cols-6 max-w-screen-2xl mx-auto md:px-20">
 		<div class="sm:justify-self-end pl-8 sm:pl-0 pr-8 w-full">
 			<p class="text-lg text-black mb-4">Quick links</p>
-			<ul class="text-gray-500 flex flex-col gap-2">
+			<ul class="text-gray-500 flex flex-col">
 				<li><a href="/">Home</a></li>
 				<li><a href="/about-us/">About us</a></li>
 				<li><a href="/no-gap/">No Gap</a></li>
@@ -48,7 +48,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 		</div>
 		<div class="pl-8 :w-full">
 			<p class="text-lg text-black mb-4">Services</p>
-			<ul class="text-gray-500 flex flex-col gap-2">
+			<ul class="text-gray-500 flex flex-col">
 				<li><a href="/general-dentistry/">General</a></li>
 				<li><a href="/cosmetic-dentistry/">Cosmetic</a></li>
 				<li><a href="/childrens-dentistry/">Children's Dentistry</a></li>
@@ -71,11 +71,12 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/locations/epping/">Epping North</a></li>
 				<li><a href="/locations/essendon/">Essendon</a></li>
 				<li><a href="/locations/reservoir">Reservoir</a></li>
+				<li><a href="/locations/south-yarra">South Yarra</a></li>
 			</ul>
 		</div>
 		<div class="pl-8  w-full">
 			<p class="text-lg text-black mb-4">Contact</p>
-			<ul class="text-gray-500 flex flex-col gap-2">
+			<ul class="text-gray-500 flex flex-col">
 				<li><a href="/contact/">Contact</a></li>
 				<li><a href="/book-appointment">Book Appointment</a></li>
 			</ul>
