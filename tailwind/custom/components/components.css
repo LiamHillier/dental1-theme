@@ -577,10 +577,10 @@ p:not(.link) > a:not(.link) {
 	display: flex !important;
 	align-items: center;
 }
-.mega-sub-menu  {
-	top: 70px !important;
-	padding-top: -10px !important;
+.mega-menu-megamenu > ul  {
+	top: 70px;
+	padding-top: -10px;
 }
-#masthead .mega-menu-row {
+#masthead .mega-sub-menu > li {
 	@apply !max-w-screen-2xl !mx-auto !px-10 md:!px-20;
 }
