@@ -52,7 +52,7 @@
         </div>
 
         <!-- Locations carousel -->
-        <section id="locations-carousel" class="embla locations-carousel max-w-screen-2xl mx-auto px-10 md:px-20">
+        <section id="locations-carousel" class="embla locations-carousel max-w-screen-2xl mx-auto px-5 md:px-20">
             <div class=" mt-4 md:mt-0 flex gap-4 justify-center md:justify-end animate__initial animate__animated animate__fadeInUp max-w-screen-2xl  mx-auto px-10 md:px-20">
                 <button class="embla__prev  bg-primary text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
