@@ -105,7 +105,7 @@ $logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-
 		wp_nav_menu(
 			array(
 				'theme_location' => 'mobile-menu',
-				'menu_id'        => 'mobile-menu',
+				'menu_id'        => 'main-right',
 				'items_wrap'     => '<ul id="%1$s" class="%2$s" aria-label="submenu">%3$s</ul>',
 			)
 		);
