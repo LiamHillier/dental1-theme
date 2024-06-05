@@ -11,6 +11,26 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Select the elements
+    const menuOpen = document.querySelector('.feather-menu');
+    const menuClose = document.querySelector('.menu-close');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    // Function to open the mobile menu
+    function openMenu() {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('flex');
+    }
+
+    // Function to close the mobile menu
+    function closeMenu() {
+        mobileMenu.classList.remove('flex');
+        mobileMenu.classList.add('hidden');
+    }
+
+    // Event listeners
+    menuOpen.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
 
     const megaMenuLinks = document.querySelectorAll('.mega-menu-link');
     const header = document.getElementById('masthead');
