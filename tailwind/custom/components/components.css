@@ -74,12 +74,12 @@
 .menu-item-has-children:hover {
 	@apply text-primary;
 }
-.menu-item-has-children .sub-menu {
+#masthead .menu-item-has-children .sub-menu {
 	@apply p-4 md:rounded-lg md:min-w-[230px] hidden text-transparent flex-col gap-2 md:shadow md:absolute bg-white;
 	visibility: hidden; /* Make it invisible */
 }
 
-.menu-item-has-children:hover .sub-menu {
+#masthead .menu-item-has-children:hover .sub-menu {
 	@apply bg-white text-black;
 	visibility: visible; /* Make it visible on hover */
 }
