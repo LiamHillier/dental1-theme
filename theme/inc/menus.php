@@ -12,6 +12,7 @@ function register_custom_menus()
         array(
             'main-left'   => esc_html__('Main Left', 'dental1'),
             'main-right' => esc_html__('Main Right', 'dental1'),
+            'mobile-menu' => esc_html__('Mobile Menu', 'dental1'),
         )
     );
 }
