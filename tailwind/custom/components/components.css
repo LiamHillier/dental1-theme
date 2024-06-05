@@ -669,3 +669,7 @@ p:not(.link) > a:not(.link) {
 .mega-menu-row > .mega-sub-menu {
 	@apply flex gap-2 justify-between py-2;
 }
+
+.mega-menu-row > .mega-sub-menu li {
+	@apply mb-2;
+}
