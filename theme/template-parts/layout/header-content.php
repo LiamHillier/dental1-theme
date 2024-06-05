@@ -14,7 +14,11 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu {
     // Start Level
     function start_lvl( &$output, $depth = 0, $args = null ) {
         $indent = str_repeat("\t", $depth);
-        $output .= "\n$indent<ul class=\"sub-menu\">\n";
+        if ($depth === 0) {
+            $output .= "\n$indent<ul class=\"sub-menu\">\n";
+        } else {
+            $output .= "\n$indent<ul class=\"sub-sub-menu\">\n";
+        }
     }
 
     // End Level
@@ -53,7 +57,8 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu {
 
         $item_output = $args->before;
         if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
-            $item_output .= '<details><summary>';
+            $item_output .= '<details>';
+            $item_output .= '<summary>';
             $item_output .= $args->link_before . $title . $args->link_after;
             $item_output .= '</summary>';
         } else {
@@ -75,6 +80,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu {
         }
     }
 }
+
 
 ?>
 <div id="top-bar" class="font-semibold w-full text-white bg-primary z-50 sticky top-0">
