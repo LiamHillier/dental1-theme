@@ -664,3 +664,8 @@ p:not(.link) > a:not(.link) {
     max-height: 164px;
 	@apply rounded;
 }
+
+
+.mega-menu-row > .mega-sub-menu {
+	@apply flex gap-2 justify-between py-2;
+}
