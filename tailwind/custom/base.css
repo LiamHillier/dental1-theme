@@ -14,13 +14,13 @@
 
 :root {
 	--global-palette1: rgb(8, 163, 154) !important;
-	--global-palette2: #2B6CB0;
-	--global-palette3: #1A202C;
-	--global-palette4: #2D3748;
-	--global-palette5: #4A5568;
+	--global-palette2: #2b6cb0;
+	--global-palette3: #1a202c;
+	--global-palette4: #2d3748;
+	--global-palette5: #4a5568;
 	--global-palette6: #718096;
-	--global-palette7: #EDF2F7;
-	--global-palette8: #F7FAFC;
+	--global-palette7: #edf2f7;
+	--global-palette8: #f7fafc;
 	--global-palette9: #ffffff;
 }
 
@@ -41,12 +41,17 @@ main {
 /*--- TYPOGRAPHY ---*/
 /*------------------*/
 
-p, ul, li {
+p,
+ul,
+li {
 	@apply text-gray-500 font-normal;
 	font-size: 1.25rem;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
 	font-weight: bold;
 }
 
@@ -123,7 +128,7 @@ h2 {
 
 .team {
 	--slide-spacing: 1rem;
-	--slide-size: 50%;
+	--slide-size: 100%;
 	--slide-height: 19rem;
 	@apply px-5;
 }
@@ -485,4 +490,3 @@ h2 {
 .animate__delay-1_8s {
 	animation-delay: 1.8s !important;
 }
-
