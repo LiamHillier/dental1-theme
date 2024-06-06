@@ -134,7 +134,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 	</div>
 
 </div>
-<header id="masthead" class="w-screen sticky top-[40px] left-0 z-50 bg-transparent transition-colors duration-300 ease-in -mb-[112px]">
+<header id="masthead" class="w-screen sticky top-[34px] left-0 z-50 bg-transparent transition-colors duration-300 ease-in -mb-[112px]">
 	<div class="max-w-screen-2xl mx-auto py-4 px-10 md:px-20 flex justify-between items-center ">
 		<div class="logo h-full flex justify-start items-center">
 			<a href="/"><?php echo $logo; ?></a>
