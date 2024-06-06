@@ -624,7 +624,11 @@ p:not(.link) > a:not(.link) {
 	width: 18px;
 	height: 18px;
 }
-.mobile-menu #site-navigation .menu-item-has-children details[open] summary:after {
+.mobile-menu
+	#site-navigation
+	.menu-item-has-children
+	details[open]
+	summary:after {
 	@apply rotate-180;
 }
 
@@ -632,9 +636,9 @@ p:not(.link) > a:not(.link) {
 	@apply pl-4;
 }
 
-.mobile-menu #main-right li a, 
+.mobile-menu #main-right li a,
 .mobile-menu #main-right li summary {
- @apply !text-base;
+	@apply !text-base;
 }
 
 .mobile-menu .feature-button a {
@@ -659,12 +663,11 @@ p:not(.link) > a:not(.link) {
 
 .mega-sub-menu img {
 	width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-height: 164px;
+	height: 100%;
+	object-fit: cover;
+	max-height: 164px;
 	@apply rounded;
 }
-
 
 .mega-menu-row > .mega-sub-menu {
 	@apply flex gap-2 justify-between py-2;
@@ -672,4 +675,11 @@ p:not(.link) > a:not(.link) {
 
 .mega-menu-row > .mega-sub-menu li {
 	@apply mb-2;
+}
+
+#mega-menu-wrap-main-right
+	#mega-menu-main-right
+	> li.mega-menu-item
+	> a.mega-menu-link {
+	font-size: clamp(0.8rem, 1.3vw, 1rem) !important;
 }
