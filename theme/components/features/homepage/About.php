@@ -21,8 +21,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
                 maintain your dental health, DentalOne is here
                 for
                 you. Schedule an appointment with us, and let us help you acheive the smile of your dreams.</p>
-            <a href="/book-appointment" class="button primary mt-6 animate__initial animate__animated animate__fadeInUp">Book
-                Online</a>
+            <a href="/about-us/" class="button primary mt-6 animate__initial animate__animated animate__fadeInUp">Read More</a>
         </header>
         <div class="relative">
             <div class="relative z-10">

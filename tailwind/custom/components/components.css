@@ -109,18 +109,13 @@
 
 	@apply shadow;
 }
-
-.mobile-book:before {
-	@apply hidden sm:inline-block;
-	font: inherit;
-	font-family: dashicons;
-	position: static;
-	margin: 0 6px 0 0;
-	vertical-align: top;
+.mobile-book, .book-icon {
+	@apply !flex flex-nowrap gap-1 relative;
+}
+.mobile-book:before, .book-icon:before {
+	display: block;
 	content: "";
-	fill: #fff;
-	color: #fff;
-	background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIxLjUiIGNsYXNzPSJ3LTYgaC02IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTYuNzUgM3YyLjI1TTE3LjI1IDN2Mi4yNU0zIDE4Ljc1VjcuNWEyLjI1IDIuMjUgMCAwIDEgMi4yNS0yLjI1aDEzLjVBMi4yNSAyLjI1IDAgMCAxIDIxIDcuNXYxMS4yNW0tMTggMEEyLjI1IDIuMjUgMCAwIDAgNS4yNSAyMWgxMy41QTIuMjUgMi4yNSAwIDAgMCAyMSAxOC43NW0tMTggMHYtNy41QTIuMjUgMi4yNSAwIDAgMSA1LjI1IDloMTMuNUEyLjI1IDIuMjUgMCAwIDEgMjEgMTEuMjV2Ny41bS05LTZoLjAwOHYuMDA4SDEydi0uMDA4Wk0xMiAxNWguMDA4di4wMDhIMTJWMTVabTAgMi4yNWguMDA4di4wMDhIMTJ2LS4wMDhaTTkuNzUgMTVoLjAwOHYuMDA4SDkuNzVWMTVabTAgMi4yNWguMDA4di4wMDhIOS43NXYtLjAwOFpNNy41IDE1aC4wMDh2LjAwOEg3LjVWMTVabTAgMi4yNWguMDA4di4wMDhINy41di0uMDA4Wm02Ljc1LTQuNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTAgMi4yNWguMDA4di4wMDhoLS4wMDhWMTVabTAgMi4yNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTIuMjUtNC41aC4wMDh2LjAwOEgxNi41di0uMDA4Wm0wIDIuMjVoLjAwOHYuMDA4SDE2LjVWMTVaIi8+PC9zdmc+) !important;
+	background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZT0iI2ZmZiIgY2xhc3M9InctNiBoLTYiPgogIDxwYXRoIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgZD0iTTYuNzUgM3YyLjI1TTE3LjI1IDN2Mi4yNU0zIDE4Ljc1VjcuNWEyLjI1IDIuMjUgMCAwIDEgMi4yNS0yLjI1aDEzLjVBMi4yNSAyLjI1IDAgMCAxIDIxIDcuNXYxMS4yNW0tMTggMEEyLjI1IDIuMjUgMCAwIDAgNS4yNSAyMWgxMy41QTIuMjUgMi4yNSAwIDAgMCAyMSAxOC43NW0tMTggMHYtNy41QTIuMjUgMi4yNSAwIDAgMSA1LjI1IDloMTMuNUEyLjI1IDIuMjUgMCAwIDEgMjEgMTEuMjV2Ny41bS05LTZoLjAwOHYuMDA4SDEydi0uMDA4Wk0xMiAxNWguMDA4di4wMDhIMTJWMTVabTAgMi4yNWguMDA4di4wMDhIMTJ2LS4wMDhaTTkuNzUgMTVoLjAwOHYuMDA4SDkuNzVWMTVabTAgMi4yNWguMDA4di4wMDhIOS43NXYtLjAwOFpNNy41IDE1aC4wMDh2LjAwOEg3LjVWMTVabTAgMi4yNWguMDA4di4wMDhINy41di0uMDA4Wm02Ljc1LTQuNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTAgMi4yNWguMDA4di4wMDhoLS4wMDhWMTVabTAgMi4yNWguMDA4di4wMDhoLS4wMDh2LS4wMDhabTIuMjUtNC41aC4wMDh2LjAwOEgxNi41di0uMDA4Wm0wIDIuMjVoLjAwOHYuMDA4SDE2LjVWMTVaIiAvPgo8L3N2Zz4K");
 	background-size: contain;
 	background-repeat: no-repeat;
 	width: 24px;
@@ -131,7 +126,7 @@
 /*--- Buttons ---*/
 /*---------------------*/
 .button {
-	@apply rounded-full py-3 px-6 font-semibold text-center border ease-in-out duration-300 inline-block lowercase;
+	@apply rounded-full py-3 px-6 font-semibold text-center border ease-in-out duration-300 inline-block;
 }
 .button.primary {
 	@apply bg-primary text-white hover:text-primary hover:bg-transparent border-primary;
@@ -682,4 +677,18 @@ p:not(.link) > a:not(.link) {
 	> li.mega-menu-item
 	> a.mega-menu-link {
 	font-size: clamp(0.8rem, 1.3vw, 1rem) !important;
+}
+
+@media (max-width: 340px) {
+	.mobile-book:before {
+		@apply hidden;
+	}
+}
+
+.mobile-menu .feature-button {
+	@apply fixed bottom-0 w-full left-0 !p-0;
+
+	a {
+		@apply rounded-none py-4;
+	}
 }

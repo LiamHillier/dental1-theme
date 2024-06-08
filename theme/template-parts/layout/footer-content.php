@@ -25,10 +25,6 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				maintaining a beautiful, healty smile. </p>
 		</div>
 
-		<div class="flex justify-center items-center my-6 gap-4 lg:mt-16 relative z-50">
-			<a href="https://www.facebook.com/dentalonecraigieburn/"> <?php echo $facebook; ?></a>
-			<a href="https://www.instagram.com/dentalonegroup/"> <?php echo $instagram; ?></a>
-		</div>
 	</div>
 
 

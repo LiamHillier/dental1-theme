@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const autoplay = () => {
             autoplayInterval = setInterval(() => {
                 emblaTeamsApi.scrollNext();
-            }, 3000); // Adjust the interval as needed
+            }, 7000); // Adjust the interval as needed
         };
 
         const stopAutoplay = () => {
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const heroAutoplay = () => {
             heroAutoplayInterval = setInterval(() => {
                 emblaApi.scrollNext();
-            }, 5000); // Adjust the interval as needed
+            }, 10000); // Adjust the interval as needed
         };
 
         const stopHeroAutoplay = () => {

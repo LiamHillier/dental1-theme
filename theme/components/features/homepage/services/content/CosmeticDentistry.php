@@ -16,7 +16,7 @@
         </a>
         <div class="flex gap-2 items-center justify-center mt-6">
             <a href="" class="button secondary">Contact Us</a>
-            <a href="" class="button primary">Book Online</a>
+            <a href="" class="button primary">Book Now</a>
         </div>
     </div>
 </section>
