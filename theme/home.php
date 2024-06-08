@@ -33,7 +33,7 @@ get_header();
                 </a>
             </div>
         </div> -->
-        <div class="pt-20 md:pt-0 md:pb-20 max-w-screen-2xl mx-auto px-10 md:px-20" id="testimonials-container">
+        <div class="pt-20 md:pt-0 md:pb-20 max-w-screen-2xl mx-auto px-5 md:px-20" id="testimonials-container">
             <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
         </div>
 

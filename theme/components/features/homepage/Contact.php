@@ -30,7 +30,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                 professional and caring dentists.​<br /><br />Simply fill in your details below and we will contact you
                 to
                 resolve any queries and to confirm your appointment.</p>
-            <div class="grid md:grid-cols-2 gap-x-4 gap-y-10 px-10 my-10 md:pl-0">
+            <div class="grid md:grid-cols-2 gap-x-4 gap-y-10 px-5 my-10 md:pl-0">
                 <div class="flex flex-col gap-2">
                     <a href="tel:1300066427" class="contact-link">
                         <span class="text-primary"><?php echo $phone; ?></span>
