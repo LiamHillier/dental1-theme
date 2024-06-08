@@ -1,12 +1,10 @@
 <section id="team" class="bg-white py-12">
     <div class="md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto">
         <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
-            <p class="text-primary pre-header md:text-left animate__initial animate__animated animate__fadeInUp">
-                Team</p>
             <h2 class="font-semibold md:text-left animate__initial animate__animated animate__fadeInUp">
                 Let's
                 meet our<br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl  ">expert</span>
-                    <span class="md:text-4xl flex flex-col ">dentists
+                    <span class="md:text-4xl flex flex-col ">team
                         <svg xmlns="http://www.w3.org/2000/svg" width="238" height="24" viewBox="0 0 238 24" fill="none" class="hidden md:block w-32 float-right">
                             <path d="M232.958 18.4731C232.958 18.4731 87.458 -10.3269 5.95801 17.4731" stroke="#08A39A" stroke-width="10" stroke-linecap="round" />
                         </svg></span></span>
@@ -101,8 +99,11 @@
         </div>
     </div>
     <div class="flex justify-center mt-16">
-        <a  href="/meet-the-team/" class="button secondary  animate__delay-2s">View
-            all</a>
+    <a href="/our-team/" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">View all
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                </svg>
+            </a>
     </div>
     <div class="mx-5 md:mx-20 border-b border-neutral-300 mt-10" />
 </section>

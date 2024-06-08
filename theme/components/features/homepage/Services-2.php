@@ -2,10 +2,9 @@
     <div class=" grid md:grid-cols-2 max-w-screen-2xl mx-auto px-5  md:px-20 gap-10">
     <div class=" text-left  mb-16 md:mb-0 flex flex-col ">
         <div>
-            <p class="mb-2 text-primary animate__initial animate__animated animate__fadeInLeft">Our services
-            </p>
-            <h2 class="mb-4 animate__initial animate__animated animate__fadeInUp">Personalized,
-                Comprehensive <span class="text-primary">Treatment</span></h2>
+
+            <h2 class="mb-4 animate__initial animate__animated animate__fadeInUp">Our <span class="text-primary">Services:</span> Personalized,
+                Comprehensive Treatment</h2>
         </div>
         <div class="">
             <p class="animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">At DentalOne, we

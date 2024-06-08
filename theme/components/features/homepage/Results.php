@@ -1,10 +1,8 @@
 <section id="results" class="bg-white py-12 px-10 md:px-20">
     <div>
         <header class="flex flex-col items-center gap-2 text-center mb-2 ">
-            <p class="text-primary animate__initial animate__animated animate__fadeInUp">Results
-            </p>
-            <h2 class="animate__initial animate__animated animate__fadeInUp">DentalOne
-                <br><span class="!text-primary">Smile Gallery</span>
+
+            <h2 class="animate__initial animate__animated animate__fadeInUp">Our Results
             </h2>
         </header>
         <div class="flex flex-col items-center gap-2 locations-description max-w-lg mx-auto mt-4">

@@ -14,7 +14,6 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                 <div class="w-12 h-12">
                     <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
                 </div>
-                <p class="text-primary">Support</p>
                 <h2 class="">Get in touch</span></h2>
             </header>
             <p class="px-5 md:pl-0 md:pr-20 mt-6">Whether you have a dental emergency, need to get some advice or just
