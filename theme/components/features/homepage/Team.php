@@ -27,7 +27,7 @@
     <div class="team mt-12 max-w-screen-2xl mx-auto">
         <div class="team__viewport">
             <div class="team__container">
-                <div class="team__slide animate__initial animate__animated animate__fadeInUp">
+                <div class="team__slide ">
                     <div class="slide-content">
                         <img src="/wp-content/uploads/2024/05/12.png" />
                         <div>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">
+                <div class="team__slide  animate__delay-0_2s">
                     <div class="slide-content">
                         <img src="/wp-content/uploads/2024/05/13.png" />
                         <div>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_4s">
+                <div class="team__slide  animate__delay-0_4s">
                     <div class="slide-content">
                         <img src="/wp-content/uploads/2024/05/14.png" />
                         <div>
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-0_8s">
+                <div class="team__slide  animate__delay-0_8s">
                     <div class="slide-content">
                         <img src="/wp-content/uploads/2024/05/15.png" />
                         <div>
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="team__slide  animate__delay-1s">
                     <div class="slide-content">
                         <img src="/wp-content/uploads/2024/05/16.png" />
                         <div>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1_2s">
+                <div class="team__slide  animate__delay-1_2s">
                     <div class="slide-content">
                         <img src="/wp-content/uploads/2024/05/17.png" />
                         <div>
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="team__slide animate__initial animate__animated animate__fadeInUp animate__delay-1_4s">
+                <div class="team__slide  animate__delay-1_4s">
                     <div class="slide-content">
                         <img src="/wp-content/uploads/2024/05/4.png" />
                         <div>
@@ -101,7 +101,7 @@
         </div>
     </div>
     <div class="flex justify-center mt-16">
-        <a  href="/meet-the-team/" class="button secondary animate__initial animate__animated animate__fadeInUp animate__delay-2s">View
+        <a  href="/meet-the-team/" class="button secondary  animate__delay-2s">View
             all</a>
     </div>
     <div class="mx-5 md:mx-20 border-b border-neutral-300 mt-10" />
