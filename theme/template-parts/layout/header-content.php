@@ -171,7 +171,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 		<?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
 	</div>
 
-	<p class="absolute left-24 top-6 text-2xl">Dental<span class="text-primary">One</span></p>
+	<p class="absolute left-24 top-[1.6rem] text-2xl">Dental<span class="text-primary">One</span></p>
 
 	<div class="flex justify-end absolute top-8 right-10">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary fill-primary menu-close">
