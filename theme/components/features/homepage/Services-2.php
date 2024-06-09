@@ -7,7 +7,7 @@
                     Comprehensive Treatment</h2>
             </div>
             <div class="">
-                <p class="animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">At DentalOne, we
+                <p class="animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">At Dental<span class="text-primary">One</span>, we
                     are more than just a
                     dental practice we are your trusted partner in
                     achieving and

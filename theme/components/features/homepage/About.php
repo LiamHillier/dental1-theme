@@ -7,9 +7,9 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         </div>
         <header class="px-5 md:absolute md:right-20 md:w-5/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
             <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp">Discover the dental
-                elegance at <span class="text-primary">DentalOne</span>
+                elegance at Dental<span class="text-primary">One</span>
             </h2>
-            <p class="animate__initial animate__animated animate__fadeInUp">At DentalOne, we are more than just a
+            <p class="animate__initial animate__animated animate__fadeInUp">At Dental<span class="text-primary">One</span>, we are more than just a
                 dental practice we
                 are your trusted partner in achieving and
                 maintaining a beautiful, healty smile. With over a decade of dedicated service in the field of
@@ -17,7 +17,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
                 we've been transforming smiles and improving lives. </p><br />
             <p class="animate__initial animate__animated animate__fadeInUp">Whether you're looking to enhance your
                 smile's beauty or
-                maintain your dental health, DentalOne is here
+                maintain your dental health, Dental<span class="text-primary">One</span> is here
                 for
                 you. Schedule an appointment with us, and let us help you acheive the smile of your dreams.</p>
             <a href="/about-us/" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">Read More

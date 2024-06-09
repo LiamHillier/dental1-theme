@@ -8,7 +8,7 @@
                     </h2>
                 </header>
                 <div class="flex flex-col items-center gap-2 locations-description">
-                    <p class="text-center animate__initial animate__animated animate__fadeInUp">At DentalOne, we
+                    <p class="text-center animate__initial animate__animated animate__fadeInUp">At Dental<span class="text-primary">One</span>, we
                         are
                         more than just a dental practice; we are your
                         trusted
