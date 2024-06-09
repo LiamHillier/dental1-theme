@@ -1,12 +1,8 @@
-<section id="locations" class=" bg-gray-100 pb-36 relative -mb-1">
+<section id="locations" class=" bg-gray-100 pt-10 md:pt-0 pb-36 relative -mb-1">
     <div class="">
         <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 max-w-screen-2xl  mx-auto px-5 md:px-20 relative">
             <div>
                 <header class="flex flex-col items-center gap-2 text-center mb-2 ">
-                    <div class="w-12 h-12 animate__initial animate__animated animate__fadeInUp">
-                        <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
-                    </div>
-
                     <h2 class="animate__initial animate__animated animate__fadeInUp">Our clinics across
                         <br><span class="!text-primary">Melbourne</span>
                     </h2>
@@ -51,8 +47,8 @@
         </div>
 
         <!-- Locations carousel -->
-        <section id="locations-carousel" class="embla locations-carousel max-w-screen-2xl mx-auto px-5 md:px-20">
-            <div class=" mt-4 md:mt-0 flex gap-4 justify-center md:justify-end animate__initial animate__animated animate__fadeInUp max-w-screen-2xl  mx-auto px-5 md:px-20">
+        <section id="locations-carousel" class="embla relative locations-carousel max-w-screen-2xl mx-auto md:px-20 mt-4">
+            <div class="absolute top-[50%] left-0 w-full  z-50  animate__initial animate__animated animate__fadeInUp !max-w-screen-2xl flex justify-between px-5">
                 <button class="embla__prev  bg-primary text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
                     </svg>
@@ -80,38 +76,41 @@
                             $image = get_the_post_thumbnail_url(get_the_ID(), 'full');
                     ?>
                             <div class="embla__slide">
-                                <div class="location-card">
-                                    <?php if ($image) : ?>
-                                        <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
-                                    <?php endif; ?>
-                                    <div class="location-content h-full flex flex-col justify-between">
-                                        <div class="flex flex-col gap-1">
-                                            <h3><?php the_title(); ?></h3>
-                                            <p>
-                                                <strong>Phone:</strong>
-                                                <a href="tel:<?php echo esc_attr($phone); ?>">
-                                                    <?php echo esc_html($phone); ?>
-                                                </a>
-                                            </p>
-                                            <p>
-                                                <strong>Email:</strong>
-                                                <a href="mailto:<?php echo esc_attr($email); ?>">
-                                                    <?php echo esc_html($email); ?>
-                                                </a>
-                                            </p>
-                                            <p>
-                                                <strong>Address:</strong>
-                                                <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo urlencode($address); ?>" target="_blank">
-                                                    <?php echo esc_html($address); ?>
-                                                </a>
-                                            </p>
+                                <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
+                                    <div class="location-card">
+                                        <?php if ($image) : ?>
+                                            <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
+                                        <?php endif; ?>
+                                        <div class="location-content h-full flex flex-col justify-between">
+                                            <div class="flex flex-col gap-1">
+                                                <h3><?php the_title(); ?></h3>
+                                                <p>
+                                                    <strong>Phone:</strong>
+                                                    <a href="tel:<?php echo esc_attr($phone); ?>">
+                                                        <?php echo esc_html($phone); ?>
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <strong>Email:</strong>
+                                                    <a href="mailto:<?php echo esc_attr($email); ?>">
+                                                        <?php echo esc_html($email); ?>
+                                                    </a>
+                                                </p>
+                                                <p>
+                                                    <strong>Address:</strong>
+                                                    <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo urlencode($address); ?>" target="_blank">
+                                                        <?php echo esc_html($address); ?>
+                                                    </a>
+                                                </p>
+                                            </div>
+                                            <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded mt-4 book-icon justify-center">
+                                                <?php echo esc_html('Book Online'); ?>
+                                            </a>
                                         </div>
-                                        <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded mt-4 book-icon justify-center">
-                                            <?php echo esc_html('Book Online'); ?>
-                                        </a>
-                                    </div>
 
-                                </div>
+                                    </div>
+                                </a>
+
                             </div>
                     <?php endwhile;
                         wp_reset_postdata();

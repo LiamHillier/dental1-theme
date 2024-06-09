@@ -4,7 +4,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
 ?>
 
 <div class="embla relative hero" id="hero">
-    <div class="embla__container h-full min-h-[600px] md:min-h-[1000px]">
+    <div class="embla__container h-full min-h-[600px] md:min-h-[900px]">
         <div class="embla__slide">
             <div class="relative flex flex-col justify-center items-start gap-10 h-full  px-5 md:px-0   overflow-hidden pb-52 md:pb-40 md:pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
                 <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>

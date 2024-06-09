@@ -3,7 +3,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
 ?>
 <section id="about" class="text-center relative  bg-gray-100">
     <div class="max-w-screen-2xl mx-auto relative">
-        <div class="bg-primary rounded-full w-[65vw] h-[65vw] absolute bottom-2 -left-52 md:max-w-[900px]  md:max-h-[900px]">
+        <div class="bg-primary rounded-full w-[45vw] h-[45vw] absolute bottom-2 -left-52 md:max-w-[754px]  md:max-h-[754px]">
         </div>
         <header class="px-5 md:absolute md:right-20 md:w-5/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
             <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp">Discover the dental
@@ -28,7 +28,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         </header>
         <div class="relative">
             <div class="relative z-10">
-                <img srcset="/wp-content/themes/dental1/theme/assets/images/3-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/3-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/3-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/3-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/3-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/3-1600w.avif 1600w, /wp-content/themes/dental1/theme/assets/images/3-2000w.avif 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="/wp-content/themes/dental1/theme/assets/images/3.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw] md:-ml-[700px]  md:max-w-[1368px] z-0" />
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/3-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/3-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/3-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/3-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/3-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/3-1600w.avif 1600w, /wp-content/themes/dental1/theme/assets/images/3-2000w.avif 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="/wp-content/themes/dental1/theme/assets/images/3.png" alt="About Dental One Services - Dental Cleaning" width="1888" height="1258" loading="lazy" class="w-[120vw] -ml-5 max-w-[120vw] md:-ml-[450px]  md:max-w-[1100px] z-0" />
                 <!-- <div class="w-24 h-24 md:w-[16vw] md:h-[16vw] md:max-w-[170px] absolute right-16 md:left-[200px] lg:left-[400px] top-[50%] translate-y-[-50%] animate__animated animate__bounceIn animate__slow">
                     <?php echo $badge; ?>
                 </div> -->

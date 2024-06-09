@@ -198,6 +198,72 @@ h2 {
 		@apply -mt-48 pt-52 rounded-xl;
 	}
 }
+
+
+
+#locations-carousel {
+	--slide-spacing: 2rem;
+	--slide-size: 100%;
+	--slide-height: 19rem;
+	@apply px-10;
+}
+
+#locations-carousel  .embla__container {
+	backface-visibility: hidden;
+	display: flex;
+	touch-action: pan-y;
+	margin-left: calc(var(--slide-spacing) * -1);
+}
+#locations-carousel .embla__slide {
+	flex: 0 0 var(--slide-size);
+	min-width: 0;
+	padding-left: var(--slide-spacing);
+	position: relative;
+}
+
+@screen md {
+	#locations-carousel  {
+		--slide-spacing: 1rem;
+		--slide-size: 50%;
+		@apply px-20;
+	}
+	#locations-carousel .embla__slide {
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		position: relative;
+	}
+}
+@screen lg {
+	#locations-carousel {
+		--slide-spacing: 1.5rem;
+		--slide-size: 33%;
+		@apply px-20;
+	}
+	#locations-carousel .embla__slide {
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		position: relative;
+	}
+}
+
+@screen xl {
+	#locations-carousel {
+		--slide-spacing: 1.5rem;
+		--slide-size: 25%;
+		@apply px-20;
+	}
+	#locations-carousel .embla__slide {
+		flex: 0 0 var(--slide-size);
+		min-width: 0;
+		padding-left: var(--slide-spacing);
+		position: relative;
+	}
+}
+
+
+
 .locations-divider {
 	position: absolute;
 	bottom: 0;

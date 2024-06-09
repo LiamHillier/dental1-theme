@@ -85,8 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (locationsContainer) {
         const emblaLocationsApi = EmblaCarousel(locationsContainer, {
-            loop: true,
-            containScroll: 'trimSnaps',
+            loop: false,
             align: 'start'
         });
 

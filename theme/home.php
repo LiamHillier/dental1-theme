@@ -14,6 +14,26 @@ get_header();
     <?php
     get_template_part('components/features/homepage/hero/Hero');
     ?>
+    <div class="bg-gray-100">
+        <section class="bg-gray-100 pt-4 pb-20 max-w-screen-2xl mx-auto px-5 md:px-20 ">
+            <div class="  bg-primary rounded-3xl text-white px-10 py-10 grid md:grid-cols-2">
+                <div class="flex flex-col gap-2 items-start">
+                    <h2>
+                        Dental Emergencies
+                    </h2>
+                    <h2>
+                        1300 066 427
+                    </h2>
+                    <a href="/dental-emergencies/" class="outline button mt-4">Learn more</a>
+
+                </div>
+                <div>
+                    <p class="text-white mt-4 md:mt-0 hidden md:block">Dental emergencies can happen and when they do it is best to be prepared – Knowing who to contact, how to identify pain and where to go. The best person to contact in a dental emergency is a dentist, however out of hours emergencies will require a different approach. It is important to remember that seeing a dentist within 30 minutes or less can mean the difference between saving or losing your tooth.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
     <?php
     get_template_part('components/features/homepage/About');
     get_template_part('components/features/homepage/Services-2');
