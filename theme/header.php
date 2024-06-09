@@ -18,12 +18,11 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="https://gmpg.org/xfn/11">
 
     
     <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-3Y8YKWQB9B"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-3Y8YKWQB9B'); </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw4mjDWv-Bat8U9jtuw2mx0C4hdnKvCUA&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw4mjDWv-Bat8U9jtuw2mx0C4hdnKvCUA&libraries=places" async defer></script>
     
     <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 
