@@ -6,10 +6,15 @@
  * `../theme/functions.php`.
  *
  * For esbuild documentation, please see:
+ * 
  * https://esbuild.github.io/
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+
+
+
+
 
     // Select the elements
     const menuOpen = document.querySelector('.feather-menu');
@@ -84,6 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const locationsNextButton = document.querySelector('.locations-carousel .embla__next');
 
     if (locationsContainer) {
+
+        document.getElementById('address-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent page reload
+            findClosestClinic();
+        });
+
+
         const emblaLocationsApi = EmblaCarousel(locationsContainer, {
             loop: false,
             align: 'start'
@@ -111,6 +123,75 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handle window resize
         window.addEventListener('resize', () => emblaLocationsApi.reInit());
+
+
+
+
+        // eslint-disable-next-line no-inner-declarations
+        function findClosestClinic() {
+            const addressInput = document.getElementById('address-input').value;
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const resultText = document.getElementById('result-text');
+
+            // Show loading spinner
+            loadingSpinner.classList.remove('hidden');
+            resultText.classList.add('hidden');
+
+            // Geocode the user's address
+            const geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': addressInput }, function (results, status) {
+                if (status == 'OK') {
+                    const userLocation = results[0].geometry.location;
+
+                    // Calculate distances to each clinic
+                    const slides = document.querySelectorAll('.locations-carousel .embla__slide');
+                    const dentalClinics = Array.from(slides).map(slide => ({
+                        address: slide.getAttribute('data-address'),
+                        element: slide
+                    }));
+
+                    let closestClinic = null;
+                    let minDistance = Infinity;
+                    const service = new google.maps.DistanceMatrixService();
+
+                    service.getDistanceMatrix({
+                        origins: [userLocation],
+                        destinations: dentalClinics.map(clinic => clinic.address),
+                        travelMode: 'DRIVING',
+                    }, function (response, status) {
+                        if (status == 'OK') {
+                            const distances = response.rows[0].elements;
+                            distances.forEach((element, index) => {
+                                if (element.distance.value < minDistance) {
+                                    minDistance = element.distance.value;
+                                    closestClinic = dentalClinics[index];
+                                }
+                            });
+
+                            // Set the closest clinic as the active slide
+                            const index = dentalClinics.indexOf(closestClinic);
+                            emblaLocationsApi.scrollTo(index);
+
+                            // Display result
+                            loadingSpinner.classList.add('hidden');
+                            resultText.classList.remove('hidden');
+                            resultText.innerText = `The closest clinic is located at ${closestClinic.address}. Distance: ${distances[index].distance.text}`;
+                        } else {
+                            // Handle distance matrix error
+                            loadingSpinner.classList.add('hidden');
+                            resultText.classList.remove('hidden');
+                            resultText.innerText = 'Error calculating distance. Please try again.';
+                        }
+                    });
+                } else {
+                    // Handle geocode error
+                    loadingSpinner.classList.add('hidden');
+                    resultText.classList.remove('hidden');
+                    resultText.innerText = 'Error finding address. Please enter a valid address.';
+                }
+            });
+        }
+
     }
 
     const teamsContainer = document.querySelector('#team .team__viewport');
