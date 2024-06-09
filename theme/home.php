@@ -41,7 +41,7 @@ get_header();
     get_template_part('components/features/homepage/Results');
     get_template_part('components/features/homepage/Team');
     ?>
-    <section id="services" class="bg-white pt-20 pb-[140px]">
+    <section id="services" class="bg-white pt-20 pb-10 ">
         <div class="px-5 md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto">
             <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
                 <h2 class="text-center md:text-left  ">
