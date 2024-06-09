@@ -1,5 +1,5 @@
-<section id="social" class="pt-10 bg-white pb-36 px-5 relative -mb-1 -mt-1">
-    <header class="flex flex-col items-center gap-2 text-center mb-2 md:items-start md:px-20 md:text-left max-w-screen-2xl mx-auto">
+<section id="social" class="pt-10 bg-white pb-36  relative -mb-1 -mt-1">
+    <header class="flex flex-col items-center gap-2 text-center mb-2 md:items-start md:text-left max-w-screen-2xl mx-auto px-5 md:px-20">
         <h2 class="">Latest posts from <br><span class="!text-primary">our social media</span></h2>
     </header>
     <div class="md:px-20 max-w-screen-2xl mx-auto"><?php echo do_shortcode('[instagram-feed feed=1]'); ?></div>
