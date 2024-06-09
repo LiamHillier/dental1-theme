@@ -14,17 +14,11 @@
                         trusted
                         partner
                         in achieving and maintaining a beautiful, healthy smile.</p>
-                    <a href="/locations" class="link mt-4 animate__initial animate__animated animate__fadeInUp animate__delay-1s">
-                        View all locations
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
-                        </svg>
-                    </a>
                 </div>
             </div>
 
-            <div class="hidden md:block md:w-full lg:w-4/12">
-                <p class="text-primary uppercase mb-4">Find the clinic nearest to you</p>
+            <div class="w-full lg:w-4/12 animate__initial animate__animated animate__fadeInUp my-4">
+                <p class="text-primary md:uppercase mb-4 text-center md:text-left">Find the clinic nearest to you</p>
                 <div class="relative">
                     <form id="address-form">
                         <input id="address-input" type="text" class="outline-primary !ring-primary rounded-lg shadow-lg px-4 py-4 w-full text-sm" placeholder="Enter your address" />
@@ -42,12 +36,12 @@
                         <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291a7.964 7.964 0 01-2-5.291H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
                 </div>
-                <p id="result-text" class="mt-4 text-primary hidden"></p>
+                <p id="result-text" class="mt-4 text-primary hidden text-center md:text-left"></p>
             </div>
         </div>
 
         <!-- Locations carousel -->
-        <section id="locations-carousel" class="embla relative locations-carousel max-w-screen-2xl mx-auto md:px-20 mt-4">
+        <section id="locations-carousel" class="embla relative locations-carousel max-w-screen-2xl mx-auto md:px-20 mt-6">
             
                 <button class="embla__prev absolute left-2 top-[50%] z-10 bg-primary text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
