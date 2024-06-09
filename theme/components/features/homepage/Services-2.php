@@ -1,4 +1,4 @@
-<section id="services" class="text-center relative bg-white -mt-1 py-20 md:pb-40 md:pt-40 ">
+<section id="services" class="text-center relative bg-white -mt-1">
     <div class=" grid md:grid-cols-2 max-w-screen-2xl mx-auto px-5  md:px-20 gap-10">
     <div class=" text-left  mb-16 md:mb-0 flex flex-col ">
         <div>
