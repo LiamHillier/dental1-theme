@@ -22,41 +22,41 @@
             </div>
         </div>
         <div class="pb-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 mt-4">
-            <div class="animate__initial animate__animated animate__fadeInUp flex flex-col items-center animate__delay-0_2s">
+            <div class=" flex flex-col items-center">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/general.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">General Dentistry</h3>
                 <p class="mt-1">We believe in preventive care as the foundation of oral health. Our general dentistry services include a wide range of treatments and procedures designed to keep your smile bright and healthy:</p>
-                <a href="/general-dentistry/" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">View all general
+                <a href="/general-dentistry/" class="link mt-6">View all general
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
                 </a>
             </div>
-            <div class="animate__initial animate__animated animate__fadeInUp flex flex-col items-center animate__delay-0_4s">
+            <div class=" flex flex-col items-center ">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/cosmetic.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">Cosmetic Dentistry</h3>
                 <p class="mt-1">We are here to help you achieve the smile you have always wanted. We’ll discuss with you the many options available and create a tailored treatment plan.</p>
-                <a href="/cosmetic-dentistry/" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">View all cosmetic
+                <a href="/cosmetic-dentistry/" class="link mt-6">View all cosmetic
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
                 </a>
             </div>
-            <div class="animate__initial animate__animated animate__fadeInUp flex flex-col items-center animate__delay-0_6s">
+            <div class="flex flex-col items-center">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/restorative.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">Restorative</h3>
                 <p class="mt-1">At Dental<span class="text-primary">One</span>, we believe in preventive care as the foundation of oral health. Our general dentistry services include a wide range of treatments and procedures designed to keep your smile bright and healthy:</p>
-                <a href="/restorative-dentistry/" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">View all restorative
+                <a href="/restorative-dentistry/" class="link mt-6">View all restorative
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
                 </a>
             </div>
-            <div class="animate__initial animate__animated animate__fadeInUp flex flex-col items-center animate__delay-0_8s">
+            <div class="flex flex-col items-center">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/othodontics.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">Orthodontics</h3>
                 <p class="mt-1">Misaligned teeth, aside from being challenging to clean, also affect one’s appearance. Many people desire a stunning smile, and straight teeth play a significant role in enhancing facial aesthetics.</p>
-                <a href="/orthodontics/" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">View all orthodontics
+                <a href="/orthodontics/" class="link mt-6">View all orthodontics
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
