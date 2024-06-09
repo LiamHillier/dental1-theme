@@ -87,6 +87,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
     function initMap() {
+        function displayError(message) {
+            const loadingSpinner = document.getElementById('loading-spinner');
+            const resultText = document.getElementById('result-text');
+
+            loadingSpinner.classList.add('hidden');
+            resultText.classList.remove('hidden');
+            resultText.innerText = message;
+        }
+
         try {
             const locationsContainer = document.querySelector('.locations-carousel .embla__viewport');
             const locationsPrevButton = document.querySelector('.locations-carousel .embla__prev');
@@ -190,15 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             displayError('Unable to get location information at the moment. Please try again later.');
                         }
                     });
-                }
-    
-                function displayError(message) {
-                    const loadingSpinner = document.getElementById('loading-spinner');
-                    const resultText = document.getElementById('result-text');
-    
-                    loadingSpinner.classList.add('hidden');
-                    resultText.classList.remove('hidden');
-                    resultText.innerText = message;
                 }
             }
         } catch (error) {
