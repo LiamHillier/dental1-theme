@@ -76,41 +76,41 @@
                             $image = get_the_post_thumbnail_url(get_the_ID(), 'full');
                     ?>
                             <div class="embla__slide">
-                                <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
-                                    <div class="location-card">
-                                        <?php if ($image) : ?>
-                                            <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
-                                        <?php endif; ?>
-                                        <div class="location-content h-full flex flex-col justify-between">
-                                            <div class="flex flex-col gap-1">
-                                                <h3><?php the_title(); ?></h3>
-                                                <p>
-                                                    <strong>Phone:</strong>
-                                                    <a href="tel:<?php echo esc_attr($phone); ?>">
-                                                        <?php echo esc_html($phone); ?>
-                                                    </a>
-                                                </p>
-                                                <p>
-                                                    <strong>Email:</strong>
-                                                    <a href="mailto:<?php echo esc_attr($email); ?>">
-                                                        <?php echo esc_html($email); ?>
-                                                    </a>
-                                                </p>
-                                                <p>
-                                                    <strong>Address:</strong>
-                                                    <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo urlencode($address); ?>" target="_blank">
-                                                        <?php echo esc_html($address); ?>
-                                                    </a>
-                                                </p>
-                                            </div>
-                                            <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded mt-4 book-icon justify-center">
-                                                <?php echo esc_html('Book Online'); ?>
-                                            </a>
+                                <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" >
+                                <div class="location-card">
+                                    <?php if ($image) : ?>
+                                        <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
+                                    <?php endif; ?>
+                                    <div class="location-content h-full flex flex-col justify-between">
+                                        <div class="flex flex-col gap-1">
+                                            <h3><?php the_title(); ?></h3>
+                                            <p>
+                                                <strong>Phone:</strong>
+                                                <a href="tel:<?php echo esc_attr($phone); ?>">
+                                                    <?php echo esc_html($phone); ?>
+                                                </a>
+                                            </p>
+                                            <p>
+                                                <strong>Email:</strong>
+                                                <a href="mailto:<?php echo esc_attr($email); ?>">
+                                                    <?php echo esc_html($email); ?>
+                                                </a>
+                                            </p>
+                                            <p>
+                                                <strong>Address:</strong>
+                                                <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo urlencode($address); ?>" target="_blank">
+                                                    <?php echo esc_html($address); ?>
+                                                </a>
+                                            </p>
                                         </div>
-
+                                        <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded mt-4 book-icon justify-center">
+                                            <?php echo esc_html('Book Online'); ?>
+                                        </a>
                                     </div>
-                                </a>
 
+                                </div>
+                                </a>
+                               
                             </div>
                     <?php endwhile;
                         wp_reset_postdata();
