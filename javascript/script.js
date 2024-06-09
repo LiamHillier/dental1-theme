@@ -119,24 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (locationsNextButton) {
                     locationsNextButton.addEventListener('click', () => emblaLocationsApi.scrollNext());
                 }
-    
-                // Autoplay functionality
-                let autoplayInterval;
-                const autoplay = () => {
-                    autoplayInterval = setInterval(() => {
-                        emblaLocationsApi.scrollNext();
-                    }, 3000); // Adjust the interval as needed
-                };
-    
-                const stopAutoplay = () => {
-                    clearInterval(autoplayInterval);
-                };
-    
-                locationsContainer.addEventListener('mouseenter', stopAutoplay);
-                locationsContainer.addEventListener('mouseleave', autoplay);
-    
-                autoplay();
-    
+        
                 // Handle window resize
                 window.addEventListener('resize', () => emblaLocationsApi.reInit());
     
