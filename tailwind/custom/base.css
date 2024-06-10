@@ -557,7 +557,7 @@ h2 {
 	animation-delay: 1.8s !important;
 }
 
-@screen sm {
+@media (max-width: 768px){
 	#hubspot-messages-iframe-container {
 		bottom: 50px;
 	}
