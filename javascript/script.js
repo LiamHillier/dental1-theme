@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     // Select the elements
-    const menuOpen = document.querySelector('.feather-menu');
+    const menuOpen = document.querySelector('.mobile-hamburger');
     const menuClose = document.querySelector('.menu-close');
     const mobileMenu = document.querySelector('.mobile-menu');
 
