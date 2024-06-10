@@ -12,14 +12,72 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-
-    document.getElementById('livechat').addEventListener('click', function() {
-        if (window.HubSpotConversations) {
-          window.HubSpotConversations.widget.open();
-        } else {
-          console.error('HubSpot chat widget not loaded.');
+    // Function to hide the chat widget on mobile devices
+    function hideChatWidgetOnMobile() {
+        if (window.innerWidth <= 768) {
+            var chatWidget = document.querySelector('span[data-test-id="chat-widget-launcher"]');
+            if (chatWidget) {
+                chatWidget.style.display = 'none';
+            }
         }
-      });
+    }
+
+    // Function to show the chat widget
+    function showChatWidget() {
+        var chatWidget = document.querySelector('span[data-test-id="chat-widget-launcher"]');
+        if (chatWidget) {
+            chatWidget.style.display = 'block';
+            if (window.HubSpotConversations) {
+                window.HubSpotConversations.widget.open();
+            }
+        }
+    }
+
+    // Function to observe DOM changes and hide the chat widget if it appears
+    function observeChatWidget() {
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.addedNodes.length) {
+                    hideChatWidgetOnMobile();
+                }
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    // Function to periodically check if the chat widget has loaded
+    function checkChatWidget() {
+        const interval = setInterval(() => {
+            var chatWidget = document.querySelector('span[data-test-id="chat-widget-launcher"]');
+            if (chatWidget) {
+                hideChatWidgetOnMobile();
+                clearInterval(interval);
+            }
+        }, 100);
+    }
+
+    // Add event listener to the custom button
+    document.getElementById('customChatButton').addEventListener('click', function () {
+        showChatWidget();
+    });
+
+    // Run the functions to hide the chat widget on mobile devices
+    window.onload = () => {
+        observeChatWidget();
+        checkChatWidget();
+    };
+    window.onresize = hideChatWidgetOnMobile;
+
+
+
+    document.getElementById('livechat').addEventListener('click', function () {
+        if (window.HubSpotConversations) {
+            window.HubSpotConversations.widget.open();
+        } else {
+            console.error('HubSpot chat widget not loaded.');
+        }
+    });
 
 
     // Select the elements
@@ -91,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    
+
     function initMap() {
         function displayError(message) {
             const loadingSpinner = document.getElementById('loading-spinner');
@@ -106,56 +164,56 @@ document.addEventListener('DOMContentLoaded', () => {
             const locationsContainer = document.querySelector('.locations-carousel .embla__viewport');
             const locationsPrevButton = document.querySelector('.locations-carousel .embla__prev');
             const locationsNextButton = document.querySelector('.locations-carousel .embla__next');
-    
+
             if (locationsContainer) {
-                document.getElementById('address-form').addEventListener('submit', function(event) {
+                document.getElementById('address-form').addEventListener('submit', function (event) {
                     event.preventDefault(); // Prevent page reload
                     findClosestClinic();
                 });
-    
+
                 const emblaLocationsApi = EmblaCarousel(locationsContainer, {
                     loop: false,
                     align: 'start'
                 });
-    
+
                 if (locationsPrevButton) {
                     locationsPrevButton.addEventListener('click', () => emblaLocationsApi.scrollPrev());
                 }
-    
+
                 if (locationsNextButton) {
                     locationsNextButton.addEventListener('click', () => emblaLocationsApi.scrollNext());
                 }
-        
+
                 // Handle window resize
                 window.addEventListener('resize', () => emblaLocationsApi.reInit());
-    
+
                 // eslint-disable-next-line no-inner-declarations
                 function findClosestClinic() {
                     const addressInput = document.getElementById('address-input').value;
                     const loadingSpinner = document.getElementById('loading-spinner');
                     const resultText = document.getElementById('result-text');
-    
+
                     // Show loading spinner
                     loadingSpinner.classList.remove('hidden');
                     resultText.classList.add('hidden');
-    
+
                     // Geocode the user's address
                     const geocoder = new google.maps.Geocoder();
                     geocoder.geocode({ 'address': addressInput }, function (results, status) {
                         if (status == 'OK') {
                             const userLocation = results[0].geometry.location;
-    
+
                             // Calculate distances to each clinic
                             const slides = document.querySelectorAll('.locations-carousel .embla__slide');
                             const dentalClinics = Array.from(slides).map(slide => ({
                                 address: slide.getAttribute('data-address'),
                                 element: slide
                             }));
-    
+
                             let closestClinic = null;
                             let minDistance = Infinity;
                             const service = new google.maps.DistanceMatrixService();
-    
+
                             service.getDistanceMatrix({
                                 origins: [userLocation],
                                 destinations: dentalClinics.map(clinic => clinic.address),
@@ -169,11 +227,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                             closestClinic = dentalClinics[index];
                                         }
                                     });
-    
+
                                     // Set the closest clinic as the active slide
                                     const index = dentalClinics.indexOf(closestClinic);
                                     emblaLocationsApi.scrollTo(index);
-    
+
                                     // Display result
                                     loadingSpinner.classList.add('hidden');
                                     resultText.classList.remove('hidden');
@@ -195,8 +253,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     initMap();
-    
-    
+
+
 
     const teamsContainer = document.querySelector('#team .team__viewport');
     const teamPrevButton = document.querySelector('.team__prev');
