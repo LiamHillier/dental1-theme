@@ -58,7 +58,8 @@
                     <?php
                     $locations = new WP_Query(array(
                         'post_type' => 'location',
-                        'posts_per_page' => -1
+                        'posts_per_page' => -1,
+                        'orderby' => 'menu_order'
                     ));
 
                     if ($locations->have_posts()) :
