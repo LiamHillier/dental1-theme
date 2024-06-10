@@ -37,7 +37,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                         <p class="font-semibold text-lg text-black">Call Us Today</p>
                         <p>13 000 NO GAP (1300 066 427)</p>
                     </a>
-                    <a href="mailto:info@DentalOne" class="contact-link mt-4">
+                    <a href="mailto:info@dental1.com.au" class="contact-link mt-4">
                         <span class="text-primary"><?php echo $mail; ?></span>
                         <p class="font-semibold text-lg text-black">Email Us</p>
                         <p>info@dental1.com.au</p>
