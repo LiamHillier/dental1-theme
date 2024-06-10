@@ -557,3 +557,8 @@ h2 {
 	animation-delay: 1.8s !important;
 }
 
+@media (max-width: 768px) {
+	.form-columns-2 {
+		flex-direction: column;
+	}
+}

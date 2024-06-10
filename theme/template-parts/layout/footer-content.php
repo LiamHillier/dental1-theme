@@ -35,25 +35,20 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			<ul class="text-gray-500 flex flex-col">
 				<li><a href="/">Home</a></li>
 				<li><a href="/about-us/">About us</a></li>
-				<li><a href="/no-gap/">No Gap</a></li>
 				<li><a href="/prices/">Prices</a></li>
 				<li><a href="/payment-options/">Payment Options</a></li>
 				<li><a href="/meet-the-team/">Our Team</a></li>
-				<li><a href="/community-support/">Community Support</a></li>
 				<li><a href="/faq/">FAQs</a></li>
 			</ul>
 		</div>
 		<div class="pl-8 :w-full">
 			<p class="text-lg text-black mb-4">Services</p>
 			<ul class="text-gray-500 flex flex-col">
-				<li><a href="/general-dentistry/">General</a></li>
-				<li><a href="/cosmetic-dentistry/">Cosmetic</a></li>
-				<li><a href="/childrens-dentistry/">Children's Dentistry</a></li>
+				<li><a href="/general-dentistry/">General Dentistry</a></li>
+				<li><a href="/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
+				<li><a href="/restorative/">Restorative Dentistry</a></li>
 				<li><a href="/dental-implants/">Dental Implants</a></li>
-				<li><a href="/dentures/">Dentures</a></li>
-				<li><a href="/full-mouth-rehabilitation/">Full Mouth Rehab</a></li>
 				<li><a href="/orthodontics/">Orthodontics</a></li>
-				<li><a href="/veneers/">Veneers</a></li>
 				<li><a href="/dental-emergencies/">Dental Emergencies</a></li>
 			</ul>
 		</div>
@@ -63,11 +58,11 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			<p class="text-lg text-black mb-4">Locations</p>
 			<ul class="text-gray-500 flex flex-col">
 				<li><a href="/locations/craigieburn/">Craigieburn</a></li>
-				<li><a href="/locations/richmond">Richmond</a></li>
-				<li><a href="/locations/lower-templestowe/">Lower Templestowe</a></li>
 				<li><a href="/locations/epping/">Epping North</a></li>
 				<li><a href="/locations/essendon/">Essendon</a></li>
+				<li><a href="/locations/lower-templestowe/">Lower Templestowe</a></li>
 				<li><a href="/locations/reservoir">Reservoir</a></li>
+				<li><a href="/locations/richmond">Richmond</a></li>
 				<li><a href="/locations/south-yarra">South Yarra</a></li>
 			</ul>
 		</div>
@@ -75,6 +70,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			<p class="text-lg text-black mb-4">Contact</p>
 			<ul class="text-gray-500 flex flex-col">
 				<li><a href="/contact/">Contact</a></li>
+				<li><a href="/get-a-quote/">Get a Quote</a></li>
 				<li><a href="/book-appointment">Book Appointment</a></li>
 			</ul>
 		</div>

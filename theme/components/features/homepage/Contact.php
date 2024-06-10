@@ -34,19 +34,19 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                 <div class="flex flex-col gap-2">
                     <a href="tel:1300066427" class="contact-link">
                         <span class="text-primary"><?php echo $phone; ?></span>
-                        <p class="font-semibold text-lg text-black">Call Us Today</p>
-                        <p>13 000 NO GAP (1300 066 427)</p>
+                        <p class="font-semibold text-lg text-black ">Call Us Today</p>
+                        <p class="underline">13 000 NO GAP (1300 066 427)</p>
                     </a>
                     <a href="mailto:info@dental1.com.au" class="contact-link mt-4">
                         <span class="text-primary"><?php echo $mail; ?></span>
                         <p class="font-semibold text-lg text-black">Email Us</p>
-                        <p>info@dental1.com.au</p>
+                        <p class="underline">info@dental1.com.au</p>
                     </a>
                 </div>
                 <div class="contact-link">
                     <span class="text-primary"><?php echo $pin; ?></span>
                     <p class="font-semibold text-lg text-black">Locations</p>
-                    <ul class="text-gray-500 flex flex-col text-sm gap-2">
+                    <ul class="text-gray-500 flex flex-col text-sm gap-2 underline">
                         <li><a href="/locations/craigieburn/">Craigieburn</a></li>
                         <li><a href="/locations/richmond">Richmond</a></li>
                         <li><a href="/locations/lower-templestowe/">Lower Templestowe</a></li>
