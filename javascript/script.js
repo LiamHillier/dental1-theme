@@ -102,10 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     event.preventDefault(); // Prevent page reload
                     findClosestClinic();
                 });
-
-                const addressInput = document.getElementById('address-input');
-         
-    
+                
                 const emblaLocationsApi = EmblaCarousel(locationsContainer, {
                     loop: false,
                     align: 'start'
