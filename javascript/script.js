@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 const addressInput = document.getElementById('address-input');
-                const autocomplete = new google.maps.places.Autocomplete(addressInput);
+         
     
                 const emblaLocationsApi = EmblaCarousel(locationsContainer, {
                     loop: false,
