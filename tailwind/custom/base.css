@@ -557,14 +557,3 @@ h2 {
 	animation-delay: 1.8s !important;
 }
 
-@media (max-width: 768px) {
-	.jBHdDb {
-		display: none !important;
-	}
-	.ctHpde {
-		bottom: 40px !important;	
-	}
-	.IconLauncher__BaseLauncher-nynwt1-0 {
-		display: none !important;
-	}
-}
