@@ -562,3 +562,7 @@ h2 {
 		bottom: 50px !important;
 	}
 }
+
+span[data-test-id="chat-widget-launcher"] {
+	display: none;
+}

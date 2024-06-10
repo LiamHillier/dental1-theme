@@ -13,7 +13,13 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-
+    document.getElementById('livechat').addEventListener('click', function() {
+        if (window.HubSpotConversations) {
+          window.HubSpotConversations.widget.open();
+        } else {
+          console.error('HubSpot chat widget not loaded.');
+        }
+      });
 
 
     // Select the elements
