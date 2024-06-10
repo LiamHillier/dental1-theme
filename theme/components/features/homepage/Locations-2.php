@@ -74,7 +74,7 @@
                                         <?php if ($image) : ?>
                                             <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
                                         <?php endif; ?>
-                                        <div class="location-content h-full flex flex-col justify-between">
+                                        <div class="location-content h-full flex flex-col justify-start">
                                             <div class="flex flex-col gap-1">
                                                 <h3><?php the_title(); ?></h3>
                                                 <p>
