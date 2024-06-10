@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     event.preventDefault(); // Prevent page reload
                     findClosestClinic();
                 });
-                
+
                 const emblaLocationsApi = EmblaCarousel(locationsContainer, {
                     loop: false,
                     align: 'start'
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                     // Display result
                                     loadingSpinner.classList.add('hidden');
                                     resultText.classList.remove('hidden');
-                                    resultText.innerText = `The closest clinic is located at ${closestClinic.address}. Distance: ${distances[index].distance.text}`;
+                                    resultText.innerText = `Your closest clinic is located at ${closestClinic.address}. Distance: ${distances[index].distance.text}`;
                                 } else {
                                     // Handle distance matrix error
                                     displayError('Unable to get location information at the moment. Please try again later.');
