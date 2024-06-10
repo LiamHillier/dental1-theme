@@ -105,7 +105,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 	</div>
 
 </div>
-<header id="masthead" class="hidden md:block w-screen sticky top-[36px] lg:top-0 left-0 z-50 bg-transparent transition-colors duration-100 ease-in -mb-[112px]">
+<header id="masthead" class="hidden lg:block w-screen sticky top-[36px] lg:top-0 left-0 z-50 bg-transparent transition-colors duration-100 ease-in -mb-[112px]">
 	<div class="max-w-screen-2xl mx-auto py-4 px-5 md:px-20 flex justify-between items-center ">
 		<div class="logo h-full flex justify-start items-center">
 			<a href="/"><?php echo $logo; ?></a>
@@ -138,7 +138,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 </header><!-- #masthead -->
 
 
-<div class="md:hidden fixed bottom-0 left-0 w-full bg-white text-primary px-5 py-3 z-50 shadow-xl">
+<div class="lg:hidden fixed bottom-0 left-0 w-full bg-white text-primary px-5 py-3 z-50 shadow-xl">
 	<nav>
 		<ul class="flex justify-center gap-7">
 			<li class="text-primary">
