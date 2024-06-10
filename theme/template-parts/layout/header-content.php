@@ -240,3 +240,5 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 	</div>
 
 </div>
+
+

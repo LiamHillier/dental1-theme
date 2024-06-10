@@ -1,4 +1,4 @@
-<section id="results" class="bg-white py-12 px-5 md:px-20">
+<section id="results" class="bg-white py-12 px-5 md:px-20 relative">
     <div>
         <header class="flex flex-col items-center gap-2 text-center mb-2 ">
 

@@ -3,9 +3,6 @@
     "themes": [
       "."
     ],
-    "plugins": [
-      "./plugins/gravityforms"
-    ],
     "port": 1000,
     "testsPort": 1001,
     "config": {
