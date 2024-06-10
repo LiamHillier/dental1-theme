@@ -102,6 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     event.preventDefault(); // Prevent page reload
                     findClosestClinic();
                 });
+
+                const addressInput = document.getElementById('address-input');
+                const autocomplete = new google.maps.places.Autocomplete(addressInput);
     
                 const emblaLocationsApi = EmblaCarousel(locationsContainer, {
                     loop: false,
