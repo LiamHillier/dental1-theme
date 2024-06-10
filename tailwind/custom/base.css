@@ -558,11 +558,7 @@ h2 {
 }
 
 @media (max-width: 768px){
-	body #hubspot-messages-iframe-container {
-		bottom: 50px !important;
+	span[data-test-id="chat-widget-launcher"] {
+		display: none;
 	}
-}
-
-span[data-test-id="chat-widget-launcher"] {
-	display: none;
 }
