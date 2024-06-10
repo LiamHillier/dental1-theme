@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+    wordpress:
+        image: wordpress:latest
+        ports:
+            - '8000:80'
+        environment:
+            # Set the db host
+            WORDPRESS_DB_HOST: mariadb
+            # Set the db name
+            WORDPRESS_DB_NAME: wp_db_001
+            # Set db user and password
+            WORDPRESS_DB_USER: wp_db_user
+            WORDPRESS_DB_PASSWORD: abcABC123!@# # change this!
+            WORDPRESS_DEBUG: 1
+            WORDPRESS_CONFIG_EXTRA: |
+                define( 'SCRIPT_DEBUG', true );
+        volumes:
+            - .:/var/www/html/wp-content/themes/dental1
+        depends_on:
+            - mariadb
+        entrypoint: >
+            sh -c "
+            apt-get update &&
+            apt-get install -y less mariadb-client sudo &&
+            curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar &&
+            chmod +x wp-cli.phar &&
+            mv wp-cli.phar /usr/local/bin/wp &&
+            echo \"alias wp='wp --allow-root'\" >> ~/.bashrc &&
+            docker-entrypoint.sh apache2-foreground
+            "
+    mariadb:
+        image: mariadb
+        expose:
+            - 3306
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_DATABASE: wp_db_001
+            MYSQL_USER: wp_db_user
+            MYSQL_PASSWORD: abcABC123!@# # Change this!
+            MYSQL_ROOT_PASSWORD: abcABC123!@# # Change this!
+        volumes:
+            - ./db:/var/lib/mysql
+
+volumes:
+    db_data: {}
