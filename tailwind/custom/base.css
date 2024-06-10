@@ -558,7 +558,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-	span[data-test-id="chat-widget-launcher"] {
+	.jBHdDb {
 		display: none !important;
 	}
 	.ctHpde {
