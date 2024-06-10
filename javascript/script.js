@@ -86,18 +86,31 @@ document.addEventListener('DOMContentLoaded', () => {
         function displayError(message) {
             const loadingSpinner = document.getElementById('loading-spinner');
             const resultText = document.getElementById('result-text');
-
+    
             loadingSpinner.classList.add('hidden');
             resultText.classList.remove('hidden');
             resultText.innerText = message;
         }
-
+    
         try {
             const locationsContainer = document.querySelector('.locations-carousel .embla__viewport');
             const locationsPrevButton = document.querySelector('.locations-carousel .embla__prev');
             const locationsNextButton = document.querySelector('.locations-carousel .embla__next');
     
             if (locationsContainer) {
+                // Initialize address autocomplete
+                const addressInput = document.getElementById('address-input');
+                const autocomplete = new google.maps.places.Autocomplete(addressInput);
+    
+                autocomplete.addListener('place_changed', () => {
+                    const place = autocomplete.getPlace();
+                    if (!place.geometry) {
+                        // User entered the name of a Place that was not suggested and pressed the Enter key, or the Place Details request failed.
+                        displayError('No details available for input: \'' + place.name + '\'');
+                        return;
+                    }
+                });
+    
                 document.getElementById('address-form').addEventListener('submit', function(event) {
                     event.preventDefault(); // Prevent page reload
                     findClosestClinic();
@@ -115,13 +128,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (locationsNextButton) {
                     locationsNextButton.addEventListener('click', () => emblaLocationsApi.scrollNext());
                 }
-        
+    
                 // Handle window resize
                 window.addEventListener('resize', () => emblaLocationsApi.reInit());
     
-                // eslint-disable-next-line no-inner-declarations
                 function findClosestClinic() {
-                    const addressInput = document.getElementById('address-input').value;
+                    const addressInputValue = addressInput.value;
                     const loadingSpinner = document.getElementById('loading-spinner');
                     const resultText = document.getElementById('result-text');
     
@@ -131,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
                     // Geocode the user's address
                     const geocoder = new google.maps.Geocoder();
-                    geocoder.geocode({ 'address': addressInput }, function (results, status) {
+                    geocoder.geocode({ 'address': addressInputValue }, function (results, status) {
                         if (status == 'OK') {
                             const userLocation = results[0].geometry.location;
     
