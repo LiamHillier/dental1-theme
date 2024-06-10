@@ -558,7 +558,7 @@ h2 {
 }
 
 @media (max-width: 768px){
-	#hubspot-messages-iframe-container {
-		bottom: 50px;
+	body #hubspot-messages-iframe-container {
+		bottom: 50px !important;
 	}
 }
