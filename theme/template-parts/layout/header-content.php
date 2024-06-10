@@ -140,7 +140,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 
 <div class="lg:hidden fixed bottom-0 left-0 w-full bg-white text-primary px-5 py-3 z-50 shadow-xl">
 	<nav>
-		<ul class="flex justify-center gap-7">
+		<ul class="flex justify-center gap-8">
 			<li class="text-primary">
 				<a href="/">
 					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
