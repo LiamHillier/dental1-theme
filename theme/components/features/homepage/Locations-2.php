@@ -1,4 +1,4 @@
-<section id="locations" class=" bg-gray-100 pt-10 md:pt-0 pb-40 relative -mb-1">
+<section id="locations" class=" bg-gray-100 pt-10 md:pt-0 pb-36 md:pb-40 relative -mb-1">
     <div class="">
         <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 max-w-screen-2xl  mx-auto px-5 md:px-20 relative">
             <div>
