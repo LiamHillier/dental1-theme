@@ -8,17 +8,10 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         <header class="px-5 md:absolute md:right-20 md:w-5/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
             <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp">About Dental<span class="text-primary">One</span>
             </h2>
-            <p class="animate__initial animate__animated animate__fadeInUp">At <strong>Dental<span class="text-primary">One</span></strong>, we are more than just a
-                dental practice we
-                are your trusted partner in achieving and
-                maintaining a beautiful, healty smile. With over a decade of dedicated service in the field of
-                dentistry,
-                we've been transforming smiles and improving lives. </p><br />
-            <p class="animate__initial animate__animated animate__fadeInUp">Whether you're looking to enhance your
-                smile's beauty or
-                maintain your dental health, Dental<span class="text-primary">One</span> is here
-                for
-                you. Schedule an appointment with us, and let us help you acheive the smile of your dreams.</p>
+            <p class="animate__initial animate__animated animate__fadeInUp">At <strong>Dental<span class="text-primary">One</span></strong>, we strive to go beyond the ordinary dental practice and become your dependable, trusted sanctuary for all your family's dental care needs.
+            </p><br />
+            <p class="animate__initial animate__animated animate__fadeInUp">Combining the advantages of an experienced dental team, a wide range of services and numerous endorsements from satisfied patients, we are dedicated to providing lifelong dental health care.
+            </p>
             <a href="/about-us/" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">Read More
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />

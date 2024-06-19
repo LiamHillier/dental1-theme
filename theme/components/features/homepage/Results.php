@@ -6,7 +6,8 @@
             </h2>
         </header>
         <div class="flex flex-col items-center gap-2 locations-description max-w-lg mx-auto mt-4">
-            <p class="text-center animate__initial animate__animated animate__fadeInUp">Every smile is a masterpiece. Our expert team has artistically enhanced over 30,000 smiles, bringing new confidence and brilliance to every face we touch. Explore our gallery of life-changing smile makeovers and see how we can illuminate your smile too.</p>
+            <p class="text-center animate__initial animate__animated animate__fadeInUp">At Dental<span class="text-primary">One</span>, we understand that every smile has its own story. Our skilled team is committed to enhancing your smile to its fullest potential. Explore our gallery of beautiful smile transformations and imagine the radiant, confident smile we can craft for you.
+            </p>
             <a href="/results" class="link mt-4 animate__initial animate__animated animate__fadeInUp animate__delay-1s">
                 View results
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">

@@ -50,25 +50,22 @@ get_header();
                 </h2>
             </header>
             <div class="flex justify-center items-center mt-12 gap-4">
-                <p class="max-w-lg text-center md:text-left">It’s never been more affordable to look after your oral health. Our affordable
-                    options enable you to
-                    save money and avoid large out of pocket expenses</p>
+                <p class="max-w-lg text-center md:text-left">It’s never been more affordable to look after your oral health. Our affordable options enable you to save money and avoid large out of pocket expenses
+                </p>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start justify-between mt-20 gap-y-16 px-5 md:px-20 max-w-screen-2xl md:mx-auto">
-            <div class="flex flex-col gap-2 items-start ">
+            <a href="/no-gap-terms-conditions/" class="flex flex-col gap-2 items-start ">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         01</div>
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-left text-lg font-semibold">Private health Insurance Patients</p>
-                <p class="text-left">Why pay hundreds on insurance just to be stung with a gap? Our No Gap
-                    Policy
-                    means you pay nothing
-                    out of pocket on Exams, Cleans and X-rays.</p>
-            </div>
-            <div class="flex flex-col gap-2 items-start">
+                <p class="text-left">Why pay hundreds on insurance just to be stung with a gap? Our No Gap Policy means you pay nothing out of pocket on Exams, Cleans and X-rays.
+                </p>
+</a>
+            <a href="/no-gap" class="flex flex-col gap-2 items-start">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         02</div>
@@ -76,11 +73,10 @@ get_header();
                 </div>
                 <p class="text-black text-left text-lg font-semibold">No insurance
                     Patients</p>
-                <p class="text-left ">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $95 check-up and clean package means you receive all your
-                    preventative dental care
-                    including an Exam, clean and X-rays</p>
-            </div>
-            <div class="flex flex-col gap-2 items-start">
+                <p class="text-left ">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $119 check-up and clean package means you receive all your preventative dental care including an Exam, clean and X-rays
+                </p>
+</a>
+            <a href="/child-dental-benefits-scheme/" class="flex flex-col gap-2 items-start">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         03</div>
@@ -88,10 +84,10 @@ get_header();
                 </div>
                 <p class="text-black text-left text-lg font-semibold">Child dental
                     Benefits</p>
-                <p class="text-left">$1000 in government benefits, bulk billed, over two calendar years, for eligible children aged 2-17. The CDBS covers a wide range of
-                    services and promotes good early habits!</p>
-            </div>
-            <div class="flex flex-col gap-2 items-start">
+                <p class="text-left">$1095 in government benefits, bulk billed, over two calendar years, for eligible children aged 2-17. The CDBS covers a wide range of services and promotes good early habits!
+                </p>
+</a>
+            <a href="/payment-options/" class="flex flex-col gap-2 items-start">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         04</div>
@@ -99,10 +95,9 @@ get_header();
                 </div>
                 <p class="text-black text-left text-lg font-semibold">Financing
                     Plans</p>
-                <p class="text-left">Available for larger treatments, our financing options enable you to split the payment on
-                    treatments that can leave a
-                    dent in your pocket</p>
-            </div>
+                <p class="text-left">Available for larger treatments, our financing options enable you to split the payment on treatments that can leave a dent in your pocket
+                </p>
+</a>
         </div>
         <div class="locations-divider-2">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
