@@ -1,13 +1,16 @@
-<section id="team" class="bg-white pt-12 relative pb-40 md:pb-60">
+<section id="team" class="bg-white pt-12 relative pb-30  md:pb-60">
     <div class="md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto relative">
         <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
             <h2 class=" md:text-left animate__initial animate__animated animate__fadeInUp">
-                Let's
-                meet our<br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl  ">expert</span>
-                    <span class="md:text-4xl flex flex-col ">team
-                        <svg xmlns="http://www.w3.org/2000/svg" width="238" height="24" viewBox="0 0 238 24" fill="none" class="hidden md:block w-32 float-right">
-                            <path d="M232.958 18.4731C232.958 18.4731 87.458 -10.3269 5.95801 17.4731" stroke="#08A39A" stroke-width="10" stroke-linecap="round" />
-                        </svg></span></span>
+                <a href="/meet-the-team">
+                    Let's
+                    meet our<br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl  ">expert</span>
+                        <span class="md:text-4xl flex flex-col ">team
+                            <svg xmlns="http://www.w3.org/2000/svg" width="238" height="24" viewBox="0 0 238 24" fill="none" class="hidden md:block w-32 float-right">
+                                <path d="M232.958 18.4731C232.958 18.4731 87.458 -10.3269 5.95801 17.4731" stroke="#08A39A" stroke-width="10" stroke-linecap="round" />
+                            </svg></span></span>
+                </a>
+
             </h2>
         </header>
 

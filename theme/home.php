@@ -15,16 +15,16 @@ get_header();
     get_template_part('components/features/homepage/hero/Hero');
     ?>
     <div class="bg-gray-100">
-        <section class="bg-gray-100 pt-4 pb-20 max-w-screen-2xl mx-auto px-5 md:px-20 ">
+        <section class="bg-gray-100 pt-8 pb-8 max-w-screen-2xl mx-auto px-5 md:px-20 ">
             <div class="  bg-primary rounded-3xl text-white px-10 py-10 grid md:grid-cols-2">
-                <div class="flex flex-col gap-2 items-start">
-                    <h2>
-                        Dental Emergencies
+                <div class="flex flex-col gap-2 items-center md:items-start">
+                    <h2 class="text-center md:text-left">
+                    Do you need urgent care?
                     </h2>
                     <h2>
                         1300 066 427
                     </h2>
-                    <a href="/dental-emergencies/" class="outline button mt-4">Learn more</a>
+                    <a href="/dental-emergencies/" class="outline button mt-4 text-center md:text-left">Learn more</a>
 
                 </div>
                 <div>
@@ -41,7 +41,7 @@ get_header();
     get_template_part('components/features/homepage/Results');
     get_template_part('components/features/homepage/Team');
     ?>
-    <section id="services" class="bg-gray-100 pt-10 md:pt-0 pb-40 relative">
+    <section id="services" class="bg-gray-100 pt-10 md:pt-0 pb-30 md:pb-40 relative">
         <div class="px-5 md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto">
             <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
                 <h2 class="text-center md:text-left  ">
@@ -135,7 +135,7 @@ get_header();
                 </a>
             </div>
         </div> -->
-        <div class="pt-20 md:pt-0 md:pb-20 max-w-screen-2xl mx-auto px-5 md:px-20" id="testimonials-container">
+        <div class="pt-6 md:pt-0 md:pb-20 max-w-screen-2xl mx-auto px-5 md:px-20" id="testimonials-container">
             <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
         </div>
 

@@ -1,10 +1,10 @@
-<section id="locations" class=" bg-gray-100 pt-10 md:pt-0 pb-36 relative -mb-1">
+<section id="locations" class=" bg-gray-100 pt-10 md:pt-0 pb-30 md:pb-40 relative -mb-1">
     <div class="">
         <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 max-w-screen-2xl  mx-auto px-5 md:px-20 relative">
             <div>
                 <header class="flex flex-col items-center gap-2 text-center mb-2 ">
-                    <h2 class="animate__initial animate__animated animate__fadeInUp">Our clinics across
-                        <br><span class="!text-primary">Melbourne</span>
+                    <h2 class="animate__initial animate__animated animate__fadeInUp"><a href="/locations/">Our clinics across
+                        <br><span class="!text-primary">Melbourne</span></a>
                     </h2>
                 </header>
                 <div class="flex flex-col items-center gap-2 locations-description">

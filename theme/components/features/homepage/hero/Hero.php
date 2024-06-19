@@ -9,7 +9,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
             <div class="relative flex flex-col justify-start md:justify-center items-start gap-10 h-full  px-5 md:px-0 !pt-32   overflow-hidden pb-52 md:pb-40 md:!pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
                 <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
                 <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/hero-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/hero-1.jpg" alt="Dental One Hero" width="1708" height="1132" class="block object-cover absolute top-0 left-0 w-full h-full" />
-                <div class="relative z-20 w-full max-w-screen-2xl mx-auto py-4 md:px-20">
+                <div class="relative z-50 w-full max-w-screen-2xl mx-auto py-4 md:px-20">
                     <h1 class="hero-text-large font-bold text-primary text-left">The Smile<br /> You Deserve</h1>
                     <p class="text-base md:text-lg mt-6 max-w-xl ">Our caring professional team of Dentists in Craigieburn, Templestowe, Epping North, Essendon, Richmond, Reservoir and South Yarra are here to provide the best ongoing dental care and guidance for you and your family.</p>
                     <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
@@ -115,13 +115,13 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
 
     </div>
     <div class="embla__dots"></div>
-    <div class="service-shape-divider-bottom-1 absolute bottom-6 left-0 ">
+    <div class="service-shape-divider-bottom-1 absolute bottom-6 left-0 z-0">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-white"></path>
         </svg>
     </div>
-    <div class="w-full h-[26px]  absolute bottom-0 bg-gray-50"></div>
-    <div class="service-shape-divider-bottom-2 absolute -bottom-0 left-0">
+    <div class="w-full h-[26px]  absolute bottom-0 bg-gray-50 z-0"></div>
+    <div class="service-shape-divider-bottom-2 absolute -bottom-0 left-0 ">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="fill-gray-100"></path>
         </svg>

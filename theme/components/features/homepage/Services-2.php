@@ -1,10 +1,9 @@
 <section id="services" class="text-center relative bg-white -mt-1 pt-10 md:pt-20 md:pb-20">
-    <div class="max-w-screen-2xl mx-auto px-5  md:px-20 gap-10">
-        <div class=" text-center mb-16 md:mb-0 flex flex-col max-w-2xl mx-auto">
+    <div class="max-w-screen-2xl mx-auto px-5  md:px-20 gap-4">
+        <div class=" text-center mb-4 md:mb-0 flex flex-col max-w-2xl mx-auto">
             <div>
 
-                <h2 class="mb-4 animate__initial animate__animated animate__fadeInUp">Our <span class="text-primary">Services:</span> Personalized,
-                    Comprehensive Treatment</h2>
+                <h2 class="mb-4 animate__initial animate__animated animate__fadeInUp"><a href="/services/">Our <span class="text-primary">Services</span></a></h2>
             </div>
             <div class="">
                 <p class="animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">At Dental<span class="text-primary">One</span>, we
@@ -21,24 +20,24 @@
                 </a>
             </div>
         </div>
-        <div class="pb-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 mt-6">
-            <a href="/general-dentistry/" class=" flex flex-col items-center bg-white rounded-xl shadow-lg p-6">
+        <div class="pb-32 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center gap-4 md:mt-8">
+            <a href="/general-dentistry/" class=" flex flex-col items-center bg-white ">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/general.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">General Dentistry</h3>
                 <p class="mt-1">We believe in preventive care as the foundation of oral health. Our general dentistry services include a wide range of treatments and procedures designed to keep your smile bright and healthy:</p>
 
             </a>
-            <a href="/cosmetic-dentistry/" class=" flex flex-col items-center bg-white rounded-xl shadow-lg p-6">
+            <a href="/cosmetic-dentistry/" class=" flex flex-col items-center bg-white ">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/cosmetic.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">Cosmetic Dentistry</h3>
                 <p class="mt-1">We are here to help you achieve the smile you have always wanted. We’ll discuss with you the many options available and create a tailored treatment plan.</p>
             </a>
-            <a href="/restorative-dentistry/" class="flex flex-col items-center bg-white rounded-xl shadow-lg p-6">
+            <a href="/restorative-dentistry/" class="flex flex-col items-center bg-white ">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/restorative.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">Restorative</h3>
                 <p class="mt-1">At Dental<span class="text-primary">One</span>, we believe in preventive care as the foundation of oral health. Our general dentistry services include a wide range of treatments and procedures designed to keep your smile bright and healthy:</p>
             </a>
-            <a href="/orthodontics/" class="flex flex-col items-center bg-white rounded-xl shadow-lg p-6">
+            <a href="/orthodontics/" class="flex flex-col items-center bg-white ">
                 <img src="/wp-content/themes/dental1/theme/assets/images/icons/othodontics.png" alt="general dentistry icon" class="size-24" />
                 <h3 class="text-2xl">Orthodontics</h3>
                 <p class="mt-1">Misaligned teeth, aside from being challenging to clean, also affect one’s appearance. Many people desire a stunning smile, and straight teeth play a significant role in enhancing facial aesthetics.</p>
