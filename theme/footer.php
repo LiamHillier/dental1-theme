@@ -12,7 +12,7 @@
 
 ?>
 
-<section id="testimonials" class="bg-white">
+<section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?>">
     <!-- <div>
             <header class="flex flex-col items-center gap-2 text-center mb-2 ">
                 <p class="text-primary ">Results
