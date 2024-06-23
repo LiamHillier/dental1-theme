@@ -72,6 +72,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/contact/">Contact</a></li>
 				<li><a href="/get-a-quote/">Get a Quote</a></li>
 				<li><a href="/book-appointment">Book Appointment</a></li>
+				<li><a href="/privacy-policy-and-appointment-policy/">Privacy Policy</a></li>
 			</ul>
 		</div>
 	</div>
