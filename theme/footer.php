@@ -31,7 +31,7 @@
                 </a>
             </div>
         </div> -->
-    <div class="pt-6 md:pt-0 <?php echo !is_front_page() ? 'md:pb-10' : 'md:pb-20'; ?> max-w-screen-2xl mx-auto px-5 md:px-20" id="testimonials-container">
+    <div class="pt-6 md:pt-0 <?php echo !is_front_page() ? 'md:pb-10' : 'md:pb-20'; ?> max-w-screen-2xl mx-auto px-5 md:px-20 <?php echo is_page('about-us') ? 'bg-gray-50' : ''; ?>" id="testimonials-container">
         <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
     </div>
 
