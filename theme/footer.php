@@ -58,13 +58,12 @@ if (is_front_page()) {
         </div>
     </section>
 
-<?
+<?php
 }
 
 if (!is_page($page_slugs)) {
     get_template_part('components/features/homepage/Contact');
 }
-
 
 ?>
 
