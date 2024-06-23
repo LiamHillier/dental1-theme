@@ -38,25 +38,31 @@
 </section>
 <?php
 
-$page_slugs = array('contact', 'get-a-quote'); // Replace with your actual page slugs
+$page_slugs = array('book-appointment', 'get-a-quote'); // Replace with your actual page slugs
 
 if (is_front_page()) {
     get_template_part('components/features/homepage/Social');
 } else {
+
+    if (!is_page($page_slugs)) {
 ?>
-    <section class="px-5 md:px-0 pt-10 bg-white pb-36  relative -mb-1 -mt-1">
-        <div class="service-shape-divider-bottom-1 absolute bottom-6 left-0 z-0">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        <div class="w-full h-[26px] absolute bottom-0 bg-gray-50  z-0"></div>
-        <div class="service-shape-divider-bottom-2 absolute -bottom-0 left-0  z-0">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </section>
+        <section class="px-5 md:px-0 pt-10 bg-white pb-36  relative -mb-1 -mt-1">
+            <div class="service-shape-divider-bottom-1 absolute bottom-6 left-0 z-0">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="w-full h-[26px] absolute bottom-0 bg-gray-50  z-0"></div>
+            <div class="service-shape-divider-bottom-2 absolute -bottom-0 left-0  z-0">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+    <?php
+    }
+    ?>
+
 
 <?php
 }
