@@ -16,20 +16,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                 </div>
                 <h2 class="">Get in touch</span></h2>
             </header>
-            <p class="px-5 md:pl-0 md:pr-20 mt-6">Whether you have a dental emergency, need to get some advice or just
-                want
-                to get a
-                regular
-                check-up, our team of Dentists is here to help. With the convenience of flexible booking times, a brand
-                new
-                clinic and affordable pricing we know you'll want to make your next appointment at Dental One. Get in
-                touch
-                with
-                us today by calling, emailing or filling in our booking form and we'll book you in to see one of our
-                team of
-                professional and caring dentists.​<br /><br />Simply fill in your details below and we will contact you
-                to
-                resolve any queries and to confirm your appointment.</p>
+            <p class="px-5 md:pl-0 md:pr-20 mt-6">Whether you have a <a href="/dental-emergencies/">dental emergency</a>, need to get some advice or just want to get a <a href="/general-dentistry/regular-checkups/">regular check-up</a>, our <a href="/meet-the-team/">team of Dentists</a> is here to help. With the convenience of flexible booking times, a brand new clinic and affordable pricing we know you'll want to make your next appointment at DentalOne. Get in touch with us today by <a href="tel:1300066427">calling</a>, <a href="mailto:info@dental1.com.au">emailing</a> or filling in our booking form and we'll book you in to see one of our <a href="/meet-the-team/">team</a> of professional and caring dentists.
+​<br /><br />Simply fill in your details below and we will contact you to resolve any queries and to confirm your appointment.</p>
             <div class="grid md:grid-cols-2 gap-x-4 gap-y-10 px-5 my-10 md:pl-0">
                 <div class="flex flex-col gap-2 items-center md:items-start ">
                     <a href="tel:1300066427" class="contact-link text-center md:text-left">
