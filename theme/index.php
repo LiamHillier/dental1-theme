@@ -16,7 +16,7 @@ get_header();
 ?>
 
 	<section id="primary">
-		<main id="main">
+		<main id="main"  class="overflow-x-hidden">
 
 		<?php
 		if ( have_posts() ) {

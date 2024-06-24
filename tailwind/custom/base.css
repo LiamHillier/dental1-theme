@@ -32,6 +32,13 @@ main {
 	@apply !overflow-x-hidden w-screen;
 }
 
+body {
+	@apply relative;
+}
+
+
+
+
 .animate__initial {
 	opacity: 0;
 	animation-play-state: paused;

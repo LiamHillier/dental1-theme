@@ -1,4 +1,4 @@
-<section id="social" class="px-5 md:px-0 pt-10 bg-white pb-36  relative -mb-1 -mt-1">
+<section id="social" class="px-5 md:px-0 pt-10 bg-white pb-36  relative -mb-1 -mt-1 !overflow-x-hidden">
     <header class="flex flex-col items-center gap-2 text-center mb-2 md:items-start md:text-left max-w-screen-2xl mx-auto px-5 md:px-20">
         <h2 class="">Latest posts from <br><span class="!text-primary">our social media</span></h2>
     </header>
