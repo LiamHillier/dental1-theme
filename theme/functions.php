@@ -292,3 +292,10 @@ function custom_services_section() {
     return ob_get_clean();
 }
 add_shortcode('services_section', 'custom_services_section');
+
+function team_shortcode() {
+    ob_start();
+    include get_template_directory() . '/components/home/Team.php'; 
+    return ob_get_clean();
+}
+add_shortcode('team_section', 'team_shortcode');
