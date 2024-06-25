@@ -242,8 +242,8 @@ class WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 function custom_services_section() {
     ob_start();
     ?>
-    <section id="services" class="bg-gray-100 pt-10 md:pt-0 pb-36 md:pb-40 relative">
-        <div class="px-5 md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto">
+    <section id="services" class="relative">
+        <div class="md:flex justify-between items-center">
             <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
                 <h2 class="text-center md:text-left">
                     Affordable options<br><span class="!text-primary">for all!</span>
@@ -253,7 +253,7 @@ function custom_services_section() {
                 <p class="max-w-lg text-center md:text-left">It’s never been more affordable to look after your oral health. Our affordable options enable you to save money and avoid large out-of-pocket expenses.</p>
             </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start justify-between mt-20 gap-y-16 px-5 md:px-20 max-w-screen-2xl md:mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start justify-between mt-20 gap-y-16">
             <a href="/no-gap-terms-conditions/" class="flex flex-col gap-2 items-start">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">01</div>
@@ -286,17 +286,6 @@ function custom_services_section() {
                 <p class="text-black text-left text-lg font-semibold">Financing Plans</p>
                 <p class="text-left">Available for larger treatments, our financing options enable you to split the payment on treatments that can leave a dent in your pocket.</p>
             </a>
-        </div>
-        <div class="locations-divider-2">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-        <div class="w-full h-[20px] left-0 absolute bottom-0 bg-gray-50"></div>
-        <div class="locations-divider">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
         </div>
     </section>
     <?php
