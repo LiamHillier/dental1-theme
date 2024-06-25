@@ -1,4 +1,4 @@
-<section id="team" class="bg-white pt-12 relative">
+<section id="team" class="bg-white relative">
     <div class="md:flex justify-between items-center md:mx-auto relative">
         <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
             <h2 class=" md:text-left animate__initial animate__animated animate__fadeInUp">
