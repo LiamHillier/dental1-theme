@@ -205,18 +205,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
                 </a>
             </li>
             <li class="text-primary w-3/12">
-                <div class="flex items-center gap-4">
-                    <form class="search-container" action="<?php echo home_url('/'); ?>">
-                        <input id="mobile-search-box" type="text" class="search-box" name="s" placeholder="Search..." />
-                        <label for="mobile-search-box" class="search-icon-label">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="glyphicon glyphicon-search search-icon">
-                                <circle cx="11" cy="11" r="8" />
-                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                            </svg>
-                        </label>
-                        <input type="submit" id="search-submit" />
-                    </form>
-                </div>
+                
             </li>
         </ul>
     </nav>
