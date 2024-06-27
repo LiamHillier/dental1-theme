@@ -11,28 +11,7 @@
 
 <section>
 
-	<header class="page-header">
-		<?php if ( is_search() ) : ?>
-
-			<h1 class="page-title">
-				<?php
-				printf(
-					/* translators: 1: search result title. 2: search term. */
-					'<h1 class="page-title">%1$s <span>%2$s</span></h1>',
-					esc_html__( 'Search results for:', 'dental1' ),
-					get_search_query()
-				);
-				?>
-			</h1>
-
-		<?php else : ?>
-
-			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'dental1' ); ?></h1>
-
-		<?php endif; ?>
-	</header><!-- .page-header -->
-
-	<div <?php dental1_content_class( 'page-content' ); ?>>
+	<div class="max-w-screen-2xl mx-auto px-5 md:px-20 pt-10" <?php dental1_content_class('page-content'); ?>>
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) :
 			?>
@@ -54,12 +33,15 @@
 		elseif ( is_search() ) :
 			?>
 
-			<p>
+			<p class="text-center">
 				<?php esc_html_e( 'Your search generated no results. Please try a different search.', 'dental1' ); ?>
 			</p>
 
+			<div class="mx-auto max-w-lg mt-10 alt-search">
+			<?php get_search_form(); ?>
+			</div>
 			<?php
-			get_search_form();
+			
 		else :
 			?>
 

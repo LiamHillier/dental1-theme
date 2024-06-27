@@ -3,12 +3,19 @@ $circle = file_get_contents('wp-content/themes/dental1/theme/assets/icons/circle
 $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/double-dash.svg');
 ?>
 
-<div class="embla relative hero" id="hero">
+<div class="embla relative hero " id="hero">
     <div class="embla__container h-full min-h-[700px] md:min-h-[900px]">
         <div class="embla__slide">
             <div class="relative flex flex-col justify-start md:justify-center items-start gap-10 h-full  px-5 md:px-0 !pt-40   overflow-hidden pb-52 md:pb-40 md:!pt-[70px] bg-gradient-to-tl from-sky-50 to-gray-100">
                 <div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
-                <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/hero-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/hero-1.jpg" alt="Dental One Hero" width="1708" height="1132" class="block object-cover absolute top-0 left-0 w-full h-full" />
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/hero-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/hero-1-1600w.avif 1600w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (min-width: 1201px) 1600px" src="/wp-content/themes/dental1/theme/assets/images/hero/hero-1.jpg" alt="Dental One Hero" width="1708" height="1132" class="desktop-hero block object-cover absolute top-0 left-0 w-full h-full" />
+                <img
+                    srcset="/wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077-1600w.avif 1600w, /wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077-2000w.avif 2000w"
+                    sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px"
+                    src="/wp-content/themes/dental1/theme/assets/images/hero/DentalOne-Templestowe-23077.jpg"
+                    alt="Dental One Medical Room"
+                   width="1708" height="1132" class="mobile-hero block object-cover absolute top-0 left-0 w-full h-full"
+                    />
                 <div class="relative z-50 w-full max-w-screen-2xl mx-auto py-4 md:px-20">
                     <h1 class="hero-text-large font-bold text-primary text-left">The Smile<br /> You Deserve</h1>
                     <p class="text-base md:text-lg mt-6 max-w-xl ">Our caring professional team of Dentists in Craigieburn, Templestowe, Epping North, Essendon, Richmond, Reservoir and South Yarra are here to provide the best ongoing dental care and guidance for you and your family.</p>

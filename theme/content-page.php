@@ -1,19 +1,18 @@
 <?php
+
 /**
- * The template for displaying search results pages
+ * Template part for displaying pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
  * @package dental1
  */
 
-get_header();
 ?>
 
-	<section id="primary">
-		<main id="main">
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-		<div id="banner" class="relative overflow-hidden min-h-[176px] md:min-h-[200px] flex items-center justify-center">
+	<div id="banner" class="relative overflow-hidden min-h-[176px] md:min-h-[200px] flex items-center justify-center">
 		<div class="bg-gradient-to-t from-transparent to-white h-[180px] w-full absolute top-0 left-0 z-10"></div>
 		<div class="bg-gradient-to-b from-primary to-transparent h-full w-full absolute bottom-0 left-0 z-0 opacity-70"></div>
 
@@ -36,37 +35,19 @@ get_header();
 
 	</div>
 
-		<?php if ( have_posts() ) : ?>
 
-			<div class="max-w-screen-2xl pt-10 mx-auto px-5 md:px-20 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-			<h1 class="col-span-full mb-16 text-center">Search Results:</h1>
-			
-
-			<?php
-			// Start the Loop.
-			while ( have_posts() ) :
-				the_post();
-				get_template_part( 'template-parts/content/content', 'excerpt' );
-
-				// End the loop.
-			endwhile;
-
-			// Previous/next page navigation.
-			dental1_the_posts_navigation();
-
-			?>
-			</div>
-			<?php
-
-		else :
-
-			// If no content is found, get the `content-none` template part.
-			get_template_part( 'template-parts/content/content', 'none' );
-
-		endif;
+	<div class="max-w-screen-2xl mx-auto px-5 md:px-20" <?php dental1_content_class('entry-content'); ?>>
+		<?php
+		the_content();
+		wp_link_pages(
+			array(
+				'before' => '<div>' . __('Pages:', 'dental1'),
+				'after'  => '</div>',
+			)
+		);
 		?>
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	</div>
 
-<?php
-get_footer();
+
+
+</article><!-- #post-<?php the_ID(); ?> -->

@@ -12,6 +12,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    document.addEventListener("touchstart", function(){}, true);
+
+
     // Select the elements
     const menuOpen = document.querySelector('.mobile-hamburger');
     const menuClose = document.querySelector('.menu-close');

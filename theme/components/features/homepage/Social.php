@@ -4,7 +4,7 @@
     </header>
     <div class="md:px-20 max-w-screen-2xl mx-auto"><?php echo do_shortcode('[instagram-feed feed=1]'); ?></div>
     <div class="flex items-center justify-center gap-3 flex-wrap mt-10 max-w-screen-2xl mx-auto relative z-40">
-        <a href="https://www.facebook.com/dentalonecraigieburn/" class="social-link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <a href="https://www.facebook.com/dentalonegroup" class="social-link" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
             </svg>Follow us on Facebook</a>
         <a href="https://www.instagram.com/dentalonegroup/" target="_blank" class="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
