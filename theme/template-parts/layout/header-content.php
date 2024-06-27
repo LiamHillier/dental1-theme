@@ -12,79 +12,82 @@ $logo = file_get_contents('wp-content/themes/dental1/theme/assets/logos/dental1-
 
 class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 {
-	// Start Level
-	function start_lvl(&$output, $depth = 0, $args = null)
-	{
-		$indent = str_repeat("\t", $depth);
-		if ($depth === 0) {
-			$output .= "\n$indent<ul class=\"sub-menu\">\n";
-		} else {
-			$output .= "\n$indent<ul class=\"sub-sub-menu\">\n";
-		}
-	}
+    // Start Level
+    function start_lvl(&$output, $depth = 0, $args = null)
+    {
+        $indent = str_repeat("\t", $depth);
+        if ($depth === 0) {
+            $output .= "\n$indent<ul class=\"sub-menu\">\n";
+        } else {
+            $output .= "\n$indent<ul class=\"sub-sub-menu\">\n";
+        }
+    }
 
-	// End Level
-	function end_lvl(&$output, $depth = 0, $args = null)
-	{
-		$indent = str_repeat("\t", $depth);
-		$output .= "$indent</ul>\n";
-	}
+    // End Level
+    function end_lvl(&$output, $depth = 0, $args = null)
+    {
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul>\n";
+    }
 
-	// Start Element
-	function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
-	{
-		$indent = ($depth) ? str_repeat("\t", $depth) : '';
+    // Start Element
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
+    {
+        $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
-		$classes = empty($item->classes) ? array() : (array) $item->classes;
-		$class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
-		$class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
+        $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
 
-		$output .= $indent . '<li id="menu-item-' . $item->ID . '"' . $class_names . '>';
+        $output .= $indent . '<li id="menu-item-' . $item->ID . '"' . $class_names . '>';
 
-		$atts = array();
-		$atts['title']  = !empty($item->attr_title) ? $item->attr_title : '';
-		$atts['target'] = !empty($item->target)     ? $item->target     : '';
-		$atts['rel']    = !empty($item->xfn)        ? $item->xfn        : '';
-		$atts['href']   = !empty($item->url)        ? $item->url        : '';
+        $atts = array();
+        $atts['title']  = !empty($item->attr_title) ? $item->attr_title : '';
+        $atts['target'] = !empty($item->target)     ? $item->target     : '';
+        $atts['rel']    = !empty($item->xfn)        ? $item->xfn        : '';
+        $atts['href']   = !empty($item->url)        ? $item->url        : '';
 
-		$atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args);
+        $atts = apply_filters('nav_menu_link_attributes', $atts, $item, $args);
 
-		$attributes = '';
-		foreach ($atts as $attr => $value) {
-			if (!empty($value)) {
-				$value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
-				$attributes .= ' ' . $attr . '="' . $value . '"';
-			}
-		}
+        $attributes = '';
+        foreach ($atts as $attr => $value) {
+            if (!empty($value)) {
+                $value = ('href' === $attr) ? esc_url($value) : esc_attr($value);
+                $attributes .= ' ' . $attr . '="' . $value . '"';
+            }
+        }
 
-		$title = apply_filters('the_title', $item->title, $item->ID);
+        $title = apply_filters('the_title', $item->title, $item->ID);
 
-		$item_output = $args->before;
-		if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
-			$item_output .= '<details open>';
-			$item_output .= '<summary>';
-			$item_output .= $args->link_before . $title . $args->link_after;
-			$item_output .= '</summary>';
-		} else {
-			$item_output .= '<a' . $attributes . '>';
-			$item_output .= $args->link_before . $title . $args->link_after;
-			$item_output .= '</a>';
-		}
-		$item_output .= $args->after;
+        $item_output = $args->before;
+        if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
+            $item_output .= '<details open>';
+            $item_output .= '<summary>';
+            $item_output .= '<a' . $attributes . '>';
+            $item_output .= $args->link_before . $title . $args->link_after;
+            $item_output .= '</a>';
+            $item_output .= '</summary>';
+        } else {
+            $item_output .= '<a' . $attributes . '>';
+            $item_output .= $args->link_before . $title . $args->link_after;
+            $item_output .= '</a>';
+        }
+        $item_output .= $args->after;
 
-		$output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
-	}
+        $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
+    }
 
-	// End Element
-	function end_el(&$output, $item, $depth = 0, $args = null)
-	{
-		if ($depth === 0 && in_array('menu-item-has-children', $item->classes)) {
-			$output .= "</details>\n";
-		} else {
-			$output .= "</li>\n";
-		}
-	}
+    // End Element
+    function end_el(&$output, $item, $depth = 0, $args = null)
+    {
+        if ($depth === 0 && in_array('menu-item-has-children', $item->classes)) {
+            $output .= "</details>\n";
+        } else {
+            $output .= "</li>\n";
+        }
+    }
 }
+
 
 
 ?>
