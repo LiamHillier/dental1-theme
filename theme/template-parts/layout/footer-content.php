@@ -78,7 +78,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 	</div>
 
 	<div class="mt-16">
-		<p class="text-sm text-center">Copyright &copy; <?php echo date("Y"); ?> Dental One. All Rights
+		<p class="text-sm text-center">Copyright &copy; <?php echo date("Y"); ?> DentalOne. All Rights
 			Reserved.</p>
 	</div>
 
