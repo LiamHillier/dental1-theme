@@ -236,7 +236,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
         </svg>
     </div>
 
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-4 mt-10">
         <form class="search-container" action="<?php echo home_url('/'); ?>">
             <input id="mobile-search-box" type="text" class="search-box" name="s" placeholder="Search..." />
             <label for="mobile-search-box" class="search-icon-label">
@@ -249,7 +249,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
         </form>
     </div>
 
-    <nav id="site-navigation" aria-label="<?php esc_attr_e('Main Right Navigation', 'dental1'); ?>" class="mt-4">
+    <nav id="site-navigation" aria-label="<?php esc_attr_e('Main Right Navigation', 'dental1'); ?>" class="mt-2">
         <?php
         wp_nav_menu(
             array(
