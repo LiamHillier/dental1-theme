@@ -30,14 +30,11 @@
                 ?>
             </header><!-- .entry-header -->
 
-            <div class="entry-content text-gray-700" <?php dental1_content_class('entry-content'); ?>>
+            <div class="entry-content text-gray-700 search-content" <?php dental1_content_class('entry-content'); ?>>
                 <?php the_excerpt(); ?>
             </div><!-- .entry-content -->
         </div>
 
-        <footer class="entry-footer p-5 bg-gray-100">
-            <?php dental1_entry_footer(); ?>
-        </footer><!-- .entry-footer -->
 
     </a>
 

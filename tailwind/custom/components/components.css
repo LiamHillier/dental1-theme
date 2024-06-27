@@ -804,3 +804,7 @@ p:not(.link) > a:not(.link) {
   .post img {
 	@apply rounded-xl;
   }
+
+  .search-content * {
+	@apply text-sm text-black !no-underline;
+  }
