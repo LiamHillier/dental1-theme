@@ -715,7 +715,7 @@ p:not(.link) > a:not(.link) {
 	box-shadow: none;
 	padding-left: 15px;
 	cursor: text;
-	width: 300px;
+	width: 175px;
 	border-radius: auto;
 	background: transparent;
 	border: 1px solid #08A39A;
@@ -756,6 +756,21 @@ p:not(.link) > a:not(.link) {
 	@apply text-primary;
   }
   
+
+  @media screen and (max-width: 1024px) {
+	.search-box {
+	  width: 40px;
+	}
+	.search-box:focus {
+	  width: 200px;
+	}
+	.search-container {
+	  justify-content: flex-end;
+	}
+	.search-icon-label {
+	  right: 0;
+	}
+  }
   
   .alt-search form {
 	@apply flex justify-center items-center gap-2;
