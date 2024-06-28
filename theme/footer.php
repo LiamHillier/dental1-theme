@@ -11,7 +11,9 @@
  */
 
 ?>
+<?php 
 
+if (!is_page('book-appointment')) { ?>
 <section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?> !overflow-x-hidden">
     <!-- <div>
             <header class="flex flex-col items-center gap-2 text-center mb-2 ">
@@ -36,9 +38,10 @@
     </div>
 
 </section>
+<?php }?>
 <?php
 
-$page_slugs = array('book-appointment', 'get-a-quote'); // Replace with your actual page slugs
+$page_slugs = array('', 'get-a-quote'); // Replace with your actual page slugs
 
 if (is_front_page()) {
     get_template_part('components/features/homepage/Social');
@@ -71,7 +74,35 @@ if (!is_page($page_slugs)) {
     get_template_part('components/features/homepage/Contact');
 }
 
-?>
+
+
+if (!is_page('book-appointment')) { ?>
+<section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?> !overflow-x-hidden">
+    <!-- <div>
+            <header class="flex flex-col items-center gap-2 text-center mb-2 ">
+                <p class="text-primary ">Results
+                </p>
+                <h2 class="">DentalOne
+                    <br><span class="!text-primary">Smile Gallery</span>
+                </h2>
+            </header>
+            <div class="flex flex-col items-center gap-2 locations-description max-w-lg mx-auto mt-4">
+                <p class="text-center ">Every smile is a masterpiece. Our expert team has artistically enhanced over 30,000 smiles, bringing new confidence and brilliance to every face we touch. Explore our gallery of life-changing smile makeovers and see how we can illuminate your smile too.</p>
+                <a href="/results" class="link mt-4  animate__delay-1s">
+                    View results
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
+                    </svg>
+                </a>
+            </div>
+        </div> -->
+    <div class="pt-6 <?php echo !is_front_page() ? 'md:pb-10 md:pt-10' : 'md:pb-20 md:pt-0'; ?> max-w-screen-2xl mx-auto px-5 md:px-20 !overflow-x-hidden" id="testimonials-container">
+        <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
+    </div>
+
+</section>
+<?php }?>
+
 
 </div><!-- #content -->
 
