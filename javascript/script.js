@@ -53,38 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Create an observer to watch for changes to the aria-expanded attribute
-    const observerLink = new MutationObserver(checkAriaExpanded);
-
-    // Start observing each megaMenuLink for attribute changes
-    megaMenuLinks.forEach(link => {
-        observerLink.observe(link, { attributes: true, attributeFilter: ['aria-expanded'] });
-    });
-
-    // Initial check on page load
-    checkAriaExpanded();
-
-
-
-    const observer = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.remove('animate__initial');
-                    entry.target.style.animationPlayState = 'running';
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.1 }
-    );
-
-    document.querySelectorAll('.').forEach(element => {
-        observer.observe(element);
-    });
-
-
-
     function initMap() {
         const loadingSpinner = document.getElementById('loading-spinner');
         const resultText = document.getElementById('result-text');
