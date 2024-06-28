@@ -303,7 +303,7 @@ function locations_section()
     <section id="locations" class="!pl-0 relative -mb-1">
         <div class="">
             <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 relative">
-                <div class="w-full animate__initial animate__animated animate__fadeInUp my-4 max-w-xl mx-auto">
+                <div class="w-full  my-4 max-w-xl mx-auto">
                     <p class="text-primary md:uppercase mb-4 text-center md:text-left">Find the clinic nearest to you</p>
                     <div class="relative">
                         <form id="address-form">
