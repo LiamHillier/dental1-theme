@@ -300,7 +300,7 @@ function locations_section()
 {
     ob_start();
 ?>
-    <section id="locations" class="!pl-0 pb-36 md:pb-40 relative -mb-1">
+    <section id="locations" class="!pl-0 relative -mb-1">
         <div class="">
             <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 relative">
                 <div class="w-full animate__initial animate__animated animate__fadeInUp my-4 max-w-xl mx-auto">
