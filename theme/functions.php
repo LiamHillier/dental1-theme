@@ -300,26 +300,10 @@ function locations_section()
 {
     ob_start();
 ?>
-    <section id="locations" class=" bg-gray-100 pt-10 md:pt-0 pb-36 md:pb-40 relative -mb-1">
+    <section id="locations" class="!px-0 pb-36 md:pb-40 relative -mb-1">
         <div class="">
             <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 relative">
-                <div>
-                    <header class="flex flex-col items-center gap-2 text-center mb-2 ">
-                        <h2 class="animate__initial animate__animated animate__fadeInUp"><a href="/locations/">Our clinics across
-                                <br><span class="!text-primary">Melbourne</span></a>
-                        </h2>
-                    </header>
-                    <div class="flex flex-col items-center gap-2 locations-description">
-                        <p class="text-center animate__initial animate__animated animate__fadeInUp">At Dental<span class="text-primary">One</span>, we
-                            are
-                            more than just a dental practice; we are your
-                            trusted
-                            partner
-                            in achieving and maintaining a beautiful, healthy smile.</p>
-                    </div>
-                </div>
-
-                <div class="w-full lg:w-4/12 animate__initial animate__animated animate__fadeInUp my-4">
+                <div class="w-full animate__initial animate__animated animate__fadeInUp my-4">
                     <p class="text-primary md:uppercase mb-4 text-center md:text-left">Find the clinic nearest to you</p>
                     <div class="relative">
                         <form id="address-form">
@@ -344,7 +328,7 @@ function locations_section()
             </div>
 
             <!-- Locations carousel -->
-            <section id="locations-carousel" class="embla relative locations-carousel mt-6">
+            <section id="locations-carousel" class="!px-0 embla relative locations-carousel mt-6">
 
                 <button class="embla__prev absolute left-2 top-[50%] z-10 bg-primary text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
