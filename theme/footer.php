@@ -76,7 +76,7 @@ if (!is_page($page_slugs)) {
 
 
 
-if (!is_page('book-appointment')) { ?>
+if (is_page('book-appointment')) { ?>
 <section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?> !overflow-x-hidden">
     <!-- <div>
             <header class="flex flex-col items-center gap-2 text-center mb-2 ">
