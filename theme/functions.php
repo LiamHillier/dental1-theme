@@ -300,7 +300,7 @@ function locations_section()
 {
     ob_start();
 ?>
-    <section id="locations" class="!px-0 pb-36 md:pb-40 relative -mb-1">
+    <section id="locations" class="!pl-0 pb-36 md:pb-40 relative -mb-1">
         <div class="">
             <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 relative">
                 <div class="w-full animate__initial animate__animated animate__fadeInUp my-4">
@@ -328,7 +328,7 @@ function locations_section()
             </div>
 
             <!-- Locations carousel -->
-            <section id="locations-carousel" class="!px-0 embla relative locations-carousel mt-6">
+            <section id="locations-carousel" class="!pl-0 !pr-0 embla relative locations-carousel mt-6">
 
                 <button class="embla__prev absolute left-2 top-[50%] z-10 bg-primary text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
