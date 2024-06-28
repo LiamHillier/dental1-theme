@@ -13,17 +13,17 @@ get_header();
     <div class="relative">
         <section id="about" class="text-center max-w-screen-2xl mx-auto px-5 md:px-20  pb-[240px] mt-20 md:mt-0">
             <div class="max-w-[650px] mx-auto mb-20 z-10 relative">
-                <p class="mb-2 animate__initial animate__animated animate__fadeInUp">About us</p>
-                <h2 class="mb-4 animate__initial  animate__animated animate__fadeInUp ">Why
+                <p class="mb-2 ">About us</p>
+                <h2 class="mb-4 ">Why
                     Dental<span class="text-primary">One</span>
                 </h2>
-                <p class="text-black my-10 animate__initial  animate__animated animate__fadeInUp">DentalOne was
+                <p class="text-black my-10 ">DentalOne was
                     created to make Dentistry more affordable and
                     accessible
                     in
                     Australia,
                     starting with our home state of Victoria.</p>
-                <p class=" animate__initial  animate__animated animate__fadeIn">Cost has long been sighted as the number
+                <p class="">Cost has long been sighted as the number
                     one reason people avoid visiting the dentist. At Dental One we
                     aim
                     to remove this obstacle and usher in a new wave of Affordable Dental Care for all. You can expect the
@@ -41,10 +41,10 @@ get_header();
                     Filipino, Italian, Syriac, Cambodian, Hindi, Punjabi and Nepali.
                 </p>
             </div>
-            <div class="grid items-center md:grid-cols-3 gap-12 animate__i z-10 relative">
-                <img srcset="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about/dental1-about-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about/dental1-about-1-800w.avif 800w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (min-width: 601px) 800px" src="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-1.png" alt="dental one reception" width="928" height="1316" loading="lazy" class="w-full animate__initial animate__animated animate__fadeIn" />
-                <img srcset="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-2-400w.avif 400w" sizes="" src="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-2.png" alt="Dental 1 Nurse" width="464" height="658" loading="lazy" class="w-full animate__initial animate__animated animate__fadeIn animate__delay-0_2s" />
-                <img srcset="/wp-content/themes/dental1/theme/assets/images/about/Mask-group-(1)-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about/Mask-group-(1)-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about/Mask-group-(1)-800w.avif 800w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (min-width: 601px) 800px" src="/wp-content/themes/dental1/theme/assets/images/about/Mask group (1).png" alt="Dental 1 Shop" width="928" height="1296" loading="lazy" class=" w-full animate__initial animate__animated animate__fadeIn animate__delay-0_4s" />
+            <div class="grid items-center md:grid-cols-3 gap-12 z-10 relative">
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-1-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about/dental1-about-1-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about/dental1-about-1-800w.avif 800w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (min-width: 601px) 800px" src="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-1.png" alt="dental one reception" width="928" height="1316" loading="lazy" class="w-full " />
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-2-400w.avif 400w" sizes="" src="/wp-content/themes/dental1/theme/assets/images/about/dental1-about-2.png" alt="Dental 1 Nurse" width="464" height="658" loading="lazy" class="w-full " />
+                <img srcset="/wp-content/themes/dental1/theme/assets/images/about/Mask-group-(1)-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/about/Mask-group-(1)-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/about/Mask-group-(1)-800w.avif 800w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (min-width: 601px) 800px" src="/wp-content/themes/dental1/theme/assets/images/about/Mask group (1).png" alt="Dental 1 Shop" width="928" height="1296" loading="lazy" class=" w-full " />
             </div>
 
 
@@ -67,9 +67,9 @@ get_header();
     <section id="services" class="bg-white pt-20 pb-[140px]">
         <div class="px-5 md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto">
             <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start text-center md:text-left">
-                <p class="text-primary  md:text-left animate__initial animate__animated animate__fadeInUp">
+                <p class="text-primary  md:text-left ">
                     Our services</p>
-                <h2 class="text-center md:text-left  animate__initial animate__animated animate__fadeInUp">
+                <h2 class="text-center md:text-left  ">
                     Affordable options<br><span class="!text-primary">for
                         all!</span>
                 </h2>
@@ -81,7 +81,7 @@ get_header();
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-start justify-between mt-20 gap-y-16 px-5 md:px-20 max-w-screen-2xl md:mx-auto">
-            <div class="flex flex-col gap-2 items-center animate__initial animate__animated animate__fadeInUp">
+            <div class="flex flex-col gap-2 items-center ">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         01</div>
@@ -93,7 +93,7 @@ get_header();
                     means you pay nothing
                     out of pocket on Exams, Cleans and X-rays.</p>
             </div>
-            <div class="flex flex-col gap-2 items-center animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">
+            <div class="flex flex-col gap-2 items-center  animate__delay-0_2s">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         02</div>
@@ -105,7 +105,7 @@ get_header();
                     preventative dental care
                     including an Exam, clean and X-rays</p>
             </div>
-            <div class="flex flex-col gap-2 items-center animate__initial animate__animated animate__fadeInUp animate__delay-0_4s">
+            <div class="flex flex-col gap-2 items-center  animate__delay-0_4s">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         03</div>
@@ -116,7 +116,7 @@ get_header();
                 <p class="text-center mx-12">$1000 in government benefits, bulk billed, over two calendar years, for eligible children aged 2-17. The CDBS covers a wide range of
                     services and promotes good early habits!</p>
             </div>
-            <div class="flex flex-col gap-2 items-center animate__initial animate__animated animate__fadeInUp animate__delay-0_6s">
+            <div class="flex flex-col gap-2 items-center  animate__delay-0_6s">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         04</div>
@@ -145,9 +145,9 @@ get_header();
                 <div class="lg:pr-20">
                     <div class="md:flex justify-between items-center mb-10">
                         <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start ">
-                            <p class="text-primary  md:text-left animate__initial animate__animated animate__fadeInUp">
+                            <p class="text-primary  md:text-left ">
                                 About us</p>
-                            <h2 class="text-center md:text-left  animate__initial animate__animated animate__fadeInUp">
+                            <h2 class="text-center md:text-left  ">
                                 Affordable gap free general<br><span class="!text-primary">Dentist has arrived</span>
                             </h2>
                         </header>

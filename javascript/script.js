@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { threshold: 0.1 }
     );
 
-    document.querySelectorAll('.animate__animated').forEach(element => {
+    document.querySelectorAll('.').forEach(element => {
         observer.observe(element);
     });
 

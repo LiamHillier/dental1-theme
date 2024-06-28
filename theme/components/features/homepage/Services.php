@@ -1,20 +1,20 @@
 <section id="services" class="text-center relative bg-white -mt-1 py-20 md:pt-40">
     <header class="px-5  md:px-20 md:grid md:grid-cols-2 text-left max-w-screen-2xl mx-auto">
         <div>
-            <p class="mb-2 text-primary pre-header animate__initial animate__animated animate__fadeInLeft">Our services
+            <p class="mb-2 text-primary pre-header">Our services
             </p>
-            <h2 class="mb-4 font-semibold animate__initial animate__animated animate__fadeInUp">Personalized,
+            <h2 class="mb-4 font-semibold ">Personalized,
                 Comprehensive <span class="text-primary">Treatment</span></h2>
         </div>
         <div class="md:place-self-end max-w-xl">
-            <p class="animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">At DentalOne, we
+            <p class=" animate__delay-0_2s">At DentalOne, we
                 are more than just a
                 dental practice we are your trusted partner in
                 achieving and
                 maintaining a beautiful, healty smile. With over a decade of dedicated service in the field of
                 dentistry,
                 we've been transforming smiles and improving lives. </p>
-            <a href="/book-online" class="link mt-6 animate__initial animate__animated animate__fadeInUp animate__delay-1s">View services
+            <a href="/book-online" class="link mt-6  animate__delay-1s">View services
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>
@@ -23,7 +23,7 @@
 
     </header>
     <div class="relative max-w-screen-2xl mx-auto">
-        <div class="desktop-service-select hidden md:flex animate__initial animate__animated  animate__bounceIn">
+        <div class="desktop-service-select hidden md:flex animate__initial ">
             <p class="uppercase text-black text-left pl-4 py-4 border-b w-full text-sm">Select a service</a>
             <ul>
                 <li><?php get_template_part('components/features/homepage/services/dropdowns/ChildrensDentistry'); ?>

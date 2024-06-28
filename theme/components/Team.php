@@ -1,7 +1,7 @@
 <section id="team" class="bg-white relative">
     <div class="md:flex justify-between items-center md:mx-auto relative">
         <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
-            <h2 class=" md:text-left animate__initial animate__animated animate__fadeInUp">
+            <h2 class=" md:text-left ">
                 <a href="/meet-the-team">
                     Let's
                     meet our<br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl  ">expert</span>
@@ -39,7 +39,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-0_2s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/13.png" />
                         <div>
@@ -49,7 +49,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-0_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/14.png" />
                         <div>
@@ -59,7 +59,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-0_8s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/15.png" />
                         <div>
@@ -69,7 +69,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1s">
+                <div class="team__slide ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/16.png" />
                         <div>
@@ -79,7 +79,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_2s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/17.png" />
                         <div>
@@ -89,7 +89,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/4.png" />
                         <div>
@@ -99,7 +99,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/5.png" />
                         <div>
@@ -109,7 +109,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/6.png" />
                         <div>
@@ -119,7 +119,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-4.png" />
                         <div>
@@ -129,7 +129,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/11.png" />
                         <div>
@@ -139,7 +139,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/06/Darren-Manoharan.png" />
                         <div>
@@ -149,7 +149,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/10.png" />
                         <div>
@@ -159,7 +159,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
                         <div>
@@ -169,7 +169,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
                         <div>
@@ -179,7 +179,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
                         <div>
@@ -189,7 +189,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/9.png" />
                         <div>
@@ -199,7 +199,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/7.png" />
                         <div>
@@ -209,7 +209,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/8.png" />
                         <div>
@@ -219,7 +219,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/1.png" />
                         <div>
@@ -229,7 +229,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/2.png" />
                         <div>
@@ -239,7 +239,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-1_4s">
+                <div class="team__slide  ">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/3.png" />
                         <div>

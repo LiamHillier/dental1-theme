@@ -7,20 +7,20 @@
                     <div class="w-12 h-12">
                         <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
                     </div>
-                    <p class="text-primary animate__initial animate__animated animate__fadeInUp">Locations
+                    <p class="text-primary ">Locations
                     </p>
-                    <h2 class="animate__initial animate__animated animate__fadeInUp">Our clinics across
+                    <h2 class="">Our clinics across
                         <br><span class="!text-primary">Melbourne</span>
                     </h2>
                 </header>
                 <div class="flex flex-col items-center gap-2 locations-description">
-                    <p class="text-center animate__initial animate__animated animate__fadeInUp">At DentalOne, we
+                    <p class="text-center ">At DentalOne, we
                         are
                         more than just a dental practice; we are your
                         trusted
                         partner
                         in achieving and maintaining a beautiful, healthy smile.</p>
-                    <a href="/book-appointment" class="link mt-4 animate__initial animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="/book-appointment" class="link mt-4  ">
                         Book your consult
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
@@ -102,8 +102,8 @@
         </div>
     </div>
     <div class="flex gap-2 items-center justify-center mt-12">
-        <a href="/contact" class="button secondary animate__initial animate__animated animate__fadeInUp">Contact Us</a>
-        <a href="/book-appointment" class="button primary animate__initial animate__animated animate__fadeInUp animate__delay-0_2s">Book
+        <a href="/contact" class="button secondary ">Contact Us</a>
+        <a href="/book-appointment" class="button primary">Book
             Online</a>
     </div>
 

@@ -15,9 +15,9 @@ get_header();
         <div class="px-5 md:px-20 max-w-screen-2xl mx-auto pb-[300px]">
             <div class="flex justify-center items-center mb-10 mt-32">
                 <header class="flex flex-col items-center gap-2 text-center mb-2 text-center ">
-                    <p class="text-primary pre-header md:text-left animate__initial animate__animated animate__fadeInUp">
+                    <p class="text-primary pre-header md:text-left ">
                         Book Now</p>
-                    <h2 class="text-center animate__initial animate__animated animate__fadeInUp">
+                    <h2 class="text-center">
                         Book Appointment at<br>Dental<span class="text-primary">One</span>
                 </header>
             </div>

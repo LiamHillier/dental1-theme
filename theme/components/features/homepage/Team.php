@@ -1,7 +1,7 @@
 <section id="team" class="bg-white pt-12 relative pb-36  md:pb-60">
     <div class="md:flex justify-between items-center md:px-20 max-w-screen-2xl md:mx-auto relative">
         <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start">
-            <h2 class=" md:text-left animate__initial animate__animated animate__fadeInUp">
+            <h2 class=" md:text-left ">
                 <a href="/meet-the-team">
                     Let's
                     meet our<br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl  ">expert</span>
