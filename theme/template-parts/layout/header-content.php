@@ -97,15 +97,14 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 // Fetch the ACF options page fields
 $enquiry_hours = get_field('enquiry_hours', 'option');
 
-$start_time = $enquiry_hours['start_time'];
-$end_time = $enquiry_hours['end_time'];
+$start_time = $enquiry_hours['start_time']; // Assuming format is 'H:i:s'
+$end_time = $enquiry_hours['end_time']; // Assuming format is 'H:i:s'
 
 // Get the current server time
-$current_time = current_time('H:i');
+$current_time = current_time('H:i:s');
 
 // Function to check if the current time is within the enquiry hours
-function is_within_enquiry_hours($current_time, $start_time, $end_time)
-{
+function is_within_enquiry_hours($current_time, $start_time, $end_time) {
     $current_time = strtotime($current_time);
     $start_time = strtotime($start_time);
     $end_time = strtotime($end_time);
@@ -122,7 +121,7 @@ function is_within_enquiry_hours($current_time, $start_time, $end_time)
 if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
     $message = "Our team is available to help you now";
 } else {
-    $message = "Enquire now and our team will get back to you ASAP";
+    $message = "Reach out now and our team will respond promptly";
 }
 ?>
 
