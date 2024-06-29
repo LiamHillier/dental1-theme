@@ -813,7 +813,7 @@ p:not(.link) > a:not(.link) {
 	@apply !mx-0;
 }
 
-@media (max-width: 1034px) {
+@media (max-width: 1280px) {
 	.desktop-search {
 		@apply !hidden;
 	}
