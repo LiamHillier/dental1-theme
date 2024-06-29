@@ -4,7 +4,7 @@
             <div>
                 <header class="flex flex-col items-center gap-2 text-center mb-2 ">
                     <h2 class=""><a href="/locations/">Our clinics across
-                        <br><span class="!text-primary">Melbourne</span></a>
+                            <br><span class="!text-primary">Melbourne</span></a>
                     </h2>
                 </header>
                 <div class="flex flex-col items-center gap-2 locations-description">
@@ -22,12 +22,12 @@
                 <div class="relative">
                     <form id="address-form">
                         <input id="address-input" type="text" class="outline-primary !ring-primary rounded-lg shadow-lg px-4 py-4 w-full text-sm" placeholder="Enter your address" />
-                        
-                    <button type="submit" class="bg-primary text-white rounded-lg p-2 absolute right-4 top-[50%] translate-y-[-50%]">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
-                    </button>
+
+                        <button type="submit" class="bg-primary text-white rounded-lg p-2 absolute right-4 top-[50%] translate-y-[-50%]">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                            </svg>
+                        </button>
                     </form>
 
                 </div>
@@ -68,7 +68,7 @@
                             $phone = get_field('phone');
                             $email = get_field('email');
                             $address = get_field('address');
-                            $image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                            $image = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail');
                     ?>
                             <div class="embla__slide" data-address="<?php echo esc_html($address); ?>">
                                 <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
