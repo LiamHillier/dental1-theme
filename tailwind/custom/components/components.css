@@ -813,3 +813,9 @@ p:not(.link) > a:not(.link) {
 .mega-indicator {
 	@apply !mx-0;
 }
+
+@media (max-width: 1034px) {
+	.desktop-search {
+		@apply hidden;
+	}
+}
