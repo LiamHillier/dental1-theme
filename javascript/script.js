@@ -65,59 +65,60 @@ document.addEventListener('DOMContentLoaded', () => {
 	function initMap() {
 		const addressForm = document.getElementById('address-form');
 		const addressInput = document.getElementById('address-input');
+		const loadingSpinner = document.getElementById('loading-spinner');
+		const resultText = document.getElementById('result-text');
 
-		if (!locationsCarousel.container || !addressForm || !addressInput) {
+		if (
+			!locationsCarousel.container ||
+			!addressForm ||
+			!addressInput ||
+			!loadingSpinner ||
+			!resultText
+		) {
 			displayError('Initialization error. Please try again later.');
 			return;
 		}
 
-		addressForm.addEventListener('submit', (event) => {
+		let emblaLocationsApi;
+
+		function initializeCarousel() {
+			emblaLocationsApi = EmblaCarousel(locationsCarousel.container, {
+				loop: false,
+				align: 'start',
+			});
+
+			if (locationsCarousel.prevButton) {
+				locationsCarousel.prevButton.addEventListener('click', () =>
+					emblaLocationsApi.scrollPrev()
+				);
+			}
+
+			if (locationsCarousel.nextButton) {
+				locationsCarousel.nextButton.addEventListener('click', () =>
+					emblaLocationsApi.scrollNext()
+				);
+			}
+		}
+
+		addressForm.addEventListener('submit', async (event) => {
 			event.preventDefault();
-			findClosestClinic();
-		});
-
-		const emblaLocationsApi = EmblaCarousel(locationsCarousel.container, {
-			loop: false,
-			align: 'start',
-		});
-
-		if (locationsCarousel.prevButton) {
-			locationsCarousel.prevButton.addEventListener('click', () =>
-				emblaLocationsApi.scrollPrev()
-			);
-		}
-
-		if (locationsCarousel.nextButton) {
-			locationsCarousel.nextButton.addEventListener('click', () =>
-				emblaLocationsApi.scrollNext()
-			);
-		}
-
-		window.addEventListener('resize', () => emblaLocationsApi.reInit());
-
-		async function findClosestClinic() {
-			const address = addressInput.value;
-			const loadingSpinner = document.getElementById('loading-spinner');
-			const resultText = document.getElementById('result-text');
-
 			loadingSpinner.classList.remove('hidden');
 			resultText.classList.add('hidden');
 
 			try {
-				const userLocation = await geocodeAddress(address);
+				const userLocation = await geocodeAddress(addressInput.value);
 				const dentalClinics = getDentalClinics();
 
 				const distances = await getDistanceMatrix(
 					userLocation,
 					dentalClinics.map((clinic) => clinic.address)
 				);
+
 				const closestClinic = findClosest(distances, dentalClinics);
 
 				if (closestClinic) {
 					const index = dentalClinics.indexOf(closestClinic);
 					emblaLocationsApi.scrollTo(index);
-					loadingSpinner.classList.add('hidden');
-					resultText.classList.remove('hidden');
 					resultText.innerText = `Your closest clinic is located at ${closestClinic.address}. Distance: ${closestClinic.distanceText}`;
 				} else {
 					displayError('No clinics found. Please try again later.');
@@ -126,69 +127,74 @@ document.addEventListener('DOMContentLoaded', () => {
 				displayError(
 					'Unable to get location information at the moment. Please try again later.'
 				);
+			} finally {
+				loadingSpinner.classList.add('hidden');
+				resultText.classList.remove('hidden');
 			}
-		}
+		});
 
-		function geocodeAddress(address) {
-			return new Promise((resolve, reject) => {
-				const geocoder = new google.maps.Geocoder();
-				geocoder.geocode({ address: address }, (results, status) => {
+		initializeCarousel();
+	}
+
+	function geocodeAddress(address) {
+		return new Promise((resolve, reject) => {
+			const geocoder = new google.maps.Geocoder();
+			geocoder.geocode({ address: address }, (results, status) => {
+				if (status === 'OK') {
+					resolve(results[0].geometry.location);
+				} else {
+					reject(status);
+				}
+			});
+		});
+	}
+
+	function getDistanceMatrix(origin, destinations) {
+		return new Promise((resolve, reject) => {
+			const service = new google.maps.DistanceMatrixService();
+			service.getDistanceMatrix(
+				{
+					origins: [origin],
+					destinations: destinations,
+					travelMode: 'DRIVING',
+				},
+				(response, status) => {
 					if (status === 'OK') {
-						resolve(results[0].geometry.location);
+						resolve(response.rows[0].elements);
 					} else {
 						reject(status);
 					}
-				});
-			});
-		}
-
-		function getDistanceMatrix(origin, destinations) {
-			return new Promise((resolve, reject) => {
-				const service = new google.maps.DistanceMatrixService();
-				service.getDistanceMatrix(
-					{
-						origins: [origin],
-						destinations: destinations,
-						travelMode: 'DRIVING',
-					},
-					(response, status) => {
-						if (status === 'OK') {
-							resolve(response.rows[0].elements);
-						} else {
-							reject(status);
-						}
-					}
-				);
-			});
-		}
-
-		function getDentalClinics() {
-			const slides = document.querySelectorAll(
-				'.locations-carousel .embla__slide'
-			);
-			return Array.from(slides).map((slide) => ({
-				address: slide.getAttribute('data-address'),
-				element: slide,
-			}));
-		}
-
-		function findClosest(distanceMatrixResult, clinics) {
-			let closestClinic = null;
-			let minDistance = Infinity;
-
-			distanceMatrixResult.forEach((element, index) => {
-				if (
-					element.status === 'OK' &&
-					element.distance.value < minDistance
-				) {
-					minDistance = element.distance.value;
-					closestClinic = clinics[index];
-					closestClinic.distanceText = element.distance.text;
 				}
-			});
+			);
+		});
+	}
 
-			return closestClinic;
-		}
+	function getDentalClinics() {
+		const slides = document.querySelectorAll(
+			'.locations-carousel .embla__slide'
+		);
+		return Array.from(slides).map((slide) => ({
+			address: slide.getAttribute('data-address'),
+			element: slide,
+		}));
+	}
+
+	function findClosest(distanceMatrixResult, clinics) {
+		let closestClinic = null;
+		let minDistance = Infinity;
+
+		distanceMatrixResult.forEach((element, index) => {
+			if (
+				element.status === 'OK' &&
+				element.distance.value < minDistance
+			) {
+				minDistance = element.distance.value;
+				closestClinic = clinics[index];
+				closestClinic.distanceText = element.distance.text;
+			}
+		});
+
+		return closestClinic;
 	}
 
 	if (locationsCarousel) {
