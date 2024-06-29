@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		resultText.innerText = message;
 	}
 
-	function initMap() {
+	async function initMap() {
 		const addressForm = document.getElementById('address-form');
 		const addressInput = document.getElementById('address-input');
 		const loadingSpinner = document.getElementById('loading-spinner');
@@ -87,13 +87,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				align: 'start',
 			});
 
-			if (locationsCarousel.prevButton) {
+			if (locationsCarousel.prevButton && locationsCarousel.nextButton) {
 				locationsCarousel.prevButton.addEventListener('click', () =>
 					emblaLocationsApi.scrollPrev()
 				);
-			}
 
-			if (locationsCarousel.nextButton) {
 				locationsCarousel.nextButton.addEventListener('click', () =>
 					emblaLocationsApi.scrollNext()
 				);
@@ -106,7 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
 			resultText.classList.add('hidden');
 
 			try {
-				const userLocation = await geocodeAddress(addressInput.value);
+				const address = addressInput.value;
+				const userLocation = await geocodeAddress(address);
 				const dentalClinics = getDentalClinics();
 
 				const distances = await getDistanceMatrix(
@@ -169,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	}
 
+	// Example function, ensure it fits your specific implementation
 	function getDentalClinics() {
 		const slides = document.querySelectorAll(
 			'.locations-carousel .embla__slide'
