@@ -234,9 +234,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		teamsContainer.addEventListener('mouseleave', autoplay);
 
 		autoplay();
-
-		// Handle window resize
-		window.addEventListener('resize', () => emblaTeamsApi.reInit());
 	}
 
 	const heroSlider = document.querySelector('.hero');
