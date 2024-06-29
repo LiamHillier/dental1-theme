@@ -6,282 +6,300 @@
  * `../theme/functions.php`.
  *
  * For esbuild documentation, please see:
- * 
+ *
  * https://esbuild.github.io/
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+	document.addEventListener('touchstart', function () {}, true);
 
-    document.addEventListener("touchstart", function () { }, true);
+	// Select the elements
+	const menuOpen = document.querySelector('.mobile-hamburger');
+	const menuClose = document.querySelector('.menu-close');
+	const mobileMenu = document.querySelector('.mobile-menu');
 
+	// Function to open the mobile menu
+	function openMenu() {
+		mobileMenu.classList.remove('hidden');
+		mobileMenu.classList.add('flex');
+	}
 
-    // Select the elements
-    const menuOpen = document.querySelector('.mobile-hamburger');
-    const menuClose = document.querySelector('.menu-close');
-    const mobileMenu = document.querySelector('.mobile-menu');
+	// Function to close the mobile menu
+	function closeMenu() {
+		mobileMenu.classList.remove('flex');
+		mobileMenu.classList.add('hidden');
+	}
 
-    // Function to open the mobile menu
-    function openMenu() {
-        mobileMenu.classList.remove('hidden');
-        mobileMenu.classList.add('flex');
-    }
+	// Event listeners
+	menuOpen.addEventListener('click', openMenu);
+	menuClose.addEventListener('click', closeMenu);
 
-    // Function to close the mobile menu
-    function closeMenu() {
-        mobileMenu.classList.remove('flex');
-        mobileMenu.classList.add('hidden');
-    }
+	const header = document.getElementById('masthead');
 
-    // Event listeners
-    menuOpen.addEventListener('click', openMenu);
-    menuClose.addEventListener('click', closeMenu);
+	console.log(header);
 
-    const megaMenuLinks = document.querySelectorAll('.mega-menu-link');
-    const header = document.getElementById('masthead');
+	window.addEventListener('scroll', () => {
+		const header = document.getElementById('masthead');
+		const addClass = window.scrollY > 50;
+		header.classList.toggle('bg-white', addClass);
+		header.classList.toggle('bg-transparent', !addClass);
+	});
 
-    function checkAriaExpanded() {
-        let shouldBeWhite = false;
-        megaMenuLinks.forEach(link => {
-            if (link.getAttribute('aria-expanded') === 'true') {
-                shouldBeWhite = true;
-            }
-        });
-        if (shouldBeWhite) {
-            header.classList.add('bg-white');
-        } else {
-            header.classList.remove('bg-white');
-        }
-    }
+	function initMap() {
+		const loadingSpinner = document.getElementById('loading-spinner');
+		const resultText = document.getElementById('result-text');
+		const locationsContainer = document.querySelector(
+			'.locations-carousel .embla__viewport'
+		);
+		const locationsPrevButton = document.querySelector(
+			'.locations-carousel .embla__prev'
+		);
+		const locationsNextButton = document.querySelector(
+			'.locations-carousel .embla__next'
+		);
+		const addressForm = document.getElementById('address-form');
+		const addressInput = document.getElementById('address-input');
 
-    function initMap() {
-        const loadingSpinner = document.getElementById('loading-spinner');
-        const resultText = document.getElementById('result-text');
-        const locationsContainer = document.querySelector('.locations-carousel .embla__viewport');
-        const locationsPrevButton = document.querySelector('.locations-carousel .embla__prev');
-        const locationsNextButton = document.querySelector('.locations-carousel .embla__next');
-        const addressForm = document.getElementById('address-form');
-        const addressInput = document.getElementById('address-input');
+		function displayError(message) {
+			loadingSpinner.classList.add('hidden');
+			resultText.classList.remove('hidden');
+			resultText.innerText = message;
+		}
 
-        function displayError(message) {
-            loadingSpinner.classList.add('hidden');
-            resultText.classList.remove('hidden');
-            resultText.innerText = message;
-        }
+		if (!locationsContainer || !addressForm || !addressInput) {
+			displayError('Initialization error. Please try again later.');
+			return;
+		}
 
-        if (!locationsContainer || !addressForm || !addressInput) {
-            displayError('Initialization error. Please try again later.');
-            return;
-        }
+		try {
+			addressForm.addEventListener('submit', function (event) {
+				event.preventDefault();
+				findClosestClinic();
+			});
 
-        try {
-            addressForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                findClosestClinic();
-            });
+			const emblaLocationsApi = EmblaCarousel(locationsContainer, {
+				loop: false,
+				align: 'start',
+			});
 
-            const emblaLocationsApi = EmblaCarousel(locationsContainer, {
-                loop: false,
-                align: 'start'
-            });
+			if (locationsPrevButton) {
+				locationsPrevButton.addEventListener('click', () =>
+					emblaLocationsApi.scrollPrev()
+				);
+			}
 
-            if (locationsPrevButton) {
-                locationsPrevButton.addEventListener('click', () => emblaLocationsApi.scrollPrev());
-            }
+			if (locationsNextButton) {
+				locationsNextButton.addEventListener('click', () =>
+					emblaLocationsApi.scrollNext()
+				);
+			}
 
-            if (locationsNextButton) {
-                locationsNextButton.addEventListener('click', () => emblaLocationsApi.scrollNext());
-            }
+			window.addEventListener('resize', () => emblaLocationsApi.reInit());
 
-            window.addEventListener('resize', () => emblaLocationsApi.reInit());
+			async function findClosestClinic() {
+				const address = addressInput.value;
+				loadingSpinner.classList.remove('hidden');
+				resultText.classList.add('hidden');
 
-            async function findClosestClinic() {
-                const address = addressInput.value;
-                loadingSpinner.classList.remove('hidden');
-                resultText.classList.add('hidden');
+				try {
+					const userLocation = await geocodeAddress(address);
+					const dentalClinics = getDentalClinics();
 
-                try {
-                    const userLocation = await geocodeAddress(address);
-                    const dentalClinics = getDentalClinics();
+					const distances = await getDistanceMatrix(
+						userLocation,
+						dentalClinics.map((clinic) => clinic.address)
+					);
+					const closestClinic = findClosest(distances, dentalClinics);
 
-                    const distances = await getDistanceMatrix(userLocation, dentalClinics.map(clinic => clinic.address));
-                    const closestClinic = findClosest(distances, dentalClinics);
+					if (closestClinic) {
+						const index = dentalClinics.indexOf(closestClinic);
+						emblaLocationsApi.scrollTo(index);
+						loadingSpinner.classList.add('hidden');
+						resultText.classList.remove('hidden');
+						resultText.innerText = `Your closest clinic is located at ${closestClinic.address}. Distance: ${closestClinic.distanceText}`;
+					} else {
+						displayError(
+							'No clinics found. Please try again later.'
+						);
+					}
+				} catch (error) {
+					displayError(
+						'Unable to get location information at the moment. Please try again later.'
+					);
+				}
+			}
 
-                    if (closestClinic) {
-                        const index = dentalClinics.indexOf(closestClinic);
-                        emblaLocationsApi.scrollTo(index);
-                        loadingSpinner.classList.add('hidden');
-                        resultText.classList.remove('hidden');
-                        resultText.innerText = `Your closest clinic is located at ${closestClinic.address}. Distance: ${closestClinic.distanceText}`;
-                    } else {
-                        displayError('No clinics found. Please try again later.');
-                    }
-                } catch (error) {
-                    displayError('Unable to get location information at the moment. Please try again later.');
-                }
-            }
+			function geocodeAddress(address) {
+				return new Promise((resolve, reject) => {
+					const geocoder = new google.maps.Geocoder();
+					geocoder.geocode(
+						{ address: address },
+						function (results, status) {
+							if (status === 'OK') {
+								resolve(results[0].geometry.location);
+							} else {
+								reject(status);
+							}
+						}
+					);
+				});
+			}
 
-            function geocodeAddress(address) {
-                return new Promise((resolve, reject) => {
-                    const geocoder = new google.maps.Geocoder();
-                    geocoder.geocode({ 'address': address }, function (results, status) {
-                        if (status === 'OK') {
-                            resolve(results[0].geometry.location);
-                        } else {
-                            reject(status);
-                        }
-                    });
-                });
-            }
+			function getDistanceMatrix(origin, destinations) {
+				return new Promise((resolve, reject) => {
+					const service = new google.maps.DistanceMatrixService();
+					service.getDistanceMatrix(
+						{
+							origins: [origin],
+							destinations: destinations,
+							travelMode: 'DRIVING',
+						},
+						function (response, status) {
+							if (status === 'OK') {
+								resolve(response.rows[0].elements);
+							} else {
+								reject(status);
+							}
+						}
+					);
+				});
+			}
 
-            function getDistanceMatrix(origin, destinations) {
-                return new Promise((resolve, reject) => {
-                    const service = new google.maps.DistanceMatrixService();
-                    service.getDistanceMatrix({
-                        origins: [origin],
-                        destinations: destinations,
-                        travelMode: 'DRIVING',
-                    }, function (response, status) {
-                        if (status === 'OK') {
-                            resolve(response.rows[0].elements);
-                        } else {
-                            reject(status);
-                        }
-                    });
-                });
-            }
+			function getDentalClinics() {
+				const slides = document.querySelectorAll(
+					'.locations-carousel .embla__slide'
+				);
+				return Array.from(slides).map((slide) => ({
+					address: slide.getAttribute('data-address'),
+					element: slide,
+				}));
+			}
 
-            function getDentalClinics() {
-                const slides = document.querySelectorAll('.locations-carousel .embla__slide');
-                return Array.from(slides).map(slide => ({
-                    address: slide.getAttribute('data-address'),
-                    element: slide
-                }));
-            }
+			function findClosest(distanceMatrixResult, clinics) {
+				let closestClinic = null;
+				let minDistance = Infinity;
 
-            function findClosest(distanceMatrixResult, clinics) {
-                let closestClinic = null;
-                let minDistance = Infinity;
+				distanceMatrixResult.forEach((element, index) => {
+					if (
+						element.status === 'OK' &&
+						element.distance.value < minDistance
+					) {
+						minDistance = element.distance.value;
+						closestClinic = clinics[index];
+						closestClinic.distanceText = element.distance.text;
+					}
+				});
 
-                distanceMatrixResult.forEach((element, index) => {
-                    if (element.status === 'OK' && element.distance.value < minDistance) {
-                        minDistance = element.distance.value;
-                        closestClinic = clinics[index];
-                        closestClinic.distanceText = element.distance.text;
-                    }
-                });
+				return closestClinic;
+			}
+		} catch (error) {
+			displayError(
+				'Unable to initialize Google Maps API. Please try again later.'
+			);
+		}
+	}
 
-                return closestClinic;
-            }
+	initMap();
 
-        } catch (error) {
-            displayError('Unable to initialize Google Maps API. Please try again later.');
-        }
-    }
+	const teamsContainer = document.querySelector('#team .team__viewport');
+	const teamPrevButton = document.querySelector('.team__prev');
+	const teamNextButton = document.querySelector('.team__next');
 
-    initMap();
+	if (teamsContainer) {
+		const emblaTeamsApi = EmblaCarousel(teamsContainer, {
+			loop: false,
+			align: 'start',
+		});
 
+		teamPrevButton.addEventListener('click', () =>
+			emblaTeamsApi.scrollPrev()
+		);
+		teamNextButton.addEventListener('click', () =>
+			emblaTeamsApi.scrollNext()
+		);
 
+		// Autoplay functionality
+		let autoplayInterval;
+		const autoplay = () => {
+			autoplayInterval = setInterval(() => {
+				emblaTeamsApi.scrollNext();
+			}, 7000); // Adjust the interval as needed
+		};
 
+		const stopAutoplay = () => {
+			clearInterval(autoplayInterval);
+		};
 
-    const teamsContainer = document.querySelector('#team .team__viewport');
-    const teamPrevButton = document.querySelector('.team__prev');
-    const teamNextButton = document.querySelector('.team__next');
+		teamsContainer.addEventListener('mouseenter', stopAutoplay);
+		teamsContainer.addEventListener('mouseleave', autoplay);
 
-    if (teamsContainer) {
-        const emblaTeamsApi = EmblaCarousel(teamsContainer, {
-            loop: false,
-            align: 'start'
-        });
+		autoplay();
 
-        teamPrevButton.addEventListener('click', () => emblaTeamsApi.scrollPrev());
-        teamNextButton.addEventListener('click', () => emblaTeamsApi.scrollNext());
+		// Handle window resize
+		window.addEventListener('resize', () => emblaTeamsApi.reInit());
+	}
 
-        // Autoplay functionality
-        let autoplayInterval;
-        const autoplay = () => {
-            autoplayInterval = setInterval(() => {
-                emblaTeamsApi.scrollNext();
-            }, 7000); // Adjust the interval as needed
-        };
+	const heroSlider = document.querySelector('.hero');
 
-        const stopAutoplay = () => {
-            clearInterval(autoplayInterval);
-        };
+	if (heroSlider) {
+		const emblaApi = EmblaCarousel(heroSlider, { loop: true }); // Enable loop for continuous autoplay
+		const dotsContainer = document.querySelector('.embla__dots');
 
-        teamsContainer.addEventListener('mouseenter', stopAutoplay);
-        teamsContainer.addEventListener('mouseleave', autoplay);
+		const setupDots = () => {
+			const slides = emblaApi.slideNodes();
+			const dotsFragment = document.createDocumentFragment();
 
-        autoplay();
-
-        // Handle window resize
-        window.addEventListener('resize', () => emblaTeamsApi.reInit());
-    }
-
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('masthead');
-        const addClass = window.scrollY > 50;
-        header.classList.toggle('bg-white', addClass);
-        header.classList.toggle('bg-transparent', !addClass);
-    });
-
-    const heroSlider = document.querySelector('.hero');
-
-    if (heroSlider) {
-        const emblaApi = EmblaCarousel(heroSlider, { loop: true }); // Enable loop for continuous autoplay
-        const dotsContainer = document.querySelector('.embla__dots');
-
-        const setupDots = () => {
-            const slides = emblaApi.slideNodes();
-            const dotsFragment = document.createDocumentFragment();
-
-            slides.forEach((slide, index) => {
-                const dot = document.createElement('button');
-                dot.className = 'embla__dot';
-                dot.innerHTML = `
+			slides.forEach((slide, index) => {
+				const dot = document.createElement('button');
+				dot.className = 'embla__dot';
+				dot.innerHTML = `
                     <span class="slide-number">0${index + 1}</span>
                     <div class="dot-inner"></div>
                     <div class="dot-line"></div>
                 `;
 
-                dot.addEventListener('click', () => emblaApi.scrollTo(index));
-                dotsFragment.appendChild(dot);
-            });
+				dot.addEventListener('click', () => emblaApi.scrollTo(index));
+				dotsFragment.appendChild(dot);
+			});
 
-            dotsContainer.appendChild(dotsFragment);
-            updateDots();
-        };
+			dotsContainer.appendChild(dotsFragment);
+			updateDots();
+		};
 
-        const updateDots = () => {
-            const dots = dotsContainer.querySelectorAll('.embla__dot');
-            const selectedIndex = emblaApi.selectedScrollSnap();
+		const updateDots = () => {
+			const dots = dotsContainer.querySelectorAll('.embla__dot');
+			const selectedIndex = emblaApi.selectedScrollSnap();
 
-            dots.forEach((dot, index) => {
-                const isActive = index === selectedIndex;
-                dot.classList.toggle('is-active', isActive);
-                dot.querySelector('.slide-number').style.display = isActive ? 'inline-block' : 'none';
-                dot.querySelector('.dot-line').style.display = isActive ? 'block' : 'none';
-            });
-        };
+			dots.forEach((dot, index) => {
+				const isActive = index === selectedIndex;
+				dot.classList.toggle('is-active', isActive);
+				dot.querySelector('.slide-number').style.display = isActive
+					? 'inline-block'
+					: 'none';
+				dot.querySelector('.dot-line').style.display = isActive
+					? 'block'
+					: 'none';
+			});
+		};
 
-        emblaApi.on('select', updateDots);
-        setupDots();
+		emblaApi.on('select', updateDots);
+		setupDots();
 
-        // Autoplay functionality
-        let heroAutoplayInterval;
-        const heroAutoplay = () => {
-            heroAutoplayInterval = setInterval(() => {
-                emblaApi.scrollNext();
-            }, 10000); // Adjust the interval as needed
-        };
+		// Autoplay functionality
+		let heroAutoplayInterval;
+		const heroAutoplay = () => {
+			heroAutoplayInterval = setInterval(() => {
+				emblaApi.scrollNext();
+			}, 10000); // Adjust the interval as needed
+		};
 
-        const stopHeroAutoplay = () => {
-            clearInterval(heroAutoplayInterval);
-        };
+		const stopHeroAutoplay = () => {
+			clearInterval(heroAutoplayInterval);
+		};
 
-        heroSlider.addEventListener('mouseenter', stopHeroAutoplay);
-        heroSlider.addEventListener('mouseleave', heroAutoplay);
+		heroSlider.addEventListener('mouseenter', stopHeroAutoplay);
+		heroSlider.addEventListener('mouseleave', heroAutoplay);
 
-        heroAutoplay();
-    }
+		heroAutoplay();
+	}
 });
-
