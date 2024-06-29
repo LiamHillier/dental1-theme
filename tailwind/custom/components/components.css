@@ -815,6 +815,15 @@ p:not(.link) > a:not(.link) {
 
 @media (max-width: 1034px) {
 	.desktop-search {
-		@apply hidden;
+		@apply !hidden;
+	}
+}
+
+@media (max-width: 1280px) {
+	#mega-menu-wrap-main-right
+		#mega-menu-main-right
+		> li.mega-menu-item
+		> a.mega-menu-link {
+		padding: 0px 6px !important;
 	}
 }
