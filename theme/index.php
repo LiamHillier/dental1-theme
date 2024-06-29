@@ -37,8 +37,6 @@ get_header();
 		<?php if (have_posts()) : ?>
 
 			<div class="max-w-screen-2xl pt-10 mx-auto px-5 md:px-20 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-				<h1 class="col-span-full mb-16 text-center">Search Results:</h1>
-
 
 				<?php
 				// Start the Loop.
