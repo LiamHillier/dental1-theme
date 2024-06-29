@@ -96,6 +96,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 <?php
 // Fetch the ACF options page fields
 $enquiry_hours = get_field('enquiry_hours', 'option');
+$message = get_field('message', 'option');
 
 $start_time = $enquiry_hours['start_time']; // Assuming format is 'H:i:s'
 $end_time = $enquiry_hours['end_time']; // Assuming format is 'H:i:s'
@@ -120,7 +121,6 @@ function is_within_enquiry_hours($current_time, $start_time, $end_time)
 
 // Determine the message to display
 if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
-    $message = "Our team is available to help you now";
 ?>
 
     <div id="top-bar" class="lg:hidden font-semibold w-full text-white bg-primary z-50 sticky top-0">
