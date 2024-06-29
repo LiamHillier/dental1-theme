@@ -809,3 +809,7 @@ p:not(.link) > a:not(.link) {
 .search-content * {
 	@apply text-sm text-black !no-underline;
 }
+
+.mega-indicator {
+	@apply mx-0;
+}
