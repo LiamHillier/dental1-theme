@@ -354,7 +354,7 @@ function locations_section()
                                 $phone = get_field('phone');
                                 $email = get_field('email');
                                 $address = get_field('address');
-                                $image = get_the_post_thumbnail_url(get_the_ID(), 'full');
+                                $image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
                         ?>
                                 <div class="embla__slide" data-address="<?php echo esc_html($address); ?>">
                                     <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
