@@ -161,7 +161,7 @@ if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
                 );
                 ?>
             </nav>
-            <div class="hidden lg:flex items-center gap-4">
+            <div class="hidden lg:flex items-center gap-4 desktop-search">
                 <form class="search-container" action="<?php echo home_url('/'); ?>">
                     <input id="search-box" type="text" class="search-box" name="s" placeholder="Search..." />
                     <label for="search-box" class="search-icon-label">
@@ -173,7 +173,7 @@ if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
                     <input type="submit" id="search-submit" />
                 </form>
             </div>
-            <div class="lg:hidden flex items-center gap-4 desktop-search">
+            <div class="lg:hidden flex items-center gap-4">
                 <a class="button primary mobile-book" href="/book-appointment">Book Now</a>
                 <div class="flex justify-end">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mobile-hamburger">
