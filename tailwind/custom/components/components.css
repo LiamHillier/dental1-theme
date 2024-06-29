@@ -811,5 +811,5 @@ p:not(.link) > a:not(.link) {
 }
 
 .mega-indicator {
-	@apply mx-0;
+	@apply !mx-0;
 }
