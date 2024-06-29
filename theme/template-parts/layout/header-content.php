@@ -143,7 +143,7 @@ if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
 ?>
 
 
-<header id="masthead" class="w-screen sticky <?php is_within_enquiry_hours($current_time, $start_time, $end_time) ? 'top-[36px]' : '' ?> lg:top-0 left-0 z-50 bg-transparent transition-colors duration-100 ease-in -mb-[112px]">
+<header id="masthead" class="w-screen sticky <?php is_within_enquiry_hours($current_time, $start_time, $end_time) ? 'top-[36px]' : 'top-0' ?> lg:top-0 left-0 z-50 bg-transparent transition-colors duration-100 ease-in -mb-[112px]">
     <div class="max-w-screen-2xl mx-auto py-4 px-5 md:px-20 flex justify-between items-center ">
         <div class="logo h-full flex justify-start items-center">
             <a href="/"><?php echo $logo; ?></a>
