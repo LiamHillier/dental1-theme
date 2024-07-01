@@ -96,7 +96,7 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
 <?php
 // Fetch the ACF options page fields
 $enquiry_hours = get_field('enquiry_hours', 'option');
-$message = get_field('message', 'option');
+$message = $enquiry_hours['message'];
 
 $start_time = $enquiry_hours['start_time']; // Assuming format is 'H:i:s'
 $end_time = $enquiry_hours['end_time']; // Assuming format is 'H:i:s'
