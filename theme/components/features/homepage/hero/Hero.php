@@ -20,7 +20,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                     <h1 class="hero-text-large font-bold text-primary text-left">The Smile<br /> You Deserve</h1>
                     <p class="text-base md:text-lg mt-6 max-w-xl ">Our caring professional team of Dentists in Craigieburn, Templestowe, Epping North, Essendon, Richmond, Reservoir and South Yarra are here to provide the best ongoing dental care and guidance for you and your family.</p>
                     <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
-                        <a href="/services" class="button primary">Our Services</a>
+                        <a href="/services" class="button primary">Our services</a>
                     </div>
 
                 </div>
@@ -36,7 +36,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                     <p class="text-base font-bold mt-2 md:text-lg">Your child's oral health matters!</p>
                     <p class=" max-w-xl text-base md:text-lg">The new federal government scheme allocates $1095 towards any eligible child's dental treatment over two calendar years for most services</p>
                     <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
-                    <a href="/services" class="button primary">Our Services</a>
+                    <a href="/child-dental-benefits-scheme/" class="button primary">Learn more</a>
                     </div>
 
                 </div>
@@ -52,7 +52,7 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                     <p class="font-bold  text-base mt-2 md:text-lg">Dental One Essendon is now open.</p>
                     <p class=" max-w-xl text-base md:text-lg">Book in now or refer a friend of family member & you both receive $50 off your next treatment.</p>
                     <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
-                    <a href="/services" class="button primary">Our Services</a>
+                    <a href="/locations/richmond/" class="button primary">View location</a>
                     </div>
 
                 </div>
