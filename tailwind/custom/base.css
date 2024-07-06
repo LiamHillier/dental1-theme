@@ -47,7 +47,7 @@ body {
 /*------------------*/
 /*--- TYPOGRAPHY ---*/
 /*------------------*/
-body {
+body *:not(form) {
 	font-size: var(--global-kb-font-size-md, 1.25rem);;
 }
 p,
