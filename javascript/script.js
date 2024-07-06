@@ -11,7 +11,26 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-	document.addEventListener('touchstart', () => {}, true);
+
+	document.querySelectorAll('.book-now-location').forEach(function (button) {
+		button.addEventListener('click', function (e) {
+			e.preventDefault();
+			const parentSlide = button.closest('.embla__slide');
+			const iframeSrc = parentSlide.dataset.bookingIframe;
+			const iframe = document.createElement('iframe');
+			iframe.id = 'core-widget';
+			iframe.src = iframeSrc;
+			iframe.width = '100%';
+			iframe.height = '1000px';
+			iframe.frameBorder = '0';
+			iframe.scrolling = 'no';
+			iframe.dataset.autoresize = 'true';
+
+			button.parentNode.replaceChild(iframe, button);
+		});
+	});
+
+	document.addEventListener('touchstart', () => { }, true);
 
 	const menuOpen = document.querySelector('.mobile-hamburger');
 	const menuClose = document.querySelector('.menu-close');

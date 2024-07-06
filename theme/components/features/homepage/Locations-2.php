@@ -114,29 +114,6 @@
             </div>
         </section>
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                document.querySelectorAll('.book-now-location').forEach(function(button) {
-                    button.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const parentSlide = button.closest('.embla__slide');
-                        const iframeSrc = parentSlide.dataset.bookingIframe;
-                        const iframe = document.createElement('iframe');
-                        iframe.id = 'core-widget';
-                        iframe.src = iframeSrc;
-                        iframe.width = '100%';
-                        iframe.height = '1000px';
-                        iframe.frameBorder = '0';
-                        iframe.scrolling = 'no';
-                        iframe.dataset.autoresize = 'true';
-
-                        const parent = button.parentNode;
-                        parent.innerHTML = '';
-                        parent.appendChild(iframe);
-                    });
-                });
-            });
-        </script>
 
     </div>
 
