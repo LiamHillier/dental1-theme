@@ -212,6 +212,10 @@ h2 {
 	--slide-spacing: 2rem;
 	--slide-size: 100%;
 	--slide-height: 19rem;
+
+}
+
+.home #locations-carousel {
 	@apply px-10;
 }
 
@@ -232,6 +236,9 @@ h2 {
 	#locations-carousel  {
 		--slide-spacing: 1rem;
 		--slide-size: 50%;
+		
+	}
+	.home #locations-carousel {
 		@apply px-20;
 	}
 	#locations-carousel .embla__slide {
@@ -245,6 +252,9 @@ h2 {
 	#locations-carousel {
 		--slide-spacing: 1.5rem;
 		--slide-size: 33%;
+		
+	}
+	.home #locations-carousel {
 		@apply px-20;
 	}
 	#locations-carousel .embla__slide {
