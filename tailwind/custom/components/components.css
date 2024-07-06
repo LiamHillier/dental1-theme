@@ -529,9 +529,11 @@ p:not(.link) > a:not(.link) {
 	align-items: center;
 	justify-content: center;
 }
-
+.locations-carousel .location-card iframe {
+	@apply mt-2;
+}
 .locations-carousel .location-card {
-	@apply flex flex-col items-stretch h-full;
+	@apply flex flex-col;
 	padding: 0px !important;
 	overflow: hidden;
 	text-align: left;
