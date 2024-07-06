@@ -62,7 +62,7 @@ get_header();
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg font-semibold underline">Private Health Insurance Patients</p>
-                <p class="text-center">Why pay hundreds on insurance just to be stung with a gap? Our <a href="/no-gap">No Gap Policy</a> means you pay nothing out of pocket on Exams, Cleans and X-rays.
+                <p class="text-center">Why pay hundreds on insurance just to be stung with a gap? Our No Gap Policy means you pay nothing out of pocket on Exams, Cleans and X-rays.
                 </p>
             </a>
             <a href="/no-gap" class="flex flex-col gap-2 items-center">
