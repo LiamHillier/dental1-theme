@@ -835,4 +835,6 @@ p:not(.link) > a:not(.link) {
 .pac-container {
 	z-index: 1050; /* Ensure it's above other elements */
 	margin-top: 0 !important; /* Remove default margin */
+	transform: translateY(-28px);
 }
+
