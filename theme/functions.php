@@ -474,6 +474,10 @@ add_action('init', 'disable_comments_admin_bar');
 function filter_search_only_pages($query) {
     if ($query->is_search && !is_admin()) {
         $query->set('post_type', 'page');
+        $query->set('post__not_in', array(
+            229, 257, 1353, 1373, 1395, 1407, 1440, 1444, 1463, 1466, 
+            1469, 1475, 1483, 1521, 14880
+        ));
     }
     return $query;
 }
