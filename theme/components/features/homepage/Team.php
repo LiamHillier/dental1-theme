@@ -4,9 +4,9 @@
             <h2 class="md:text-left">
                 <a href="/meet-the-team">
                     Let's meet our<br><span class="flex gap-2"><span class="!text-primary md:ml-12 md:text-4xl">expert</span><span class="md:text-4xl flex flex-col">team
-                        <svg xmlns="http://www.w3.org/2000/svg" width="238" height="24" viewBox="0 0 238 24" fill="none" class="hidden md:block w-32 float-right">
-                            <path d="M232.958 18.4731C232.958 18.4731 87.458 -10.3269 5.95801 17.4731" stroke="#08A39A" stroke-width="10" stroke-linecap="round" />
-                        </svg></span></span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="238" height="24" viewBox="0 0 238 24" fill="none" class="hidden md:block w-32 float-right">
+                                <path d="M232.958 18.4731C232.958 18.4731 87.458 -10.3269 5.95801 17.4731" stroke="#08A39A" stroke-width="10" stroke-linecap="round" />
+                            </svg></span></span>
                 </a>
             </h2>
         </header>
@@ -25,6 +25,15 @@
             <div class="team__container">
                 <div class="team__slide">
                     <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/05/17.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Adrian Balendra</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/13.png" />
                         <div>
                             <p class="font-semibold text-lg">Ahmad Mehrez</p>
@@ -34,37 +43,10 @@
                 </div>
                 <div class="team__slide">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/12.png" />
+                        <img src="/wp-content/uploads/2024/05/2.png" />
                         <div>
-                            <p class="font-semibold text-lg">Michael Ahmar</p>
-                            <p>General Dentist</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/16.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Filomena Perri</p>
-                            <p>General Dentist</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/4.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Francis Tenazas</p>
-                            <p>General Dentist</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Gareth Huang</p>
-                            <p>General Dentist</p>
+                            <p class="font-semibold text-lg">Christine Nacief</p>
+                            <p>Oral Health Therapist</p>
                         </div>
                     </a>
                 </div>
@@ -74,24 +56,6 @@
                         <div>
                             <p class="font-semibold text-lg">Clifford Gan</p>
                             <p>Oral Health Therapist</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Jacalyn Madden</p>
-                            <p>General Dentist</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-4.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Kiro Labib</p>
-                            <p>General Dentist</p>
                         </div>
                     </a>
                 </div>
@@ -124,13 +88,78 @@
                 </div>
                 <div class="team__slide">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/17.png" />
+                        <img src="/wp-content/uploads/2024/05/16.png" />
                         <div>
-                            <p class="font-semibold text-lg">Adrian Balendra</p>
+                            <p class="font-semibold text-lg">Filomena Perri</p>
                             <p>General Dentist</p>
                         </div>
                     </a>
                 </div>
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/05/4.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Francis Tenazas</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Gareth Huang</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Jacalyn Madden</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/05/7.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Joshua Tawadros</p>
+                            <p>Oral Health Therapist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Justin Luke</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-4.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Kiro Labib</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="team__slide">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/05/12.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Michael Ahmar</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+
                 <div class="team__slide">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/10.png" />
@@ -149,15 +178,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Justin Luke</p>
-                            <p>General Dentist</p>
-                        </div>
-                    </a>
-                </div>
+
                 <div class="team__slide">
                     <a href="/meet-the-team" class="slide-content">
                         <img src="/wp-content/uploads/2024/05/8.png" />
@@ -185,24 +206,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/7.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Joshua Tawadros</p>
-                            <p>Oral Health Therapist</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="team__slide">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/2.png" />
-                        <div>
-                            <p class="font-semibold text-lg">Christine Nacief</p>
-                            <p>Oral Health Therapist</p>
-                        </div>
-                    </a>
-                </div>
+
+
             </div>
         </div>
     </div>
