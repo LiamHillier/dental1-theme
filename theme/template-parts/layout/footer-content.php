@@ -42,7 +42,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			</ul>
 		</div>
 		<div class="md:pl-8 :w-full">
-			<p class="text-lg text-black mb-4 text-center md:text-left">Services</p>
+			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/services">Services</a></p>
 			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left">
 				<li><a href="/general-dentistry/">General Dentistry</a></li>
 				<li><a href="/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
@@ -55,7 +55,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 		<div class="hidden md:block"></div>
 		<div class="hidden md:block border-none"></div>
 		<div class="sm:justify-self-end md:pr-8 border-l-0  w-full md:!border-l md:pl-8">
-			<p class="text-lg text-black mb-4 text-center md:text-left">Locations</p>
+			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/locations">Locations</a></p>
 			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left">
 				<li><a href="/locations/craigieburn/">Craigieburn</a></li>
 				<li><a href="/locations/epping/">Epping North</a></li>
@@ -67,7 +67,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			</ul>
 		</div>
 		<div class="md:pl-8  w-full">
-			<p class="text-lg text-black mb-4 text-center md:text-left">Contact</p>
+			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/contact">Contact</a></p>
 			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left">
 				<li><a href="/contact/">Contact</a></li>
 				<li><a href="/get-a-quote/">Get a Quote</a></li>
