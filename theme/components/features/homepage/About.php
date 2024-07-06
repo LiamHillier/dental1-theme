@@ -8,7 +8,7 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         <header class="px-5 md:absolute md:right-20 md:w-5/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
             <h2 class="mb-4 ">About Us
             </h2>
-            <p class="">At <strong>Dental<span class="text-primary">One</span></strong>, we strive to go beyond the ordinary dental practice and become your dependable, trusted sanctuary for all your family's dental care needs.
+            <p class="">At Dental<span class="text-primary">One</span>, we strive to go beyond the ordinary dental practice and become your dependable, trusted sanctuary for all your family's dental care needs.
             </p><br />
             <p class="">Combining the advantages of an experienced dental team, a wide range of services and numerous endorsements from satisfied patients, we are dedicated to providing lifelong dental health care.
             </p>

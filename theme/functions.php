@@ -469,3 +469,12 @@ function disable_comments_admin_bar()
     }
 }
 add_action('init', 'disable_comments_admin_bar');
+
+
+function filter_search_only_pages($query) {
+    if ($query->is_search && !is_admin()) {
+        $query->set('post_type', 'page');
+    }
+    return $query;
+}
+add_action('pre_get_posts', 'filter_search_only_pages');
