@@ -15,7 +15,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 
 
 
-<footer id="colophon" class="bg-gradient-to-t from-teal-50 via-white to-white -mt-1 pt-16 pb-4">
+<footer id="colophon" class="bg-gradient-to-t from-teal-50 via-white to-white -mt-1 pt-10 pb-4">
 
 	<div class="lg:-mb-40">
 		<div class="logo h-20 flex justify-center md:mb-6">
