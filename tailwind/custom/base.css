@@ -47,9 +47,7 @@ body {
 /*------------------*/
 /*--- TYPOGRAPHY ---*/
 /*------------------*/
-body #page *:not(label) {
-	font-size: var(--global-kb-font-size-md, 1.25rem);
-}
+
 p,
 ul,
 li {
