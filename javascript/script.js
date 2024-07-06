@@ -12,23 +12,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	document.querySelectorAll('.book-now-location').forEach(function (button) {
-		button.addEventListener('click', function (e) {
-			e.preventDefault();
-			const parentSlide = button.closest('.embla__slide');
-			const iframeSrc = parentSlide.dataset.bookingIframe;
-			const iframe = document.createElement('iframe');
-			iframe.id = 'core-widget';
-			iframe.src = iframeSrc;
-			iframe.width = '100%';
-			iframe.height = '1000px';
-			iframe.frameBorder = '0';
-			iframe.scrolling = 'no';
-			iframe.dataset.autoresize = 'true';
-
-			button.parentNode.replaceChild(iframe, button);
-		});
-	});
 
 	document.addEventListener('touchstart', () => { }, true);
 
@@ -218,6 +201,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	if (locationsCarousel) {
 		initMap();
+
+		document.querySelectorAll('.book-now-location').forEach(function (button) {
+			button.addEventListener('click', function (e) {
+				e.preventDefault();
+				const parentSlide = button.closest('.embla__slide');
+				const iframeSrc = parentSlide.dataset.bookingIframe;
+				const iframe = document.createElement('iframe');
+				iframe.id = 'core-widget';
+				iframe.src = iframeSrc;
+				iframe.width = '100%';
+				iframe.height = '1000px';
+				iframe.frameBorder = '0';
+				iframe.scrolling = 'no';
+				iframe.dataset.autoresize = 'true';
+	
+				button.parentNode.replaceChild(iframe, button);
+			});
+		});
+
 	}
 
 	if (teamsCarousel.container) {
@@ -312,4 +314,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		heroAutoplay();
 	}
+
+
+
+
 });
