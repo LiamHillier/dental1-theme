@@ -838,3 +838,6 @@ p:not(.link) > a:not(.link) {
 	transform: translateY(-28px);
 }
 
+.book-now-location {
+	@apply cursor-pointer;
+}
