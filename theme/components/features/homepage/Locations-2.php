@@ -99,7 +99,7 @@
                                                 </p>
                                             </div>
                                             <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded mt-4 book-icon justify-center">
-                                                <?php echo esc_html('Book Online'); ?>
+                                                <?php echo esc_html('Book Now'); ?>
                                             </a>
                                         </div>
 

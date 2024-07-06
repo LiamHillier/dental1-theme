@@ -22,7 +22,7 @@ get_header();
                         Do you need urgent care?
                     </h2>
                     <h2>
-                        1300 066 427
+                        <a href="tel:1300066427">1300 066 427</a>
                     </h2>
                     <a href="/dental-emergencies/" class="outline button mt-4 text-center md:text-left">Learn more</a>
 
