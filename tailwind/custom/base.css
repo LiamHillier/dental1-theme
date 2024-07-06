@@ -259,6 +259,8 @@ h2 {
 	#locations-carousel {
 		--slide-spacing: 1.5rem;
 		--slide-size: 25%;
+	}
+	.home #locations-carousel {
 		@apply px-20;
 	}
 	#locations-carousel .embla__slide {
