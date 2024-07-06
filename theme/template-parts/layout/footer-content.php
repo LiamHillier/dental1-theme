@@ -32,7 +32,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 	<div class="p5-8 grid sm:grid-cols-2 divide-x gap-y-10 sm:justify-center md:grid-cols-6 max-w-screen-2xl mx-auto mt-4 md:mt-0 md:px-20">
 		<div class="sm:justify-self-end md:pr-8 w-full">
 			<p class="text-lg text-black mb-4 text-center md:text-left">Quick links</p>
-			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left">
+			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
 				<li><a href="/">Home</a></li>
 				<li><a href="/about-us/">About us</a></li>
 				<li><a href="/prices/">Prices</a></li>
@@ -42,8 +42,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			</ul>
 		</div>
 		<div class="md:pl-8 :w-full">
-			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/services">Services</a></p>
-			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left">
+			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/services" class="text-black">Services</a></p>
+			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
 				<li><a href="/general-dentistry/">General Dentistry</a></li>
 				<li><a href="/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
 				<li><a href="/restorative/">Restorative Dentistry</a></li>
@@ -55,8 +55,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 		<div class="hidden md:block"></div>
 		<div class="hidden md:block border-none"></div>
 		<div class="sm:justify-self-end md:pr-8 border-l-0  w-full md:!border-l md:pl-8">
-			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/locations">Locations</a></p>
-			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left">
+			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/locations" class="text-black">Locations</a></p>
+			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
 				<li><a href="/locations/craigieburn/">Craigieburn</a></li>
 				<li><a href="/locations/epping/">Epping North</a></li>
 				<li><a href="/locations/essendon/">Essendon</a></li>
@@ -67,8 +67,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			</ul>
 		</div>
 		<div class="md:pl-8  w-full">
-			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/contact">Contact</a></p>
-			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left">
+			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/contact" class="text-black">Contact</a></p>
+			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
 				<li><a href="/contact/">Contact</a></li>
 				<li><a href="/get-a-quote/">Get a Quote</a></li>
 				<li><a href="/book-appointment">Book Appointment</a></li>
