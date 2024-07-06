@@ -328,19 +328,19 @@ function locations_section()
             </div>
 
             <!-- Locations carousel -->
-            <section id="locations-carousel" class="!pl-0 !pr-0 embla relative locations-carousel mt-6 overflow-visible">
-
-                <button class="embla__prev absolute -left-4 top-[50%] z-10 bg-primary text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+            <section id="locations-carousel" class="embla relative locations-carousel max-w-screen-2xl mx-auto md:px-20 mt-6">
+                <button class="embla__prev absolute left-2 top-[50%] z-10 bg-primary text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
                     </svg>
                 </button>
-                <button class="embla__next absolute -right-4 top-[50%] z-10 bg-primary text-white rounded-full p-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <button class="embla__next absolute right-2 top-[50%] z-10 bg-primary text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
                         <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
                     </svg>
                 </button>
 
                 <div class="embla__viewport">
-
                     <div class="embla__container">
                         <?php
                         $locations = new WP_Query(array(
@@ -355,8 +355,9 @@ function locations_section()
                                 $email = get_field('email');
                                 $address = get_field('address');
                                 $image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                                $booking_iframe = get_field('booking_iframe'); // Get the iframe URL from ACF
                         ?>
-                                <div class="embla__slide" data-address="<?php echo esc_html($address); ?>">
+                                <div class="embla__slide" data-address="<?php echo esc_html($address); ?>" data-booking-iframe="<?php echo esc_url($booking_iframe); ?>">
                                     <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
                                         <div class="location-card">
                                             <?php if ($image) : ?>
@@ -384,11 +385,10 @@ function locations_section()
                                                         </a>
                                                     </p>
                                                 </div>
-                                                <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>" class="button primary w-full rounded mt-4 book-icon justify-center">
+                                                <div class="button primary w-full rounded mt-4 book-icon justify-center book-now-location">
                                                     <?php echo esc_html('Book Now'); ?>
-                                                </a>
+                                                </div>
                                             </div>
-
                                         </div>
                                     </a>
                                 </div>
@@ -471,11 +471,12 @@ function disable_comments_admin_bar()
 add_action('init', 'disable_comments_admin_bar');
 
 
-function filter_search_only_pages($query) {
+function filter_search_only_pages($query)
+{
     if ($query->is_search && !is_admin()) {
         $query->set('post_type', 'page');
         $query->set('post__not_in', array(
-            229, 257, 1353, 1373, 1395, 1407, 1440, 1444, 1463, 1466, 
+            229, 257, 1353, 1373, 1395, 1407, 1440, 1444, 1463, 1466,
             1469, 1475, 1483, 1521, 14880
         ));
     }
