@@ -202,14 +202,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (locationsCarousel) {
 		initMap();
 
-		 // Initialize Google Maps Autocomplete
-		 function initializeAutocomplete() {
-            const addressInput = document.getElementById('address-input');
-            const autocomplete = new google.maps.places.Autocomplete(addressInput);
-            autocomplete.setFields(['address_components', 'geometry', 'icon', 'name']);
-        }
-
-        google.maps.event.addDomListener(window, 'load', initializeAutocomplete);
+		function initializeAutocomplete() {
+			const addressInput = document.getElementById('address-input');
+			const autocomplete = new google.maps.places.Autocomplete(addressInput);
+			autocomplete.setFields(['address_components', 'geometry', 'icon', 'name']);
+		}
+		
+		window.addEventListener('load', initializeAutocomplete);
 
 		document.querySelectorAll('.book-now-location').forEach(function (button) {
 			button.addEventListener('click', function (e) {
