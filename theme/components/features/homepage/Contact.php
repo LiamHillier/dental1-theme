@@ -7,7 +7,7 @@ $facebook = file_get_contents('wp-content/themes/dental1/theme/assets/icons/face
 $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/instagram.svg');
 ?>
 
-<section id="contact" class="text-center relative bg-gray-100 -mt-1 pt-16 pb-16 md:text-left md:pb-60">
+<section id="contact" class="text-center relative bg-gray-100 -mt-1 pt-16 pb-16 md:text-left ">
     <div class="max-w-screen-2xl mx-auto md:px-20 lg:grid lg:grid-cols-5 lg:gap-20 ">
         <div class="col-span-3">
             <header class=" flex flex-col items-center gap-2 text-center mb-2 md:items-start">
