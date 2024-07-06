@@ -211,23 +211,31 @@ document.addEventListener('DOMContentLoaded', () => {
 		window.addEventListener('load', initializeAutocomplete);
 
 
-		document.querySelectorAll('.book-now-location').forEach(function (button) {
-			button.addEventListener('click', function (e) {
-				e.preventDefault();
-				const parentSlide = button.closest('.embla__slide');
-				const iframeSrc = parentSlide.dataset.bookingIframe;
-				const iframe = document.createElement('iframe');
-				iframe.id = 'core-widget';
-				iframe.src = iframeSrc;
-				iframe.width = '100%';
-				iframe.height = '1000px';
-				iframe.frameBorder = '0';
-				iframe.scrolling = 'no';
-				iframe.dataset.autoresize = 'true';
-	
-				button.parentNode.replaceChild(iframe, button);
-			});
-		});
+
+		document.querySelectorAll('.book-now-location').forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+                const parentSlide = button.closest('.embla__slide');
+                const iframeSrc = parentSlide.dataset.bookingIframe;
+                const locationUrl = button.dataset.locationUrl;
+
+                if (isDesktop) {
+                    window.location.href = locationUrl;
+                } else {
+                    const iframe = document.createElement('iframe');
+                    iframe.id = 'core-widget';
+                    iframe.src = iframeSrc;
+                    iframe.width = '100%';
+                    iframe.height = '1000px';
+                    iframe.frameBorder = '0';
+                    iframe.scrolling = 'no';
+                    iframe.dataset.autoresize = 'true';
+
+                    button.parentNode.replaceChild(iframe, button);
+                }
+            });
+        });
 
 	}
 

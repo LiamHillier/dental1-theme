@@ -99,7 +99,7 @@
                                                     </a>
                                                 </p>
                                             </div>
-                                            <div class="button primary w-full rounded mt-4 book-icon justify-center book-now-location">
+                                            <div class="button primary w-full rounded mt-4 book-icon justify-center book-now-location" data-location-url="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
                                                 <?php echo esc_html('Book Now'); ?>
                                             </div>
                                         </div>
