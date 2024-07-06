@@ -47,7 +47,9 @@ body {
 /*------------------*/
 /*--- TYPOGRAPHY ---*/
 /*------------------*/
-
+body {
+	font-size: var(--global-kb-font-size-md, 1.25rem);;
+}
 p,
 ul,
 li {
