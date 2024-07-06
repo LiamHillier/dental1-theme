@@ -55,7 +55,7 @@ get_header();
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start justify-between mt-20 gap-y-16 px-5 md:px-20 max-w-screen-2xl md:mx-auto">
-            <a href="/no-gap-terms-conditions/" class="flex flex-col gap-2 items-center ">
+            <a href="/no-gap" class="flex flex-col gap-2 items-center ">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
                         01</div>
