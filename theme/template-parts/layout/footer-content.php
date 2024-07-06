@@ -69,7 +69,6 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 		<div class="md:pl-8  w-full">
 			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/contact" class="text-black">Contact</a></p>
 			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
-				<li><a href="/contact/">Contact</a></li>
 				<li><a href="/get-a-quote/">Get a Quote</a></li>
 				<li><a href="/book-appointment">Book Appointment</a></li>
 				<li><a href="/privacy-policy-and-appointment-policy/">Privacy Policy</a></li>
