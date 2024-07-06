@@ -206,9 +206,12 @@ document.addEventListener('DOMContentLoaded', () => {
 			const addressInput = document.getElementById('address-input');
 			const autocomplete = new google.maps.places.Autocomplete(addressInput);
 			autocomplete.setFields(['address_components', 'geometry', 'icon', 'name']);
+			const addressForm = document.getElementById('address-form');
+			autocomplete.addListener('place_changed', () => addressForm.submit());
 		}
 		
 		window.addEventListener('load', initializeAutocomplete);
+
 
 		document.querySelectorAll('.book-now-location').forEach(function (button) {
 			button.addEventListener('click', function (e) {
