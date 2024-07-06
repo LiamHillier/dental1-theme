@@ -52,7 +52,6 @@ p,
 ul,
 li {
 	@apply text-gray-500 font-normal;
-	font-size: var(--global-kb-font-size-md, 1.25rem);;
 }
 
 h1,
