@@ -94,7 +94,7 @@ get_header();
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-strategic-plan-5780211.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg font-semibold underline">Payment Options</p>
-                <p class="text-lecenterft">Available for larger treatments, our financing options enable you to split the payment on treatments that can leave a dent in your pocket
+                <p class="text-center">Available for larger treatments, our financing options enable you to split the payment on treatments that can leave a dent in your pocket
                 </p>
             </a>
         </div>
