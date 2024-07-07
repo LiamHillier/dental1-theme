@@ -74,6 +74,10 @@ h2 {
 	font-weight: bold;
 }
 
+a:hover {
+	@apply text-primary;
+}
+
 .hero-text-large {
 	font-size: clamp(48px, 7vw, 96px);
 	line-height: 1;
