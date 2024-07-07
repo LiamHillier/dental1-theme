@@ -21,14 +21,14 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
             <div class="grid md:grid-cols-2 gap-x-4 gap-y-10 px-5 my-10 md:pl-0">
                 <div class="flex flex-col gap-2 items-center md:items-start ">
                     <a href="tel:1300066427" class="contact-link text-center md:text-left">
-                        <span class="text-primary flex justify-center md:justify-start !hover:text-primary"><?php echo $phone; ?></span>
-                        <p class="font-semibold text-lg text-black !hover:text-primary">Call Us Today</p>
-                        <p class="underline !hover:text-primary">13 000 NO GAP (1300 066 427)</p>
+                        <span class="text-primary flex justify-center md:justify-start hover:text-primary"><?php echo $phone; ?></span>
+                        <p class="font-semibold text-lg text-black hover:text-primary">Call Us Today</p>
+                        <p class="underline hover:text-primary">13 000 NO GAP (1300 066 427)</p>
                     </a>
                     <a href="mailto:info@dental1.com.au" class="contact-link mt-4 text-center md:text-left">
-                        <span class="text-primary flex justify-center md:justify-start !hover:text-primary"><?php echo $mail; ?></span>
-                        <p class="font-semibold text-lg text-black !hover:text-primary">Email Us</p>
-                        <p class="underline !hover:text-primary">info@dental1.com.au</p>
+                        <span class="text-primary flex justify-center md:justify-start hover:text-primary"><?php echo $mail; ?></span>
+                        <p class="font-semibold text-lg text-black hover:text-primary">Email Us</p>
+                        <p class="underline hover:text-primary">info@dental1.com.au</p>
                     </a>
                 </div>
                 <div class="contact-link text-center md:text-left">
