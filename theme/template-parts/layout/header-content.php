@@ -220,11 +220,12 @@ if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
 </div>
 
 <div class="mobile-menu hidden lg:hidden flex flex-col items-stretch justify-start fixed w-screen h-screen bg-white top-0 z-50 pt-16 px-10">
-    <div class="w-12 absolute top-5 left-10">
-        <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
-    </div>
-
-    <p class="absolute left-24 top-[1.6rem] text-2xl">Dental<span class="text-primary">One</span></p>
+    <a href="/">
+        <div class="w-12 absolute top-5 left-10">
+            <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
+        </div>
+        <p class="absolute left-24 top-[1.6rem] text-2xl">Dental<span class="text-primary">One</span></p>
+    </a>
 
     <div class="flex justify-end absolute top-8 right-10">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary fill-primary menu-close">
