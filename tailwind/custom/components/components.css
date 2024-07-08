@@ -573,6 +573,10 @@ p:not(.link) > a:not(.link) {
 .mega-sub-menu > mega-menu-item {
 	margin-bottom: 6px !important;
 }
+
+.sub-sub-menu {
+	padding-left: 1rem;
+}
 #mega-menu-main-right {
 	display: flex !important;
 	align-items: center;
