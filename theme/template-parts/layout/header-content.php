@@ -16,11 +16,8 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
     function start_lvl(&$output, $depth = 0, $args = null)
     {
         $indent = str_repeat("\t", $depth);
-        if ($depth === 0) {
-            $output .= "\n$indent<ul class=\"sub-menu\">\n";
-        } else {
-            $output .= "\n$indent<ul class=\"sub-sub-menu\">\n";
-        }
+        $classes = ($depth === 0) ? 'sub-menu' : 'sub-sub-menu';
+        $output .= "\n$indent<ul class=\"$classes\">\n";
     }
 
     // End Level
@@ -60,8 +57,8 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
         $title = apply_filters('the_title', $item->title, $item->ID);
 
         $item_output = $args->before;
-        if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
-            $item_output .= '<details open>';
+        if (in_array('menu-item-has-children', $classes)) {
+            $item_output .= ($depth === 0) ? '<details open>' : '';
             $item_output .= '<summary>';
             $item_output .= '<a' . $attributes . '>';
             $item_output .= $args->link_before . $title . $args->link_after;
@@ -80,13 +77,14 @@ class Walker_Nav_Menu_Details extends Walker_Nav_Menu
     // End Element
     function end_el(&$output, $item, $depth = 0, $args = null)
     {
-        if ($depth === 0 && in_array('menu-item-has-children', $item->classes)) {
+        if (in_array('menu-item-has-children', $item->classes) && $depth === 0) {
             $output .= "</details>\n";
         } else {
             $output .= "</li>\n";
         }
     }
 }
+
 
 
 
