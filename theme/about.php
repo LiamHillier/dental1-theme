@@ -75,9 +75,7 @@ get_header();
                 </h2>
             </header>
             <div class="flex justify-center items-center mt-12 gap-4">
-                <p class="max-w-lg text-center md:text-left">It’s never been more affordable to look after your oral health. Our affordable
-                    options enable you to
-                    save money and avoid large out of pocket expenses</p>
+                <p class="max-w-lg text-center md:text-left">It’s never been more affordable to look after your oral health. Our affordable options enable you to save money and avoid large out of pocket expenses</p>
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-start justify-between mt-20 gap-y-16 px-5 md:px-20 max-w-screen-2xl md:mx-auto">
@@ -88,10 +86,7 @@ get_header();
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">Private Health Insurance</p>
-                <p class="text-center mx-12">Why pay hundreds on insurance just to be stung with a gap? Our No Gap
-                    Policy
-                    means you pay nothing
-                    out of pocket on Exams, Cleans and X-rays.</p>
+                <p class="text-center mx-12">Why pay hundreds on insurance just to be stung with a gap? Our No Gap Policy means you pay nothing out of pocket on Exams, Cleans and X-rays.</p>
             </div>
             <div class="flex flex-col gap-2 items-center  animate__delay-0_2s">
                 <div class="relative bg-primary rounded-full p-8">
@@ -100,9 +95,7 @@ get_header();
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">No Private Health Insurance</p>
-                <p class="text-center mx-12">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $95 check-up and clean package means you receive all your
-                    preventative dental care
-                    including an Exam, clean and X-rays</p>
+                <p class="text-center mx-12">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $95 check-up and clean package means you receive all your preventative dental care including an Exam, clean and X-rays</p>
             </div>
             <div class="flex flex-col gap-2 items-center  animate__delay-0_4s">
                 <div class="relative bg-primary rounded-full p-8">
@@ -110,8 +103,7 @@ get_header();
                         03</div>
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-pedodontics-3981829.png" class="w-[64px] h-[64px]" />
                 </div>
-                <p class="text-black text-center text-lg mx-20 font-semibold">Child dental
-                    Benefits</p>
+                <p class="text-black text-center text-lg mx-20 font-semibold">Child dental Benefits</p>
                 <p class="text-center mx-12">$1095 in government benefits, bulk billed, over two calendar years, for eligible children aged 0-17. The CDBS covers a wide range of services and promotes good early habits!</p>
             </div>
             <div class="flex flex-col gap-2 items-center  animate__delay-0_6s">
