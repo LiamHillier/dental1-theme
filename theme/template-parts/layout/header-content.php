@@ -185,7 +185,7 @@ if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
     </div>
 </header>
 
-<div class="lg:hidden fixed bottom-0 left-0 w-full bg-white text-primary px-5 py-3 z-50 shadow-xl">
+<div class="lg:hidden fixed bottom-0 left-0 w-full text-primary px-5 py-3 z-50" style="box-shadow: 0px -13px 15px -3px rgba(0,0,0,0.1);     background: rgb(241 255 254);">
     <nav class="w-full">
         <ul class="flex justify-between gap-7">
             <li class="text-primary w-3/12">
