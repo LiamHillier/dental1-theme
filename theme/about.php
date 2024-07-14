@@ -112,11 +112,8 @@ get_header();
                         04</div>
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-strategic-plan-5780211.png" class="w-[64px] h-[64px]" />
                 </div>
-                <p class="text-black text-center text-lg mx-20 font-semibold">Financing
-                    Plans</p>
-                <p class="text-center mx-12">Available for larger treatments, our financing options enable you to split the payment on
-                    treatments that can leave a
-                    dent in your pocket</p>
+                <p class="text-black text-center text-lg mx-20 font-semibold">Financing Plans</p>
+                <p class="text-center mx-12">Available for larger treatments, our financing options enable you to split the payment on treatments that can leave a dent in your pocket</p>
             </div>
         </div>
     </section>
