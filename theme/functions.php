@@ -278,7 +278,7 @@ function custom_services_section()
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-pedodontics-3981829.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg font-semibold">Child dental Benefits</p>
-                <p class="text-center">$1095 in government benefits, bulk billed, over two calendar years, for eligible children aged 0-17. The CDBS covers a wide range of services and promotes good early habits!
+                <p class="text-center">$1095 in government benefits, bulk billed, over two calendar years, for eligible children aged 0-17. The CDBS covers a wide range of services and promotes good early habits!</p>
             </a>
             <a href="/payment-options/" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
