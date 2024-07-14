@@ -36,9 +36,6 @@ body {
 	@apply relative;
 }
 
-
-
-
 .animate__initial {
 	opacity: 0;
 	animation-play-state: paused;
@@ -52,7 +49,7 @@ p,
 ul,
 li {
 	@apply text-gray-500 font-normal;
-	font-size: var(--global-kb-font-size-md, 1.25rem);;
+	font-size: var(--global-kb-font-size-md, 1.25rem);
 }
 
 h1,
@@ -69,9 +66,13 @@ h1 {
 }
 
 h2 {
-	font-size: clamp(28px, 3vw, 42px);
+	font-size: var(--global-kb-font-size-lg, 2rem);
 	line-height: 1;
 	font-weight: bold;
+}
+
+.klg {
+	font-size: var(--global-kb-font-size-lg, 2rem);
 }
 
 a:hover {
@@ -210,20 +211,17 @@ a:hover {
 	}
 }
 
-
-
 #locations-carousel {
 	--slide-spacing: 2rem;
 	--slide-size: 100%;
 	--slide-height: 19rem;
-
 }
 
 .home #locations-carousel {
 	@apply px-10;
 }
 
-#locations-carousel  .embla__container {
+#locations-carousel .embla__container {
 	backface-visibility: hidden;
 	display: flex;
 	touch-action: pan-y;
@@ -237,10 +235,9 @@ a:hover {
 }
 
 @screen md {
-	#locations-carousel  {
+	#locations-carousel {
 		--slide-spacing: 1rem;
 		--slide-size: 50%;
-		
 	}
 	.home #locations-carousel {
 		@apply px-20;
@@ -256,7 +253,6 @@ a:hover {
 	#locations-carousel {
 		--slide-spacing: 1.5rem;
 		--slide-size: 33%;
-		
 	}
 	.home #locations-carousel {
 		@apply px-20;
@@ -284,8 +280,6 @@ a:hover {
 		position: relative;
 	}
 }
-
-
 
 .locations-divider {
 	position: absolute;
@@ -587,5 +581,5 @@ a:hover {
 }
 
 .kt-blocks-info-box-number {
-	font-size: 
+	font-size:;
 }

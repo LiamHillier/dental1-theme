@@ -69,7 +69,7 @@ get_header();
             <header class="flex flex-col items-center gap-2 text-center mb-2 md:text-left md:items-start text-center md:text-left">
                 <p class="text-primary  md:text-left ">
                     Our services</p>
-                <h2 class="text-center md:text-left  ">
+                <h2 class="text-center md:text-left klg ">
                     Affordable options<br><span class="!text-primary">for
                         all!</span>
                 </h2>
@@ -87,7 +87,7 @@ get_header();
                         01</div>
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
                 </div>
-                <p class="text-black text-center text-lg mx-20 font-semibold">Private health Insurance Patients</p>
+                <p class="text-black text-center text-lg mx-20 font-semibold">Private Health Insurance</p>
                 <p class="text-center mx-12">Why pay hundreds on insurance just to be stung with a gap? Our No Gap
                     Policy
                     means you pay nothing
@@ -99,8 +99,7 @@ get_header();
                         02</div>
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
                 </div>
-                <p class="text-black text-center text-lg mx-20 font-semibold">No insurance
-                    Patients</p>
+                <p class="text-black text-center text-lg mx-20 font-semibold">No Private Health Insurance</p>
                 <p class="text-center mx-12">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $95 check-up and clean package means you receive all your
                     preventative dental care
                     including an Exam, clean and X-rays</p>
@@ -113,8 +112,7 @@ get_header();
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">Child dental
                     Benefits</p>
-                <p class="text-center mx-12">$1000 in government benefits, bulk billed, over two calendar years, for eligible children aged 2-17. The CDBS covers a wide range of
-                    services and promotes good early habits!</p>
+                <p class="text-center mx-12">$1095 in government benefits, bulk billed, over two calendar years, for eligible children aged 0-17. The CDBS covers a wide range of services and promotes good early habits!</p>
             </div>
             <div class="flex flex-col gap-2 items-center  animate__delay-0_6s">
                 <div class="relative bg-primary rounded-full p-8">
