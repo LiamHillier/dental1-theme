@@ -11,9 +11,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-
-
-	document.addEventListener('touchstart', () => { }, true);
+	document.addEventListener('touchstart', () => {}, true);
 
 	const menuOpen = document.querySelector('.mobile-hamburger');
 	const menuClose = document.querySelector('.menu-close');
@@ -199,44 +197,52 @@ document.addEventListener('DOMContentLoaded', () => {
 		return closestClinic;
 	}
 
+	function initializeAutocomplete() {
+		const addressInput = document.getElementById('address-input');
+		const autocomplete = new google.maps.places.Autocomplete(addressInput, {
+			componentRestrictions: { country: 'au' },
+		});
+		autocomplete.setFields([
+			'address_components',
+			'geometry',
+			'icon',
+			'name',
+		]);
+	}
+
 	if (locationsCarousel) {
 		initMap();
 
-		function initializeAutocomplete() {
-			const addressInput = document.getElementById('address-input');
-			const autocomplete = new google.maps.places.Autocomplete(addressInput);
-			autocomplete.setFields(['address_components', 'geometry', 'icon', 'name']);
-		}
-		
 		window.addEventListener('load', initializeAutocomplete);
 
+		document
+			.querySelectorAll('.book-now-location')
+			.forEach(function (button) {
+				button.addEventListener('click', function (e) {
+					e.preventDefault();
+					const isDesktop = window.matchMedia(
+						'(min-width: 1024px)'
+					).matches;
+					const parentSlide = button.closest('.embla__slide');
+					const iframeSrc = parentSlide.dataset.bookingIframe;
+					const locationUrl = button.dataset.locationUrl;
 
+					if (isDesktop) {
+						window.location.href = locationUrl;
+					} else {
+						const iframe = document.createElement('iframe');
+						iframe.id = 'core-widget';
+						iframe.src = iframeSrc;
+						iframe.width = '100%';
+						iframe.height = '1000px';
+						iframe.frameBorder = '0';
+						iframe.scrolling = 'no';
+						iframe.dataset.autoresize = 'true';
 
-		document.querySelectorAll('.book-now-location').forEach(function(button) {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const isDesktop = window.matchMedia('(min-width: 1024px)').matches;
-                const parentSlide = button.closest('.embla__slide');
-                const iframeSrc = parentSlide.dataset.bookingIframe;
-                const locationUrl = button.dataset.locationUrl;
-
-                if (isDesktop) {
-                    window.location.href = locationUrl;
-                } else {
-                    const iframe = document.createElement('iframe');
-                    iframe.id = 'core-widget';
-                    iframe.src = iframeSrc;
-                    iframe.width = '100%';
-                    iframe.height = '1000px';
-                    iframe.frameBorder = '0';
-                    iframe.scrolling = 'no';
-                    iframe.dataset.autoresize = 'true';
-
-                    button.parentNode.replaceChild(iframe, button);
-                }
-            });
-        });
-
+						button.parentNode.replaceChild(iframe, button);
+					}
+				});
+			});
 	}
 
 	if (teamsCarousel.container) {
@@ -331,8 +337,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		heroAutoplay();
 	}
-
-
-
-
 });
