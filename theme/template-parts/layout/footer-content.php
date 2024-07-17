@@ -23,7 +23,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 		</div>
 		<div class="px-5 lg:max-w-xs mx-auto">
 			<p class="text-center">We are more than just a dental practice. We are your trusted partner in achieving and
-				maintaining a beautiful, healty smile. </p>
+				maintaining a beautiful, healthy smile. </p>
 		</div>
 
 	</div>
@@ -49,7 +49,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/restorative/">Restorative Dentistry</a></li>
 				<li><a href="/dental-implants/">Dental Implants</a></li>
 				<li><a href="/orthodontics/">Orthodontics</a></li>
-				<li><a href="/dental-emergencies/">Dental Emergencies</a></li>
+				<li><a href="/emergency-dentist/">Dental Emergencies</a></li>
 			</ul>
 		</div>
 		<div class="hidden md:block"></div>

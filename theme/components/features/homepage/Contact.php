@@ -16,7 +16,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
                 </div>
                 <h2 class="">Get in touch</span></h2>
             </header>
-            <p class="px-5 md:pl-0 md:pr-20 mt-6">Whether you have a <a href="/dental-emergencies/">dental emergency</a>, need to get some advice or just want to get a <a href="/general-dentistry/regular-checkups/">regular check-up</a>, our <a href="/meet-the-team/">team of Dentists</a> is here to help. With the convenience of flexible booking times, a brand new clinic and affordable pricing we know you'll want to make your next appointment at DentalOne. Get in touch with us today by <a href="tel:1300066427">calling</a>, <a href="mailto:info@dental1.com.au">emailing</a> or filling in our booking form and we'll book you in to see one of our <a href="/meet-the-team/">team</a> of professional and caring dentists.
+            <p class="px-5 md:pl-0 md:pr-20 mt-6">Whether you have a <a href="/emergency-dentist/">dental emergency</a>, need to get some advice or just want to get a <a href="/general-dentistry/regular-checkups/">regular check-up</a>, our dental <a href="/meet-the-team/">team</a> is here to help. With the convenience of flexible booking times, a brand new clinic and affordable pricing we know you'll want to make your next appointment at Dental<span class="text-primary">One</span>. Get in touch with us today by <a href="tel:1300066427">calling</a>, <a href="mailto:info@dental1.com.au">emailing</a> or filling in our booking form and we'll book you in to see one of our <a href="/meet-the-team/">team</a> of professional and caring dentists.
 ​<br /><br />Simply fill in your details below and we will contact you to resolve any queries and to confirm your appointment.</p>
             <div class="grid md:grid-cols-2 gap-x-4 gap-y-10 px-5 my-10 md:pl-0">
                 <div class="flex flex-col gap-2 items-center md:items-start ">
@@ -49,7 +49,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
             <hr class="mx-5" />
             <p class=" font-semibold text-black text-lg mt-8">Stay social with us:</p>
             <div class="flex justify-center items-center my-4 gap-4 md:justify-start">
-                <a href="https://www.facebook.com/dentalonecraigieburn/"> <?php echo $facebook; ?></a>
+                <a href="https://www.facebook.com/dentalonegroup"> <?php echo $facebook; ?></a>
                 <a href="https://www.instagram.com/dentalonegroup/"> <?php echo $instagram; ?></a>
             </div>
         </div>
