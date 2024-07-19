@@ -585,5 +585,5 @@ a:hover {
 }
 
 .service-form {
-	@apply p-7 rounded-3xl text-left bg-white shadow-2xl shadow-teal-500/30;
+	@apply w-full p-7 rounded-3xl text-left bg-white shadow-2xl shadow-teal-500/30;
 }
