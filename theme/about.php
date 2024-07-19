@@ -104,7 +104,7 @@ get_header();
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-pedodontics-3981829.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">Child dental Benefits</p>
-                <p class="text-center mx-12">$1095 in government benefits, bulk billed, over two calendar years, for eligible children aged 0-17. The CDBS covers a wide range of services and promotes good early habits!</p>
+                <p class="text-center mx-12">$1052 in government benefits, bulk billed, over two calendar years, for eligible children aged 0-17. The CDBS covers a wide range of services and promotes good early habits!</p>
             </div>
             <div class="flex flex-col gap-2 items-center  animate__delay-0_6s">
                 <div class="relative bg-primary rounded-full p-8">
@@ -113,7 +113,7 @@ get_header();
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-strategic-plan-5780211.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg mx-20 font-semibold">Financing Plans</p>
-                <p class="text-center mx-12">Available for larger treatments, our financing options enable you to split the payment on treatments that can leave a dent in your pocket</p>
+                <p class="text-center mx-12">Available for larger treatments, our financing options enable you to split the payment on treatments which will not leave a large dent in your pocket.</p>
             </div>
         </div>
     </section>
@@ -139,11 +139,11 @@ get_header();
                             </h2>
                         </header>
                     </div>
-                    <p>Dental One provides patients with Dental cover, from recognised Australian Private Health Insurers, restorative and preventative dental services at no out-of-pocket expense. As long as your health funds pays a benefit amount for each treatment claimed and you have not reached your annual benefit limit, you will receive your treatment with no-gap.
-                        <br /><br />
-                        We make the claim on the spot using our Hicaps terminal giving you added convenience. We accept all recognised Australian Private Health funds.
-                    </p>
-                    <p class="text-black text-xl mt-10">Our policy means you can visit us for your regular twice-yearly check-up and clean for FREE!</p>
+                    <p>Dental<span class="text-primary">One</span> is excited to offer patients with Australian Private Health Insurance a new level of affordability with our gap-free preventative dentistry service. If your health insurance includes dental cover for preventative service, you can now receive treatment with no out-of-pocket expenses.
+<br/><br/>
+As long as your health fund pays a benefit for each claimed treatment and you haven't reached your annual benefit limit, you will enjoy no-gap treatments. For added convenience, we process claims on the spot using our HICAPS terminal.
+<br/><br/>
+We accept all recognized Australian Private Health funds that offer dental health cover, ensuring you can visit us for your regular twice-yearly check-up and clean for FREE!/p>
                 </div>
                 <div class="lg:pl-20 flex flex-col gap-6 justify-center">
                     <div class="bg-white rounded-full p-4 w-full flex items-center gap-8 relative">
