@@ -15,6 +15,10 @@
 	box-sizing: border-box;
 }
 
+a {
+	text-decoration: none;
+}
+
 #site-navigation a {
 	@apply text-black whitespace-nowrap text-lg md:text-base;
 
