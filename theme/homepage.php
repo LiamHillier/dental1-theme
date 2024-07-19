@@ -55,25 +55,21 @@ get_header();
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 items-start justify-between mt-20 gap-y-16 px-5 md:px-20 max-w-screen-2xl md:mx-auto">
-            <a href="/general-dentistry/preventative-dentistry/" class="flex flex-col gap-2 items-center ">
+        <a href="/no-gap" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
-                    <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
-                        01</div>
+                    <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">01</div>
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
                 </div>
-                <p class="text-black text-center text-lg font-semibold underline">Private Health Insurance</p>
-                <p class="text-center">Why pay hundreds on insurance just to be stung with a gap? Our No Gap Policy means you pay nothing out of pocket on Exams, Cleans and X-rays.
-                </p>
+                <p class="text-black text-center text-lg font-semibold">Private Health Insurance</p>
+                <p class="text-center">Why pay hundreds on insurance just to be stung with a gap? Our No Gap Policy means you pay nothing out of pocket on Exams, Cleans, and X-rays.</p>
             </a>
-            <a href="/no-gap" class="flex flex-col gap-2 items-center">
+            <a href="/general-dentistry/preventative-dentistry/" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
-                    <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">
-                        02</div>
+                    <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">02</div>
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
                 </div>
-                <p class="text-black text-center text-lg font-semibold underline">No Private Health Insurance</p>
-                <p class="text-center ">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $119 check-up and clean package means you receive all your preventative dental care including an Exam, clean and X-rays
-                </p>
+                <p class="text-black text-lecenterft text-lg font-semibold">No Private Health Insurance</p>
+                <p class="text-center">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $119 check-up and clean package means you receive all your preventative dental care including an Exam, clean and X-rays.</p>
             </a>
             <a href="/child-dental-benefits-scheme/" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
