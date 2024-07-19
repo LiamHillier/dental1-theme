@@ -54,7 +54,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
             </div>
         </div>
 
-        <div id="basic-contact-form" class="my-10 mx-5 p-7 bg-white rounded-3xl shadow-3xl text-left bg-white shadow-2xl shadow-teal-500/30 lg:col-span-2 md:mx-0 ">
+        <div id="basic-contact-form" class="my-10 mx-5 p-7 rounded-3xl shadow-3xl text-left bg-white shadow-2xl shadow-teal-500/30 lg:col-span-2 md:mx-0 ">
             <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
             <script>
                 hbspt.forms.create({

@@ -580,9 +580,6 @@ a:hover {
 	}
 }
 
-.kt-blocks-info-box-number {
-	font-size:;
-}
 
 .service-form {
 	@apply w-full p-7 rounded-3xl text-left bg-white shadow-2xl shadow-teal-500/30;
