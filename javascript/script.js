@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const addressInput = document.getElementById('address-input');
 		const loadingSpinner = document.getElementById('loading-spinner');
 		const resultText = document.getElementById('result-text');
-
+	
 		if (
 			!locationsCarousel.container ||
 			!addressForm ||
@@ -78,43 +78,43 @@ document.addEventListener('DOMContentLoaded', () => {
 			displayError('Initialization error. Please try again later.');
 			return;
 		}
-
+	
 		let emblaLocationsApi;
-
+	
 		function initializeCarousel() {
 			emblaLocationsApi = EmblaCarousel(locationsCarousel.container, {
 				loop: false,
 				align: 'start',
 			});
-
+	
 			if (locationsCarousel.prevButton && locationsCarousel.nextButton) {
 				locationsCarousel.prevButton.addEventListener('click', () =>
 					emblaLocationsApi.scrollPrev()
 				);
-
+	
 				locationsCarousel.nextButton.addEventListener('click', () =>
 					emblaLocationsApi.scrollNext()
 				);
 			}
 		}
-
+	
 		addressForm.addEventListener('submit', async (event) => {
 			event.preventDefault();
 			loadingSpinner.classList.remove('hidden');
 			resultText.classList.add('hidden');
-
+	
 			try {
 				const address = addressInput.value;
 				const userLocation = await geocodeAddress(address);
 				const dentalClinics = getDentalClinics();
-
+	
 				const distances = await getDistanceMatrix(
 					userLocation,
 					dentalClinics.map((clinic) => clinic.address)
 				);
-
+	
 				const closestClinic = findClosest(distances, dentalClinics);
-
+	
 				if (closestClinic) {
 					const index = dentalClinics.indexOf(closestClinic);
 					emblaLocationsApi.scrollTo(index);
@@ -131,10 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
 				resultText.classList.remove('hidden');
 			}
 		});
-
+	
 		initializeCarousel();
+		initializeAutocomplete();
 	}
-
+	
 	function geocodeAddress(address) {
 		return new Promise((resolve, reject) => {
 			const geocoder = new google.maps.Geocoder();
@@ -147,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 		});
 	}
-
+	
 	function getDistanceMatrix(origin, destinations) {
 		return new Promise((resolve, reject) => {
 			const service = new google.maps.DistanceMatrixService();
@@ -167,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			);
 		});
 	}
-
+	
 	// Example function, ensure it fits your specific implementation
 	function getDentalClinics() {
 		const slides = document.querySelectorAll(
@@ -178,11 +179,11 @@ document.addEventListener('DOMContentLoaded', () => {
 			element: slide,
 		}));
 	}
-
+	
 	function findClosest(distanceMatrixResult, clinics) {
 		let closestClinic = null;
 		let minDistance = Infinity;
-
+	
 		distanceMatrixResult.forEach((element, index) => {
 			if (
 				element.status === 'OK' &&
@@ -193,10 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
 				closestClinic.distanceText = element.distance.text;
 			}
 		});
-
+	
 		return closestClinic;
 	}
-
+	
 	function initializeAutocomplete() {
 		const addressInput = document.getElementById('address-input');
 		const autocomplete = new google.maps.places.Autocomplete(addressInput, {
@@ -208,13 +209,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			'icon',
 			'name',
 		]);
+	
+		autocomplete.addListener('place_changed', () => {
+			const addressForm = document.getElementById('address-form');
+			const place = autocomplete.getPlace();
+			if (!place.geometry) {
+				displayError('No details available for input: ' + place.name);
+				return;
+			}
+	
+			// Automatically submit the form when an address is selected
+			addressForm.dispatchEvent(new Event('submit'));
+		});
 	}
-
+	
 	if (locationsCarousel) {
 		initMap();
-
+	
 		window.addEventListener('load', initializeAutocomplete);
-
+	
 		document
 			.querySelectorAll('.book-now-location')
 			.forEach(function (button) {
@@ -226,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					const parentSlide = button.closest('.embla__slide');
 					const iframeSrc = parentSlide.dataset.bookingIframe;
 					const locationUrl = button.dataset.locationUrl;
-
+	
 					if (isDesktop) {
 						window.location.href = locationUrl;
 					} else {
@@ -238,13 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
 						iframe.frameBorder = '0';
 						iframe.scrolling = 'no';
 						iframe.dataset.autoresize = 'true';
-
+	
 						button.parentNode.replaceChild(iframe, button);
 					}
 				});
 			});
 	}
-
+	
 	if (teamsCarousel.container) {
 		const emblaTeamsApi = EmblaCarousel(teamsCarousel.container, {
 			loop: false,
