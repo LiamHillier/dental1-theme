@@ -19,7 +19,10 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Hotjar Tracking Code for https://dental1.com.au/ -->
+    <link rel="preconnect" href="https://static.hotjar.com">
+    <link rel="preconnect" href="https://maps.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
     <script>
         (function(h, o, t, j, a, r) {
             h.hj = h.hj || function() {
@@ -32,15 +35,17 @@
             a = o.getElementsByTagName('head')[0];
             r = o.createElement('script');
             r.async = 1;
+            r.defer = 1; // Ensure this script does not block the rendering
             r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
             a.appendChild(r);
         })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
     </script>
 
-
+    <!-- Google Maps API -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw4mjDWv-Bat8U9jtuw2mx0C4hdnKvCUA&libraries=places" async defer></script>
 
-    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <!-- Embla Carousel -->
+    <script async src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 
     <?php wp_head(); ?>
 
