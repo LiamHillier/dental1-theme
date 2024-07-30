@@ -49,8 +49,8 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
             <hr class="mx-5" />
             <p class=" font-semibold text-black text-lg mt-8">Stay social with us:</p>
             <div class="flex justify-center items-center my-4 gap-4 md:justify-start">
-                <a href="https://www.facebook.com/dentalonegroup"> <?php echo $facebook; ?></a>
-                <a href="https://www.instagram.com/dentalonegroup/"> <?php echo $instagram; ?></a>
+                <a target="_blank" href="https://www.facebook.com/dentalonegroup"> <?php echo $facebook; ?></a>
+                <a  target="_blank" href="https://www.instagram.com/dentalonegroup/"> <?php echo $instagram; ?></a>
             </div>
         </div>
 
