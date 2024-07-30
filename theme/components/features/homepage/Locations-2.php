@@ -75,7 +75,7 @@
                                 <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
                                     <div class="location-card">
                                         <?php if ($image) : ?>
-                                            <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
+                                            <img loading="lazy"  src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
                                         <?php endif; ?>
                                         <div class="location-content h-full flex flex-col justify-start">
                                             <div class="flex flex-col gap-1">

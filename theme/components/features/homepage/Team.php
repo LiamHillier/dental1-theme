@@ -31,7 +31,7 @@
             <div class="team__container">
                 <div class="team__slide  animate__delay-1s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/16.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/16.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Adrian Balendra</p>
                             <p>General Dentist</p>
@@ -41,7 +41,7 @@
                 </div>
                 <div class="team__slide  animate__delay-0_2s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/13.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/13.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Ahmad Mehrez</p>
                             <p>General Dentist</p>
@@ -51,7 +51,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/2.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/2.png" />
                         <div>
                             <p class="font-semibold text-lg">Christine Nacief</p>
                             <p>Oral Health Therapist</p>
@@ -61,7 +61,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/3.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/3.png" />
                         <div>
                             <p class="font-semibold text-lg">Clifford Gan</p>
                             <p>Oral Health Therapist</p>
@@ -71,7 +71,7 @@
                 </div>
                 <div class="team__slide  animate__delay-0_8s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/15.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/15.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Daniel Karam</p>
                             <p>General Dentist</p>
@@ -81,7 +81,7 @@
                 </div>
                 <div class="team__slide  animate__delay-0_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/14.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/14.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Daniel Yacoub</p>
                             <p>General Dentist</p>
@@ -91,7 +91,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Darren-Manoharan.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Darren-Manoharan.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr. Darren Manoharan</p>
                             <p>General Dentist</p>
@@ -101,7 +101,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_2s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/17.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/17.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Filomena Perri</p>
                             <p>General Dentist</p>
@@ -111,7 +111,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/4.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/4.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Francis Tenazas</p>
                             <p>General Dentist</p>
@@ -121,7 +121,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
                         <div>
                             <p class="font-semibold text-lg">Gareth Huang</p>
                             <p>General Dentist</p>
@@ -131,7 +131,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/1.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/1.png" />
                         <div>
                             <p class="font-semibold text-lg">Isabelle Magliozzi</p>
                             <p>Oral Health Therapist</p>
@@ -141,7 +141,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
                         <div>
                             <p class="font-semibold text-lg">Justin Luke</p>
                             <p>General Dentist</p>
@@ -151,7 +151,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
                         <div>
                             <p class="font-semibold text-lg">Jacalyn Madden</p>
                             <p>General Dentist</p>
@@ -161,7 +161,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/7.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/7.png" />
                         <div>
                             <p class="font-semibold text-lg">Joshua Tawadros</p>
                             <p>Oral Health Therapist</p>
@@ -171,7 +171,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/06/Staff-Head-Shots-4.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-4.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr. Kiro Labib</p>
                             <p>General Dentist</p>
@@ -181,7 +181,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/6.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/6.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Maged Rafail</p>
                             <p>General Dentist</p>
@@ -191,7 +191,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/11.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/11.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr. Matthew Bodo</p>
                             <p>General Dentist</p>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="team__slide ">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/12.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/12.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Michael Ahmar</p>
                             <p>General Dentist</p>
@@ -211,7 +211,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/10.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/10.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Mohamed Khodr</p>
                             <p>General Dentist</p>
@@ -221,7 +221,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/9.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/9.png" />
                         <div>
                             <p class="font-semibold text-lg">Mehrael Ebrahim</p>
                             <p>Oral Health Therapist</p>
@@ -231,7 +231,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/8.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/8.png" />
                         <div>
                             <p class="font-semibold text-lg">Mitchell Boulos</p>
                             <p>Oral Health Therapist</p>
@@ -241,7 +241,7 @@
                 </div>
                 <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img src="/wp-content/uploads/2024/05/5.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/5.png" />
                         <div>
                             <p class="font-semibold text-lg">Dr Seean Rashid</p>
                             <p>General Dentist</p>
