@@ -229,7 +229,7 @@ if (is_within_enquiry_hours($current_time, $start_time, $end_time)) {
     </nav>
 </div>
 
-<div class="mobile-menu hidden lg:hidden flex flex-col items-stretch justify-start fixed w-screen h-screen bg-white top-0 z-50 pt-16 px-10">
+<div class="mobile-menu hidden lg:hidden flex flex-col items-stretch justify-start fixed w-screen h-screen bg-white top-0 z-[150] pt-16 px-10">
     <a href="/">
         <div class="w-12 absolute top-5 left-10">
             <?php echo file_get_contents('wp-content/themes/dental1/theme/assets/logos/icon.svg'); ?>
