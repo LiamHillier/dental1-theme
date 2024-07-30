@@ -98,9 +98,21 @@ $message = $enquiry_hours['message'];
 
 $start_time = $enquiry_hours['start_time']; // Assuming format is 'H:i:s'
 $end_time = $enquiry_hours['end_time']; // Assuming format is 'H:i:s'
+$weekend_start_time = $enquiry_hours['weekend_start_time']; // Assuming format is 'H:i:s'
+$weekend_end_time = $enquiry_hours['weekend_end_time']; // Assuming format is 'H:i:s'
 
 // Get the current server time
 $current_time = current_time('H:i:s');
+$current_day = current_time('w'); // 0 (for Sunday) through 6 (for Saturday)
+
+// Determine if it's a weekend
+$is_weekend = ($current_day == 0 || $current_day == 6);
+
+// Use weekend hours if it's a weekend
+if ($is_weekend) {
+    $start_time = $weekend_start_time;
+    $end_time = $weekend_end_time;
+}
 
 // Function to check if the current time is within the enquiry hours
 function is_within_enquiry_hours($current_time, $start_time, $end_time)
