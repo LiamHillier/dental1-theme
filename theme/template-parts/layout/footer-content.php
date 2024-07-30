@@ -35,10 +35,12 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
 				<li><a href="/">Home</a></li>
 				<li><a href="/about-us/">About us</a></li>
+				<li><a href="/community-support/">Community Support</a></li>
 				<li><a href="/prices/">Prices</a></li>
 				<li><a href="/payment-options/">Payment Options</a></li>
 				<li><a href="/meet-the-team/">Our Team</a></li>
 				<li><a href="/faq/">FAQs</a></li>
+				<li><a href="careers/">Careers</a></li>
 			</ul>
 		</div>
 		<div class="md:pl-8 :w-full">
@@ -72,6 +74,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/get-a-quote/">Get a Quote</a></li>
 				<li><a href="/book-appointment">Book Appointment</a></li>
 				<li><a href="/privacy-policy-and-appointment-policy/">Privacy Policy</a></li>
+				<li><a href="/terms-conditions/">Terms & Conditions</a></li>
 			</ul>
 		</div>
 	</div>
