@@ -11,11 +11,11 @@
  */
 
 ?>
-<?php 
+<?php
 
 if (!is_page('book-appointment')) { ?>
-<section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?> !overflow-x-hidden">
-    <!-- <div>
+    <section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?> !overflow-x-hidden">
+        <!-- <div>
             <header class="flex flex-col items-center gap-2 text-center mb-2 ">
                 <p class="text-primary ">Results
                 </p>
@@ -33,12 +33,12 @@ if (!is_page('book-appointment')) { ?>
                 </a>
             </div>
         </div> -->
-    <div class="pt-6 <?php echo !is_front_page() ? 'md:pb-10 md:pt-10' : 'md:pb-10 md:pt-0'; ?> max-w-screen-2xl mx-auto px-5 md:px-20 !overflow-x-hidden" id="testimonials-container">
-        <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
-    </div>
+        <div class="pt-6 <?php echo !is_front_page() ? 'md:pb-10 md:pt-10' : 'md:pb-10 md:pt-0'; ?> max-w-screen-2xl mx-auto px-5 md:px-20 !overflow-x-hidden" id="testimonials-container">
+            <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
+        </div>
 
-</section>
-<?php }?>
+    </section>
+<?php } ?>
 <?php
 
 $page_slugs = array('', 'get-a-quote'); // Replace with your actual page slugs
@@ -77,8 +77,8 @@ if (!is_page($page_slugs)) {
 
 
 if (is_page('book-appointment')) { ?>
-<section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?> !overflow-x-hidden">
-    <!-- <div>
+    <section id="testimonials" class="bg-white <?php echo !is_front_page() ? 'mt-10' : 'mt-4'; ?> !overflow-x-hidden">
+        <!-- <div>
             <header class="flex flex-col items-center gap-2 text-center mb-2 ">
                 <p class="text-primary ">Results
                 </p>
@@ -96,12 +96,12 @@ if (is_page('book-appointment')) { ?>
                 </a>
             </div>
         </div> -->
-    <div class="pt-6 <?php echo !is_front_page() ? 'md:pb-10 md:pt-10' : 'md:pb-10 md:pt-0'; ?> max-w-screen-2xl mx-auto px-5 md:px-20 !overflow-x-hidden" id="testimonials-container">
-        <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
-    </div>
+        <div class="pt-6 <?php echo !is_front_page() ? 'md:pb-10 md:pt-10' : 'md:pb-10 md:pt-0'; ?> max-w-screen-2xl mx-auto px-5 md:px-20 !overflow-x-hidden" id="testimonials-container">
+            <?php echo do_shortcode('[reviews-feed feed=3]'); ?>
+        </div>
 
-</section>
-<?php }?>
+    </section>
+<?php } ?>
 
 
 </div><!-- #content -->
@@ -115,6 +115,19 @@ if (is_page('book-appointment')) { ?>
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/44861831.js"></script>
 <!-- End of HubSpot Embed Code -->
+
+
+<!-- End Meta Pixel Event Code -->
+<div id='fb-pxl-ajax-code'></div>
+<script>
+    window.addEventListener('load', function() {
+        if (window.location.pathname == '/get-a-quote/') {
+            gtag('event', 'conversion', {
+                'send_to': 'AW-969056386/giHKCKu33-EDEILBis4D'
+            });
+        };
+    });
+</script>
 
 </body>
 
