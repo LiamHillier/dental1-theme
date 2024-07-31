@@ -584,3 +584,12 @@ a:hover {
 .service-form {
 	@apply w-full p-7 rounded-3xl text-left bg-white shadow-2xl shadow-teal-500/30;
 }
+
+
+#main-right > li > details > summary > a {
+	@apply font-bold;
+}
+
+#main-right > li > details > ul > li > a, #main-right > li > details > ul > li > summary > a {
+	@apply font-bold;
+}
