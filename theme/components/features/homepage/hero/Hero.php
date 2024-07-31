@@ -44,8 +44,8 @@ $doubledash = file_get_contents('wp-content/themes/dental1/theme/assets/icons/do
                 <img srcset="/wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-3_edited-400w.avif 400w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-3_edited-600w.avif 600w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-3_edited-800w.avif 800w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-3_edited-1000w.avif 1000w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-3_edited-1200w.avif 1200w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-3_edited-1600w.avif 1600w, /wp-content/themes/dental1/theme/assets/images/hero/Essendon-photo-3_edited-2000w.avif 2000w" sizes="(max-width: 400px) 400px, (max-width: 600px) 600px, (max-width: 800px) 800px, (max-width: 1000px) 1000px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (min-width: 1601px) 2000px" src="/wp-content/themes/dental1/theme/assets/images/hero/Essendon photo 3_edited.jpg" alt="Dental One Essendon" class="block object-cover absolute top-0 left-0 w-full h-full" />
                 <div class="relative z-20 w-full max-w-screen-2xl mx-auto py-4 md:px-20">
                     <h1 class="hero-text-large font-bold text-primary text-left">New Clinic<br> Now Open!</h1>
-                    <p class="font-bold  text-base mt-2 md:text-lg">Dental One Essendon is now open.</p>
-                    <p class=" max-w-xl text-base md:text-lg">Book in now or refer a friend of family member & you both receive $50 off your next treatment.</p>
+                    <p class="font-bold  text-base mt-2 md:text-lg">DentalOne Essendon is now open.</p>
+                    <p class=" max-w-xl text-base md:text-lg">Schedule your appointment today and refer a friend or family member to receive $50 off your next treatment for both of you.</p>
                     <div class="flex flex-col md:flex-row gap-4 items-start md:items-center mt-6 justify-center md:justify-start">
                         <a href="/locations/essendon/" class="button primary">View location</a>
                     </div>

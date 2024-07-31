@@ -2,7 +2,7 @@
     <div>
         <header class="flex flex-col items-center gap-2 text-center mb-2 ">
 
-            <h2 class="">Our Results
+            <h2 class=""><a href="/dentalone-results/">Our Results</a>
             </h2>
         </header>
         <div class="flex flex-col items-center gap-2 locations-description max-w-lg mx-auto mt-4">

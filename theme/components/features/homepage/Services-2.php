@@ -3,7 +3,7 @@
         <div class=" text-center mb-4 md:mb-0 flex flex-col max-w-2xl mx-auto">
             <div>
 
-                <h2 class="mb-4 "><a href="/services/">Our <span class="text-primary">Services</span></a></h2>
+                <h2 class="mb-4 "><a href="/services/">Our Services</a></h2>
             </div>
             <div class="">
                 <p class=" animate__delay-0_2s">At Dental<span class="text-primary">One</span>, we strive to go beyond the ordinary dental practice and become your dependable, trusted sanctuary for all your family's dental care needs. Our commitment to personalise comprehensive treatment to each individual sets us apart. Offering a wide range of services tailored to meet your unique needs, our compassionate team is ready to help transform smiles and improve lives.
