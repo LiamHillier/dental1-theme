@@ -586,7 +586,7 @@ a:hover {
 }
 
 
-#main-right > li > details > summary > a {
+#main-right > li > details > summary > a,  #main-right > li > a {
 	@apply font-bold;
 }
 
