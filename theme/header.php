@@ -99,7 +99,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCw4mjDWv-Bat8U9jtuw2mx0C4hdnKvCUA&libraries=places" async defer></script>
 
     <!-- Embla Carousel -->
-    <script async src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script  src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
 
     <!-- Facebook Pixel Code -->
     <script async defer>
