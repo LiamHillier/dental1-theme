@@ -40,7 +40,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/payment-options/">Payment Options</a></li>
 				<li><a href="/meet-the-team/">Our Team</a></li>
 				<li><a href="/faq/">FAQs</a></li>
-				<li><a href="careers/">Careers</a></li>
+				<li><a href="/careers/">Careers</a></li>
 			</ul>
 		</div>
 		<div class="md:pl-8 :w-full">
