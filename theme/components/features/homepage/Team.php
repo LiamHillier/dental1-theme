@@ -123,7 +123,7 @@
                     <a href="/meet-the-team" class="slide-content">
                         <img loading="lazy" src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
                         <div>
-                            <p class="font-semibold text-lg">Gareth Huang</p>
+                            <p class="font-semibold text-lg">Dr. Gareth Huang</p>
                             <p>General Dentist</p>
 
                         </div>
@@ -143,7 +143,7 @@
                     <a href="/meet-the-team" class="slide-content">
                         <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
                         <div>
-                            <p class="font-semibold text-lg">Justin Luke</p>
+                            <p class="font-semibold text-lg">Dr. Justin Luke</p>
                             <p>General Dentist</p>
 
                         </div>
@@ -153,7 +153,7 @@
                     <a href="/meet-the-team" class="slide-content">
                         <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
                         <div>
-                            <p class="font-semibold text-lg">Jacalyn Madden</p>
+                            <p class="font-semibold text-lg">Dr. Jacalyn Madden</p>
                             <p>General Dentist</p>
 
                         </div>
