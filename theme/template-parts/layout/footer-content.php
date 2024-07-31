@@ -34,7 +34,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			<p class="text-lg text-black mb-4 text-center md:text-left">Quick links</p>
 			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
 				<li><a href="/">Home</a></li>
-				<li><a href="/about-us/">About us</a></li>
+				<li><a href="/dentalone-about-us/">About us</a></li>
 				<li><a href="/community-support/">Community Support</a></li>
 				<li><a href="/prices/">Prices</a></li>
 				<li><a href="/payment-options/">Payment Options</a></li>
@@ -49,9 +49,9 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 				<li><a href="/general-dentistry/">General Dentistry</a></li>
 				<li><a href="/cosmetic-dentistry/">Cosmetic Dentistry</a></li>
 				<li><a href="/restorative/">Restorative Dentistry</a></li>
-				<li><a href="/dental-implants/">Dental Implants</a></li>
+				<li><a href="/general-dentistry/preventative-dentistry/">Preventative Dentistry</a></li>
 				<li><a href="/orthodontics/">Orthodontics</a></li>
-				<li><a href="/emergency-dentist/">Dental Emergencies</a></li>
+				<li><a href="/dental-emergencies/">Dental Emergencies</a></li>
 			</ul>
 		</div>
 		<div class="hidden md:block"></div>

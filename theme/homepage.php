@@ -69,7 +69,7 @@ get_header();
                     <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-lecenterft text-lg font-semibold">No Private Health Insurance</p>
-                <p class="text-center">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $119 check-up and clean package means you receive all your preventative dental care including an Exam, clean and X-rays.</p>
+                <p class="text-center">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our $119 check-up and clean package means you receive all your preventative dental care including an Exam, clean and X-rays.</p>
             </a>
             <a href="/child-dental-benefits-scheme/" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">

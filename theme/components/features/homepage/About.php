@@ -8,11 +8,11 @@ $badge = file_get_contents('wp-content/themes/dental1/theme/assets/icons/smile-b
         <header class="px-5 md:absolute md:right-20 md:w-5/12 md:text-left md:top-1/2 md:-translate-y-1/2 md:z-20 md:pb-20 ">
             <h2 class="mb-4 ">About Us
             </h2>
-            <p class="">At Dental<span class="text-primary">One</span>, we strive to go beyond the ordinary dental practice and become your dependable, trusted sanctuary for all your family's dental care needs.
+            <p class="">At Dental<span class="text-primary">One</span>, we aim to surpass the typical dental practice, becoming your reliable and trusted sanctuary for all your family's dental care needs.
             </p><br />
             <p class="">Combining the advantages of an experienced dental team, a wide range of services and numerous endorsements from satisfied patients, we are dedicated to providing lifelong dental health care.
             </p>
-            <a href="/about-us/" class="link mt-6 ">Read More
+            <a href="/dentalone-about-us/" class="link mt-6 ">Read More
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 inline-block ml-1">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                 </svg>
