@@ -271,9 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
 						iframe.id = 'core-widget';
 						iframe.src = iframeSrc;
 						iframe.width = '100%';
-						iframe.height = '100%';
 						iframe.frameBorder = '0';
-						iframe.scrolling = 'no';
+						iframe.scrolling = 'yes';
 						iframe.dataset.autoresize = 'true';
 
 						button.parentNode.replaceChild(iframe, button);
