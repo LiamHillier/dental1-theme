@@ -129,6 +129,8 @@ if (is_page('book-appointment')) { ?>
     });
 </script>
 
+<script type="text/javascript" src="https://www.corepractice.is/Scripts/widget/client.js"></script>
+
 </body>
 
 </html>
