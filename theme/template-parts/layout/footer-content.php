@@ -60,6 +60,7 @@ $instagram = file_get_contents('wp-content/themes/dental1/theme/assets/icons/ins
 			<p class="text-lg text-black mb-4 text-center md:text-left"><a href="/locations" class="!text-black hover:text-primary">Locations</a></p>
 			<ul class="text-gray-500 flex flex-col items-center md:items-start text-center md:text-left underline">
 				<li><a href="/locations/craigieburn/">Craigieburn</a></li>
+				<li><a href="/locations/bayswater/">Bayswater</a></li>
 				<li><a href="/locations/epping/">Epping North</a></li>
 				<li><a href="/locations/essendon/">Essendon</a></li>
 				<li><a href="/locations/lower-templestowe/">Lower Templestowe</a></li>
