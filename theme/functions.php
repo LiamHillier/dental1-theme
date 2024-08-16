@@ -476,15 +476,29 @@ function filter_search_only_pages($query)
     if ($query->is_search && !is_admin()) {
         $query->set('post_type', 'page');
         $query->set('post__not_in', array(
-            229, 257, 1353, 1373, 1395, 1407, 1440, 1444, 1463, 1466,
-            1469, 1475, 1483, 1521, 14880
+            229,
+            257,
+            1353,
+            1373,
+            1395,
+            1407,
+            1440,
+            1444,
+            1463,
+            1466,
+            1469,
+            1475,
+            1483,
+            1521,
+            14880
         ));
     }
     return $query;
 }
 add_action('pre_get_posts', 'filter_search_only_pages');
 
-function locations_carousel_shortcode($atts) {
+function locations_carousel_shortcode($atts)
+{
     // Extract shortcode attributes
     $atts = shortcode_atts(
         array(
@@ -508,74 +522,102 @@ function locations_carousel_shortcode($atts) {
 
     ob_start(); // Start output buffering
 
-    ?>
-    <!-- Locations carousel -->
-    <section id="locations-carousel" class="embla relative locations-carousel mt-6">
-        <button class="embla__prev absolute -left-8 md:-left-10 top-[50%] z-10 bg-primary text-white rounded-full p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
-            </svg>
-        </button>
-        <button class="embla__next absolute -right-6 md:-right-10 top-[50%] z-10 bg-primary text-white rounded-full p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-                <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
-            </svg>
-        </button>
+?>
+    <section id="locations" class="!pl-0 relative -mb-1 overflow-visible alt-locations">
+        <div class="">
+            <div class="md:flex justify-between items-center md:flex-wrap md:gap-10 relative">
+                <div class="w-full  my-4 max-w-xl mx-auto">
+                    <p class="text-primary md:uppercase mb-4 text-center md:text-left">Find the clinic nearest to you</p>
+                    <div class="relative">
+                        <form id="address-form">
+                            <input id="address-input" type="text" class="outline-primary !ring-primary rounded-lg shadow-lg px-4 py-4 w-full text-sm" placeholder="Enter your address" />
 
-        <div class="embla__viewport">
-            <div class="embla__container">
-                <?php
-                if ($locations->have_posts()) :
-                    while ($locations->have_posts()) : $locations->the_post();
-                        $phone = get_field('phone');
-                        $email = get_field('email');
-                        $address = get_field('address');
-                        $image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
-                        $booking_iframe = get_field('booking_iframe'); // Get the iframe URL from ACF
-                ?>
-                        <div class="embla__slide" data-address="<?php echo esc_html($address); ?>" data-booking-iframe="<?php echo esc_url($booking_iframe); ?>">
-                            <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
-                                <div class="location-card">
-                                    <?php if ($image) : ?>
-                                        <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
-                                    <?php endif; ?>
-                                    <div class="location-content h-full flex flex-col justify-start">
-                                        <div class="flex flex-col gap-1">
-                                            <h3><?php the_title(); ?></h3>
-                                            <p>
-                                                <strong>Phone:</strong>
-                                                <a href="tel:<?php echo esc_attr($phone); ?>">
-                                                    <?php echo esc_html($phone); ?>
-                                                </a>
-                                            </p>
-                                            <p>
-                                                <strong>Email:</strong>
-                                                <a href="mailto:<?php echo esc_attr($email); ?>">
-                                                    <?php echo esc_html($email); ?>
-                                                </a>
-                                            </p>
-                                            <p>
-                                                <strong>Address:</strong>
-                                                <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo urlencode($address); ?>" target="_blank">
-                                                    <?php echo esc_html($address); ?>
-                                                </a>
-                                            </p>
-                                        </div>
-                                        <div class="button primary w-full rounded mt-4 book-icon justify-center book-now-location" data-location-url="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
-                                            <?php echo esc_html('Book Now'); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                <?php endwhile;
-                    wp_reset_postdata();
-                endif;
-                ?>
+                            <button type="submit" class="bg-primary text-white rounded-lg p-2 absolute right-4 top-[50%] translate-y-[-50%]">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                                </svg>
+                            </button>
+                        </form>
+
+                    </div>
+                    <div id="loading-spinner" class="hidden mt-4">
+                        <svg class="animate-spin h-5 w-5 text-primary" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291a7.964 7.964 0 01-2-5.291H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                    </div>
+                    <p id="result-text" class="mt-4 text-primary hidden text-center md:text-left"></p>
+                </div>
             </div>
+            <!-- Locations carousel -->
+            <section id="locations-carousel" class="embla relative locations-carousel mt-6">
+                <button class="embla__prev absolute -left-8 md:-left-10 top-[50%] z-10 bg-primary text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M20.25 12a.75.75 0 01-.75.75H6.31l5.47 5.47a.75.75 0 11-1.06 1.06l-6.75-6.75a.75.75 0 010-1.06l6.75-6.75a.75.75 0 111.06 1.06l-5.47 5.47H19.5a.75.75 0 01.75.75z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+                <button class="embla__next absolute -right-6 md:-right-10 top-[50%] z-10 bg-primary text-white rounded-full p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                        <path fill-rule="evenodd" d="M3.75 12a.75.75 0 01.75-.75h13.19l-5.47-5.47a.75.75 0 011.06-1.06l6.75 6.75a.75.75 0 010 1.06l-6.75 6.75a.75.75 0 11-1.06-1.06l5.47-5.47H4.5a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+
+                <div class="embla__viewport">
+                    <div class="embla__container">
+                        <?php
+                        if ($locations->have_posts()) :
+                            while ($locations->have_posts()) : $locations->the_post();
+                                $phone = get_field('phone');
+                                $email = get_field('email');
+                                $address = get_field('address');
+                                $image = get_the_post_thumbnail_url(get_the_ID(), 'medium');
+                                $booking_iframe = get_field('booking_iframe'); // Get the iframe URL from ACF
+                        ?>
+                                <div class="embla__slide" data-address="<?php echo esc_html($address); ?>" data-booking-iframe="<?php echo esc_url($booking_iframe); ?>">
+                                    <a href="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
+                                        <div class="location-card">
+                                            <?php if ($image) : ?>
+                                                <img src="<?php echo esc_url($image); ?>" alt="<?php the_title(); ?>" />
+                                            <?php endif; ?>
+                                            <div class="location-content h-full flex flex-col justify-start">
+                                                <div class="flex flex-col gap-1">
+                                                    <h3><?php the_title(); ?></h3>
+                                                    <p>
+                                                        <strong>Phone:</strong>
+                                                        <a href="tel:<?php echo esc_attr($phone); ?>">
+                                                            <?php echo esc_html($phone); ?>
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <strong>Email:</strong>
+                                                        <a href="mailto:<?php echo esc_attr($email); ?>">
+                                                            <?php echo esc_html($email); ?>
+                                                        </a>
+                                                    </p>
+                                                    <p>
+                                                        <strong>Address:</strong>
+                                                        <a href="https://www.google.com/maps/dir/?api=1&destination=<?php echo urlencode($address); ?>" target="_blank">
+                                                            <?php echo esc_html($address); ?>
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                                <div class="button primary w-full rounded mt-4 book-icon justify-center book-now-location" data-location-url="<?php echo esc_url('/locations/' . sanitize_title(get_the_title())); ?>">
+                                                    <?php echo esc_html('Book Now'); ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                        <?php endwhile;
+                            wp_reset_postdata();
+                        endif;
+                        ?>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
-    <?php
+<?php
 
     return ob_get_clean(); // Return the output buffer content
 }
