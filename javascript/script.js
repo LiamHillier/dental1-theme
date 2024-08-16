@@ -67,20 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		const addressInput = document.getElementById('address-input');
 		const loadingSpinner = document.getElementById('loading-spinner');
 		const resultText = document.getElementById('result-text');
-	
-		if (
-			!locationsCarousel.container ||
-			!addressForm ||
-			!addressInput ||
-			!loadingSpinner ||
-			!resultText
-		) {
-			displayError('Initialization error. Please try again later.');
-			return;
-		}
-	
-		let emblaLocationsApi;
-	
+
 		function initializeCarousel() {
 			emblaLocationsApi = EmblaCarousel(locationsCarousel.container, {
 				loop: false,
@@ -97,6 +84,21 @@ document.addEventListener('DOMContentLoaded', () => {
 				);
 			}
 		}
+	
+		if (
+			!locationsCarousel.container ||
+			!addressForm ||
+			!addressInput ||
+			!loadingSpinner ||
+			!resultText
+		) {
+			displayError('Initialization error. Please try again later.');
+			return;
+		}
+	
+		let emblaLocationsApi;
+	
+		
 	
 		addressForm.addEventListener('submit', async (event) => {
 			event.preventDefault();
