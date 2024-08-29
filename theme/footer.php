@@ -41,7 +41,7 @@ if (!is_page('book-appointment')) { ?>
 <?php } ?>
 <?php
 
-$page_slugs = array('', 'get-a-quote'); // Replace with your actual page slugs
+$page_slugs = array('', 'get-a-quote', 'clear-aligners'); // Replace with your actual page slugs
 
 if (is_front_page()) {
     get_template_part('components/features/homepage/Social');
