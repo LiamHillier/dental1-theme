@@ -29,41 +29,78 @@
         </button>
         <div class="team__viewport">
             <div class="team__container">
-            <div class="team__slide  animate__delay-1s">
+                <div class="team__slide  animate__delay-1s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/16.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/16.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Adrian Balendra</p>
+                            <p class="font-semibold text-lg">Dr. Balendra</p>
                             <p>General Dentist</p>
-
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  animate__delay-0_2s">
+				 <div class="team__slide  animate__delay-0_2s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/13.png" />
+                        <img src="/wp-content/uploads/2024/05/13.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Ahmad Mehrez</p>
+                            <p class="font-semibold text-lg">Dr. Mehrez</p>
                             <p>General Dentist</p>
-
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
-                    <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/2.png" />
+				<div class="team__slide  animate__delay-1s">
+                    <a href="/meet-the-team" class="slide-content"><img src="/wp-content/uploads/2024/09/Rebecca.png" />
                         <div>
-                            <p class="font-semibold text-lg">Christine Nacief</p>
+                            <p class="font-semibold text-lg">Dr. Liu</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+				<div class="team__slide  animate__delay-0_2s">
+                    <a href="/meet-the-team" class="slide-content"><img src="/wp-content/uploads/2024/09/Ailson.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Dr. Lau</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+				<div class="team__slide  animate__delay-0_2s">
+                    <a href="/meet-the-team" class="slide-content"><img src="/wp-content/uploads/2024/09/david.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Dr. Abdelmalek</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+				<div class="team__slide  animate__delay-0_2s">
+                    <a href="/meet-the-team" class="slide-content"><img src="/wp-content/uploads/2024/09/Saimir.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Dr. Zhurka</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+				<div class="team__slide  animate__delay-0_2s">
+                    <a href="/meet-the-team" class="slide-content"><img src="/wp-content/uploads/2024/09/Imran.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Dr. Khan</p>
+                            <p>General Dentist</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="team__slide  animate__delay-1_4s">
+                    <a href="/meet-the-team" class="slide-content">
+                        <img src="/wp-content/uploads/2024/05/2.png" />
+                        <div>
+                            <p class="font-semibold text-lg">Christine</p>
                             <p>Oral Health Therapist</p>
-
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/3.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/3.png" />
                         <div>
-                            <p class="font-semibold text-lg">Clifford Gan</p>
+                            <p class="font-semibold text-lg">Clifford</p>
                             <p>Oral Health Therapist</p>
 
                         </div>
@@ -71,9 +108,9 @@
                 </div>
                 <div class="team__slide  animate__delay-0_8s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/15.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/15.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Daniel Karam</p>
+                            <p class="font-semibold text-lg">Dr. Karam</p>
                             <p>General Dentist</p>
 
                         </div>
@@ -81,19 +118,19 @@
                 </div>
                 <div class="team__slide  animate__delay-0_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/14.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/14.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Daniel Yacoub</p>
+                            <p class="font-semibold text-lg">Dr. Yacoub</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/06/Darren-Manoharan.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Darren-Manoharan.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr. Darren Manoharan</p>
+                            <p class="font-semibold text-lg">Dr. Manoharan</p>
                             <p>General Dentist</p>
 
                         </div>
@@ -101,99 +138,99 @@
                 </div>
                 <div class="team__slide  animate__delay-1_2s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/17.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/17.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Filomena Perri</p>
+                            <p class="font-semibold text-lg">Dr. Perri</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/4.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/4.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Francis Tenazas</p>
+                            <p class="font-semibold text-lg">Dr. Tenazas</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Gareth-Huang.png" />
                         <div>
-                            <p class="font-semibold text-lg">Gareth Huang</p>
+                            <p class="font-semibold text-lg">Dr. Huang</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/1.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/1.png" />
                         <div>
-                            <p class="font-semibold text-lg">Isabelle Magliozzi</p>
+                            <p class="font-semibold text-lg">Isabelle</p>
                             <p>Oral Health Therapist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-3.png" />
                         <div>
-                            <p class="font-semibold text-lg">Justin Luke</p>
+                            <p class="font-semibold text-lg">Dr. Luke</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-1.png" />
                         <div>
-                            <p class="font-semibold text-lg">Jacalyn Madden</p>
+                            <p class="font-semibold text-lg">Dr. Madden</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/7.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/7.png" />
                         <div>
-                            <p class="font-semibold text-lg">Joshua Tawadros</p>
+                            <p class="font-semibold text-lg">Joshua</p>
                             <p>Oral Health Therapist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/06/Staff-Head-Shots-4.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/06/Staff-Head-Shots-4.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr. Kiro Labib</p>
+                            <p class="font-semibold text-lg">Dr. Labib</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/6.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/6.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Maged Rafail</p>
+                            <p class="font-semibold text-lg">Dr. Rafail</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/11.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/11.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr. Matthew Bodo</p>
+                            <p class="font-semibold text-lg">Dr. Bodo</p>
                             <p>General Dentist</p>
 
                         </div>
@@ -201,49 +238,49 @@
                 </div>
                 <div class="team__slide ">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/12.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/12.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Michael Ahmar</p>
+                            <p class="font-semibold text-lg">Dr. Ahmar</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/10.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/10.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Mohamed Khodr</p>
+                            <p class="font-semibold text-lg">Dr. Khodr</p>
                             <p>General Dentist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/9.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/9.png" />
                         <div>
-                            <p class="font-semibold text-lg">Mehrael Ebrahim</p>
+                            <p class="font-semibold text-lg">Mehrael</p>
                             <p>Oral Health Therapist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/8.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/8.png" />
                         <div>
-                            <p class="font-semibold text-lg">Mitchell Boulos</p>
+                            <p class="font-semibold text-lg">Mitchell</p>
                             <p>Oral Health Therapist</p>
 
                         </div>
                     </a>
                 </div>
-                <div class="team__slide  ">
+                <div class="team__slide  animate__delay-1_4s">
                     <a href="/meet-the-team" class="slide-content">
-                        <img loading="lazy"  src="/wp-content/uploads/2024/05/5.png" />
+                        <img loading="lazy" src="/wp-content/uploads/2024/05/5.png" />
                         <div>
-                            <p class="font-semibold text-lg">Dr Seean Rashid</p>
+                            <p class="font-semibold text-lg">Dr. Rashid</p>
                             <p>General Dentist</p>
 
                         </div>
