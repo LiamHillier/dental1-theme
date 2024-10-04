@@ -259,7 +259,7 @@ function custom_services_section()
             <a href="/no-gap" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">01</div>
-                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/assets/images/about/noun-health-insurance-6206424.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg font-semibold">Private Health Insurance</p>
                 <p class="text-center">Why pay hundreds on insurance just to be stung with a gap? Our No Gap Policy means you pay nothing out of pocket on Exams, Cleans, and X-rays.</p>
@@ -267,7 +267,7 @@ function custom_services_section()
             <a href="/general-dentistry/preventative-dentistry/" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">02</div>
-                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/assets/images/about/noun-patients-3811611.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-lecenterft text-lg font-semibold">No Private Health Insurance</p>
                 <p class="text-center">Affordable preventative dental care, for about the cost of a cup of coffee per week – Our from $119 check-up and clean package means you receive all your preventative dental care including an Exam, clean and X-rays.</p>
@@ -275,7 +275,7 @@ function custom_services_section()
             <a href="/child-dental-benefits-scheme/" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">03</div>
-                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-pedodontics-3981829.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/assets/images/about/noun-pedodontics-3981829.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg font-semibold">Child dental Benefits</p>
                 <p class="text-center">$1095 in government benefits, bulk billed, over two calendar years, for eligible children aged 0-17. The CDBS covers a wide range of services and promotes good early habits!</p>
@@ -283,7 +283,7 @@ function custom_services_section()
             <a href="/payment-options/" class="flex flex-col gap-2 items-center">
                 <div class="relative bg-primary rounded-full p-8">
                     <div class="bg-gray-50 rounded-full absolute left-[50%] translate-x-[-50%] text-sm translate-y-[-50%] top-0 flex items-center justify-center" style="width: 44px; height: 44px; text-align:center">04</div>
-                    <img src="/wp-content/themes/dental1/theme/assets/images/about/noun-strategic-plan-5780211.png" class="w-[64px] h-[64px]" />
+                    <img src="/wp-content/themes/dental1/assets/images/about/noun-strategic-plan-5780211.png" class="w-[64px] h-[64px]" />
                 </div>
                 <p class="text-black text-center text-lg font-semibold">Financing Plans</p>
                 <p class="text-center">Available for larger treatments, our financing options enable you to split the payment on treatments which will not leave a large dent in your pocket..</p>
